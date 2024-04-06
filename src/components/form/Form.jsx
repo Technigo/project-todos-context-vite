@@ -14,12 +14,12 @@ export const Form = () => {
     event.preventDefault();
     newTask.desc.length > 3
       ? addTask(newTask)
-      : console.error("Must be over 3 char");
-    setTimeout((newTask.desc = "")), 500;
+      : console.error("Must be over 2 char");
+    setNewTask({ ...newTask, desc: "" });
   };
 
   const handleChange = event => {
-    setNewTask({ ...newTask, [event.target.name]: event.target.value });
+    setNewTask({ ...newTask, desc: event.target.value });
     console.log("New task", newTask);
   };
 

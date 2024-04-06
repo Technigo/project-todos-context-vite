@@ -9,6 +9,7 @@ export const TodoProvider = ({ children }) => {
   const [tasks, setTasks] = useState(tasksJson);
 
   const addTask = newTask => {
+    console.log("Submit", newTask);
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 

@@ -1,87 +1,97 @@
 [
   {
-    "id": 1,
-    "task": "Set up basics",
-    "done": false
+    "_id": 1,
+    "desc": "Set up basics",
+    "isDone": true
   },
   {
-    "id": 2,
-    "task": "Create components",
-    "done": false
+    "_id": 2,
+    "desc": "Create components",
+    "isDone": false
   },
   {
-    "id": 3,
-    "task": "Set up form",
-    "done": false
+    "_id": 3,
+    "desc": "Set up form",
+    "isDone": false
   },
   {
-    "id": 4,
-    "task": "Feature - Add task",
-    "done": false
+    "_id": 4,
+    "desc": "Feature - Add task",
+    "isDone": false
   },
   {
-    "id": 5,
-    "task": "Feature - Remove task",
-    "done": false
+    "_id": 5,
+    "desc": "Feature - Remove task",
+    "isDone": false
   },
   {
-    "id": 6,
-    "task": "Feature - Toggle completion",
-    "done": false
+    "_id": 6,
+    "desc": "Feature - Toggle completion",
+    "isDone": false
   },
   {
-    "id": 7,
-    "task": "Feature - Count",
-    "done": false
+    "_id": 7,
+    "desc": "Feature - Count",
+    "isDone": false
   },
   {
-    "id": 8,
-    "task": "Feature - Timestamp",
-    "done": false
+    "_id": 8,
+    "desc": "Feature - Timestamp",
+    "isDone": false
   },
   {
-    "id": 9,
-    "task": "Feature - Darkmode",
-    "done": false
+    "_id": 9,
+    "desc": "Feature - Darkmode",
+    "isDone": false
   },
   {
-    "id": 10,
-    "task": "Feature - Complete all",
-    "done": false
+    "_id": 10,
+    "desc": "Feature - Complete all",
+    "isDone": false
   },
   {
-    "id": 11,
-    "task": "Feature - Duedate",
-    "done": false
+    "_id": 11,
+    "desc": "Feature - Duedate",
+    "isDone": false
   },
   {
-    "id": 12,
-    "task": "Feature - Filter",
-    "done": false
+    "_id": 12,
+    "desc": "Feature - Filter",
+    "isDone": false
   },
   {
-    "id": 13,
-    "task": "Feature - Categories",
-    "done": false
+    "_id": 13,
+    "desc": "Feature - Categories",
+    "isDone": false
   },
   {
-    "id": 14,
-    "task": "Feature - Projects",
-    "done": false
+    "_id": 14,
+    "desc": "Feature - Projects",
+    "isDone": false
   },
   {
-    "id": 15,
-    "task": "Style",
-    "done": false
+    "_id": 15,
+    "desc": "Style",
+    "isDone": false
   },
   {
-    "id": 16,
-    "task": "Deploy to Netlify",
-    "done": false
+    "_id": 16,
+    "desc": "Deploy to Netlify",
+    "isDone": false
   },
   {
-    "id": 17,
-    "task": "Do a pull request",
-    "done": false
+    "_id": 17,
+    "desc": "Do a pull request",
+    "isDone": false
+  },
+  {
+    "_id": 18,
+    "desc": "Set up list",
+    "isDone": false
+  },
+  {
+    "_id": 19,
+    "desc": "Set up local storage",
+    "isDone": false
   }
 ]

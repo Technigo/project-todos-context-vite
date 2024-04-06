@@ -28,7 +28,8 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://sofias-todo.netlify.app
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a6d922f6-3527-42a5-8c2e-842f55479e46/deploy-status)](https://app.netlify.com/sites/sofias-todo/deploys)
 
 ## Instructions
 
