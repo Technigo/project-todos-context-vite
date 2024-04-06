@@ -13,8 +13,13 @@ export const TodoProvider = ({ children }) => {
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 
+  const removeTask = taskId => {
+    console.log("remove", taskId);
+    setTasks(prevTasks => prevTasks.filter(task => task._id !== taskId));
+  };
+
   return (
-    <TodoContext.Provider value={{ tasks, setTasks, addTask }}>
+    <TodoContext.Provider value={{ tasks, setTasks, addTask, removeTask }}>
       {children}
     </TodoContext.Provider>
   );
