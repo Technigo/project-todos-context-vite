@@ -3,7 +3,7 @@ import { useTodo } from "../../contexts/TodoContext";
 import "./list.css";
 
 export const List = () => {
-  const [...tasks] = useTodo();
+  const { tasks } = useTodo();
   console.log(tasks);
 
   return (
