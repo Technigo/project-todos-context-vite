@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "task": "Set up basics",
+    "done": false
+  },
+  {
+    "id": 2,
+    "task": "Create components",
+    "done": false
+  },
+  {
+    "id": 3,
+    "task": "Set up form",
+    "done": false
+  },
+  {
+    "id": 4,
+    "task": "Feature - Add task",
+    "done": false
+  },
+  {
+    "id": 5,
+    "task": "Feature - Remove task",
+    "done": false
+  },
+  {
+    "id": 6,
+    "task": "Feature - Toggle completion",
+    "done": false
+  },
+  {
+    "id": 7,
+    "task": "Feature - Count",
+    "done": false
+  },
+  {
+    "id": 8,
+    "task": "Feature - Timestamp",
+    "done": false
+  },
+  {
+    "id": 9,
+    "task": "Feature - Darkmode",
+    "done": false
+  },
+  {
+    "id": 10,
+    "task": "Feature - Complete all",
+    "done": false
+  },
+  {
+    "id": 11,
+    "task": "Feature - Duedate",
+    "done": false
+  },
+  {
+    "id": 12,
+    "task": "Feature - Filter",
+    "done": false
+  },
+  {
+    "id": 13,
+    "task": "Feature - Categories",
+    "done": false
+  },
+  {
+    "id": 14,
+    "task": "Feature - Projects",
+    "done": false
+  },
+  {
+    "id": 15,
+    "task": "Style",
+    "done": false
+  },
+  {
+    "id": 16,
+    "task": "Deploy to Netlify",
+    "done": false
+  },
+  {
+    "id": 17,
+    "task": "Do a pull request",
+    "done": false
+  }
+]
