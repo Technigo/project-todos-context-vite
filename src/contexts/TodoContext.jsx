@@ -9,7 +9,9 @@ export const TodoProvider = ({ children }) => {
   const [tasks, setTasks] = useState(tasksJson);
 
   return (
-    <TodoContext.Provider value={{ tasks }}>{children}</TodoContext.Provider>
+    <TodoContext.Provider value={{ tasks, setTasks }}>
+      {children}
+    </TodoContext.Provider>
   );
 };
 

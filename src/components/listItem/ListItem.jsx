@@ -3,12 +3,14 @@ import "./ListItem.css";
 import { useTodo } from "../../contexts/TodoContext";
 
 export const ListItem = ({ desc, id, isDone }) => {
-  const [status, setStatus] = useState(isDone);
+  const { tasks, setTasks } = useTodo();
+  const currentTask = tasks.find(item => item._id === id);
+  const [isChecked, setIsChecked] = useState(isDone);
 
-  const handleChecked = event => {
-    // const updatedTask = { ...task, isDone: event.target.checked };
-    // console.log(updatedTask);
-    setStatus(event.target.checked);
+  const handleTaskUpdate = event => {
+    setIsChecked(event.target.checked);
+    const update = { ...currentTask, isDone: !isChecked };
+    setTasks(tasks => tasks.map(item => (item._id === id ? update : item)));
   };
 
   return (
@@ -17,8 +19,8 @@ export const ListItem = ({ desc, id, isDone }) => {
         type="checkbox"
         name={desc}
         id={`task-${id}`}
-        checked={status}
-        onChange={handleChecked}
+        checked={isChecked}
+        onChange={handleTaskUpdate}
       />
       {desc}
     </li>

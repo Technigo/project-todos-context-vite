@@ -4,11 +4,15 @@ import "./list.css";
 
 export const List = () => {
   const { tasks } = useTodo([]);
-
-  // const doneTasks = [tasks].filter(task => task);
+  const completedTasks = tasks.filter(item => item.isDone);
 
   return (
     <section className="task-container">
+      <p>You have {tasks.length} tasks</p>
+      <p>
+        You have completed {completedTasks.length}.{" "}
+        {tasks.length - completedTasks.length} left to do!{" "}
+      </p>
       <ul className="task-list">
         {tasks.map(item => {
           return (
