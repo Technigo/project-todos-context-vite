@@ -8,7 +8,9 @@ const TodoContext = createContext();
 export const TodoProvider = ({ children }) => {
   const [tasks, setTasks] = useState(tasksJson);
 
-  return <TodoContext.Provider value={tasks}>{children}</TodoContext.Provider>;
+  return (
+    <TodoContext.Provider value={{ tasks }}>{children}</TodoContext.Provider>
+  );
 };
 
 // custom hook
