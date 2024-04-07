@@ -1,9 +1,10 @@
 import React from "react";
-import TodoList from "./TodoList";
-import TodoForm from "./TodoForm";
+
+import { TodoList } from  "./TodoList";
+import { TodoForm } from "./TodoForm";
 import { TodoProvider } from "./TodoContext";
 
-const App = () => {
+export const App = () => {
   return (
     <TodoProvider>
       <div>
@@ -15,4 +16,3 @@ const App = () => {
   );
 };
 
-export default App;

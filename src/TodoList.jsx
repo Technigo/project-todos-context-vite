@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import { TodoContext } from "./TodoContext";
 export const TodoList = () => {
+  const todoContext = useContext(TodoContext);
+  console.log(todoContext);
   return (
+    // here we are rendering a list dynamically (it can change)
     <ul>
-      <li>Todo 1</li>
-      <li>Todo 2</li>
-      <li>Todo 3</li>
+      {todoContext.todoList.map((todo, index) => (
+        <li key={index}>{todo}</li>
+      ))}
     </ul>
   );
-}
+};

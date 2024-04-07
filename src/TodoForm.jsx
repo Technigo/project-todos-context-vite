@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 export const TodoForm = () => {
   
   const [todo, setTodo] = useState("");
@@ -5,6 +6,7 @@ export const TodoForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
    
+    // this one clears the text in the input field
     setTodo("");
   };
 
