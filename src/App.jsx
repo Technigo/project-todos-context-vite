@@ -1,3 +1,10 @@
+import { TodoProvider } from "./Contexts/TodoContext"
+import { TaskList } from "./Components/TaskList"
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
-};
+  return (
+    <TodoProvider>
+      <TaskList />
+    </TodoProvider>
+  )
+}
