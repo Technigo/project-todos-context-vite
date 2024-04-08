@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
-import { useToDoContext } from "../Contexts/TodoContext"
-import "../Styles/Task.css"
+import { useEffect, useState } from 'react'
+import { useToDoContext } from '../Contexts/TodoContext'
+import moment from 'moment'
+import '../Styles/Task.css'
 export const TaskList = () => {
   const { taskList } = useToDoContext()
+  const now = moment().format('MMM Do YY')
 
   return (
     <>
@@ -24,8 +26,7 @@ export const TaskList = () => {
                 <button className="deleteBtn">x</button>
                 <h2>{item.content}</h2>
                 <div className="checkboxDatesContainer">
-                  <h5>Created:{item.createdAt}</h5>
-                  <h5>Due:{item.dueDate}</h5>
+                  <h5>{moment(item.startDate).format('h:mm a')}</h5>
                 </div>
               </div>
             </label>

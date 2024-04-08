@@ -9,6 +9,8 @@
   cursor: pointer;
 } */
 .taskItem {
+  box-sizing: content-box;
+
   background-color: #bc8cff;
   cursor: pointer;
   margin: 20px 10px;
