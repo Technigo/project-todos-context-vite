@@ -1,6 +1,7 @@
 import "./TaskInput.css";
 import { useState } from "react";
-import { useTask } from "../themes/TaskTheme";
+import { useTask } from "../contexts/TaskContext";
+import moment from "moment";
 
 export const TaskInput = () => {
   const { taskData, addTask } = useTask();
@@ -8,7 +9,7 @@ export const TaskInput = () => {
   const [newTask, setNewTask] = useState({
     title: "",
     complete: false,
-    date: "",
+    date: moment().calendar()
   });
 
   const handleChange = (event) => {
@@ -23,7 +24,7 @@ export const TaskInput = () => {
 
     if (newTask.title) {
       addTask(newTask);
-      setNewTask({ title: "", complete: false, date: "" });
+      setNewTask({ title: "", complete: false, date: moment().calendar() });
     } else {
       alert("Please fill in all the fields");
     }

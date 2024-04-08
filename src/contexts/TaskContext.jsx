@@ -1,19 +1,24 @@
 import { useContext, createContext, useState } from "react";
+import moment from "moment";
 
 const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
-  const [taskData, setTaskData] = useState([
-    {
-      title: "Task 1",
-      complete: false,
-      dateAdded: "now",
-    },
+  const [taskData, setTaskData] = useState([{
+    title: "Title",
+    complete: false,
+    date: moment().calendar()
+  }
   ]);
 
   const addTask = (newTask) => {
-    setTaskData((prevTasks) => [...prevTasks, newTask]);
+    if (taskData.length === 0 || taskData === undefined) {
+      setTaskData(newTask);
+    } else {
+      setTaskData((prevTasks) => [...prevTasks, newTask]);
+    }
   };
+  console.log(taskData);
 
   return (
     <TaskContext.Provider value={{ taskData, addTask }}>

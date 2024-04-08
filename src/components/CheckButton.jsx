@@ -1,8 +1,10 @@
 import "./CheckButton.css";
+import { useTask } from "../contexts/TaskContext";
 
 export const CheckButton = ({ name }) => {
+  const { taskData, addTask } = useTask();
   const clicked = () => {
-    console.log(name);
+    console.log("Checkbox:", name.index);
   };
 
   return (

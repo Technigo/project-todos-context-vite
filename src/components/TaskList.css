@@ -1,9 +1,10 @@
 .todo {
     border: 2px solid black;
     border-radius: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 1rem;
-    margin-inline: 4rem;
+    margin: 0.5rem 4rem;
 }

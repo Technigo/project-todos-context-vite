@@ -1,9 +1,9 @@
 import { CheckButton } from "./components/CheckButton";
 import { Header } from "./components/Header";
-import { Task } from "./components/Task";
+import { TaskList } from "./components/TaskList";
 import { TaskInput } from "./components/TaskInput";
-import { AppDataProvider } from "./themes/AppTheme";
-import { TaskProvider } from "./themes/TaskTheme";
+import { AppDataProvider } from "./contexts/AppContext";
+import { TaskProvider } from "./contexts/TaskContext";
 
 export const App = () => {
   return (
@@ -15,7 +15,7 @@ export const App = () => {
             <TaskInput />
           </div>
           <div className="task-list">
-            <Task />
+            <TaskList />
           </div>
         </div>
       </TaskProvider>
