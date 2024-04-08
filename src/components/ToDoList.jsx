@@ -5,12 +5,17 @@ const ToDoList = () => {
   const { ToDo, removeToDo } = useToDo();
   const { complete, addComplete } = useComplete();
 
-  const handleCheck = e => {
+  const handleComplete = e => {
     //decide if we want to also remove the task from the completed list
     if (!e.target.checked) return;
     const newComplete = e.target.value;
     addComplete(newComplete);
     removeToDo(newComplete);
+  };
+
+  const deleteToDo = e => {
+    const toDoToRemove = e.target.value;
+    removeToDo(toDoToRemove);
   };
 
   return (
@@ -22,9 +27,12 @@ const ToDoList = () => {
               type="checkbox"
               id={index}
               value={todo.task}
-              onChange={handleCheck}
+              onChange={handleComplete}
             />
             <label htmlFor={index}>{todo.task}</label>
+            <button value={todo.task} onClick={deleteToDo}>
+              delete
+            </button>
           </li>
         ))}
     </ul>
