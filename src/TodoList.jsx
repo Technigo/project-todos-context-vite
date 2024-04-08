@@ -7,7 +7,9 @@ export const TodoList = () => {
     // here we are rendering a list dynamically (it can change)
     <ul>
       {todoContext.todoList.map((todo, index) => (
-        <li key={index}>{todo}</li>
+        <li key={index}>
+          <input type="checkbox" /> 
+          {todo}</li>
       ))}
     </ul>
   );
