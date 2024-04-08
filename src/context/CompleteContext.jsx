@@ -5,8 +5,17 @@ const CompleteContext = createContext();
 export const CompleteProvider = ({ children }) => {
   const [complete, setComplete] = useState([]);
 
+  const addComplete = newComplete => {
+    setComplete(prevValue => [
+      ...prevValue,
+      {
+        task: newComplete,
+      },
+    ]);
+  };
+
   return (
-    <CompleteContext.Provider value={{ complete }}>
+    <CompleteContext.Provider value={{ complete, addComplete }}>
       {children}
     </CompleteContext.Provider>
   );
