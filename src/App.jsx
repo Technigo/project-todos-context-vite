@@ -1,3 +1,12 @@
+import ToDoList from './components/ToDoList'
+import ToDoForm from './components/ToDoForm'
+import { ToDoProvider } from './context/ToDoContext'
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
-};
+  return (
+    <ToDoProvider>
+      <ToDoList />
+      <ToDoForm />
+    </ToDoProvider>
+  )
+}
