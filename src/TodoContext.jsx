@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 export const TodoContext = createContext();
 export const TodoProvider = ({ children }) => {
-  const [todoList, setTodos] = useState([{ text: "Todo 1" }]);
+  const [todoList, setTodos] = useState([{ text: "Todo 1", done: false }]);
 
   return (
     <TodoContext.Provider value={{ todoList, setTodos }}>
