@@ -10,7 +10,7 @@ export const TodoForm = () => {
     e.preventDefault();
     // https://sentry.io/answers/react-spread-operator-three-dots/
     // this is react context. 
-    todoContext.setTodos([...todoContext.todoList, todo]);
+    todoContext.setTodos([...todoContext.todoList, { text: todo }]);
 
     // this one clears the text in the input field
     setTodo("");

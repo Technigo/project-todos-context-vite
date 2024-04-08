@@ -9,7 +9,7 @@ export const TodoList = () => {
       {todoContext.todoList.map((todo, index) => (
         <li key={index}>
           <input type="checkbox" /> 
-          {todo}</li>
+          {todo.text}</li>
       ))}
     </ul>
   );
