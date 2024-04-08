@@ -17,9 +17,8 @@
   left: 0;
   width: 18px;
   height: 18px;
-  outline: 2px solid black;
-  border-radius: 50%;
 }
+
 [type="checkbox"]:checked + label::before {
   content: "";
   position: absolute;
@@ -27,8 +26,13 @@
   left: 0;
   width: 18px;
   height: 18px;
-  outline: 1px solid grey;
-  border-radius: 50%;
+  background-image: url("../assets/fried-egg-base-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: fill;
+  animation-name: eggrotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 [type="checkbox"]:not(:checked) + label::before {
@@ -38,17 +42,36 @@
   left: 0;
   width: 18px;
   height: 18px;
-  outline: 1px solid grey;
-  border-radius: 50%;
+  background-image: url("../assets/egg-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: fill;
 }
 
 [type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 7px;
-  width: 8px;
-  height: 8px;
-  background-color: gold;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../assets/fried-egg-yoke-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: fill;
+}
+
+.complete + label {
+  text-decoration: line-through;
+  color: grey;
+}
+
+@keyframes eggrotate {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 }

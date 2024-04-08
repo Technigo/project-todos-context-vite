@@ -13,7 +13,7 @@ export const TaskList = () => {
       {taskData ? (
         taskData.map((todo, index) => (
           <div className="todo" key={index}>
-            <CheckButton name={todo.title} />
+            <CheckButton todo={todo.title} index={index} />
             <p>{todo.date}</p>
           </div>
         ))
