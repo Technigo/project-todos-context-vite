@@ -1,18 +1,17 @@
-import { useToDo } from "../context/ToDoContext"
-
+import { useToDo } from '../context/ToDoContext'
 
 const ToDoList = () => {
+  const { ToDo } = useToDo()
 
-    const { ToDo } = useToDo()
-
-    return (
-    <div className="todo-list">
-        <ul>
-            {ToDo.map((todo, index) => (
-                <li key={index}>{todo.task}</li>
-            ))}
-        </ul>
-    </div>
+  return (
+    <ul className="todo-list">
+      {ToDo.map((todo, index) => (
+        <li key={index}>
+          <input type="checkbox" id={index} />
+          <label htmlFor={index}>{todo.task}</label>
+        </li>
+      ))}
+    </ul>
   )
 }
 
