@@ -1,3 +1,11 @@
+import { NewTask } from "./components/NewTask";
+import { ToDoList } from "./components/ToDoList";
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
+  return (
+    <>
+      <NewTask />
+      <ToDoList />
+    </>
+  );
 };
