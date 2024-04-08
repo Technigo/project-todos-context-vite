@@ -1,7 +1,18 @@
+import { useToDo } from "../context/ToDoContext"
+
 
 const ToDoList = () => {
-  return (
-    <div>ToDoList</div>
+
+    const { ToDo } = useToDo()
+
+    return (
+    <div className="todo-list">
+        <ul>
+            {ToDo.map((todo, index) => (
+                <li key={index}>{todo.task}</li>
+            ))}
+        </ul>
+    </div>
   )
 }
 

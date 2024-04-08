@@ -14,6 +14,7 @@ const ToDoForm = () => {
     e.preventDefault()
     console.log(newTodo)
     addToDo(newTodo)
+    setNewTodo("")
   }
   return (
     <form onSubmit={handleSubmit}>
