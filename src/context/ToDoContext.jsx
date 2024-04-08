@@ -1,26 +1,27 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState } from "react";
 
-const ToDoContext = createContext()
+const ToDoContext = createContext();
 
 export const ToDoProvider = ({ children }) => {
-  const [ToDo, setToDo] = useState([
-    {
-      task: 'Walk the dog',
-    },
-  ])
+  const [ToDo, setToDo] = useState([]);
 
-  const addToDo = (newToDo) => {
-    setToDo(prevValue => [...prevValue, {task: newToDo}])
-  }
+  const addToDo = newToDo => {
+    setToDo(prevValue => [...prevValue, { task: newToDo }]);
+  };
+  const removeToDo = todoToRemove => {
+    setToDo(ToDo.filter(item => item.task !== todoToRemove));
+  };
 
   return (
-    <ToDoContext.Provider value={{ ToDo, addToDo }}>{children}</ToDoContext.Provider>
-  )
-}
+    <ToDoContext.Provider value={{ ToDo, addToDo, removeToDo }}>
+      {children}
+    </ToDoContext.Provider>
+  );
+};
 export const useToDo = () => {
-  const context = useContext(ToDoContext)
+  const context = useContext(ToDoContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
-  return context
-}
+  return context;
+};

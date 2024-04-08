@@ -14,8 +14,12 @@ export const CompleteProvider = ({ children }) => {
     ]);
   };
 
+  const removeComplete = completeToRemove => {
+    setComplete(complete.filter(item => item.task !== completeToRemove));
+  };
+
   return (
-    <CompleteContext.Provider value={{ complete, addComplete }}>
+    <CompleteContext.Provider value={{ complete, addComplete, removeComplete }}>
       {children}
     </CompleteContext.Provider>
   );

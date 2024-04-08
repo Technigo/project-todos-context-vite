@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import { useToDo } from '../context/ToDoContext'
+import { useState } from "react";
+import { useToDo } from "../context/ToDoContext";
 
 const ToDoForm = () => {
-  const [newTodo, setNewTodo] = useState('')
-  const { ToDo, addToDo } = useToDo()
-  console.log(ToDo[0].task)
+  const [newTodo, setNewTodo] = useState("");
+  const { ToDo, addToDo } = useToDo();
+  // console.log(ToDo[0].task)
 
-  const handleInputChange = (e) => {
-    setNewTodo(e.target.value)
-  }
+  const handleInputChange = e => {
+    setNewTodo(e.target.value);
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(newTodo)
-    addToDo(newTodo)
-    setNewTodo("")
-  }
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(newTodo);
+    addToDo(newTodo);
+    setNewTodo("");
+  };
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -26,7 +26,7 @@ const ToDoForm = () => {
       />
       <button type="submit">submit</button>
     </form>
-  )
-}
+  );
+};
 
-export default ToDoForm
+export default ToDoForm;

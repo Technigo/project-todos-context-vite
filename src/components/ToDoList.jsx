@@ -2,7 +2,7 @@ import { useToDo } from "../context/ToDoContext";
 import { useComplete } from "../context/CompleteContext";
 
 const ToDoList = () => {
-  const { ToDo } = useToDo();
+  const { ToDo, removeToDo } = useToDo();
   const { complete, addComplete } = useComplete();
 
   const handleCheck = e => {
@@ -10,21 +10,23 @@ const ToDoList = () => {
     if (!e.target.checked) return;
     const newComplete = e.target.value;
     addComplete(newComplete);
+    removeToDo(newComplete);
   };
 
   return (
     <ul className="todo-list">
-      {ToDo.map((todo, index) => (
-        <li key={index}>
-          <input
-            type="checkbox"
-            id={index}
-            value={todo.task}
-            onChange={handleCheck}
-          />
-          <label htmlFor={index}>{todo.task}</label>
-        </li>
-      ))}
+      {ToDo &&
+        ToDo.map((todo, index) => (
+          <li key={index}>
+            <input
+              type="checkbox"
+              id={index}
+              value={todo.task}
+              onChange={handleCheck}
+            />
+            <label htmlFor={index}>{todo.task}</label>
+          </li>
+        ))}
     </ul>
   );
 };
