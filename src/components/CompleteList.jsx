@@ -9,8 +9,9 @@ const CompleteList = () => {
   return (
     <ul className="complete-list">
       {complete &&
-        complete.map((item, index) => (
-          <li key={index}>
+        complete.map(item => (
+          ////replace the value of the key and some attr with item.timestamp later
+          <li key={item.task}>
             <input
               id={item.task}
               type="checkbox"
@@ -18,7 +19,7 @@ const CompleteList = () => {
               value={item.task}
               disabled
             />
-            <label>{item.task}</label>
+            <label htmlFor={item.task}>{item.task}</label>
             <button value={item.task} onClick={deleteComplete}>
               delete
             </button>

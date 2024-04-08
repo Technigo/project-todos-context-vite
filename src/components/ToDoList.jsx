@@ -21,15 +21,16 @@ const ToDoList = () => {
   return (
     <ul className="todo-list">
       {ToDo &&
-        ToDo.map((todo, index) => (
-          <li key={index}>
+        ToDo.map(todo => (
+          //replace the value of the key and some attr with todo.timestamp later
+          <li key={todo.task}>
             <input
               type="checkbox"
-              id={index}
+              id={todo.task}
               value={todo.task}
               onChange={handleComplete}
             />
-            <label htmlFor={index}>{todo.task}</label>
+            <label htmlFor={todo.task}>{todo.task}</label>
             <button value={todo.task} onClick={deleteToDo}>
               delete
             </button>
