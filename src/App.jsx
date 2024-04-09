@@ -1,12 +1,17 @@
 import ToDoList from './components/ToDoList'
-import ToDoForm from './components/ToDoForm'
 import { ToDoProvider } from './context/ToDoContext'
+import { CompletedList } from './components/CompletedList'
+import InspirationCard from './components/InspirationCard'
+import './styling/app.css'
 
 export const App = () => {
   return (
     <ToDoProvider>
+      <div className="main-container">
       <ToDoList />
-      <ToDoForm />
+      <CompletedList />
+      <InspirationCard />
+      </div>
     </ToDoProvider>
   )
 }
