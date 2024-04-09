@@ -2,7 +2,7 @@
   margin-bottom: 20px;
 }
 
-.noteForm textarea {
+.inputForm, textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -16,16 +16,8 @@
   padding: 0;
 }
 
-.noteList li {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.noteList, li.dark {
+  color: black;
 }
 
 textarea:focus {

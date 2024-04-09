@@ -13,7 +13,7 @@ const MyComponent = () => {
       <h2>Completed Tasks: {completedCount}</h2>
       <ul>
         {completedTodos.map((todo) => (
-          <li key={todo.id}>{todo.text}</li>
+          <li className="completed" key={todo.id}>{todo.text}</li>
         ))}
       </ul>
     </div>

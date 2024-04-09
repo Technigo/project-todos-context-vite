@@ -10,3 +10,8 @@ li {
   white-space: normal;
   word-wrap: break-word;
 }
+
+.completed,
+li .dark {
+  color: black;
+}

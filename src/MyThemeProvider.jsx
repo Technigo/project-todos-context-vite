@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import ThemeContext, { ThemeProvider } from "./ThemeContext"
 
 const MyThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light") // Använd 'light' som standardtema
+  const [theme, setTheme] = useState("light")
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light")

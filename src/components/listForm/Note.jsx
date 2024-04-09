@@ -34,7 +34,7 @@ const Note = () => {
   return (
     <div className="noteContainer">
       <h2>Notes:</h2>
-      <form onSubmit={handleSubmit} className="noteForm">
+      <form onSubmit={handleSubmit} className="inputForm">
         <textarea
           value={note}
           onChange={(e) => setNote(e.target.value)}
