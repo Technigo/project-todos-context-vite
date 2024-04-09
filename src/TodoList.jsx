@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { TodoContext } from "./TodoContext";
 import "./TodoList.css";
+import { TodoTask } from "./TodoTask";
 
 export const TodoList = () => {
   const todoContext = useContext(TodoContext);
@@ -10,26 +11,7 @@ export const TodoList = () => {
     <ul className="TodoList">
       {todoContext.todoList.map((todo, index) => (
         <li key={index}>
-          <input
-            type="checkbox"
-            checked={todo.done}
-            onChange={(e) => {
-              const newTodos = [...todoContext.todoList];
-              newTodos[index].done = e.target.checked;
-              todoContext.setTodos(newTodos);
-            }}
-          />
-          {todo.text}
-          <button
-            onClick={(e) => {
-              const newTodos = [...todoContext.todoList];
-              // splice is to remove an element from an array
-              newTodos.splice(index, 1);
-              todoContext.setTodos(newTodos);
-            }}
-          >
-            Delete
-          </button>
+          <TodoTask todo={todo} index={index} />
         </li>
       ))}
     </ul>
