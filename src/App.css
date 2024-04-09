@@ -9,3 +9,10 @@
   font-size: 1.5em;
   margin: 0;
 }
+
+@media (min-width: 432px) {
+  .App {
+    max-width: 400px;
+    margin: 16px auto;
+  }
+}
