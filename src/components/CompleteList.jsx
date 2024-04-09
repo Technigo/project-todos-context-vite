@@ -5,10 +5,7 @@ import "../styling/CompletedList.css";
 const CompleteList = () => {
   const { complete, removeComplete } = useComplete();
   const { addToDo } = useToDo();
-  // const deleteComplete = e => {
-  //   const completeToRemove = e.target.value;
-  //   removeComplete(completeToRemove);
-  // };
+
   return (
     <div className="card">
       <div className="section completed">
@@ -28,7 +25,11 @@ const CompleteList = () => {
                 }}
               />
               <label htmlFor={item.task}>{item.task}</label>
-              <button value={item.task} onClick={() => removeComplete(item)}>
+              <button
+                type="button"
+                value={item.task}
+                onClick={() => removeComplete(item)}
+              >
                 delete
               </button>
             </li>
