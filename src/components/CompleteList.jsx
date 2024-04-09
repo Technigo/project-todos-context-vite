@@ -1,8 +1,10 @@
 import { useComplete } from "../context/CompleteContext";
+import { useToDo } from "../context/ToDoContext";
 import "../styling/CompletedList.css";
 
 const CompleteList = () => {
   const { complete, removeComplete } = useComplete();
+  const { ToDo, addToDo } = useToDo();
   // const deleteComplete = e => {
   //   const completeToRemove = e.target.value;
   //   removeComplete(completeToRemove);
@@ -20,6 +22,10 @@ const CompleteList = () => {
                 type="checkbox"
                 defaultChecked
                 value={item.task}
+                onChange={() => {
+                  addToDo(item.task);
+                  removeComplete(item);
+                }}
               />
               <label htmlFor={item.task}>{item.task}</label>
               <button value={item.task} onClick={() => removeComplete(item)}>
