@@ -22,7 +22,7 @@ export const TodoTask = ({ todo, index }) => {
         onClick={(e) => todoContext.removeTodo(index)}
         className="TodoTask-delete"
       >
-        Delete
+        ❌
       </button>
     </div>
   );
