@@ -7,8 +7,8 @@ export const CheckboxProvider = ({ children }) => {
     
 const toggleChecked = () => {
     setTasks(tasks === "checked" ? "unchecked" : "checked")
-    }
-
+   }
+    
 return (
     <CheckboxContext.Provider value={{ tasks, toggleChecked }}>
         {children}
