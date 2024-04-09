@@ -1,22 +1,23 @@
-import { useState } from 'react'
-import { useToDo } from '../context/ToDoContext'
+import { useState } from "react";
+import { useToDo } from "../context/ToDoContext";
 import '../styling/ToDoForm.css'
 
+
 const ToDoForm = () => {
-  const [newTodo, setNewTodo] = useState('')
-  const { ToDo, addToDo } = useToDo()
-  console.log(ToDo[0].task)
+  const [newTodo, setNewTodo] = useState("");
+  const { ToDo, addToDo } = useToDo();
+  // console.log(ToDo[0].task)
 
-  const handleInputChange = (e) => {
-    setNewTodo(e.target.value)
-  }
+  const handleInputChange = e => {
+    setNewTodo(e.target.value);
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(newTodo)
-    addToDo(newTodo)
-    setNewTodo("")
-  }
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(newTodo);
+    addToDo(newTodo);
+    setNewTodo("");
+  };
   return (
     <div className="section todo-form">
     <form onSubmit={handleSubmit}>
@@ -32,4 +33,4 @@ const ToDoForm = () => {
   )
 }
 
-export default ToDoForm
+export default ToDoForm;
