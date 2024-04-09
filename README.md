@@ -24,9 +24,27 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This week we're practicing using global state with Context.
+To do this we're building a To Do app.
+
+- Your app should list all tasks - completed or uncompleted.
+- You should be able to mark an uncompleted task as complete (and change it back to uncompleted).
+- You should be able to add and remove tasks.
+- Your app should show a count of either all tasks or all uncompleted tasks (or both).
+
+Eveything went pretty smootly until I started with local storage. Something made it update one event too late. Then, instead it started resetting local at every reload. When it finally works, there are double logs in the console and I don't know why. Descided to leave it for now...
+
+#### Next
+
+- Styling
+- Adding categories and projects
+- Addind deadline
+- I would like to create a kanban style board, with multiple statuses and labels. I doubt I will have time though...
 
 ### View it live
+
+_Note for code review!_
+If you mess up and want to restart: go to Dev tools -> Application -> Local storage -> delete To Do...
 
 https://sofias-todo.netlify.app
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a6d922f6-3527-42a5-8c2e-842f55479e46/deploy-status)](https://app.netlify.com/sites/sofias-todo/deploys)

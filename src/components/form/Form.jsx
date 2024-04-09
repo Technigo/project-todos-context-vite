@@ -5,13 +5,15 @@ import "./form.css";
 export const Form = () => {
   const { tasks, setTasks, addTask } = useTodo();
   const [newTask, setNewTask] = useState({
-    _id: tasks.length + 1,
+    _id: 0,
     desc: "",
     isDone: false,
   });
 
   const handleFormSubmit = event => {
     event.preventDefault();
+    console.log("tasks", tasks.length);
+    console.log("New task", newTask);
     newTask.desc.length > 3
       ? addTask(newTask)
       : console.error("Must be over 2 char");
@@ -19,8 +21,7 @@ export const Form = () => {
   };
 
   const handleChange = event => {
-    setNewTask({ ...newTask, desc: event.target.value });
-    console.log("New task", newTask);
+    setNewTask({ ...newTask, _id: tasks.length + 1, desc: event.target.value });
   };
 
   return (
