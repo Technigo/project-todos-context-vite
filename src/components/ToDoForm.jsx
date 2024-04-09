@@ -20,6 +20,7 @@ const ToDoForm = () => {
   };
   return (
     <div className="section todo-form">
+      <h1>What do you need to do today?</h1>
     <form onSubmit={handleSubmit}>
       <input
         value={newTodo}

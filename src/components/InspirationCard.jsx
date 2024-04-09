@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../styling/InspirationCard.css'
+//import { RandomImage } from './RandomImage'
 
 const InspirationCard = () => {
 
@@ -34,7 +35,7 @@ const InspirationCard = () => {
     {!loading && (
         <div className="section daily-inspo">
         <h1>Daily Inspiration</h1>
-        <h2>{quote[Math.floor(Math.random() * quote.length)].text}</h2>
+        <p>" {quote[Math.floor(Math.random() * quote.length)].text} "</p>
         </div>
         )}
     </div>

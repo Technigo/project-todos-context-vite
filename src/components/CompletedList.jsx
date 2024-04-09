@@ -1,3 +1,4 @@
+import '../styling/CompletedList.css'
 
 export const CompletedList = () => {
   return (

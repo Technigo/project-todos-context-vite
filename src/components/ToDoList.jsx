@@ -1,6 +1,7 @@
 import { useToDo } from "../context/ToDoContext";
 import { useComplete } from "../context/CompleteContext";
 import ToDoForm from './ToDoForm'
+import GreetUser from './Greeting'
 import '../styling/ToDoList.css'
 
 
@@ -9,7 +10,8 @@ const ToDoList = () => {
   const { complete, addComplete } = useComplete();
 
   return (
-    <div className="card set-todo">
+    <div className="card">
+      <GreetUser />
         <ToDoForm />
     <ul className="section todo-list">
     <h1>To do:</h1>

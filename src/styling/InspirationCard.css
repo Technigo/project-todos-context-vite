@@ -1,3 +1,8 @@
 .daily-inspo{
-    background-color: rgb(255, 255, 188);
+    background-color: rgb(255, 251, 188);
+
+    p{
+        font-style:italic;
+        font-size: 18px;
+    }
 }
