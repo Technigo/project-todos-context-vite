@@ -1,0 +1,19 @@
+.task-input-box {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  button {
+    background-color: #fffc9b;
+    border: 2px solid #ffa447;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+
+  button:hover {
+    background-color: #ffa447;
+    border: 2px solid #fffc9b;
+  }
+}
