@@ -1,10 +1,15 @@
 import { useToDo } from '../context/ToDoContext'
+import ToDoForm from './ToDoForm'
+import '../styling/ToDoList.css'
 
 const ToDoList = () => {
   const { ToDo } = useToDo()
 
   return (
-    <ul className="todo-list">
+    <div className="card set-todo">
+        <ToDoForm />
+    <ul className="section todo-list">
+    <h1>To do:</h1>
       {ToDo.map((todo, index) => (
         <li key={index}>
           <input type="checkbox" id={index} />
@@ -12,6 +17,7 @@ const ToDoList = () => {
         </li>
       ))}
     </ul>
+    </div>
   )
 }
 
