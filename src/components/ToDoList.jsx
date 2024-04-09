@@ -39,6 +39,7 @@ const ToDoList = () => {
             completeAllToDo();
             addAllComplete(ToDo);
           }}
+          disabled={ToDo.length === 0 ? true : false}
         >
           Complete all
         </button>
