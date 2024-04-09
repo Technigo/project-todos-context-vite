@@ -11,4 +11,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black;
+}
+
+[type="checkbox"]:checked + label {
+  color: rgb(109, 109, 109);
+  text-decoration: line-through;
 }
