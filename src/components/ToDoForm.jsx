@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useToDo } from "../context/ToDoContext";
+import '../styling/ToDoForm.css'
+
 
 const ToDoForm = () => {
   const [newTodo, setNewTodo] = useState("");
@@ -17,6 +19,7 @@ const ToDoForm = () => {
     setNewTodo("");
   };
   return (
+    <div className="section todo-form">
     <form onSubmit={handleSubmit}>
       <input
         value={newTodo}
@@ -26,7 +29,8 @@ const ToDoForm = () => {
       />
       <button type="submit">submit</button>
     </form>
-  );
-};
+   </div> 
+  )
+}
 
 export default ToDoForm;

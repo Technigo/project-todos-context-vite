@@ -1,12 +1,18 @@
 import { useToDo } from "../context/ToDoContext";
 import { useComplete } from "../context/CompleteContext";
+import ToDoForm from './ToDoForm'
+import '../styling/ToDoList.css'
+
 
 const ToDoList = () => {
   const { ToDo, removeToDo } = useToDo();
   const { complete, addComplete } = useComplete();
 
   return (
-    <ul className="todo-list">
+    <div className="card set-todo">
+        <ToDoForm />
+    <ul className="section todo-list">
+    <h1>To do:</h1>
       {ToDo.map(todo => (
         //replace the value of the key and some attr with todo.timestamp later
         <li key={todo.task}>
@@ -25,9 +31,9 @@ const ToDoList = () => {
             delete
           </button>
         </li>
-      ))}
     </ul>
-  );
-};
+    </div>
+  )
+}
 
 export default ToDoList;
