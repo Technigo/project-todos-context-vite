@@ -1,4 +1,4 @@
-import { useState, useContext, createContext } from "react";
+import { useState, useContext, createContext, useEffect } from "react";
 import tasksJson from "../data/tasks.json";
 
 // Todo context
@@ -6,22 +6,45 @@ const TodoContext = createContext();
 
 // Todo provider
 export const TodoProvider = ({ children }) => {
-  const [tasks, setTasks] = useState(tasksJson);
+  const [tasks, setTasks] = useState([]);
+  const [local, setLocal] = useState(JSON.parse(localStorage.getItem("To-Do")));
 
+  // Update local storage
+  const updateLocal = async () => {
+    localStorage.setItem("To-Do", JSON.stringify(tasks));
+    console.log("local update", tasks);
+  };
+
+  // Add task from state array
   const addTask = newTask => {
-    console.log("Submit", newTask);
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 
+  // Remove task from state array
   const removeTask = taskId => {
-    console.log("remove", taskId);
     setTasks(prevTasks => prevTasks.filter(task => task._id !== taskId));
   };
 
+  // Load data from local storage on component mount
+  useEffect(() => {
+    console.log("savedData", local);
+    local ? setTasks(local) : setTasks(tasksJson);
+  }, []);
+
+  // When tasks are updated, save to localStorage
+  useEffect(() => {
+    updateLocal();
+    console.log("effect, wtf");
+  }, [tasks]);
+
+  // Component
   return (
-    <TodoContext.Provider value={{ tasks, setTasks, addTask, removeTask }}>
-      {children}
-    </TodoContext.Provider>
+    <>
+      <TodoContext.Provider
+        value={{ tasks, setTasks, addTask, removeTask, updateLocal }}>
+        {children}
+      </TodoContext.Provider>
+    </>
   );
 };
 

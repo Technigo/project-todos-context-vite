@@ -1,15 +1,13 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import "./ListItem.css";
 import { useTodo } from "../../contexts/TodoContext";
 
-export const ListItem = ({ desc, id, isDone }) => {
+export const ListItem = ({ id }) => {
   const { tasks, setTasks, removeTask } = useTodo();
   const currentTask = tasks.find(item => item._id === id);
-  const [isChecked, setIsChecked] = useState(isDone);
 
   const handleCheckUpdate = event => {
-    setIsChecked(event.target.checked);
-    const update = { ...currentTask, isDone: !isChecked };
+    const update = { ...currentTask, isDone: event.target.checked };
     setTasks(tasks => tasks.map(item => (item._id === id ? update : item)));
   };
 
@@ -21,12 +19,12 @@ export const ListItem = ({ desc, id, isDone }) => {
     <li className="task">
       <input
         type="checkbox"
-        name={desc}
+        name={currentTask.desc}
         id={`task-${id}`}
-        checked={isChecked}
+        checked={currentTask.isDone}
         onChange={handleCheckUpdate}
       />
-      {desc}
+      {currentTask.desc}
       <button
         className="btn remove"
         onClick={handleRemove}>
