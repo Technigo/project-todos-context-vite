@@ -6,16 +6,11 @@ export const CompleteProvider = ({ children }) => {
   const [complete, setComplete] = useState([]);
 
   const addComplete = newComplete => {
-    setComplete(prevValue => [
-      ...prevValue,
-      {
-        task: newComplete,
-      },
-    ]);
+    setComplete([...complete, newComplete]);
   };
 
   const removeComplete = completeToRemove => {
-    setComplete(complete.filter(item => item.task !== completeToRemove));
+    setComplete(complete.filter(item => item !== completeToRemove));
   };
 
   return (

@@ -9,7 +9,7 @@ export const ToDoProvider = ({ children }) => {
     setToDo(prevValue => [...prevValue, { task: newToDo }]);
   };
   const removeToDo = todoToRemove => {
-    setToDo(ToDo.filter(item => item.task !== todoToRemove));
+    setToDo(ToDo.filter(item => item !== todoToRemove));
   };
 
   return (
