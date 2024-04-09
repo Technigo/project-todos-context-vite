@@ -3,12 +3,14 @@ import "./CheckButton.css";
 import { useTask } from "../contexts/TaskContext";
 
 export const CheckButton = ({ todo, index }) => {
-  const { taskData, addTask } = useTask();
+  const { taskData, addTask, completeTask } = useTask();
   const taskRef = useRef();
 
   const clicked = () => {
-    console.log("Checkbox:", todo, index);
+    console.log("Checkbox:", taskData);
     taskRef.current.classList.toggle("complete");
+    completeTask(taskRef, index);
+        console.log("Checkbox 2:", taskData);
   };
 
   return (

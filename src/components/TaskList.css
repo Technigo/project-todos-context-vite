@@ -8,3 +8,11 @@
     padding-right: 1rem;
     margin: 0.5rem 4rem;
 }
+
+.todo-clear{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

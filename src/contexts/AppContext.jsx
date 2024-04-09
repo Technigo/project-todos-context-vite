@@ -6,7 +6,7 @@ export const AppDataProvider = ({ children }) => {
   const [name, setname] = useState("Test");
 
   const appContent = {
-    heading: "Eggcelent Todo"
+    heading: "Eggcellent Todo"
   };
 
   return (
