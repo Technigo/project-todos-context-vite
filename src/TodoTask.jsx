@@ -11,22 +11,11 @@ export const TodoTask = ({ todo, index }) => {
         type="checkbox"
         checked={todo.done}
         onChange={(e) => {
-          const newTodos = [...todoContext.todoList];
-          newTodos[index].done = e.target.checked;
-          todoContext.setTodos(newTodos);
+          todoContext.toggleTodo(index, e.target.checked);
         }}
       />
       {todo.text}
-      <button
-        onClick={(e) => {
-          const newTodos = [...todoContext.todoList];
-          // splice is to remove an element from an array
-          newTodos.splice(index, 1);
-          todoContext.setTodos(newTodos);
-        }}
-      >
-        Delete
-      </button>
+      <button onClick={(e) => todoContext.removeTodo(index)}>Delete</button>
     </div>
   );
 };
