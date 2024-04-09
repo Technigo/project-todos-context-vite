@@ -1,6 +1,8 @@
+@import "../index.scss";
+
 .heading-background {
   padding: 30px;
-  background-color: #f28585;
+  background-color: $spring-prim;
   display: flex;
   align-items: center;
   justify-content: center;
