@@ -5,7 +5,7 @@ import { TodoForm } from "./components/TodoForm";
 export const App = () => {
   return (
     <TodoProvider>
-      <div>
+      <div className="app-container">
         <h1>Todo App</h1>
         <TodoForm />
         <TodoList />

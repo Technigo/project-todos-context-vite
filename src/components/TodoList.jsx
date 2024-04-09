@@ -6,6 +6,7 @@ export const TodoList = () => {
   const { todos, toggleTodo } = useContext(TodoContext);
 
   return (
+    <div className="list-container">
     <ul>
       {todos.map((todo) => (
         <li
@@ -13,6 +14,7 @@ export const TodoList = () => {
           style={{ textDecoration: todo.completed ? "line-through" : "none" }}
         >
           <input
+          className="checkbox"
             type="checkbox"
             checked={todo.completed}
             onChange={() => toggleTodo(todo.id)}
@@ -22,5 +24,6 @@ export const TodoList = () => {
         </li>
       ))}
     </ul>
+    </div>
   );
 };

@@ -29,16 +29,19 @@ export const TodoForm = () => {
 
   return (
     // press enter or click submit
-    <form onSubmit={handleSubmit}>
-      <input
-        // it is a "text field"
-        type="text"
-        // Make the value (that user typed) into "todo" state
-        value={todo}
-        // everytime when event (todo) changes, it updates
-        onChange={(event) => setTodo(event.target.value)}
-        placeholder="Add a new task"
-      />
-    </form>
+    <div className="input-form">
+      <form onSubmit={handleSubmit}>
+        <input
+          className="text-field"
+          // it is a "text field"
+          type="text"
+          // Make the value (that user typed) into "todo" state
+          value={todo}
+          // everytime when event (todo) changes, it updates
+          onChange={(event) => setTodo(event.target.value)}
+          placeholder="Add a new task"
+        />
+      </form>
+    </div>
   );
 };
