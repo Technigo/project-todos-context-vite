@@ -4,7 +4,7 @@ ul, li{
 }
 
 .main-container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
     display: grid;
@@ -29,7 +29,7 @@ ul, li{
   
   @media screen and (min-width: 1024px){
     .main-container{
-      grid-template-columns: 30% 30% 30%;
+      grid-template-columns: 50% 50%;
       padding: 5em 0;
     }
 

@@ -28,7 +28,7 @@ const InspirationCard = () => {
 
 
   return (
-    <div className="card inspiration">
+    <>
        {loading && (<h1>Loading</h1>
     )}
     {!loading && (
@@ -37,7 +37,7 @@ const InspirationCard = () => {
         <p>" {quote[Math.floor(Math.random() * quote.length)].text} "</p>
         </div>
         )}
-    </div>
+    </>
 )}
 
 export default InspirationCard

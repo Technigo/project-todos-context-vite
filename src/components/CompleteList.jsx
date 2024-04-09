@@ -7,7 +7,6 @@ const CompleteList = () => {
   const { addToDo } = useToDo();
 
   return (
-    <div className="card">
       <div className="section completed">
         <h1>Completed</h1>
         <ul className="complete-list">
@@ -37,7 +36,6 @@ const CompleteList = () => {
         </ul>
         <p>Count:{complete.length}/5</p>
       </div>
-    </div>
   );
 };
 

@@ -1,7 +1,5 @@
 import { useToDo } from "../context/ToDoContext";
 import { useComplete } from "../context/CompleteContext";
-import ToDoForm from "./ToDoForm";
-import GreetUser from "./Greeting";
 import "../styling/ToDoList.css";
 import clear from "../assets/noToDo.svg";
 
@@ -10,9 +8,6 @@ const ToDoList = () => {
   const { complete, addComplete, addAllComplete } = useComplete();
 
   return (
-    <div className="card">
-      <GreetUser />
-      <ToDoForm />
       <ul className="section todo-list">
         <h1>To do:</h1>
         {ToDo.length === 0 ? (
@@ -54,7 +49,6 @@ const ToDoList = () => {
           Complete all
         </button>
       </ul>
-    </div>
   );
 };
 
