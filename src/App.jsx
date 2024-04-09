@@ -1,6 +1,6 @@
-import { TodoProvider } from "./components/TodoContext/TodoContext";
-import { TodoList } from "./components/TodoList/TodoList";
-import { TodoForm } from "./components/TodoForm/TodoForm";
+import { TodoProvider } from "./components/TodoContext";
+import { TodoList } from "./components/TodoList";
+import { TodoForm } from "./components/TodoForm";
 
 export const App = () => {
   return (

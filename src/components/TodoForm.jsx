@@ -1,6 +1,6 @@
 //Form to add new task
 import { useState, useContext } from "react";
-import { TodoContext } from "../TodoContext/TodoContext";
+import { TodoContext } from "./TodoContext";
 import moment from "moment";
 
 export const TodoForm = () => {
