@@ -33,6 +33,7 @@ const ToDoList = () => {
             delete
           </button>
         </li>
+      ))}
     </ul>
     </div>
   )

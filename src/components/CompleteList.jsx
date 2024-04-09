@@ -1,4 +1,6 @@
 import { useComplete } from "../context/CompleteContext";
+import '../styling/CompletedList.css'
+
 
 const CompleteList = () => {
   const { complete, removeComplete } = useComplete();
@@ -7,6 +9,9 @@ const CompleteList = () => {
   //   removeComplete(completeToRemove);
   // };
   return (
+    <div className="card">
+        <div className="section completed">
+      <h1>Completed</h1>
     <ul className="complete-list">
       {complete.map(item => (
         ////replace the value of the key and some attr with item.timestamp later
@@ -25,6 +30,8 @@ const CompleteList = () => {
         </li>
       ))}
     </ul>
+    </div>
+    </div>
   );
 };
 

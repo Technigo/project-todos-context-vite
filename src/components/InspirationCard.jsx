@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import '../styling/InspirationCard.css'
-//import { RandomImage } from './RandomImage'
 
 const InspirationCard = () => {
 
