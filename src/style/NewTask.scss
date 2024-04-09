@@ -24,3 +24,12 @@
     border: 2px solid $spring-third;
   }
 }
+
+.task-input-box-dark {
+  button {
+    background-color: #102375;
+  }
+  button:hover {
+    background-color: #1d61ad;
+  }
+}
