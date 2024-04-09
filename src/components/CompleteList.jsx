@@ -34,6 +34,7 @@ const CompleteList = () => {
             </li>
           ))}
         </ul>
+        <p>Count:{complete.length}/5</p>
       </div>
     </div>
   );

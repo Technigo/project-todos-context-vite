@@ -6,7 +6,11 @@ export const CompleteProvider = ({ children }) => {
   const [complete, setComplete] = useState([]);
 
   const addComplete = newComplete => {
-    setComplete([...complete, newComplete]);
+    if (complete.length === 5) {
+      setComplete([...complete.slice(1), newComplete]);
+    } else {
+      setComplete([...complete, newComplete]);
+    }
   };
 
   const removeComplete = completeToRemove => {
