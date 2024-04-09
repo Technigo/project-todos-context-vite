@@ -7,17 +7,23 @@ export const TodoTask = ({ todo, index }) => {
 
   return (
     <div className="TodoTask">
-      <label>
+      <label className="TodoTask-label">
         <input
           type="checkbox"
           checked={todo.done}
           onChange={(e) => {
             todoContext.toggleTodo(index, e.target.checked);
           }}
+          className="TodoTask-checkbox"
         />
         {todo.text}
       </label>
-      <button onClick={(e) => todoContext.removeTodo(index)}>Delete</button>
+      <button
+        onClick={(e) => todoContext.removeTodo(index)}
+        className="TodoTask-delete"
+      >
+        Delete
+      </button>
     </div>
   );
 };

@@ -10,7 +10,7 @@ export const TodoList = () => {
     // here we are rendering a list dynamically (it can change)
     <ul className="TodoList">
       {todoContext.todoList.map((todo, index) => (
-        <li key={index}>
+        <li key={index} className="TodoList-item">
           <TodoTask todo={todo} index={index} />
         </li>
       ))}
