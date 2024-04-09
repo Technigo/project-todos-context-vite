@@ -1,3 +1,15 @@
+:root {
+  --light-background: #fff;
+  --dark-background: #000;
+  --text-color: #000;
+  /* Standard textfärg för ljust läge */
+}
+
+.dark-mode {
+  --text-color: #fff;
+  /* Textfärg för mörkt läge */
+}
+
 body {
   background-color: #DEA5A4;
   font-family: 'Courier New', Courier, monospace;
@@ -38,7 +50,16 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
 
+.App.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.App.dark {
+  background-color: #414040;
+  color: #fff;
 }
 
 .notesContainer,
@@ -49,8 +70,6 @@ body {
   padding: 20px;
   width: 80%;
   margin: 20px;
-  /*box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);*/
-
 }
 
 h1,
