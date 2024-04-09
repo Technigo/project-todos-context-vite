@@ -1,3 +1,11 @@
+import { TodoForm } from "./components/TodoForm";
+import { TodoList } from "./components/TodoList";
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
+  return (
+    <>
+      <TodoForm />
+      <TodoList />
+    </>
+  )
 };
