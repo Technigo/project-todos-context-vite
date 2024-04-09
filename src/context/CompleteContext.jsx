@@ -6,7 +6,14 @@ export const CompleteProvider = ({ children }) => {
   const [complete, setComplete] = useState([]);
 
   const addComplete = newComplete => {
-    setComplete([...complete, newComplete]);
+    if (complete.length === 5) {
+      setComplete([...complete.slice(1), newComplete]);
+    } else {
+      setComplete([...complete, newComplete]);
+    }
+  };
+  const addAllComplete = taskList => {
+    setComplete([...complete, ...taskList].slice(-5));
   };
 
   const removeComplete = completeToRemove => {
@@ -14,7 +21,9 @@ export const CompleteProvider = ({ children }) => {
   };
 
   return (
-    <CompleteContext.Provider value={{ complete, addComplete, removeComplete }}>
+    <CompleteContext.Provider
+      value={{ complete, addComplete, removeComplete, addAllComplete }}
+    >
       {children}
     </CompleteContext.Provider>
   );

@@ -1,20 +1,20 @@
-import ToDoList from './components/ToDoList'
-import { ToDoProvider } from './context/ToDoContext'
-import { CompleteProvider } from './context/CompleteContext'
-import CompleteList from './components/CompleteList'
-import InspirationCard from './components/InspirationCard'
-import './styling/app.css'
+import ToDoList from "./components/ToDoList";
+import { ToDoProvider } from "./context/ToDoContext";
+import { CompleteProvider } from "./context/CompleteContext";
+import CompleteList from "./components/CompleteList";
+import InspirationCard from "./components/InspirationCard";
+import "./styling/app.css";
 
 export const App = () => {
   return (
-    <ToDoProvider>
-      <div className="main-container">
+    <div className="main-container">
+      <ToDoProvider>
         <CompleteProvider>
           <ToDoList />
           <CompleteList />
         </CompleteProvider>
-        <InspirationCard />
-      </div>
-    </ToDoProvider>
-  )
-}
+      </ToDoProvider>
+      <InspirationCard />
+    </div>
+  );
+};

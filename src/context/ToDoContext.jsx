@@ -6,14 +6,24 @@ export const ToDoProvider = ({ children }) => {
   const [ToDo, setToDo] = useState([]);
 
   const addToDo = newToDo => {
-    setToDo(prevValue => [...prevValue, { task: newToDo }]);
+    if (ToDo.length === 5) {
+      setToDo(prevValue => [...prevValue.slice(1), { task: newToDo }]);
+    } else {
+      setToDo(prevValue => [...prevValue, { task: newToDo }]);
+    }
+  };
+
+  const completeAllToDo = () => {
+    setToDo([]);
   };
   const removeToDo = todoToRemove => {
     setToDo(ToDo.filter(item => item !== todoToRemove));
   };
 
   return (
-    <ToDoContext.Provider value={{ ToDo, addToDo, removeToDo }}>
+    <ToDoContext.Provider
+      value={{ ToDo, addToDo, removeToDo, completeAllToDo }}
+    >
       {children}
     </ToDoContext.Provider>
   );
