@@ -8,6 +8,7 @@ export const App = () => {
   return (
     <ToDoProvider>
       <div className="main-container">
+      
       <ToDoList />
       <CompletedList />
       <InspirationCard />

@@ -1,3 +1,28 @@
 .todo-list{
-    background-color: pink;
+    background-color: rgb(136, 134, 255);
+}
+
+input[type="checkbox"] {
+    accent-color:  #000000;
+    width: 40px;
+    margin: 0;
+}
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+label{
+    font-size: 1.3em;
+}
+
+.greeting{
+    display: flex;
+
+    h3{
+        font-size: 1em;
+    }
+}
+
+.greet-text{
+    width: 15em;
 }
