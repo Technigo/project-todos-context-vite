@@ -4,7 +4,7 @@ import "../styling/CompletedList.css";
 
 const CompleteList = () => {
   const { complete, removeComplete } = useComplete();
-  const { ToDo, addToDo } = useToDo();
+  const { addToDo } = useToDo();
   // const deleteComplete = e => {
   //   const completeToRemove = e.target.value;
   //   removeComplete(completeToRemove);

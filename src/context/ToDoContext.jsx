@@ -12,12 +12,18 @@ export const ToDoProvider = ({ children }) => {
       setToDo(prevValue => [...prevValue, { task: newToDo }]);
     }
   };
+
+  const completeAllToDo = () => {
+    setToDo([]);
+  };
   const removeToDo = todoToRemove => {
     setToDo(ToDo.filter(item => item !== todoToRemove));
   };
 
   return (
-    <ToDoContext.Provider value={{ ToDo, addToDo, removeToDo }}>
+    <ToDoContext.Provider
+      value={{ ToDo, addToDo, removeToDo, completeAllToDo }}
+    >
       {children}
     </ToDoContext.Provider>
   );

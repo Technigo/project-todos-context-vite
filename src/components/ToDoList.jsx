@@ -5,8 +5,8 @@ import GreetUser from "./Greeting";
 import "../styling/ToDoList.css";
 
 const ToDoList = () => {
-  const { ToDo, removeToDo } = useToDo();
-  const { complete, addComplete } = useComplete();
+  const { ToDo, removeToDo, completeAllToDo } = useToDo();
+  const { complete, addComplete, addAllComplete } = useComplete();
 
   return (
     <div className="card">
@@ -34,6 +34,14 @@ const ToDoList = () => {
           </li>
         ))}
         <p>Count:{ToDo.length}/5</p>
+        <button
+          onClick={() => {
+            completeAllToDo();
+            addAllComplete(ToDo);
+          }}
+        >
+          Complete all
+        </button>
       </ul>
     </div>
   );

@@ -12,13 +12,18 @@ export const CompleteProvider = ({ children }) => {
       setComplete([...complete, newComplete]);
     }
   };
+  const addAllComplete = taskList => {
+    setComplete([...complete, ...taskList].slice(-5));
+  };
 
   const removeComplete = completeToRemove => {
     setComplete(complete.filter(item => item !== completeToRemove));
   };
 
   return (
-    <CompleteContext.Provider value={{ complete, addComplete, removeComplete }}>
+    <CompleteContext.Provider
+      value={{ complete, addComplete, removeComplete, addAllComplete }}
+    >
       {children}
     </CompleteContext.Provider>
   );
