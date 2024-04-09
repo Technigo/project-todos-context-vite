@@ -14,7 +14,7 @@ console.log(tasks)
             {todo.map((task, index) => (
             <div className="task" key={index}>
             <form>
-             <input 
+            <input 
             type="checkbox"
             key={index}
             onChange={toggleChecked}

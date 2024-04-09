@@ -16,5 +16,6 @@ body {
 
 [type="checkbox"]:checked + label {
   color: rgb(109, 109, 109);
-  text-decoration: line-through;
+  text-decoration: line-through; 
 }
+
