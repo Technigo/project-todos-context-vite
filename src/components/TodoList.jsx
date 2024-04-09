@@ -7,8 +7,15 @@ export const TodoList = () => {
   // Extract todos and the toggleTodo function from our TodoContext.
   const { todos, toggleTodo } = useContext(TodoContext);
 
+  // Count for completed and uncompleted tasks
+  // .filter: keeps all the items that matches (returns "true" in ((todo) => todo.completed))
+  const completedCount = todos.filter((todo) => todo.completed).length;
+  const uncompletedCount = todos.length - completedCount;
+
   return (
     <div className="list-container">
+      <div>Completed: {completedCount}</div>
+      <div>Uncompleted: {uncompletedCount}</div>
       <ul>
         {todos.map((todo) => (
           <li
@@ -21,7 +28,7 @@ export const TodoList = () => {
               checked={todo.completed} // The checkbox is checked if the todo is marked as completed.
               onChange={() => toggleTodo(todo.id)} // When you click the checkbox, the toggleTodo function is called with the todo's ID to switch its "completed" status between done and not done.
             />
-            {todo.todo} {" "}
+            {todo.todo}{" "}
             <span>{moment(todo.createdAt).format("YYYY-MM-DD HH:mm")}</span>{" "}
           </li>
         ))}
