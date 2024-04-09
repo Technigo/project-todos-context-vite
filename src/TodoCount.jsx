@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import { TodoContext } from "./TodoContext";
+import "./TodoCount.css";
+
 export const TodoCount = () => {
   const todoContext = useContext(TodoContext);
   const done = todoContext.todoList.filter((todo) => todo.done == true).length;
@@ -10,7 +12,7 @@ export const TodoCount = () => {
   ).length;
 
   return (
-    <div>
+    <div className="TodoCount">
       {notDone} todos left ({done} completed)
     </div>
   );
