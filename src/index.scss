@@ -2,11 +2,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   font-family: Verdana, Tahoma, sans-serif;
+  padding: 0;
 }
 
 $spring-prim: #f28585;
