@@ -1,6 +1,5 @@
 import { useComplete } from "../context/CompleteContext";
-import '../styling/CompletedList.css'
-
+import "../styling/CompletedList.css";
 
 const CompleteList = () => {
   const { complete, removeComplete } = useComplete();
@@ -10,27 +9,26 @@ const CompleteList = () => {
   // };
   return (
     <div className="card">
-        <div className="section completed">
-      <h1>Completed</h1>
-    <ul className="complete-list">
-      {complete.map(item => (
-        ////replace the value of the key and some attr with item.timestamp later
-        <li key={item.task}>
-          <input
-            id={item.task}
-            type="checkbox"
-            defaultChecked
-            value={item.task}
-            disabled
-          />
-          <label htmlFor={item.task}>{item.task}</label>
-          <button value={item.task} onClick={() => removeComplete(item)}>
-            delete
-          </button>
-        </li>
-      ))}
-    </ul>
-    </div>
+      <div className="section completed">
+        <h1>Completed</h1>
+        <ul className="complete-list">
+          {complete.map(item => (
+            ////replace the value of the key and some attr with item.timestamp later
+            <li key={item.task}>
+              <input
+                id={item.task}
+                type="checkbox"
+                defaultChecked
+                value={item.task}
+              />
+              <label htmlFor={item.task}>{item.task}</label>
+              <button value={item.task} onClick={() => removeComplete(item)}>
+                delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
