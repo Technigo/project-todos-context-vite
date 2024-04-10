@@ -9,7 +9,7 @@ export const TaskInput = () => {
   const [newTask, setNewTask] = useState({
     title: "",
     complete: false,
-    date: moment().calendar()
+    date: moment().calendar(),
   });
 
   const handleChange = (event) => {

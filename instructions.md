@@ -71,3 +71,22 @@ Another challenge will be giving your checkboxes and/or radio buttons a custom l
 - Add filters to display completed/uncompleted tasks, tasks created after a given date or anything else you consider important.
 - Create categories/tags for tasks so they can be grouped - for example, 'Housework', 'Shopping', etc.
 - Create projects for tasks → A project could be a group of tasks which all need to be completed and when they are completed, the project is marked as complete.
+
+
+
+### Roadmap
+- Remove Task (Trashcan icon?)
+
+- Separate completed tasks to own list
+- Headers for lists
+
+- Style added/completed text
+- Style for responsiveness (mobile first)
+
+- Due date (äggklocka!)
+
+- Complete all button
+- Theme switcher (lightbulb? sun/moon? )
+
+- Change title of headings
+

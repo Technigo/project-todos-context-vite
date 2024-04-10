@@ -6,8 +6,6 @@ export const Header = () => {
   const { name, appContent } = useAppData();
   const { taskData, addTask } = useTask();
 
-  console.log(name, appContent);
-
   return (
     <header>
       <h1>{appContent.heading}</h1>

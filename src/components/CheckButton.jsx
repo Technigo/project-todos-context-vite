@@ -7,10 +7,11 @@ export const CheckButton = ({ todo, index }) => {
   const taskRef = useRef();
 
   const clicked = () => {
-    console.log("Checkbox:", taskData);
     taskRef.current.classList.toggle("complete");
-    completeTask(taskRef, index);
-        console.log("Checkbox 2:", taskData);
+
+    //add complete state to taskData
+    completeTask(index);
+    console.log("Checkbox:", taskData);
   };
 
   return (

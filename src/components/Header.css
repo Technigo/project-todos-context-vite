@@ -1,6 +1,9 @@
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: grey;
-    padding: 1rem;
+    padding: 0 2rem;
     color: white;
     font-weight: 900;
 }

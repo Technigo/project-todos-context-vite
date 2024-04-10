@@ -1,14 +1,14 @@
 import { useState } from "react";
 import moment from "moment";
 import { CheckButton } from "./CheckButton";
+import { RemoveButton } from "./RemoveButton";
 import "./TaskList.css";
 import { useTask } from "../contexts/TaskContext";
 
 export const TaskList = () => {
   const { taskData, addTask, completeTask } = useTask();
-  console.log(taskData);
 
-
+  const filterComplete = () => {};
 
   return (
     <div>
@@ -16,7 +16,13 @@ export const TaskList = () => {
         taskData.map((todo, index) => (
           <div className="todo" key={index}>
             <CheckButton todo={todo.title} index={index} />
-            <p>Added: {todo.date}</p>
+
+            <RemoveButton />
+            {todo.complete ? (
+              <p>Completed: {moment().calendar()} </p>
+            ) : (
+              <p>Added: {todo.date}</p>
+            )}
           </div>
         ))
       ) : (

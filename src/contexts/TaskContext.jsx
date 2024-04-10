@@ -4,8 +4,7 @@ import moment from "moment";
 const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
-  const [taskData, setTaskData] = useState([
-  ]);
+  const [taskData, setTaskData] = useState([]);
 
   const addTask = (newTask) => {
     if (taskData.length === 0 || taskData === undefined) {
@@ -15,19 +14,20 @@ export const TaskProvider = ({ children }) => {
     }
   };
 
-  const completeTask = (taskData, index) => {
-    if (taskData[index].complete === true) {
-      setTaskData(taskData[index].complete = false);
-    } else {
-    setTaskData(taskData[index].complete = true);
-    }
+  const completeTask = (taskIndex) => {
+    const updateTasks = [...taskData];
+    const currentState = updateTasks[taskIndex].complete;
+    updateTasks[taskIndex].complete = !currentState;
 
-    console.log("Completed task?:", taskData);
+    setTaskData(updateTasks);
   };
-  console.log(taskData);
+
+  const removeTask = (taskIndex) => {
+        const updateTasks = [...taskData];
+  }
 
   return (
-    <TaskContext.Provider value={{ taskData, addTask, completeTask }}>
+    <TaskContext.Provider value={{ taskData, addTask, completeTask, removeTask }}>
       {children}
     </TaskContext.Provider>
   );
