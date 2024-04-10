@@ -7,6 +7,7 @@ In your to do app, you should be able to add tasks, list tasks and toggle whethe
 
 You're free to style your to do list however you'd like, but try to keep it simple and clean - remember prospective employers will probably be interested to see this project!
 
+npm run dev -- --host
 
 ### Hints and tips to complete the project
 
