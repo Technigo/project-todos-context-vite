@@ -7,10 +7,19 @@ export const useTodoContext = () => useContext(TodoContext);
 export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([
     {
+      id: 1,
       description: "Buy vegetables",
+      completed: false,
     },
     {
+      id: 2,
       description: "Pay bills",
+      completed: false,
+    },
+    {
+      id: 3,
+      description: "Pet the dog",
+      completed: false,
     },
   ]);
 
@@ -21,20 +30,30 @@ export const TodoProvider = ({ children }) => {
     setTodos(updatedTodos);
   };
 
-  /*  const addTask = () => {
-    if (task.trim() !== "") {
-      setTodos([...todos, { task, completed: false }]);
-      setTask({ description: "" });
-    }
-  }; */
   const addTodo = (newTodo) => {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  // const removeTodo = () => {};
+  const removeTodo = (index) => {
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos);
+  };
+
+  const clearTodos = () => {
+    setTodos([]);
+  };
 
   return (
-    <TodoContext.Provider value={{ todos, setTodos, toggleComplete, addTodo }}>
+    <TodoContext.Provider
+      value={{
+        todos,
+        setTodos,
+        toggleComplete,
+        addTodo,
+        removeTodo,
+        clearTodos,
+      }}
+    >
       {children}
     </TodoContext.Provider>
   );

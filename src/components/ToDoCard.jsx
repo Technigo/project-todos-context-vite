@@ -1,4 +1,11 @@
+import { useTodoContext } from "../contexts/TodoContext";
+
 export const ToDoCard = ({ todo, toggleComplete }) => {
+  const { removeTodo, clearTodos } = useTodoContext();
+
+  const handleRemove = () => {
+    removeTodo(todo.id);
+  };
   return (
     <li>
       <input
@@ -11,6 +18,7 @@ export const ToDoCard = ({ todo, toggleComplete }) => {
       >
         {todo.description}
       </span>
+      <button onChange={handleRemove}>Remove</button>
     </li>
   );
 };
