@@ -11,21 +11,17 @@ export const TodoProvider = ({ children }) => {
     setTodo((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  const removeTodo = (taskId) => {
+  const removeTodo = (newTodo) => {
     const updatedList = todoItems
       .map((todo) =>
         todo.id === newTodo ? { ...task, quantity: task.quantitiy - 1 } : task
       )
       .filter((task) => task.quantity > 0);
 
-    setTodoItems([updatedList]);
+    setTodoItems(updatedList);
   };
 
-//   const removeToBin = () => {
-//     const [removeTask, setRemoveTask] = useState("unclicked")
-//     const clickRemove = () => {
-//         setRemoveTask(removeTask === "clicked")
-//     }
+
 
   return (
     <TodoContext.Provider value={{ todo, addTodo, removeTodo }}>
@@ -35,3 +31,4 @@ export const TodoProvider = ({ children }) => {
 };
 
 export const useTodo = () => useContext(TodoContext);
+

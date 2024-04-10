@@ -7,8 +7,16 @@ export const TodoList = () => {
   const { todo } = useTodo();
   const { tasks, toggleChecked } = useCheckbox();
 
-  console.log(tasks);
+  //const filterDoneToDos = () => {};
 
+  const handleRemoveTask = (toDo) => {
+    removeToDo(toDo);
+    console.log(toDo);
+  };
+
+
+  //PÅ RAD 28 handleRemoveTask() - vilket värde ska in i parentesen? 
+  // key={task} är det rätt?
   return (
     <div>
       {" "}
@@ -18,15 +26,12 @@ export const TodoList = () => {
           <form>
             <input type="checkbox" key={index} onChange={toggleChecked}></input>
             <label>{task.todotext}</label>
-            <button> 🚮 </button>
+            <button type="button" key={task} onClick={() => handleRemoveTask()}>
+              🚮
+            </button>
           </form>
         </div>
       ))}
     </div>
   );
 };
-//Få checked to dos att hamna längst ned
-//Få unchecked to do's att hoppa upp ett steg till unchecked
-//Lägg till sopkorg/radera och edit
-//Form-funktion till varje input/label för att kunna editera
-//HUR sparar vi datan för att inte rendera från början vid varje uppdatering
