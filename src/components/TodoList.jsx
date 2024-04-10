@@ -1,11 +1,12 @@
 import { useTodo } from "../context/TodoContext";
 
 export const TodoList = () => {
-  const { todoList, deleteTasks, toggleTodo } = useTodo();
+  const { todoList, deleteTodo, toggleTodo, countTodos } = useTodo();
 
   return (
     <div className="todo-list-container">
       <h2>To do list:</h2>
+      <p>{countTodos}</p>
       <ul>
         {todoList.map((item) => {
           return (
@@ -23,9 +24,7 @@ export const TodoList = () => {
                 >
                   {item.text}
                 </span>
-                <button onClick={() => deleteTasks(item.id)}>
-                  Delete
-                </button>
+                <button onClick={() => deleteTodo(item.id)}>Delete</button>
               </label>
             </li>
           );

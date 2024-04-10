@@ -7,6 +7,7 @@ export const NewTodoForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (newItem === "") return;
     addTodo(newItem);
     setNewItem("");
   };
