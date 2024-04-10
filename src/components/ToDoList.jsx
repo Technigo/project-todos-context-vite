@@ -1,4 +1,3 @@
-import React from "react";
 import { ToDoCard } from "./ToDoCard";
 import { useTodoContext } from "../contexts/TodoContext";
 
