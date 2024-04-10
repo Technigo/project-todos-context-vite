@@ -75,13 +75,13 @@ Another challenge will be giving your checkboxes and/or radio buttons a custom l
 
 TODO:
 
-- check task when done
-- remove the task
-- count of all tasks/completed tasks
+- check task when done DONE
+- remove the task DONE
+- count of all tasks/completed tasks DONE
 - empty state styling
 
 Extra, when time
 
 - complete all button
-- toggle theme button
+- toggle theme button DONE
 - timestamp when created
