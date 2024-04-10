@@ -2,7 +2,8 @@
   background-color: rgb(255, 151, 151);
   min-height: 700px;
   display: grid;
-  grid-template-rows: 6% 90% 4%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 .image img {

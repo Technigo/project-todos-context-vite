@@ -6,11 +6,14 @@ import Submit from "../assets/sounds/submit.mp3";
 
 const ToDoForm = () => {
   const [newTodo, setNewTodo] = useState("");
+  const [charCount, setCharCount] = useState(0);
   const { addToDo } = useToDo();
   const [playSubmit] = useSound(Submit, { volume: 0.5 });
 
   const handleInputChange = e => {
-    setNewTodo(e.target.value);
+    const userInput = e.target.value;
+    setNewTodo(userInput);
+    setCharCount(userInput.length);
   };
 
   const handleSubmit = e => {
@@ -39,6 +42,7 @@ const ToDoForm = () => {
           Add Todo
         </button>
       </form>
+      <p>{charCount}/70</p>
     </div>
   );
 };

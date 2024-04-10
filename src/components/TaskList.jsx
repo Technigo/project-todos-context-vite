@@ -67,7 +67,9 @@ const TaskList = ({ data }) => {
               />
             </div>
             <div className="task-content">
-              <label htmlFor={item.createdAt}>{item.task}</label>
+              <label className="task-text" htmlFor={item.createdAt}>
+                {item.task}
+              </label>
               <img
                 src={trash}
                 className="trashbin"
