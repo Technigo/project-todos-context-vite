@@ -10,6 +10,11 @@
     }
 }
 
+.top-todo{
+    display: flex;
+    justify-content: space-between;
+}
+
 input[type="checkbox"] {
     accent-color:  #000000;
     width: 40px;
@@ -23,14 +28,6 @@ label{
     font-size: 1.3em;
 }
 
-.greeting{
-    display: flex;
-
-    h3{
-        font-size: 1em;
-    }
-}
-
-.greet-text{
-    width: 15em;
+.delete{
+    margin-left: 1em;
 }

@@ -3,9 +3,13 @@ ul, li{
   padding: 0;
 }
 
+h1, h2, h3, p{
+  color: white;
+  margin: 0.5%;
+}
+
 .main-container{
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     justify-content: center;
     display: grid;
     grid-template-columns: 100%;
@@ -14,10 +18,10 @@ ul, li{
   }
   
   .card{
-    background-color: white;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 30px;
     padding: 2em;
+    border: 0.5px solid white;
+    border-radius: 30px;
+  
   }
 
   .section{
@@ -26,9 +30,26 @@ ul, li{
     padding: 5%;
     border-radius: 20px;
   }
+
+  .button{
+    padding: 0.3em 0.7em;
+    width: max-content;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1em;
+    background-color: white;
+    justify-self: right;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
   
   @media screen and (min-width: 1024px){
     .main-container{
+      width: 80%;
+      margin: 0 auto;
       grid-template-columns: 50% 50%;
       padding: 5em 0;
     }

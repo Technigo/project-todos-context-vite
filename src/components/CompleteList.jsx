@@ -27,6 +27,7 @@ const CompleteList = () => {
               <button
                 type="button"
                 value={item.task}
+                className="button"
                 onClick={() => removeComplete(item)}
               >
                 delete

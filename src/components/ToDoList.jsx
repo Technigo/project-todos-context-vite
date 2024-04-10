@@ -9,7 +9,19 @@ const ToDoList = () => {
 
   return (
       <ul className="section todo-list">
-        <h1>To do:</h1>
+        <div className="top-todo">
+        <h1>To do:</h1> <button
+          type="button"
+          className="button"
+          onClick={() => {
+            completeAllToDo();
+            addAllComplete(ToDo);
+          }}
+          disabled={ToDo.length === 0 ? true : false}
+        >
+          Complete all
+        </button>
+        </div>
         {ToDo.length === 0 ? (
           <img src={clear} alt="No todo" />
         ) : (
@@ -30,6 +42,7 @@ const ToDoList = () => {
               <button
                 type="button"
                 value={todo.task}
+                className="button delete"
                 onClick={() => removeToDo(todo)}
               >
                 delete
@@ -38,16 +51,6 @@ const ToDoList = () => {
           ))
         )}
         <p>Count:{ToDo.length}/5</p>
-        <button
-          type="button"
-          onClick={() => {
-            completeAllToDo();
-            addAllComplete(ToDo);
-          }}
-          disabled={ToDo.length === 0 ? true : false}
-        >
-          Complete all
-        </button>
       </ul>
   );
 };

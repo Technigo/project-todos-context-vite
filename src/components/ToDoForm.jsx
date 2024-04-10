@@ -28,7 +28,7 @@ const ToDoForm = () => {
           placeholder="write your task here..."
           onChange={handleInputChange}
         />
-        <button type="submit">submit</button>
+        <button type="submit" className="button add">Add to list</button>
       </form>
     </div>
   );

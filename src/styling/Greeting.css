@@ -1,0 +1,27 @@
+.greeting{
+    display: flex;
+}
+
+#lottie{
+    width: 120px;
+}
+
+.greet-text{
+    width: 15em;
+}
+
+
+@media screen and (min-width: 768px){
+    #lottie{
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #lottie{
+        width: 230px;
+    }
+    .greet-text{
+        font-size: 1.5em;
+    }
+}
