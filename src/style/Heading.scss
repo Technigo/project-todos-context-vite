@@ -2,23 +2,38 @@
 
 .heading-background {
   padding: 30px;
-  background-color: $spring-prim;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 
+  .heading-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-  h1 {
-    margin: 0;
+    h1 {
+      margin: 0;
+    }
+
+    .checklist {
+      font-size: 40px;
+    }
   }
 
-  .checklist {
-    font-size: 40px;
+  button {
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
   }
 }
 
+.light {
+  background-color: $spring-prim;
 
-.heading-background-dark {
+  button {
+    background-color: $spring-third;
+    border: 2px solid $spring-sec;
+  }
+}
+
+.dark {
   background-color: #102375;
 }

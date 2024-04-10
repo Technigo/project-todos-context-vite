@@ -9,27 +9,41 @@ export const NewTask = () => {
   const { darkMode } = useTheme();
   const [taskInput, setTaskInput] = useState("");
 
-  const handleAddTask = () => {
+  /* const handleAddTask = () => {
     if (taskInput != "") {
       const taskObj = { text: taskInput, completed: false };
+      console.log(taskObj);
       addTask(taskObj);
+      setTaskInput("");
+    } else {
+      alert("Please add a task");
+    }
+  }; */
+
+  const handleAddTask = () => {
+    if (taskInput != "") {
+      addTask(taskInput);
       setTaskInput("");
     } else {
       alert("Please add a task");
     }
   };
 
-  const getBackgroundClases = () => {
+  /* const getBackgroundClases = () => {
     if (darkMode === false) {
       return "task-input-box";
     } else {
       return "task-input-box task-input-box-dark";
     }
-  };
+  }; */
 
   return (
     <>
-      <div className={getBackgroundClases()}>
+      <div
+        className={
+          darkMode ? "task-input-box task-input-box-dark" : "task-input-box"
+        }
+      >
         <label htmlFor="new-task">New Task:</label>
         <input
           type="text"

@@ -14,11 +14,13 @@
       border: 5px solid $spring-fourth;
       border-radius: 10px;
       margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
     }
   }
 }
 
-.background-ligth {
+.background-light {
   background-color: $spring-prim;
 }
 
