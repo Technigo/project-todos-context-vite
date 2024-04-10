@@ -1,4 +1,4 @@
-import "./CheckButton.css";
+import "./RemoveButton.css";
 import { useTask } from "../contexts/TaskContext";
 
 export const RemoveButton = ({ todo, index }) => {
@@ -13,11 +13,13 @@ export const RemoveButton = ({ todo, index }) => {
   };
 
   return (
-    <form>
-      <button id={index} name="remove" onClick={clicked}>
-        Rem
-      </button>
-      <label htmlFor={index}>Remove</label>
-    </form>
+    <button
+      className="remove-button"
+      id={index}
+      name="remove"
+      onClick={clicked}
+    >
+      <img src="src/assets/trash-can.svg" />
+    </button>
   );
 };
