@@ -1,4 +1,5 @@
 import "./TodoList.css";
+import { useTodo } from "../contexts/TodoContext";
 
 /**
  *
@@ -8,22 +9,13 @@ import "./TodoList.css";
  * - remove
  *
  * Access
- * - todos
+ * - fetch all todos
  */
 
 export const TodoList = () => {
-  const todos = [
-    {
-      id: 1,
-      description: "First todo....",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      description: "Second todo....",
-      isCompleted: true,
-    },
-  ];
+  // Fetch all todos from globel state
+  const { todos } = useTodo();
+  console.log(todos);
 
   return (
     <div className="todo-list-wrapper">
