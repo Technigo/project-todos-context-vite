@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -11,12 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.task {
-  border: 1px solid green;
-}
-
-.checked {
-  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

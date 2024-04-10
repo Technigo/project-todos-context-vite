@@ -1,0 +1,6 @@
+.task-list {
+    background-color: rgba(166, 166, 166, 0.823);
+    max-width: 900px;
+    border-radius: 25px; 
+    padding: 20px;
+}

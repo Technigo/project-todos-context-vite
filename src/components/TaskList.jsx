@@ -1,5 +1,6 @@
 import { Task } from "./Task";
 import { useTasks } from "../contexts/TasksContext";
+import "./TaskList.css"
 
 export const TaskList = () => {
   const { tasks } = useTasks();

@@ -1,61 +1,52 @@
-import { useState } from "react";
-import { useTasks } from "../contexts/TasksContext";
+import { useState } from "react"
+import { useTasks } from "../contexts/TasksContext"
 
 export const TaskForm = () => {
-  const { addTask } = useTasks();
+  const { tasks, addTask } = useTasks()
 
   const [newTask, setNewTask] = useState({
-    id: "",
+    id: null,
     task: "",
-  });
+  })
 
   const handleChange = (event) => {
     setNewTask({
       ...newTask,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const newId = () => {
-    Math(tasks.length + 1);
-  };
+      task: event.target.value, id: (tasks.length + 1) })
+  }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-
+    event.preventDefault()
     if (newTask.task) {
-      setNewTask({ id: { newId } });
-      addTask(newTask);
-      setNewTask({ id: null, task: "" });
+      addTask(newTask)
+      setNewTask({ id: null, task: "" })
     } else {
-      alert("Please fill in the field");
+      alert("Please fill in the field")
     }
-  };
+  }
 
   return (
-    <>
-      <div>
-        <h2>Add new task here:</h2>
-        <form onSubmit={handleSubmit}>
-          <label>
-            To do:
-            <input
-              type="text"
-              name="task"
-              value={newTask.task}
-              onChange={handleChange}
-              placeholder="Type a task.."
-            />
-          </label>
-          <button
-            type="submit"
-            className="submit-task"
-            aria-label="Button for add task"
-          >
-            Add task
-          </button>
-        </form>
-      </div>
-    </>
-  );
-};
+    <div className="task-form">
+      <h2>Add new task here:</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          To do:
+          <input
+            type="text"
+            name="task"
+            value={newTask.task}
+            onChange={handleChange}
+            placeholder="Type a task.."
+          />
+        </label>
+        <button
+          type="submit"
+          className="submit-button"
+          aria-label="Button to add task"
+        >
+          Add task
+        </button>
+      </form>
+    </div>
+  )
+}
