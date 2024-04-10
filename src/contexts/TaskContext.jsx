@@ -23,11 +23,16 @@ export const TaskProvider = ({ children }) => {
   };
 
   const removeTask = (taskIndex) => {
-        const updateTasks = [...taskData];
-  }
+    const updateTasks = [...taskData];
+    updateTasks.splice([taskIndex], 1);
+    
+    setTaskData(updateTasks);
+  };
 
   return (
-    <TaskContext.Provider value={{ taskData, addTask, completeTask, removeTask }}>
+    <TaskContext.Provider
+      value={{ taskData, addTask, completeTask, removeTask }}
+    >
       {children}
     </TaskContext.Provider>
   );

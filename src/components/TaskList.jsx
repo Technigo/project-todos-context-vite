@@ -14,15 +14,19 @@ export const TaskList = () => {
     <div>
       {taskData.length != 0 ? (
         taskData.map((todo, index) => (
-          <div className="todo" key={index}>
-            <CheckButton todo={todo.title} index={index} />
+          <div className="todo-container">
+            <div className="todo" key={index}>
+              <CheckButton todo={todo.title} index={index} />
 
-            <RemoveButton />
-            {todo.complete ? (
-              <p>Completed: {moment().calendar()} </p>
-            ) : (
-              <p>Added: {todo.date}</p>
-            )}
+              <RemoveButton todo={todo} index={index} />
+            </div>
+            <div className="timestamp">
+              {todo.complete ? (
+                <p>Completed: {moment().calendar()} </p>
+              ) : (
+                <p>Added: {todo.date}</p>
+              )}
+            </div>
           </div>
         ))
       ) : (
