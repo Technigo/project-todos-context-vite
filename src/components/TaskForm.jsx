@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useTasks } from "../contexts/TasksContext";
-import { useCheckedTask } from "../contexts/CheckedTaskContext";
 
-export const TodoForm = () => {
+export const TaskForm = () => {
   const { addTask } = useTasks();
 
   const [newTask, setNewTask] = useState({
-    todo: "",
+    id: "",
+    task: "",
   });
 
   const handleChange = (event) => {
@@ -16,12 +16,17 @@ export const TodoForm = () => {
     });
   };
 
+  const newId = () => {
+    Math(tasks.length + 1);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (newTask.todo) {
+    if (newTask.task) {
+      setNewTask({ id: { newId } });
       addTask(newTask);
-      setNewTask({ todo: "" });
+      setNewTask({ id: null, task: "" });
     } else {
       alert("Please fill in the field");
     }
@@ -30,17 +35,25 @@ export const TodoForm = () => {
   return (
     <>
       <div>
-        <h2>Add new to do here:</h2>
+        <h2>Add new task here:</h2>
         <form onSubmit={handleSubmit}>
           <label>
             To do:
             <input
               type="text"
-              name="todo"
-              value={newTask.todo}
+              name="task"
+              value={newTask.task}
               onChange={handleChange}
+              placeholder="Type a task.."
             />
           </label>
+          <button
+            type="submit"
+            className="submit-task"
+            aria-label="Button for add task"
+          >
+            Add task
+          </button>
         </form>
       </div>
     </>

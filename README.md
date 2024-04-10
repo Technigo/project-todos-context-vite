@@ -14,8 +14,7 @@ Every project should be deployed somewhere. Be sure to include the link to the d
 
 ## Instructions
 
-Form - Add task
-List - Showing all tasks
-Task - check/uncheck
-    - delete
+✅ Form - Add task
+✅ List - Showing all tasks
+✅ Task - check/uncheck - delete
 Count - all tasks/completed tasks/both

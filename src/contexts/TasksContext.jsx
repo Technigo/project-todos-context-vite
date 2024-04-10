@@ -13,13 +13,30 @@ export const TasksProvider = ({ children }) => {
       task: "Book dentistapp.",
     },
   ]);
+  const [tasksDone, setTasksDone] = useState([
+    {
+      id: null,
+      task: "",
+    },
+  ]);
 
   const addTask = (newTask) => {
     setTasks((prevTask) => [...prevTask, newTask]);
   };
 
+  const deleteTask = (taskToDelete) => {
+    const newTasks = tasks.filter((task) => task.task !== taskToDelete);
+    setTasks(newTasks);
+  };
+
+  const addTaskDone = (newTaskDone) => {
+    setTasksDone((prevTasksDone) => [...prevTasksDone, newTaskDone]);
+  };
+
   return (
-    <TaskContext.Provider value={{ tasks, addTask }}>
+    <TaskContext.Provider
+      value={{ tasks, tasksDone, addTask, deleteTask, addTaskDone }}
+    >
       {children}
     </TaskContext.Provider>
   );

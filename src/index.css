@@ -16,3 +16,7 @@ body {
 .task {
   border: 1px solid green;
 }
+
+.checked {
+  color: red;
+}
