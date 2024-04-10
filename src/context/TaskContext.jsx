@@ -13,14 +13,18 @@ export const TaskProvider = ({ children }) => {
   }; */
 
   const addTask = (task) => {
-    const newTask = { text: task, status: false };
-    setToDoList([...toDoList, newTask]);
+    const newTask = { id: Date.now(), text: task, status: false };
+    setToDoList((prevList) => [...prevList, newTask]);
   };
 
-  const removeTask = (task) => {
+  /* const removeTask = (task) => {
     const indexElement = toDoList.indexOf(task);
     toDoList.splice(indexElement, 1);
     setToDoList([...toDoList]);
+  }; */
+
+  const removeTask = (taskId) => {
+    setToDoList((prevList) => prevList.filter((task) => task.id !== taskId));
   };
 
   /* const updatedStatus = (task) => {
@@ -30,11 +34,19 @@ export const TaskProvider = ({ children }) => {
     setTaskStatus(updatedTaskStatus);
   }; */
 
-  const updatedStatus = (taskId) => {
+  /* const updatedStatus = (taskId) => {
     const updatedTaskList = toDoList.map((task) =>
       task.id === taskId ? { ...task, status: !task.status } : task
     );
     setToDoList(updatedTaskList);
+  }; */
+
+  const updatedStatus = (taskId) => {
+    setToDoList((prevList) =>
+      prevList.map((task) =>
+        task.id === taskId ? { ...task, status: !task.status } : task
+      )
+    );
   };
 
   return (

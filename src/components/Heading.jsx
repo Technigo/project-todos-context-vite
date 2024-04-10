@@ -5,14 +5,6 @@ import { useTheme } from "../context/ThemeContext";
 export const Heading = () => {
   const { darkMode, changeMode } = useTheme();
 
-  /* const getBackgroundClases = () => {
-    if (darkMode === false) {
-      return "heading-background";
-    } else {
-      return "heading-background heading-background-dark";
-    }
-  }; */
-
   return (
     <>
       <div

@@ -1,4 +1,3 @@
-//1. Input for writing
 import { useState } from "react";
 import "../style/NewTask.scss";
 import { useTask } from "../context/TaskContext";
@@ -28,14 +27,6 @@ export const NewTask = () => {
       alert("Please add a task");
     }
   };
-
-  /* const getBackgroundClases = () => {
-    if (darkMode === false) {
-      return "task-input-box";
-    } else {
-      return "task-input-box task-input-box-dark";
-    }
-  }; */
 
   return (
     <>
