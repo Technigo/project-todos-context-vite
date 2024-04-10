@@ -1,3 +1,8 @@
+import { AddToDo } from "./pages/AddToDo";
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
+  return <div>
+
+    <AddToDo />
+  </div>;
 };
