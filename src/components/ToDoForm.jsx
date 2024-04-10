@@ -23,6 +23,7 @@ const ToDoForm = () => {
     console.log(newTodo);
     addToDo(newTodo);
     setNewTodo("");
+    setCharCount(0);
   };
   return (
     <div className="section todo-form">
@@ -35,14 +36,14 @@ const ToDoForm = () => {
           onChange={handleInputChange}
         />
         <button
-          disabled={newTodo ? false : true}
+          disabled={newTodo && charCount <= 70 ? false : true}
           type="submit"
           className="button add"
         >
           Add Todo
         </button>
       </form>
-      <p>{charCount}/70</p>
+      <p style={{ color: charCount > 70 && "red" }}>{charCount}/70</p>
     </div>
   );
 };
