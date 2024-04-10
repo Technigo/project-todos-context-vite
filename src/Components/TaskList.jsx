@@ -42,11 +42,8 @@ export const TaskList = () => {
               className="customRadioCheckbox"
             >
               <div className="customCheckboxContent">
-                <button
-                  className="deleteBtn"
-                  onClick={() => handleDelete(item.id)}
-                >
-                  x
+                <button id="deleteBtn" onClick={() => handleDelete(item.id)}>
+                  ✖️
                 </button>
                 <h2>{item.content}</h2>
                 <div className="checkboxDatesContainer">

@@ -8,6 +8,8 @@
 }
 
 body {
+  background-color: #e9e1ff;
+  padding: 10px 16px;
   position: relative;
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -21,16 +23,16 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 h1 {
-  font-size: 24px;
+  font-size: 18px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 15px;
 }
 h5 {
   font-size: 12px;
 }
 button {
-  background-color: #ffad47;
+  background-color: #7d59e7;
   color: white;
 }
 p {

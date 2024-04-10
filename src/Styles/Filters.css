@@ -1,0 +1,17 @@
+.filtersWrapper {
+  display: flex;
+  gap: 10px;
+}
+.filtersWrapper button {
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+.filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
