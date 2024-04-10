@@ -34,8 +34,13 @@ export const TodoProvider = ({ children }) => {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  const removeTodo = (index) => {
-    const updatedTodos = todos.filter((_, i) => i !== index);
+  // const removeTodo = (index) => {
+  //   const updatedTodos = todos.filter((_, i) => i !== index);
+  //   setTodos(updatedTodos);
+  // };
+
+  const removeTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   };
 
