@@ -1,4 +1,5 @@
 # Instructions
+
 In this week's project, it's time to flex your muscles and build an application that pulls together all the parts of the Context API by building a todo app.
 
 ## Getting started 🤓
@@ -6,8 +7,6 @@ In this week's project, it's time to flex your muscles and build an application 
 In your to do app, you should be able to add tasks, list tasks and toggle whether a task is done or not.
 
 You're free to style your to do list however you'd like, but try to keep it simple and clean - remember prospective employers will probably be interested to see this project!
-
-npm run dev -- --host
 
 ### Hints and tips to complete the project
 
@@ -25,6 +24,7 @@ Manage State with Context: Use the useContext() hook within your components to a
 With all that set up, you can now start creating components. For example, you could make a `TodoList` component that displays the list of todos and map over them, and a `TodoForm` to add your to-do to your global state.
 
 Here is how you can wrap your application with the provider:
+
 ```
   // src/App.jsx
   import React from 'react';
