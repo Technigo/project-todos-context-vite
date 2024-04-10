@@ -4,31 +4,24 @@ const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [todo, setTodo] = useState([]);
-  const [todoItems, setTodoItems] = useState([]);
-  
 
   const addTodo = (newTodo) => {
     setTodo((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  const removeTodo = (newTodo) => {
-    const updatedList = todoItems
-      .map((todo) =>
-        todo.id === newTodo ? { ...task, quantity: task.quantitiy - 1 } : task
-      )
-      .filter((task) => task.quantity > 0);
-
-    setTodoItems(updatedList);
-  };
-
-
+  function removeToDo(id) {
+    const removeItem = todo.filter((task) => {
+      return task.id !== id;
+    });
+    setTodo(removeItem);
+    console.log(id);
+  }
 
   return (
-    <TodoContext.Provider value={{ todo, addTodo, removeTodo }}>
+    <TodoContext.Provider value={{ todo, addTodo, removeToDo }}>
       {children}
     </TodoContext.Provider>
   );
 };
 
 export const useTodo = () => useContext(TodoContext);
-
