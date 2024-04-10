@@ -1,39 +1,39 @@
 import { useState } from 'react'
-import DateTimePicker from 'react-datetime-picker'
 import '../Styles/form.css'
-// import 'react-datetime-picker/dist/DateTimePicker.css'
-// import 'react-calendar/dist/Calendar.css'
-import 'react-clock/dist/Clock.css'
-// import moment from 'moment'
-
+import { redirect } from 'react-router-dom'
+import { useToDoContext } from '../Contexts/TodoContext'
 export const AddTaskForm = () => {
-  const [startTime, setStartTime] = useState('')
-  const [endTime, setEndTime] = useState('')
+  const { taskList, addTask } = useToDoContext()
+  const [newTask, setNewTask] = useState({ content: '' })
+  const [submitted, setSubmitted] = useState(false)
+  const handleChange = (event) => {
+    setNewTask({ ...newTask, [event.target.name]: event.target.value })
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
+    if (newTask.content) {
+      addTask(newTask)
+      setNewTask({ content: '' })
+      setSubmitted(true)
+    } else {
+      alert('Please fill in the form')
+    }
+    if (submitted) {
+      return redirect('/')
+    }
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <textarea
-        name=""
-        id=""
+        name="content"
         cols="30"
         rows="10"
         placeholder="Task to-do..."
+        value={newTask.content}
+        onChange={handleChange}
       ></textarea>
-      {/* <div>
-        <label>
-          Start Date:
-          <DateTimePicker />
-        </label>
-      </div>
-      <div>
-        <label>
-          End Date:
-          <DateTimePicker />
-        </label>
-      </div> */}
 
       <button type="submit">Submit</button>
     </form>
