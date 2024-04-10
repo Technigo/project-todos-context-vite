@@ -1,8 +1,7 @@
 import React from "react";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
-import { TodoProvider } from "./context/TodoContext";
-import "./App.css";
+import { TodoProvider } from "./TodoContext";
 
 const App = () => {
   return (
