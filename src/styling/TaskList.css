@@ -1,0 +1,62 @@
+li {
+  background-color: rgb(255, 220, 226);
+  border-radius: 20px;
+  margin-top: 1em;
+  padding: 1em;
+
+  p {
+    padding: 0 0 1em 1em;
+  }
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+}
+input[type='checkbox']:hover {
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.unchecked {
+  position: absolute;
+  z-index: 0;
+}
+.checked {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+input[type='checkbox']:checked ~ .checked {
+  display: block;
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 1em;
+}
+
+label {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.trashbin {
+  width: 15px;
+  height: 15px;
+}

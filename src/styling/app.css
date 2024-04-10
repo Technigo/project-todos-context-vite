@@ -9,7 +9,8 @@ h1, h2, h3, p{
 }
 
 .main-container{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     justify-content: center;
     display: grid;
     grid-template-columns: 100%;
@@ -18,7 +19,7 @@ h1, h2, h3, p{
   }
   
   .card{
-    padding: 2em;
+    padding: 1em;
     border: 0.5px solid white;
     border-radius: 30px;
   
@@ -48,13 +49,14 @@ h1, h2, h3, p{
   @media screen and (min-width: 1024px){
     .main-container{
       width: 80%;
-      margin: 0 auto;
       grid-template-columns: 50% 50%;
       padding: 5em 0;
     }
     .section{
       min-height: 150px;
-
     }
+
+    .card{
+      padding: 2em;
 }
-  
+}

@@ -26,7 +26,7 @@ for (var i = 0; i < greeting.length; i++) {
           </div>
           <div className="greet-text">
                 <h1>{greeting[i][1]}</h1>
-                <h3>What do you need to do today? Manage your time in an efficient way</h3>
+                <h3>What's your plan for today? Manage your time in an efficient way with this To Do list</h3>
             </div>
         </div>
         )

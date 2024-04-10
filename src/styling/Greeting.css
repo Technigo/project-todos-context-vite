@@ -1,15 +1,15 @@
 .greeting{
     display: flex;
+    margin-bottom: 2em;
+    padding-top: 1em;
 }
 
 #lottie{
-    width: 120px;
+    width: 180px;
 }
-
 .greet-text{
-    width: 15em;
+    text-align: justify;
 }
-
 
 @media screen and (min-width: 768px){
     #lottie{
