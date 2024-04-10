@@ -18,6 +18,28 @@ const TaskList = ({ data }) => {
   const { ToDo, addToDo, removeToDo } = useToDo();
   const { complete, addComplete, removeComplete } = useComplete();
 
+  // event handler functions
+  const changeStatus = item => {
+    if (data === "ToDo") {
+      playCompleteToDo();
+      addComplete(item);
+      removeToDo(item);
+    } else {
+      playAddToDo();
+      addToDo(item.task);
+      removeComplete(item);
+    }
+  };
+
+  const removeItem = item => {
+    playDump();
+    if (data === "ToDo") {
+      removeToDo(item);
+    } else {
+      removeComplete(item);
+    }
+  };
+
   return (
     <ul className="task-list">
       {(data === "ToDo" ? ToDo : complete).map(item => (
@@ -30,15 +52,7 @@ const TaskList = ({ data }) => {
                 // value={item.task}
                 defaultChecked={complete.includes(item)}
                 onChange={() => {
-                  if (data === "ToDo") {
-                    playCompleteToDo();
-                    addComplete(item);
-                    removeToDo(item);
-                  } else {
-                    playAddToDo();
-                    addToDo(item.task);
-                    removeComplete(item);
-                  }
+                  changeStatus(item);
                 }}
               />
               <img
@@ -58,17 +72,12 @@ const TaskList = ({ data }) => {
                 src={trash}
                 className="trashbin"
                 onClick={() => {
-                  playDump();
-                  if (data === "ToDo") {
-                    removeToDo(item);
-                  } else {
-                    removeComplete(item);
-                  }
+                  removeItem(item);
                 }}
               />
             </div>
           </div>
-          <p>{item.createdAt.calendar()}</p>
+          <p>Created: {item.createdAt.calendar()}</p>
         </li>
       ))}
     </ul>
