@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./ListItem.css";
 import { useTodo } from "../../contexts/TodoContext";
+import { Badge } from "../badge/Badge";
 
 export const ListItem = ({ id }) => {
   const { tasks, setTasks, removeTask } = useTodo();
@@ -25,6 +26,18 @@ export const ListItem = ({ id }) => {
         onChange={handleCheckUpdate}
       />
       {currentTask.desc}
+      <Badge
+        text={currentTask.category}
+        type="cat"
+      />
+      <Badge
+        text={currentTask.sprint}
+        type="spr"
+      />
+      <Badge
+        text={currentTask.project}
+        type="pro"
+      />
       <button
         className="btn remove"
         onClick={handleRemove}>

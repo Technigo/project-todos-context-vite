@@ -2,96 +2,153 @@
   {
     "_id": 1,
     "desc": "Set up basics",
-    "isDone": true
+    "isDone": true,
+    "category": "Must have",
+    "sprint": "Current",
+    "project":"To do"
   },
   {
     "_id": 2,
     "desc": "Create components",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Current",
+    "project":"To do"
   },
   {
     "_id": 3,
     "desc": "Set up form",
-    "isDone": false
+    "isDone": false    ,
+    "category": "Must have",
+    "sprint": "Current",
+    "project":"To do"
   },
   {
     "_id": 4,
     "desc": "Feature - Add task",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Current",
+    "project":"To do"
   },
   {
     "_id": 5,
     "desc": "Feature - Remove task",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Current",
+    "project":"To do"
   },
   {
     "_id": 6,
     "desc": "Feature - Toggle completion",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Coming up",
+    "project":"To do"
   },
   {
     "_id": 7,
     "desc": "Feature - Count",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Coming up",
+    "project":"To do"
   },
   {
     "_id": 8,
     "desc": "Feature - Timestamp",
-    "isDone": false
+    "isDone": false,
+    "category": "Nice to have",
+    "sprint": "Coming up",
+    "project":"To do"
   },
   {
     "_id": 9,
     "desc": "Feature - Darkmode",
-    "isDone": false
+    "isDone": false,
+    "category": "Nice to have",
+    "sprint": "Coming up",
+    "project":"To do"
   },
   {
     "_id": 10,
     "desc": "Feature - Complete all",
-    "isDone": false
+    "isDone": false,
+    "category": "Nice to have",
+    "sprint": "Coming up",
+    "project":"To do"
   },
   {
     "_id": 11,
     "desc": "Feature - Duedate",
-    "isDone": false
+    "isDone": false,
+    "category": "Could have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 12,
     "desc": "Feature - Filter",
-    "isDone": false
+    "isDone": false,
+    "category": "Could have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 13,
     "desc": "Feature - Categories",
-    "isDone": false
+    "isDone": false,
+    "category": "Could have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 14,
     "desc": "Feature - Projects",
-    "isDone": false
+    "isDone": false,
+    "category": "Could have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 15,
     "desc": "Style",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 16,
     "desc": "Deploy to Netlify",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 17,
     "desc": "Do a pull request",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 18,
     "desc": "Set up list",
-    "isDone": false
+    "isDone": false,
+    "category": "Must have",
+    "sprint": "Future",
+    "project":"To do"
   },
   {
     "_id": 19,
     "desc": "Set up local storage",
-    "isDone": false
+    "isDone": false,
+    "category": "Could have",
+    "sprint": "Future",
+    "project":"To do"
   }
 ]
