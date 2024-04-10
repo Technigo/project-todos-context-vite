@@ -30,6 +30,12 @@
     cursor: pointer;
     align-self: flex-end;
   }
+
+  .task-count {
+    font-size: 15px;
+    align-self: flex-end;
+    padding-right: 10px;
+  }
 }
 
 .light-heading {
@@ -60,4 +66,12 @@
     background-color: $dark-sec;
     border: 2px solid $dark-third;
   }
+}
+
+.task-light {
+  border-right: 10px solid $light-fourth;
+}
+
+.task-dark {
+  border-right: 10px solid $dark-fourth;
 }

@@ -22,9 +22,31 @@ export const TaskProvider = ({ children }) => {
     );
   };
 
+  let totalLength = toDoList.length;
+  console.log(totalLength);
+
+  let uncompletedTasks = [];
+
+  if (toDoList.length === 0) {
+    console.log("No tasks in the list.");
+  } else {
+    uncompletedTasks = toDoList.filter((task) => !task.status);
+  }
+
+  console.log(uncompletedTasks);
+
+  let uncompletedLength = uncompletedTasks.length;
+
   return (
     <TaskContext.Provider
-      value={{ toDoList, addTask, removeTask, updatedStatus }}
+      value={{
+        toDoList,
+        addTask,
+        removeTask,
+        updatedStatus,
+        totalLength,
+        uncompletedLength,
+      }}
     >
       {children}
     </TaskContext.Provider>

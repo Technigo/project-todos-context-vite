@@ -9,25 +9,8 @@ export const ToDoList = () => {
 
   console.log(toDoList);
 
-  let totalLenght = toDoList.length;
-  console.log(totalLenght);
-
-  let uncompletedTasks = [];
-
-  if (toDoList.length === 0) {
-    console.log("No tasks in the list.");
-  } else {
-    uncompletedTasks = toDoList.filter((task) => !task.status);
-  }
-
-  console.log(uncompletedTasks);
-
-  let uncomlpetedLength = uncompletedTasks.length;
-
   return (
     <div className="tasklist">
-      <p>All Tasks: {totalLenght}</p>
-      <p>Uncompleted: {uncomlpetedLength}</p>
       <ul>
         {toDoList.map((taskObj) => (
           <li

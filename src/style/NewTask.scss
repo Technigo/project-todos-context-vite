@@ -7,6 +7,11 @@
   gap: 10px;
   align-items: center;
 
+  input {
+    border-radius: 10px;
+    padding: 7px;
+  }
+
   input:focus::placeholder {
     color: transparent;
   }

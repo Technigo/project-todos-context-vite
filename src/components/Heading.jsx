@@ -1,9 +1,13 @@
 import "../style/Heading.scss";
 import { FaClipboardList } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
+import { useTask } from "../context/TaskContext";
 
 export const Heading = () => {
   const { darkMode, changeMode } = useTheme();
+  const { totalLength, uncompletedLength } = useTask();
+
+  console.log(totalLength);
 
   return (
     <>
@@ -20,6 +24,10 @@ export const Heading = () => {
         <button className={darkMode ? "dark" : "light"} onClick={changeMode}>
           Swich Theme: Light/Dark
         </button>
+        <div className={`task-count ${darkMode ? "task-dark" : "task-light"}`}>
+          <p>All Tasks: {totalLength}</p>
+          <p>Uncompleted Tasks: {uncompletedLength}</p>
+        </div>
       </div>
     </>
   );
