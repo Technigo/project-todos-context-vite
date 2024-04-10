@@ -10,16 +10,17 @@ import AddToDo from "../assets/sounds/addToDo.mp3";
 import CompleteToDo from "../assets/sounds/complete.mp3";
 
 const TaskList = ({ data }) => {
+  // sounds
   const [playDump] = useSound(Dump, { volume: 0.5 });
   const [playAddToDo] = useSound(AddToDo, { volume: 0.5 });
   const [playCompleteToDo] = useSound(CompleteToDo, { volume: 0.5 });
+  // contexts
   const { ToDo, addToDo, removeToDo } = useToDo();
   const { complete, addComplete, removeComplete } = useComplete();
 
   return (
     <ul className="task-list">
       {(data === "ToDo" ? ToDo : complete).map(item => (
-        //replace the value of the key and some attr with item.timestamp later
         <li key={item.createdAt}>
           <div className="task-item">
             <div className="checkbox">
