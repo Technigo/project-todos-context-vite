@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useTasks } from "../contexts/TasksContext"
+import "./TaskForm.css"
 
 export const TaskForm = () => {
   const { tasks, addTask } = useTasks()
@@ -28,7 +29,7 @@ export const TaskForm = () => {
   return (
     <div className="task-form">
       <h2>Add new task here:</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label>
           To do:
           <input
