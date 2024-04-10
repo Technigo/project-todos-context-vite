@@ -1,11 +1,19 @@
 import { useToDoContext } from '../Contexts/TodoContext'
+import { useState } from 'react'
 import moment from 'moment'
 import '../Styles/Task.css'
 import { Filters } from './Filters'
 export const TaskList = () => {
   const { taskList, deleteTask, completeTask } = useToDoContext()
-  const now = moment().format('MMM Do YY')
-
+  const [filter, setFilter] = useState('all')
+  const filteredTasks = taskList.filter((task) => {
+    if (filter === 'completed') return task.completed
+    if (filter === 'pending') return !task.completed
+    return true
+  })
+  const uncompletedTasksCount = taskList.filter(
+    (task) => !task.completed
+  ).length
   const handleDelete = (taskId) => {
     deleteTask(taskId)
   }
@@ -14,9 +22,12 @@ export const TaskList = () => {
   }
   return (
     <>
-      <Filters />
-      {taskList &&
-        taskList.map((item) => (
+      <Filters
+        setFilter={setFilter}
+        uncompletedTasksCount={uncompletedTasksCount}
+      />
+      {filteredTasks &&
+        filteredTasks.map((item) => (
           <div key={item.id} className="taskItem">
             <input
               id={`checkbox-${item.id}`}

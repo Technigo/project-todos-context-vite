@@ -4,7 +4,7 @@ const TodoContext = createContext()
 
 export const TodoProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([])
-  const [filteredTasks, setFilteredTasks] = useState([])
+
   useEffect(() => {
     fetch('https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content')
       .then((res) => res.json())
@@ -88,18 +88,6 @@ export const TodoProvider = ({ children }) => {
       })
       .catch((error) => console.error('Error updating task:', error))
   }
-  const filterPending = () => {
-    const pendingTasks = taskList.filter((task) => task.completed == false)
-    setFilteredTasks(pendingTasks)
-  }
-  const filterCompleted = () => {
-    const completedTasks = taskList.filter((task) => task.completed)
-    setFilteredTasks(completedTasks)
-  }
-
-  const showAllTasks = () => {
-    setFilteredTasks(taskList)
-  }
 
   return (
     <TodoContext.Provider
@@ -108,10 +96,7 @@ export const TodoProvider = ({ children }) => {
         addTask,
         deleteTask,
         completeTask,
-        filterPending,
-        filterCompleted,
-        showAllTasks,
-        taskList: filteredTasks,
+        completeTask,
       }}
     >
       {children}

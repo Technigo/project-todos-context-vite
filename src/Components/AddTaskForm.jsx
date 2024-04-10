@@ -1,21 +1,23 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../Styles/form.css'
 import { redirect } from 'react-router-dom'
 import { useToDoContext } from '../Contexts/TodoContext'
 export const AddTaskForm = () => {
-  const { taskList, addTask } = useToDoContext()
+  const { addTask } = useToDoContext()
   const [newTask, setNewTask] = useState({ content: '' })
-  const [submitted, setSubmitted] = useState(false)
+
   const handleChange = (event) => {
     setNewTask({ ...newTask, [event.target.name]: event.target.value })
   }
-
+  const navigate = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault()
     if (newTask.content) {
       addTask(newTask)
       setNewTask({ content: '' })
-      setSubmitted(true)
+
+      navigate('/')
     } else {
       alert('Please fill in the form')
     }

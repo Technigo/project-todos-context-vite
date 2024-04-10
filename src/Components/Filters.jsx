@@ -1,12 +1,10 @@
-import { useToDoContext } from '../Contexts/TodoContext'
-
-export const Filters = () => {
-  const { filterPending, filterCompleted, showAllTasks } = useToDoContext()
+export const Filters = ({ setFilter, uncompletedTasksCount }) => {
   return (
     <div className="filtersWrapper">
-      <button onClick={showAllTasks}>All Tasks</button>
-      <button onClick={filterPending}>Pending</button>
-      <button onClick={filterCompleted}>Completed Tasks</button>
+      <button onClick={() => setFilter('all')}>All Tasks</button>
+      <button onClick={() => setFilter('pending')}>Pending</button>
+      <button onClick={() => setFilter('completed')}>Completed Tasks</button>
+      <span>Tasks to complete: {uncompletedTasksCount}</span>
     </div>
   )
 }
