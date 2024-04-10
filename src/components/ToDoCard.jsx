@@ -18,7 +18,7 @@ export const ToDoCard = ({ todo, toggleComplete }) => {
       >
         {todo.description}
       </span>
-      <button onChange={handleRemove}>Remove</button>
+      <button onClick={handleRemove}>Remove</button>
     </li>
   );
 };
