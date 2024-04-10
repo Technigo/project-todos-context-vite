@@ -9,7 +9,7 @@ export const ToDoCard = ({ todo, toggleComplete }) => {
       <span
         style={{ textDecoration: todo.completed ? "line-through" : "none" }}
       >
-        {todo.task}
+        {todo.description}
       </span>
     </li>
   );
