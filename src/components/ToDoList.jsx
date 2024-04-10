@@ -3,11 +3,13 @@
 
 import { useState } from "react";
 import { useTask } from "../context/TaskContext";
+import { useTheme } from "../context/ThemeContext";
 import "../style/ToDoList.scss";
 import { GiBurningDot } from "react-icons/gi";
 
 export const ToDoList = () => {
-  const { toDoList, darkMode, removeTask } = useTask();
+  const { toDoList, removeTask } = useTask();
+  const { darkMode } = useTheme();
   const [done, setDone] = useState(false);
 
   const getBackgroundClases = () => {

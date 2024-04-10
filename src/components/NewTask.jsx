@@ -2,9 +2,11 @@
 import { useState } from "react";
 import "../style/NewTask.scss";
 import { useTask } from "../context/TaskContext";
+import { useTheme } from "../context/ThemeContext";
 
 export const NewTask = () => {
-  const { addTask, darkMode } = useTask();
+  const { addTask } = useTask();
+  const { darkMode } = useTheme();
   const [taskInput, setTaskInput] = useState("");
 
   const handleAddTask = () => {

@@ -15,19 +15,8 @@ export const TaskProvider = ({ children }) => {
     setToDoList([...toDoList]);
   };
 
-  const [darkMode, setDarkMode] = useState(false);
-  const changeMode = () => {
-    if (darkMode === false) {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-  };
-
   return (
-    <TaskContext.Provider
-      value={{ toDoList, addTask, darkMode, changeMode, removeTask }}
-    >
+    <TaskContext.Provider value={{ toDoList, addTask, removeTask }}>
       {children}
     </TaskContext.Provider>
   );
