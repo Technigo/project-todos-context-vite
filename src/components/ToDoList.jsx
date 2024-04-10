@@ -9,9 +9,9 @@ const ToDoList = () => {
   const { addAllComplete } = useComplete()
 
   return (
-    <ul className="section todo-list">
+    <div className="section todo-list">
       <div className="top-todo">
-        <h1>To do:</h1>{' '}
+        <h1>To do:</h1>
         <button
           type="button"
           className="button"
@@ -29,8 +29,8 @@ const ToDoList = () => {
       ) : (
         <TaskList data="ToDo" />
       )}
-      <p>Count:{ToDo.length}/5</p>
-    </ul>
+      <p className='count'>Count:{ToDo.length}/5</p>
+    </div>
   )
 }
 

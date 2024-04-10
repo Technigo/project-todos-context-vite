@@ -1,7 +1,26 @@
 .daily-inspo{
+    background-color: rgb(144, 164, 255); 
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
 
     p{
         font-style:italic;
         font-size: 18px;
+    }
+}
+
+.quote p{
+    width: max-content;
+    margin-top: 1em;
+    }
+
+#lottie{
+    width: 160px;
+}
+
+@media screen and (min-width: 1024px){
+    .quote p{
+        font-size: 1.5em;
     }
 }

@@ -32,7 +32,7 @@ const ToDoForm = () => {
           type="submit"
           className="button add"
         >
-          Add to list
+        Add Todo
         </button>
       </form>
     </div>

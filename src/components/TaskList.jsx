@@ -10,7 +10,7 @@ const TaskList = ({ data }) => {
   const { complete, addComplete, removeComplete } = useComplete()
 
   return (
-    <>
+    <ul className="task-list">
       {(data === 'ToDo' ? ToDo : complete).map((item) => (
         //replace the value of the key and some attr with item.timestamp later
         <li key={item.createdAt}>
@@ -60,7 +60,7 @@ const TaskList = ({ data }) => {
           <p>{item.createdAt.calendar()}</p>
         </li>
       ))}
-    </>
+    </ul>
   )
 }
 

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../styling/InspirationCard.css'
+import animation from '../assets/animations/Animation-planning.json'
+import Lottie from 'lottie-react'
 
 const InspirationCard = () => {
 
@@ -33,9 +35,17 @@ const InspirationCard = () => {
     )}
     {!loading && (
         <div className="section daily-inspo">
-        <h1>Daily Inspiration</h1>
-        <p>" {quote[Math.floor(Math.random() * quote.length)].text} "</p>
+        <div className="quote"><h1>Daily Inspiration</h1>
+        <p>" {quote[Math.floor(Math.random() * quote.length)].text}"</p>
         </div>
+        <div id="lottie">
+        <Lottie
+        animationData={animation}
+        loop
+        autoPlay
+    />
+    </div>
+  </div>
         )}
     </>
 )}

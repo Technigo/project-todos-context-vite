@@ -1,3 +1,10 @@
+.task-list {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 li {
   background-color: rgb(255, 220, 226);
   border-radius: 20px;

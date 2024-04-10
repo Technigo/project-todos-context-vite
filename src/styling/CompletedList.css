@@ -1,7 +1,20 @@
-.completed{
-    background-color: rgb(255, 151, 151);
+.completed {
+  background-color: rgb(255, 151, 151);
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.image img{
-    width: 70%;
+.image img {
+  width: 70%;
+}
+
+.count {
+  align-self: flex-end;
+}
+
+.no-complete-img {
+  width: 90%;
+  align-self: center;
 }

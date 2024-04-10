@@ -1,11 +1,11 @@
 .greeting{
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     padding-top: 1em;
 }
 
 #lottie{
-    width: 180px;
+    width: 120px;
 }
 .greet-text{
     text-align: justify;
@@ -13,15 +13,15 @@
 
 @media screen and (min-width: 768px){
     #lottie{
-        width: 200px;
+        width: 150px;
     }
 }
 
 @media screen and (min-width: 1024px){
     #lottie{
-        width: 230px;
+        width: 180px;
     }
     .greet-text{
-        font-size: 1.5em;
+      
     }
 }

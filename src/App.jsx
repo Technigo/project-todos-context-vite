@@ -13,12 +13,11 @@ export const App = () => {
       <ToDoProvider>
         <CompleteProvider>
           <div className="card">
-          <Greeting />
           <ToDoForm />
-          <InspirationCard />
+          <ToDoList />
           </div>
           <div className="card">
-          <ToDoList />
+          <InspirationCard />
           <CompleteList />
           </div>
         </CompleteProvider>
