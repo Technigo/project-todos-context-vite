@@ -34,13 +34,14 @@ export const ToDoProvider = ({ children }) => {
 
   // Function to add new task to todo-list
   const addToDo = (newToDo) => {
-    setToDos((prevToDos) => [...prevToDos, newToDo]);
+    setToDos((prevToDos) => [
+      ...prevToDos,
+      {
+        id: toDos.length > 0 ? toDos[toDos.length - 1].id + 1 : 1, // Generate the next available numerical id
+        ...newToDo,
+      },
+    ]);
   };
-
-  // const removeTodo = (index) => {
-  //   const updatedTodos = todos.filter((_, i) => i !== index);
-  //   setTodos(updatedTodos);
-  // };
 
   // Function to remove task from todo-list
   const removeToDo = (id) => {
