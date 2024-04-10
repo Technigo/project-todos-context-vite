@@ -1,8 +1,12 @@
 import { AddToDo } from "./pages/AddToDo";
+import { ToDoProvider } from "./ToDoContext";
 
 export const App = () => {
-  return <div>
-
-    <AddToDo />
-  </div>;
+  return (
+    <div>
+      <ToDoProvider>
+        <AddToDo />
+      </ToDoProvider>
+    </div>
+  );
 };
