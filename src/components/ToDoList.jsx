@@ -3,10 +3,13 @@ import { useComplete } from "../context/CompleteContext";
 import "../styling/ToDoList.css";
 import TaskList from "./TaskList";
 import clear from "../assets/noToDo.svg";
+import useSound from "use-sound";
+import CompleteAll from "../assets/sounds/completeAll.mp3";
 
 const ToDoList = () => {
   const { ToDo, completeAllToDo } = useToDo();
   const { addAllComplete } = useComplete();
+  const [playCompleteAll] = useSound(CompleteAll, { volume: 0.5 });
 
   return (
     <div className="section todo-list">
@@ -16,6 +19,7 @@ const ToDoList = () => {
           type="button"
           className="button"
           onClick={() => {
+            playCompleteAll();
             completeAllToDo();
             addAllComplete(ToDo);
           }}
