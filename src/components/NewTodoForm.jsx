@@ -3,13 +3,14 @@ import { useTodo } from "../context/TodoContext";
 
 export const NewTodoForm = () => {
   const [newItem, setNewItem] = useState("");
-  const { addTodo } = useTodo();
+  const { addTodo, itemId, setItemId } = useTodo();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addTodo(newItem);
     setNewItem("");
   };
+
   return (
     <>
       <form onSubmit={handleSubmit} className="new-todo-form">

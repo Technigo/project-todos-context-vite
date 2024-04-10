@@ -1,14 +1,36 @@
-import { useContext } from "react";
-import { useTodo } from "../context/TodoContext"
+import { useTodo } from "../context/TodoContext";
 
 export const TodoList = () => {
-  const { todoList } = useTodo()
+  const { todoList, deleteTasks, toggleTodo } = useTodo();
 
   return (
-    <ul>
-{todoList.map((item, index) => {
-  return <li key={index}>{item}</li>
-})}
-</ul>
-  )
+    <div className="todo-list-container">
+      <h2>To do list:</h2>
+      <ul>
+        {todoList.map((item) => {
+          return (
+            <li key={item.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={item.completed}
+                  onChange={(e) => toggleTodo(item.id, e.target.checked)}
+                />
+                <span
+                  style={{
+                    textDecoration: item.completed ? "line-through" : "none",
+                  }}
+                >
+                  {item.text}
+                </span>
+                <button onClick={() => deleteTasks(item.id)}>
+                  Delete Task
+                </button>
+              </label>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
