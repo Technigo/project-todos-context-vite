@@ -2,19 +2,25 @@
 
 .heading-background {
   padding: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+  font-size: 3vw;
 
   .heading-text {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 20px;
 
     h1 {
       margin: 0;
     }
 
     .checklist {
-      font-size: 40px;
+      font-size: 8vmax;
     }
   }
 
@@ -22,18 +28,36 @@
     border-radius: 20px;
     padding: 5px 10px;
     cursor: pointer;
+    align-self: flex-end;
   }
 }
 
-.light {
-  background-color: $spring-prim;
+.light-heading {
+  background-color: $light-prim;
+  color: #000;
 
   button {
-    background-color: $spring-third;
-    border: 2px solid $spring-sec;
+    background-color: $light-third;
+    border: 2px solid $light-sec;
+  }
+
+  button:hover {
+    background-color: $light-sec;
+    border: 2px solid $light-third;
   }
 }
 
-.dark {
-  background-color: #102375;
+.dark-heading {
+  background-color: $dark-prim;
+  color: #fff;
+
+  button {
+    background-color: $dark-third;
+    border: 2px solid $dark-sec;
+  }
+
+  button:hover {
+    background-color: $dark-sec;
+    border: 2px solid $dark-third;
+  }
 }

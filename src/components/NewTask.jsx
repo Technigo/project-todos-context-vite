@@ -39,11 +39,7 @@ export const NewTask = () => {
 
   return (
     <>
-      <div
-        className={
-          darkMode ? "task-input-box task-input-box-dark" : "task-input-box"
-        }
-      >
+      <div className="task-input-box">
         <label htmlFor="new-task">New Task:</label>
         <input
           type="text"
@@ -53,7 +49,12 @@ export const NewTask = () => {
           onChange={(event) => setTaskInput(event.target.value)}
         />
 
-        <button onClick={handleAddTask}>Add to List</button>
+        <button
+          className={darkMode ? "dark-button" : "light-button"}
+          onClick={handleAddTask}
+        >
+          Add to List
+        </button>
       </div>
     </>
   );

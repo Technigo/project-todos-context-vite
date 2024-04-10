@@ -12,24 +12,28 @@
   }
 
   button {
-    background-color: $spring-third;
-    border: 2px solid $spring-sec;
     border-radius: 20px;
     padding: 5px 10px;
     cursor: pointer;
   }
-
-  button:hover {
-    background-color: $spring-sec;
-    border: 2px solid $spring-third;
-  }
 }
 
-.task-input-box-dark {
-  button {
-    background-color: #102375;
-  }
-  button:hover {
-    background-color: #1d61ad;
-  }
+.light-button {
+  background-color: $light-third;
+  border: 2px solid $light-sec;
+}
+
+.light-button:hover {
+  background-color: $light-sec;
+  border: 2px solid $light-third;
+}
+
+.dark-button {
+  background-color: $dark-third;
+  border: 2px solid $dark-sec;
+}
+
+.dark-button:hover {
+  background-color: $dark-sec;
+  border: 2px solid $dark-third;
 }
