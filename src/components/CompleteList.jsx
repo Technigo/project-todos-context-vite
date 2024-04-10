@@ -24,6 +24,7 @@ const CompleteList = () => {
                 }}
               />
               <label htmlFor={item.task}>{item.task}</label>
+              <span>{item.createdAt.calendar()}</span>
               <button
                 type="button"
                 value={item.task}

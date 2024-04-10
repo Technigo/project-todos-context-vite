@@ -1,3 +1,7 @@
+# TO DO
+-fixed height of todo-list and completed-list
+
+
 # Instructions
 In this week's project, it's time to flex your muscles and build an application that pulls together all the parts of the Context API by building a todo app.
 
