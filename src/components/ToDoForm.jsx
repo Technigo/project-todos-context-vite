@@ -2,13 +2,27 @@ import { useState } from "react";
 import { useTodoContext } from "../contexts/TodoContext";
 
 export const TodoForm = () => {
-  const { todos, setTodos, addTask } = useTodoContext();
-  const [task, setTask] = useState({
+  const { addTodo } = useTodoContext();
+  const [newTodo, setNewTodo] = useState({
     description: "",
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (newTodo.description) {
+      addTodo(newTodo);
+      setNewTodo({ description: "" });
+    } else {
+      alert("Please fill in the field");
+    }
+  };
+
+  const handleChange = (event) => {
+    setNewTodo({
+      ...newTodo,
+      [event.target.name]: event.target.value,
+    });
   };
 
   return (
@@ -17,11 +31,12 @@ export const TodoForm = () => {
         <label>Add a new task</label>
         <input
           type="text"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
+          value={newTodo.description}
           placeholder="New task"
+          name="description"
+          onChange={handleChange}
         />
-        <button onClick={addTask}>+</button>
+        <button type="submit">+</button>
       </form>
     </div>
   );

@@ -2,7 +2,7 @@ import { ToDoCard } from "./ToDoCard";
 import { useTodoContext } from "../contexts/TodoContext";
 
 export const TodoList = () => {
-  const { todos, setTodos } = useTodoContext();
+  const { todos, toggleComplete } = useTodoContext();
 
   return (
     <div>

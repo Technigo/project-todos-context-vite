@@ -21,17 +21,20 @@ export const TodoProvider = ({ children }) => {
     setTodos(updatedTodos);
   };
 
-  const addTask = () => {
+  /*  const addTask = () => {
     if (task.trim() !== "") {
       setTodos([...todos, { task, completed: false }]);
       setTask({ description: "" });
     }
+  }; */
+  const addTodo = (newTodo) => {
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  const removeTodo = () => {};
+  // const removeTodo = () => {};
 
   return (
-    <TodoContext.Provider value={{ todos, setTodos, toggleComplete, addTask }}>
+    <TodoContext.Provider value={{ todos, setTodos, toggleComplete, addTodo }}>
       {children}
     </TodoContext.Provider>
   );
