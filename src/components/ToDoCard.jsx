@@ -1,22 +1,22 @@
-import { useTodoContext } from "../contexts/TodoContext";
+import { useToDoContext } from "../contexts/ToDoContext";
 
-export const ToDoCard = ({ todo, toggleComplete }) => {
-  const { removeTodo, clearTodos } = useTodoContext();
+export const ToDoCard = ({ toDo, toggleComplete }) => {
+  const { removeToDo, clearToDos } = useToDoContext();
 
   const handleRemove = () => {
-    removeTodo(todo.id);
+    removeToDo(toDo.id);
   };
   return (
     <li>
       <input
         type="checkbox"
-        checked={todo.completed}
+        checked={toDo.completed}
         onChange={toggleComplete}
       />
       <span
-        style={{ textDecoration: todo.completed ? "line-through" : "none" }}
+        style={{ textDecoration: toDo.completed ? "line-through" : "none" }}
       >
-        {todo.description}
+        {toDo.description}
       </span>
       <button onClick={handleRemove}>Remove</button>
     </li>

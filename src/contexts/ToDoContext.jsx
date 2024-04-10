@@ -1,11 +1,13 @@
 import { createContext, useState, useContext } from "react";
 
-const TodoContext = createContext();
+// Create a Context
+const ToDoContext = createContext();
 
-export const useTodoContext = () => useContext(TodoContext);
+// Custom hook
+export const useToDoContext = () => useContext(ToDoContext);
 
-export const TodoProvider = ({ children }) => {
-  const [todos, setTodos] = useState([
+export const ToDoProvider = ({ children }) => {
+  const [toDos, setToDos] = useState([
     {
       id: 1,
       description: "Buy vegetables",
@@ -25,13 +27,14 @@ export const TodoProvider = ({ children }) => {
 
   // Function to toggle the completed status of a task
   const toggleComplete = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos[index].completed = !updatedTodos[index].completed;
-    setTodos(updatedTodos);
+    const updatedToDos = [...toDos];
+    updatedToDos[index].completed = !updatedToDos[index].completed;
+    setToDos(updatedToDos);
   };
 
-  const addTodo = (newTodo) => {
-    setTodos((prevTodos) => [...prevTodos, newTodo]);
+  // Function to add new task to todo-list
+  const addToDo = (newToDo) => {
+    setToDos((prevToDos) => [...prevToDos, newToDo]);
   };
 
   // const removeTodo = (index) => {
@@ -39,27 +42,30 @@ export const TodoProvider = ({ children }) => {
   //   setTodos(updatedTodos);
   // };
 
-  const removeTodo = (id) => {
-    const updatedTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
+  // Function to remove task from todo-list
+  const removeToDo = (id) => {
+    const updatedToDos = toDos.filter((toDo) => toDo.id !== id);
+    setToDos(updatedToDos);
   };
 
-  const clearTodos = () => {
-    setTodos([]);
+  //Function to clear all tasks from todo-list
+  const clearToDos = () => {
+    setToDos([]);
   };
 
   return (
-    <TodoContext.Provider
+    //Provide the context value, which contains the data we want to share, to the children
+    <ToDoContext.Provider
       value={{
-        todos,
-        setTodos,
+        toDos,
+        setToDos,
         toggleComplete,
-        addTodo,
-        removeTodo,
-        clearTodos,
+        addToDo,
+        removeToDo,
+        clearToDos,
       }}
     >
       {children}
-    </TodoContext.Provider>
+    </ToDoContext.Provider>
   );
 };

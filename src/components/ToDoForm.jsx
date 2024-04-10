@@ -1,26 +1,26 @@
 import { useState } from "react";
-import { useTodoContext } from "../contexts/TodoContext";
+import { useToDoContext } from "../contexts/ToDoContext";
 
-export const TodoForm = () => {
-  const { addTodo } = useTodoContext();
-  const [newTodo, setNewTodo] = useState({
+export const ToDoForm = () => {
+  const { addToDo } = useToDoContext();
+  const [newToDo, setNewToDo] = useState({
     description: "",
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (newTodo.description) {
-      addTodo(newTodo);
-      setNewTodo({ description: "" });
+    if (newToDo.description) {
+      addToDo(newToDo);
+      setNewToDo({ description: "" });
     } else {
       alert("Please fill in the field");
     }
   };
 
   const handleChange = (event) => {
-    setNewTodo({
-      ...newTodo,
+    setNewToDo({
+      ...newToDo,
       [event.target.name]: event.target.value,
     });
   };
@@ -31,7 +31,7 @@ export const TodoForm = () => {
         <label>Add a new task</label>
         <input
           type="text"
-          value={newTodo.description}
+          value={newToDo.description}
           placeholder="New task"
           name="description"
           onChange={handleChange}

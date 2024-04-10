@@ -1,21 +1,21 @@
 import { ToDoCard } from "./ToDoCard";
-import { useTodoContext } from "../contexts/TodoContext";
+import { useToDoContext } from "../contexts/ToDoContext";
 
-export const TodoList = () => {
-  const { todos, toggleComplete } = useTodoContext();
+export const ToDoList = () => {
+  const { toDos, toggleComplete } = useToDoContext();
 
   return (
     <div>
-      <h2>Todo List</h2>
+      <h2>ToDo List</h2>
       <ul>
-        {todos.map((todo, index) => (
+        {toDos.map((toDo, index) => (
           <ToDoCard
             key={index}
-            todo={todo}
+            toDo={toDo}
             toggleComplete={() => toggleComplete(index)}
           />
         ))}
       </ul>
     </div>
   );
-}
+};

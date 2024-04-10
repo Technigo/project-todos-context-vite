@@ -1,17 +1,17 @@
 import React from "react";
-import { TodoProvider } from "./contexts/TodoContext";
-import { TodoForm } from "./components/TodoForm";
-import { TodoList } from "./components/TodoList";
+import { ToDoProvider } from "./contexts/ToDoContext";
+import { ToDoForm } from "./components/ToDoForm";
+import { ToDoList } from "./components/ToDoList";
 
 const App = () => {
   return (
-    <TodoProvider>
+    <ToDoProvider>
       <div>
-        <h1>Todo App</h1>
-        <TodoForm />
-        <TodoList />
+        <h1>ToDo App</h1>
+        <ToDoForm />
+        <ToDoList />
       </div>
-    </TodoProvider>
+    </ToDoProvider>
   );
 };
 
