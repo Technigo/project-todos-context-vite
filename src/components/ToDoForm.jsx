@@ -18,9 +18,9 @@ export const TodoForm = () => {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        placeholder="Add a new task"
+        placeholder="New task"
       />
-      <button onClick={addTask}>Add Task</button>
+      <button onClick={addTask}>+</button>
     </div>
   );
 };
