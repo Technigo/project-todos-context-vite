@@ -1,12 +1,12 @@
-import { useToDo } from '../context/ToDoContext'
-import { useComplete } from '../context/CompleteContext'
-import '../styling/ToDoList.css'
-import TaskList from './TaskList'
-import clear from '../assets/noToDo.svg'
+import { useToDo } from "../context/ToDoContext";
+import { useComplete } from "../context/CompleteContext";
+import "../styling/ToDoList.css";
+import TaskList from "./TaskList";
+import clear from "../assets/noToDo.svg";
 
 const ToDoList = () => {
-  const { ToDo, completeAllToDo } = useToDo()
-  const { addAllComplete } = useComplete()
+  const { ToDo, completeAllToDo } = useToDo();
+  const { addAllComplete } = useComplete();
 
   return (
     <div className="section todo-list">
@@ -16,8 +16,8 @@ const ToDoList = () => {
           type="button"
           className="button"
           onClick={() => {
-            completeAllToDo()
-            addAllComplete(ToDo)
+            completeAllToDo();
+            addAllComplete(ToDo);
           }}
           disabled={ToDo.length === 0 ? true : false}
         >
@@ -29,9 +29,9 @@ const ToDoList = () => {
       ) : (
         <TaskList data="ToDo" />
       )}
-      <p className='count'>Count:{ToDo.length}/5</p>
+      <p className="count">Count:{ToDo.length}/5</p>
     </div>
-  )
-}
+  );
+};
 
-export default ToDoList
+export default ToDoList;
