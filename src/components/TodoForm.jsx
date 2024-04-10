@@ -14,10 +14,12 @@ export const TodoForm = () => {
   const handleChange = (event) => {
     setNewTodo({ ...newTodo, [event.target.name]: event.target.value });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     addTodo(newTodo);
     setNewTodo({ todotext: "", id: newTodo.id + 1 });
+    console.log(newTodo);
   };
 
   return (
@@ -31,7 +33,9 @@ export const TodoForm = () => {
         value={newTodo.todotext}
         onChange={handleChange}
       />
-      <button type="submit" className="addTodo-btn">Add!</button>
+      <button type="submit" className="addTodo-btn">
+        Add!
+      </button>
     </form>
   );
 };

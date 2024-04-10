@@ -1,11 +1,12 @@
 import { useTodo } from "../contexts/TodoContext.jsx";
 import { useCheckbox } from "../contexts/CheckboxContext.jsx";
 import "./todo-list.css";
+//import moment from "moment";
 
 //Map and list all todos
 export const TodoList = () => {
-  const { todo, removeToDo } = useTodo();
-  const { tasks, toggleChecked } = useCheckbox();
+  const { todo, removeToDo, clearList } = useTodo();
+  const { tasks, toggleChecked, removeChecked } = useCheckbox();
 
   //const filterDoneToDos = () => {};
 
@@ -14,8 +15,11 @@ export const TodoList = () => {
     console.log(id);
   };
 
-  //PÅ RAD 28 handleRemoveTask() - vilket värde ska in i parentesen?
-  // key={task} är det rätt?
+  const clearChecked = (id) => {
+    removeChecked(id);
+    console.log(id);
+  };
+
   return (
     <div>
       {" "}
@@ -26,14 +30,37 @@ export const TodoList = () => {
             <input
               type="checkbox"
               key={task.id}
+              checked={task.isComplete}
               onChange={toggleChecked}></input>
             <label>{task.todotext}</label>
-            <button type="button" onClick={() => handleRemoveTask(task.id)}>
+            <button
+              className="delete-btn-task"
+              type="button"
+              onClick={() => handleRemoveTask(task.id)}>
               🚮
             </button>
           </form>
         </div>
       ))}
+      <div className="delete-btn-div">
+        <div className="delete-btn-all">
+          {todo.length > 0 && (
+            <button type="button" onClick={() => clearList()}>
+              ❌ Clear all
+            </button>
+          )}
+        </div>
+
+        {/* {todo.length > 0 && (
+          <button
+            className="delete-btn-checked"
+            type="button"
+            key={todo.id}
+            onClick={() => clearChecked(tasks)}>
+            ✔️ Clear checked
+          </button>
+        )} */}
+      </div>
     </div>
   );
 };
