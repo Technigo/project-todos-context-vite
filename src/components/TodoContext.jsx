@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 // Making a place to store our to-do list data so other child components can easily access it without using props
 export const TodoContext = createContext();
 
-// Provider component: It acts like a container for any part of your app that needs to access or modify the to-do list. Think of it as a box that holds the to-do list where other components can look into this box to see the list or add new items to it.
+// Provider component: It acts like a container for any part of your app that needs to access or modify the to-do list. 
+//Think of it as a box that holds the to-do list where other components can look into this box to see the list or add new items to it.
 export const TodoProvider = ({ children }) => {
   // Creating a list to hold our tasks. At the beginning, this list has nothing in it.
   const [todos, setTodos] = useState([]);

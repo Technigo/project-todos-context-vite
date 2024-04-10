@@ -1,0 +1,96 @@
+body {
+  background-color: rgb(237, 238, 239);
+}
+
+.title {
+  text-align: center;
+  color: rgb(13, 71, 13);
+}
+
+.app-container {
+  padding: 20px 40px;
+}
+
+.text-input {
+  width: 90%;
+  margin: 10px;
+  height: 40px;
+  padding: 10px 5px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.checkbox {
+  margin-right: 8px;
+  /* opacity: 0; */
+  /*to replace this with avocados?*/
+}
+
+.todo-count {
+  margin-right: 15px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-container {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  margin-top: 20px;
+  padding: 5px 20px;
+  border-radius: 40px;
+}
+
+.todo-item {
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.todo-time {
+  margin-top: 3px;
+  color: grey;
+  font-size: 12px;
+  margin-left: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.completed h2 {
+  background-color: rgb(31, 235, 31);
+  width: fit-content;
+  padding: 3px;
+}
+
+.uncompleted h2 {
+  background-color: yellow;
+  width: fit-content;
+  padding: 3px;
+}
+
+/*Media queries*/
+
+@media (min-width: 600px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-container {
+    padding: 20px 100px;
+  }
+
+  .list-container {
+    max-width: 550px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

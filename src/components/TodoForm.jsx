@@ -32,10 +32,10 @@ export const TodoForm = () => {
 
   return (
     // This form submits a new task when you press "Enter" or click the submit button.
-    <div className="input-form">
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
         <input
-          className="text-field"
+          className="text-input"
           // it is a "text field"
           type="text"
           // Make the value (that user typed) into "todo" state
