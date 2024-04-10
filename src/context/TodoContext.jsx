@@ -13,16 +13,16 @@ const toggleTodo = (id, completed) => {
   setTodoList(currentItems => {
     return currentItems.map(item => {
       if (item.id === id) {
-        return {...todoList, completed}
+        return {...item, completed: !completed }
       }
+      return item;
     })
   })
 }
   
-  const deleteTasks =() => {
+  const deleteTasks =(id) => {
     setTodoList(todoList.filter(item => item.id !== id))
-    
-  }
+  };
   
   const addTodo = (newItem) => {
     const newId = itemId + 1;

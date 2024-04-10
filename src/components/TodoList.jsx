@@ -24,7 +24,7 @@ export const TodoList = () => {
                   {item.text}
                 </span>
                 <button onClick={() => deleteTasks(item.id)}>
-                  Delete Task
+                  Delete
                 </button>
               </label>
             </li>
