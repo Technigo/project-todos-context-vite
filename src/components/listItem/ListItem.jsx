@@ -18,26 +18,30 @@ export const ListItem = ({ id }) => {
 
   return (
     <li className="task">
-      <input
-        type="checkbox"
-        name={currentTask.desc}
-        id={`task-${id}`}
-        checked={currentTask.isDone}
-        onChange={handleCheckUpdate}
-      />
-      {currentTask.desc}
-      <Badge
-        text={currentTask.category}
-        type="cat"
-      />
-      <Badge
-        text={currentTask.sprint}
-        type="spr"
-      />
-      <Badge
-        text={currentTask.project}
-        type="pro"
-      />
+      <label className="task-desc">
+        <input
+          type="checkbox"
+          name={currentTask.desc}
+          id={`task-${id}`}
+          checked={currentTask.isDone}
+          onChange={handleCheckUpdate}
+        />
+        {currentTask.desc}
+      </label>
+      <div className="badge-container">
+        <Badge
+          text={currentTask.category}
+          type="cat"
+        />
+        <Badge
+          text={currentTask.sprint}
+          type="spr"
+        />
+        <Badge
+          text={currentTask.project}
+          type="pro"
+        />
+      </div>
       <button
         className="btn remove"
         onClick={handleRemove}>
