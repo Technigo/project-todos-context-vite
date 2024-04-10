@@ -1,5 +1,5 @@
 import React from "react";
-
+// This is like the "backbone" of the app, where all the components are put together.
 import { TodoList } from "./TodoList";
 import { TodoForm } from "./TodoForm";
 import { TodoProvider } from "./TodoContext";
