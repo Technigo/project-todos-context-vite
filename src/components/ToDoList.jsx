@@ -1,3 +1,4 @@
+import moment from "moment";
 import { GiBurningDot } from "react-icons/gi";
 
 import { useTask } from "../context/TaskContext";
@@ -26,7 +27,14 @@ export const ToDoList = () => {
             />
             <GiBurningDot className="fireball" /> {taskObj.text}{" "}
             <GiBurningDot className="fireball" />
-            <button onClick={() => removeTask(taskObj.id)}>🗑️</button>
+            <p>{taskObj.date}</p>
+            <button
+              onClick={() => {
+                removeTask(taskObj.id);
+              }}
+            >
+              🗑️
+            </button>
           </li>
         ))}
       </ul>

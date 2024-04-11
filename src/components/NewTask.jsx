@@ -10,17 +10,6 @@ export const NewTask = () => {
   const { darkMode } = useTheme();
   const [taskInput, setTaskInput] = useState("");
 
-  /* const handleAddTask = () => {
-    if (taskInput != "") {
-      const taskObj = { text: taskInput, completed: false };
-      console.log(taskObj);
-      addTask(taskObj);
-      setTaskInput("");
-    } else {
-      alert("Please add a task");
-    }
-  }; */
-
   const handleAddTask = () => {
     if (taskInput != "") {
       addTask(taskInput);
@@ -44,7 +33,10 @@ export const NewTask = () => {
 
         <button
           className={darkMode ? "dark-button" : "light-button"}
-          onClick={handleAddTask}
+          onClick={() => {
+            handleAddTask();
+            DisplayTime();
+          }}
         >
           Add to List
         </button>

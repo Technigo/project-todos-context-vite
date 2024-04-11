@@ -1,3 +1,4 @@
+import moment from "moment";
 import { createContext, useContext, useState } from "react";
 
 const TaskContext = createContext();
@@ -6,7 +7,12 @@ export const TaskProvider = ({ children }) => {
   const [toDoList, setToDoList] = useState([]);
 
   const addTask = (task) => {
-    const newTask = { id: Date.now(), text: task, status: false };
+    const newTask = {
+      id: Date.now(),
+      text: task,
+      status: false,
+      date: moment().format("MMM Do YY, h:mm:ss a"),
+    };
     setToDoList((prevList) => [newTask, ...prevList]);
   };
 

@@ -78,10 +78,10 @@ TODO:
 - check task when done DONE
 - remove the task DONE
 - count of all tasks/completed tasks DONE
-- empty state styling
+- empty state styling DONE
 
 Extra, when time
 
 - complete all button
 - toggle theme button DONE
-- timestamp when created
+- timestamp when created DONE
