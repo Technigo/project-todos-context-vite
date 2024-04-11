@@ -1,6 +1,19 @@
+// TodoList.js
+import { useTodoContext } from './TodoContext'
 
-export const TodoList = () => {
+const TodoList = () => {
+  const { todos, removeTodo } = useTodoContext()
+
   return (
-    <div>TodoList</div>
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          {todo.text}
+          <button onClick={() => removeTodo(todo.id)}>Remove</button>
+        </li>
+      ))}
+    </ul>
   )
 }
+
+export default TodoList

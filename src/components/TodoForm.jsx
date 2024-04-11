@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { useTodoContext } from './TodoContext';
+import React, { useState } from 'react'
+import { useTodoContext } from './TodoContext'
 
 const TodoForm = () => {
-  const { addTodo } = useTodoContext();
-  const [todoText, setTodoText] = useState('');
+  const { addTodo } = useTodoContext()
+  const [todoText, setTodoText] = useState('')
 
   const handleInputChange = (e) => {
-    setTodoText(e.target.value);
-  };
+    setTodoText(e.target.value)
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!todoText.trim()) return;
+    e.preventDefault()
+    if (!todoText.trim()) return
     addTodo({
       id: Date.now(),
       text: todoText,
-    });
-    setTodoText('');
-  };
+    })
+    setTodoText('')
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -29,7 +29,7 @@ const TodoForm = () => {
       />
       <button type="submit">Add</button>
     </form>
-  );
-};
+  )
+}
 
-export default TodoForm;
+export default TodoForm
