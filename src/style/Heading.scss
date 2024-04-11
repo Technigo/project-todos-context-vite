@@ -6,7 +6,7 @@
   flex-direction: column-reverse;
   align-items: center;
   gap: 20px;
-  font-size: 15px;
+  font-size: 20px;
 
   .heading-text {
     display: flex;
@@ -17,10 +17,6 @@
 
     h1 {
       margin: 0;
-    }
-
-    .checklist {
-      font-size: 8vmax;
     }
   }
 
@@ -40,7 +36,7 @@
 }
 
 .light-heading {
-  background-color: $light-prim;
+  background-image: linear-gradient($light-prim, $light-sec);
   color: #000;
 
   button {
@@ -55,7 +51,7 @@
 }
 
 .dark-heading {
-  background-color: $dark-prim;
+  background-image: linear-gradient($dark-prim, $dark-sec);
   color: #fff;
 
   button {
@@ -75,4 +71,39 @@
 
 .task-dark {
   border-right: 10px solid $dark-fourth;
+}
+
+@media (min-width: 460px) {
+  .heading-background {
+    font-size: 30px;
+
+    button {
+      font-size: 20px;
+    }
+
+    .task-count {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .heading-background {
+    font-size: 40px;
+
+    .task-count {
+      align-self: center;
+      justify-content: center;
+      order: -1;
+      font-size: 25px;
+    }
+  }
+
+  .task-light {
+    border: none;
+  }
+
+  .task-dark {
+    border: none;
+  }
 }

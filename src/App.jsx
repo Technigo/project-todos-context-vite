@@ -4,6 +4,8 @@ import { ToDoList } from "./components/ToDoList";
 import { TaskProvider } from "./context/TaskContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
+import "./index.scss";
+
 export const App = () => {
   return (
     <ThemeProvider>

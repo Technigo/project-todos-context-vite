@@ -11,7 +11,7 @@ export const TaskProvider = ({ children }) => {
       id: Date.now(),
       text: task,
       status: false,
-      date: moment().format("MMM Do YY, h:mm:ss a"),
+      date: moment().format("lll"),
     };
     setToDoList((prevList) => [newTask, ...prevList]);
   };

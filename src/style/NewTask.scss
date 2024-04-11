@@ -50,3 +50,25 @@
   background-color: $dark-sec;
   border: 2px solid $dark-third;
 }
+
+@media (min-width: 460px) {
+  .task-input-box {
+    label {
+      font-size: 30px;
+    }
+    input {
+      font-size: 20px;
+    }
+    button {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .task-input-box {
+    label {
+      font-size: 40px;
+    }
+  }
+}

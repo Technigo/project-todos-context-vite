@@ -3,12 +3,13 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: "Changa", sans-serif;
   padding: 0;
 }
 
 body {
-  background-image: url(/floral.png);
+  background-image: url(/watercolor1.jpg);
+  background-repeat: no-repeat;
 }
 
 $light-prim: #f28585;
@@ -17,6 +18,6 @@ $light-third: #fffc9b;
 $light-fourth: #b7e5b4;
 
 $dark-prim: #49243e;
-$dark-sec: #704264;
+$dark-sec: #94595f;
 $dark-third: #bb8493;
 $dark-fourth: #dbafa0;

@@ -19,12 +19,10 @@ export const Heading = () => {
         }`}
       >
         <div className="heading-text">
-          <FaClipboardList className="checklist" />
-          <h1>Your ToDo List</h1>
-          <FaClipboardList className="checklist" />
+          <h1>Things to do</h1>
         </div>
         <button className={darkMode ? "dark" : "light"} onClick={changeMode}>
-          Swich Theme: Light/Dark
+          Light | Dark Mode
         </button>
         <div className={`task-count ${darkMode ? "task-dark" : "task-light"}`}>
           <p>All Tasks: {totalLength}</p>

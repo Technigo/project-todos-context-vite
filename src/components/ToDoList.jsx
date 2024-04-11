@@ -21,13 +21,15 @@ export const ToDoList = () => {
             key={taskObj.id}
           >
             <input
+              /*  className="bigbox" */
               type="checkbox"
               checked={taskObj.status}
               onChange={() => updatedStatus(taskObj.id)}
             />
-            <GiBurningDot className="fireball" /> {taskObj.text}{" "}
-            <GiBurningDot className="fireball" />
-            <p>{taskObj.date}</p>
+            <GiBurningDot className="fireball" />{" "}
+            <p className="single-task">{taskObj.text}</p>{" "}
+            <GiBurningDot className="fireball" />{" "}
+            <p className="date">{taskObj.date}</p>
             <button
               onClick={() => {
                 removeTask(taskObj.id);

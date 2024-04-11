@@ -18,26 +18,86 @@
       width: 300px;
       align-items: center;
 
+      input {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+
+      .single-task {
+        font-size: 15px;
+      }
+
       .fireball {
         width: 20px;
         height: 20px;
       }
 
+      .date {
+        font-size: 12px;
+        margin-left: auto;
+        width: 50px;
+      }
+
       button {
         margin-left: auto;
-        max-height: 26px;
+        font-size: 20px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
       }
     }
   }
 }
 
 .background-light {
-  border: 10px solid $light-fourth;
-  background-color: #fff;
+  border: 10px solid $light-sec;
+  background-color: $light-fourth;
 }
 
 .background-dark {
   border: 10px solid $dark-fourth;
-  background-color: #000;
+  background-color: $dark-prim;
   color: #fff;
+}
+
+@media (min-width: 460px) {
+  .tasklist {
+    ul {
+      li {
+        width: 400px;
+
+        .single-task {
+          font-size: 20px;
+        }
+
+        .date {
+          font-size: 15px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .tasklist {
+    ul {
+      li {
+        width: 700px;
+
+        .single-task {
+          font-size: 25px;
+        }
+
+        .date {
+          font-size: 20px;
+          width: 100px;
+        }
+        button {
+          font-size: 35px;
+        }
+      }
+    }
+  }
 }
