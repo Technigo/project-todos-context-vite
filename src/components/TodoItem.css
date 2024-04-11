@@ -38,7 +38,6 @@
 
 
 /*Avocado checkbox*/
-
 [type="checkbox"] {
 display: none;}
 
@@ -70,7 +69,7 @@ display: none;}
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
-  animation-name: eggrotate;
+  animation-name: avorotate;
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
@@ -99,4 +98,13 @@ display: none;}
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
+}
+
+@keyframes avorotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
 }
