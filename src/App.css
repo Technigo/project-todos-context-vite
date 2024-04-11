@@ -25,31 +25,13 @@ h1 {
 /*Media queries*/
 
 @media (min-width: 400px) {
-  .todo-text {
-    width: 270px;
-  }
-
-  .todo-count-container {
-    font-size: 16px;
-  }
-
   h1 {
     font-size: 32px;
   }
 }
 
 @media (min-width: 600px) {
-  .todo-text {
-    width: 200px;
-  }
-
   .app-container {
     padding: 20px 100px;
-  }
-
-  .list-container {
-    width: 550px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 }
