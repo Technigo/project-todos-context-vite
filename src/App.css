@@ -1,0 +1,17 @@
+.background {
+  position: fixed;
+  object-fit: none;
+  object-position: 47% 60%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (min-height: 1117px) {
+  
+  .background {
+    object-fit: cover;
+  }
+}
