@@ -1,44 +1,46 @@
-import { useState } from "react"
-import { useTasks } from "../contexts/TasksContext"
-import "./TaskForm.css"
+import { useState } from "react";
+import { useTasks } from "../contexts/TasksContext";
+import addIcon from "/icon-add.png";
+import "./TaskForm.css";
 
 export const TaskForm = () => {
-  const { tasks, nextId, addTask } = useTasks()
+  const { tasks, nextId, addTask } = useTasks();
   const [newTask, setNewTask] = useState({
     id: null,
     task: "",
-    done: false
-  })
+    done: false,
+  });
 
   const handleChange = (event) => {
     setNewTask({
       ...newTask,
-      task: event.target.value, id: nextId, done: false })
-  }
+      task: event.target.value,
+      id: nextId,
+      done: false,
+    });
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     if (newTask.task) {
-      addTask(newTask)
-      setNewTask({ id: null, task: "" })
+      addTask(newTask);
+      setNewTask({ id: null, task: "" });
     } else {
-      alert("Please fill in the field")
+      alert("Please fill in the field");
     }
-  }
+  };
 
   return (
     <div className="task-form">
-      <h2>Add new task here:</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <label >
-          To do:
+        <label>
           <input
             className="input-field"
             type="text"
             name="task"
             value={newTask.task}
             onChange={handleChange}
-            placeholder="Type a task.."
+            placeholder="Add new task here..."
           />
         </label>
         <button
@@ -46,9 +48,9 @@ export const TaskForm = () => {
           className="submit-button"
           aria-label="Button to add task"
         >
-          Add task
+          <img className="add-icon" src={addIcon} alt="Add task icon" />
         </button>
       </form>
     </div>
-  )
-}
+  );
+};

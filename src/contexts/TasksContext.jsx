@@ -1,47 +1,48 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from "react";
 
-const TaskContext = createContext()
+const TaskContext = createContext();
 
 export const TasksProvider = ({ children }) => {
   const [tasks, setTasks] = useState([
     {
       id: 1,
       task: "Buy milk",
-      done: false
-    },{
+      done: false,
+    },
+    {
       id: 2,
       task: "Get good!",
-      done: true
-    }
-  ])
-  const [nextId, setNextId] = useState(3)
+      done: true,
+    },
+  ]);
+  const [nextId, setNextId] = useState(3);
 
   const addTask = (newTask) => {
-    setTasks((prevTask) => [...prevTask, newTask])
-    setNextId(nextId + 1)
-  }
+    setTasks((prevTask) => [...prevTask, newTask]);
+    setNextId(nextId + 1);
+  };
 
   const deleteTask = (taskToDelete) => {
-    const newTasks = tasks.filter((task) => task.id !== taskToDelete)
-    setTasks(newTasks)
-  }
+    const newTasks = tasks.filter((task) => task.id !== taskToDelete);
+    setTasks(newTasks);
+  };
 
   const toggleChecked = (taskToToggle) => {
     /*Find the index of the task to toggle.*/
-    const changedTask = tasks.map((task) => task.id).indexOf(taskToToggle)
+    const changedTask = tasks.map((task) => task.id).indexOf(taskToToggle);
     /*Find out whether the task is done or not.*/
-    const doneStatus = tasks[changedTask].done
+    const doneStatus = tasks[changedTask].done;
     /*Make a copy of current task-list.*/
-    const updatedList = tasks
+    const updatedList = tasks;
     /*See if the task is found in "tasks".*/
-    const targetTask = updatedList.find((task) => task.id === taskToToggle)
+    const targetTask = updatedList.find((task) => task.id === taskToToggle);
     /*If the task is found, go to the new list, index of the task to toggle, attribute "done" and change it to what it wasn't before.*/
     if (targetTask) {
-      updatedList[changedTask].done = (doneStatus ? false : true)
+      updatedList[changedTask].done = doneStatus ? false : true;
     }
     /*Use the old task list to the updated.*/
-    setTasks(updatedList)
-  }
+    setTasks(updatedList);
+  };
 
   return (
     <TaskContext.Provider
@@ -49,7 +50,7 @@ export const TasksProvider = ({ children }) => {
     >
       {children}
     </TaskContext.Provider>
-  )
-}
+  );
+};
 
-export const useTasks = () => useContext(TaskContext)
+export const useTasks = () => useContext(TaskContext);

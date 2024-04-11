@@ -13,6 +13,36 @@ body {
   background-color: #E1F6C7;
 }
 
-#root {
-  width: 500px;
+.todo-container {
+  width: 300px;
 }
+
+h3 {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.count-tasks {
+  text-align: center;
+}
+
+@media (min-width: 400px) and (max-width: 520px) {
+  .todo-container {
+    width: 380px;
+  }
+
+  .input-field {
+    width: 336px;
+  }
+}
+
+@media (min-width: 521px) {
+  .todo-container {
+    width: 500px;
+  }
+
+  .input-field {
+    width: 456px;
+  }
+} 

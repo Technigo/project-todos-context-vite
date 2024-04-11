@@ -1,5 +1,5 @@
-import { Task } from "./Task"
-import { useTasks } from "../contexts/TasksContext"
+import { Task } from "./Task";
+import { useTasks } from "../contexts/TasksContext";
 
 export const TasksDoneList = () => {
   const { tasks } = useTasks();
@@ -12,9 +12,10 @@ export const TasksDoneList = () => {
         .map((task) => (
           <Task key={task.id} task={task} />
         ))}
-      <div>
-        Finished tasks: {tasks.filter((task) => task.done === true).length}
+      <div className="count-tasks">
+        You have finished {tasks.filter((task) => task.done === true).length}{" "}
+        tasks
       </div>
     </div>
   );
-}
+};

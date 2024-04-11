@@ -1,11 +1,12 @@
 .task-box {
   padding: 10px;
   width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   background-color: white;
-  margin: 4px;
   border-radius: 4px;
+  margin-bottom: 6px;
 }
 
 /*Div with just checkbox and name of task*/
@@ -19,6 +20,7 @@
 .button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  cursor: pointer;
 }
 .delete-icon {
   height: 20px;
@@ -26,7 +28,7 @@
 
 /* Hide the browser's default checkbox */
 .checkbox {
-  opacity: 0.5;
+  opacity: 0;
   z-index: 2;
   cursor: pointer;
   height: 25px;
@@ -87,3 +89,4 @@
 .checked {
   text-decoration: line-through;
 }
+

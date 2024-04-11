@@ -1,13 +1,15 @@
-import { useTasks } from "../contexts/TasksContext"
-import deleteIcon from "/icon-delete.png"
-import "./Task.css"
+import { useTasks } from "../contexts/TasksContext";
+import deleteIcon from "/icon-delete.png";
+import "./Task.css";
+import moment from "moment";
 
 export const Task = ({ task }) => {
-  const { toggleChecked, deleteTask } = useTasks()
+  const { toggleChecked, deleteTask } = useTasks();
+  const dayDate = moment().format("dddd do");
 
-  const toggleDone = () => { 
-    toggleChecked(task.id)
-  }
+  const toggleDone = () => {
+    toggleChecked(task.id);
+  };
 
   return (
     <div className={task.done ? "task-box checked" : "task-box"}>
@@ -24,9 +26,10 @@ export const Task = ({ task }) => {
         </div>
         <p>{task.task}</p>
       </div>
+      <div>{dayDate}</div>
       <button className="button" onClick={() => deleteTask(task.id)}>
         <img className="delete-icon" src={deleteIcon} alt="Delete icon" />
       </button>
     </div>
-  )
-}
+  );
+};
