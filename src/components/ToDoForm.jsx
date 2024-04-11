@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useToDoContext } from "../contexts/ToDoContext";
+import addIcon from "../assets/plus-blue.svg";
+import "./ToDoForm.css";
 
 export const ToDoForm = () => {
   const { addToDo } = useToDoContext();
@@ -26,9 +28,8 @@ export const ToDoForm = () => {
   };
 
   return (
-    <div>
+    <div className="add-task-form">
       <form onSubmit={handleSubmit}>
-        <label>Add a new task</label>
         <input
           type="text"
           value={newToDo.description}
@@ -36,7 +37,12 @@ export const ToDoForm = () => {
           name="description"
           onChange={handleChange}
         />
-        <button type="submit">+</button>
+        <img
+          src={addIcon}
+          alt="Add new task"
+          className="add-todo-button"
+          onClick={handleSubmit}
+        />
       </form>
     </div>
   );
