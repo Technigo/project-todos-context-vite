@@ -77,8 +77,8 @@ Another challenge will be giving your checkboxes and/or radio buttons a custom l
 ### Roadmap
 - Remove Task (Trashcan icon?)              CHECK!
 
-- Separate completed tasks to own list
-- Headers for lists
+- Separate completed tasks to own list      CHECK!
+- Headers for lists                         CHECK!
 
 - Style added/completed text                CHECK!
 - Style for responsiveness (mobile first)

@@ -14,17 +14,21 @@ export const TaskProvider = ({ children }) => {
     }
   };
 
-  const completeTask = (taskIndex) => {
+  const completeTask = (taskId,index) => {
     const updateTasks = [...taskData];
-    const currentState = updateTasks[taskIndex].complete;
-    updateTasks[taskIndex].complete = !currentState;
+    const currentState = updateTasks[index].complete;
+    updateTasks[index].complete = !currentState;
 
     setTaskData(updateTasks);
   };
 
-  const removeTask = (taskIndex) => {
+  const removeTask = (taskId) => {
+    console.log(taskId);
+    const indexCheck = (task) => task.id === taskId;
+    const indexToRemove = taskData.findIndex(indexCheck)
+    console.log("Remove task:", indexToRemove);
     const updateTasks = [...taskData];
-    updateTasks.splice([taskIndex], 1);
+    updateTasks.splice([indexToRemove], 1);
     
     setTaskData(updateTasks);
   };

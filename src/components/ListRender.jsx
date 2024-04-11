@@ -8,11 +8,11 @@ export const ListRender = ({ array }) => {
   return (
       <div>
         {array.map((todo, index) => (
-          <div className="todo-container" key={index}>
+          <div className="todo-container" key={todo.id}>
             <div className={todo.complete ? "todo complete" : "todo"}>
-              <CheckButton todo={todo.title}  index={index} />
+              <CheckButton todo={todo}  taskId={todo.id} />
 
-              <RemoveButton todo={todo} index={index} />
+              <RemoveButton todo={todo} taskId={todo.id} />
             </div>
             <div className="timestamp">
               {todo.complete ? (

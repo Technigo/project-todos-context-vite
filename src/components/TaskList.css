@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.todo-list h2{
+    margin-inline: 5rem;
+}
+
 .todo {
     position:relative;
     border: 2px solid black;

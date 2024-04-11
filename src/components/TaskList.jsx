@@ -1,7 +1,3 @@
-import { useState } from "react";
-import moment from "moment";
-import { CheckButton } from "./CheckButton";
-import { RemoveButton } from "./RemoveButton";
 import "./TaskList.css";
 import { useTask } from "../contexts/TaskContext";
 import { ListRender } from "./ListRender";
@@ -11,26 +7,32 @@ export const TaskList = () => {
 
   const incompleteTasks = taskData.filter((task) => task.complete === false);
   const completedTasks = taskData.filter((task) => task.complete === true);
-  console.log(completedTasks);
-
+  console.log("IncompletedTasks: ", incompleteTasks);
+  console.log("CompletedTasks: ", completedTasks);
+console.log("All Tasks: ", taskData);
   // const filterComplete = () => {
 
   // };
 
   return (
     <div>
-      {taskData.length != 0 ? (
-        <div>
+      {incompleteTasks.length != 0 ? (
+        <div className="todo-list">
           <h2>Active Tasks</h2>
           <ListRender array={incompleteTasks} />
-          <h2>Completed Tasks</h2>
-          <ListRender array={completedTasks} />
         </div>
       ) : (
         <div className="todo-clear">
-          <h2>All clear... </h2> <p>No tasks left todo</p>
+          <h2>All clear! </h2> <p>No tasks left... eggcellent! </p>
         </div>
       )}
+
+      {completedTasks.length != 0 ? (
+        <div className="todo-list">
+          <h2>Completed Tasks</h2>
+          <ListRender array={completedTasks} />
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -9,21 +9,22 @@ export const CheckButton = ({ todo, index }) => {
   const clicked = () => {
     taskRef.current.classList.toggle("complete");
 
-    //add complete state to taskData
-    completeTask(index);
-    console.log("Checkbox:", taskData);
+    completeTask(index, todo.id);
+    console.log("Checkbox:", todo.id);
   };
 
   return (
     <form>
       <input
         ref={taskRef}
+        className={todo.complete ? "complete" : ""}
+        checked={todo.complete}
         type="checkbox"
         id={index}
         name="task-check"
         onChange={clicked}
       ></input>
-      <label htmlFor={index}>{todo}</label>
+      <label htmlFor={index}>{todo.title}</label>
     </form>
   );
 };

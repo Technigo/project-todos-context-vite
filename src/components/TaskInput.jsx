@@ -7,6 +7,7 @@ export const TaskInput = () => {
   const { taskData, addTask } = useTask();
 
   const [newTask, setNewTask] = useState({
+    id: "id" + Math.random().toString(16).slice(2),
     title: "",
     complete: false,
     date: moment().calendar(),
@@ -24,7 +25,7 @@ export const TaskInput = () => {
 
     if (newTask.title) {
       addTask(newTask);
-      setNewTask({ title: "", complete: false, date: moment().calendar() });
+      setNewTask({id: "id" + Math.random().toString(16).slice(2), title: "", complete: false, date: moment().calendar() });
     } else {
       alert("Please fill in all the fields");
     }

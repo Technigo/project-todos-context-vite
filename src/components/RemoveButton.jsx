@@ -3,19 +3,19 @@ import { useTask } from "../contexts/TaskContext";
 
 export const RemoveButton = ({ todo, index }) => {
   const { taskData, addTask, completeTask, removeTask } = useTask();
-  console.log("Remove button: ", index);
-
+ 
+  console.log(todo)
   const clicked = (e) => {
     e.preventDefault();
 
     //remove task from taskData
-    removeTask(index);
+    removeTask(todo.id);
   };
 
   return (
     <button
       className="remove-button"
-      id={index}
+      id={todo.id}
       name="remove"
       onClick={clicked}
     >
