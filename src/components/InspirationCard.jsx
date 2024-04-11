@@ -30,11 +30,11 @@ const InspirationCard = () => {
 
 
   return (
-    <>
+    <div className="section daily-inspo">
        {loading && (<h1>Loading</h1>
     )}
     {!loading && (
-        <div className="section daily-inspo">
+        <>
         <div className="quote"><h1>Daily Inspiration</h1>
         <p>" {quote[Math.floor(Math.random() * quote.length)].text}"</p>
         </div>
@@ -45,9 +45,9 @@ const InspirationCard = () => {
         autoPlay
     />
     </div>
-  </div>
-        )}
     </>
+        )}
+    </div>
 )}
 
 export default InspirationCard
