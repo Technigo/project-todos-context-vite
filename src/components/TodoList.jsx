@@ -2,6 +2,7 @@
 import { useContext } from "react"
 import { TodoContext } from "./TodoContext"
 import { Todo } from "./TodoItem"
+import "./TodoList.css"
 
 export const TodoList = () => {
   // Extract todos and the toggleTodo function from our TodoContext.
@@ -17,7 +18,7 @@ export const TodoList = () => {
 
   return (
     <>
-      <div className="task-count">
+      <div className="todo-count-container">
         <span className="todo-count">Uncompleted: {uncompletedCount}</span>
         <span> Completed: {completedCount}</span>
       </div>

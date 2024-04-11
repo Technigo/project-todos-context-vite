@@ -2,6 +2,11 @@ body {
   background-color: rgb(229, 244, 229);
 }
 
+h1 {
+  cursor: pointer;
+  font-size: 26px;
+}
+
 .title {
   text-align: center;
   color: rgb(13, 71, 13);
@@ -11,84 +16,31 @@ body {
   padding: 20px 40px;
 }
 
-.text-input {
-  width: 90%;
-  margin: 10px;
-  height: 40px;
-  padding: 10px 5px;
-  border-radius: 6px;
-  font-size: 18px;
-}
-
-.todo-count {
-  margin-right: 15px;
-}
-
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.list-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: white;
-  margin-top: 20px;
-  padding: 5px 20px;
-  border-radius: 40px;
-}
-
-.todo-item {
-  text-align: start;
-  margin-bottom: 10px;
-}
-
-.todo-time {
-  margin-top: 3px;
-  color: grey;
-  font-size: 12px;
-  margin-left: 50px;
-}
-
-.list-item {
-  display: flex;
-  justify-content: space-around;
-}
-
-.remove-button button {
-  background-color: white;
-  border: none;
-}
-
-.remove-icon {
-  font-size: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.completed h2 {
-  background-color: rgb(31, 235, 31);
-  width: fit-content;
-  padding: 3px;
-}
-
-.uncompleted h2 {
-  background-color: yellow;
-  width: fit-content;
-  padding: 3px;
-}
-
 /*Media queries*/
 
+@media (min-width: 400px) {
+  .todo-text {
+    width: 250px;
+  }
+
+  .todo-count-container {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
 @media (min-width: 600px) {
-  .form-container {
-    display: flex;
-    justify-content: center;
+  .todo-text {
+    width: 200px;
   }
 
   .app-container {
@@ -96,7 +48,7 @@ ul {
   }
 
   .list-container {
-    max-width: 550px;
+    width: 550px;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }

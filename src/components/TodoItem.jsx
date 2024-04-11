@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx"
 import moment from "moment"
 import "./TodoItem.css"
 
-// passing the props (data = id, completed, onChange, todo, createdAt) from TodoList.jsx
+// passing the props (data = id, completed, onChange, todo, createdAt, removeTodo) from TodoList.jsx
 export const Todo = ({
   id,
   completed,
@@ -38,7 +38,7 @@ export const Todo = ({
 
           <div className="remove-button">
             <button onClick={() => removeTodo(id)}>
-              <RxCross1 className="remove-icon"/>
+              <RxCross1 className="remove-icon" />
             </button>
           </div>
         </div>

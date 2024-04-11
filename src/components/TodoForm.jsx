@@ -2,6 +2,7 @@
 import { useState, useContext } from "react";
 import { TodoContext } from "./TodoContext";
 import moment from "moment"; // import moment.js
+import "./TodoForm.css"
 
 export const TodoForm = () => {
   const [todo, setTodo] = useState("");
