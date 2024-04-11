@@ -11,7 +11,7 @@ npm run dev -- --host
 
 ### Hints and tips to complete the project
 
-As always, start by sketching out how your app will look and what components you'll need. Break down the UI into smaller components.
+As always, start by sketching out how your app will look and what components you'll need. Break down the UI into smaller components.pin
 
 Once you have your sketch, think about how the data in your store should look. What data does a task contain? Sketch it out and get it clear in your head. You'll need React for building components.
 
