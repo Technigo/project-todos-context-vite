@@ -1,6 +1,4 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import moment from "moment";
-
 
 const TodoContext = createContext();
 
@@ -45,9 +43,16 @@ export const TodoProvider = ({ children }) => {
     setTotalChecked(checkedCount);
   }, [todoList]);
 
-  const dateDispaly = () => {
-    
-  }
+
+  const toggleAllTodos = () => {
+    setTodoList((currentItems) => {
+      const allCompleted = currentItems.every((item) => item.completed)
+      return currentItems.map(item => ({ ...item, completed: !allCompleted }));
+    });
+    ;
+  };
+
+
   return (
     <TodoContext.Provider
       value={{
@@ -59,6 +64,7 @@ export const TodoProvider = ({ children }) => {
         toggleTodo,
         totalItems,
         totalChecked,
+        toggleAllTodos,
       }}
     >
       {children}
