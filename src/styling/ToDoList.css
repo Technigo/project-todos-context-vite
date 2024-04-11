@@ -1,6 +1,7 @@
 .todo-list {
   background-color: rgb(255, 202, 141);
-  min-height: 700px;
+  min-height: 500px;
+  margin-top: 1em;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;

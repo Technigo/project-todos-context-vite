@@ -15,11 +15,10 @@ p {
 .main-container {
   width: 90%;
   margin: 0 auto;
-  justify-content: center;
+  align-items: center;
   display: grid;
   grid-template-columns: 100%;
-  gap: 0;
-  padding: 3em 0;
+  padding: 2em 0;
 }
 
 .card {
@@ -32,7 +31,6 @@ p {
   width: 90%;
   padding: 5%;
   border-radius: 20px;
-  margin-bottom: 1em;
 }
 
 .button {
@@ -40,9 +38,7 @@ p {
   width: max-content;
   border: none;
   border-radius: 8px;
-  /* margin-top: 1em; */
   background-color: white;
-  justify-self: right;
 }
 
 .button:hover {
@@ -52,10 +48,9 @@ p {
 @media screen and (min-width: 1024px) {
   .main-container {
     grid-template-columns: 50% 50%;
-    padding: 5em 0;
   }
 
   .card {
-    padding: 2em;
+    padding: 2rem;
   }
 }

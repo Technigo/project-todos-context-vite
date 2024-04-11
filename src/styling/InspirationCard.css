@@ -1,8 +1,8 @@
 .daily-inspo{
-    background-color: rgb(144, 164, 255); 
+    background-color: rgb(252, 175, 131); 
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 130px;
 
     p{
         font-style:italic;
@@ -22,5 +22,9 @@
 @media screen and (min-width: 1024px){
     .quote p{
         font-size: 1.5em;
+    }
+
+.daily-inspo{
+    height: 100px;
     }
 }

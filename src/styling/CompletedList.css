@@ -1,13 +1,10 @@
 .completed {
   background-color: rgb(255, 151, 151);
-  min-height: 700px;
+  min-height: 500px;
+  margin-top: 1em;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
-}
-
-.image img {
-  width: 70%;
 }
 
 .count {
@@ -17,6 +14,7 @@
 .no-complete-img {
   width: 90%;
   align-self: center;
+  justify-self: center;
 }
 
 /* .complete-btn {

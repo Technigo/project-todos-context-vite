@@ -1,6 +1,6 @@
 .todo-form{
     background-color: rgb(136, 134, 255);
-    height: 100px;
+    height: 130px;
 }
 
 form{
@@ -20,4 +20,11 @@ input[type=text]{
 input::placeholder {
     font-weight: bold;
     color: rgba(119, 1, 1, 0.562);
+}
+
+
+@media screen and (min-width: 768px){
+    .todo-form{
+        height: 100px;
+    }
 }

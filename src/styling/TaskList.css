@@ -8,13 +8,12 @@
 li {
   background-color: rgb(255, 220, 226);
   border-radius: 20px;
-  margin-top: 1em;
   width: inherit;
   height: fit-content;
   padding: 1em;
 
   p {
-    padding: 0 0 1em 1em;
+    padding: 0 0 0.5em 1em;
   }
 }
 
@@ -22,7 +21,7 @@ li {
   width: inherit;
   display: flex;
   align-items: flex-start;
-  padding: 1em;
+  padding: 1em 1em 0.5em 1em;
 }
 
 input[type="checkbox"] {
