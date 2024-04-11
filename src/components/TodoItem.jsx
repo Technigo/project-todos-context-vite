@@ -3,7 +3,7 @@ import moment from "moment"
 import "./TodoItem.css"
 
 // passing the props (data = id, completed, onChange, todo, createdAt) from TodoList.jsx
-export const Todo = ({ id, completed, onChange, todo, createdAt }) => {
+export const Todo = ({ id, completed, onChange, todo, createdAt, removeTodo }) => {
   return (
     <div className="todo-item">
       <li
@@ -23,6 +23,7 @@ export const Todo = ({ id, completed, onChange, todo, createdAt }) => {
         <div className="todo-time">
           {moment(createdAt).format("YYYY-MM-DD HH:mm")}
         </div>
+        <button onClick={() => removeTodo(id)}>Remove</button>
       </li>
     </div>
   )

@@ -2,11 +2,10 @@
 import { useContext } from "react"
 import { TodoContext } from "./TodoContext"
 import { Todo } from "./TodoItem"
-import moment from "moment"
 
 export const TodoList = () => {
   // Extract todos and the toggleTodo function from our TodoContext.
-  const { todos, toggleTodo } = useContext(TodoContext)
+  const { todos, toggleTodo, removeTodo } = useContext(TodoContext)
 
   // .filter: keeps all the items that matches (returns "true" in ((todo) => todo.completed))
   const completedTodos = todos.filter((todo) => todo.completed)
@@ -37,6 +36,7 @@ export const TodoList = () => {
                 todo={todo.todo}
                 createdAt={todo.createdAt}
                 onChange={() => toggleTodo(todo.id)}
+                removeTodo={removeTodo}
               />
             ))}
           </ul>
@@ -53,6 +53,7 @@ export const TodoList = () => {
                 todo={todo.todo}
                 createdAt={todo.createdAt}
                 onChange={() => toggleTodo(todo.id)}
+                removeTodo={removeTodo}
               />
             ))}
           </ul>
