@@ -46,6 +46,9 @@
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
+  animation-name: eggrotate;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
 }
 
 [type="checkbox"]:checked + label::after {
@@ -66,11 +69,16 @@
   color: grey;
 }
 
+.todo-inner{
+  display: flex;
+  place-items: center;
+}
+
 @keyframes eggrotate {
   0%, 100% {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(20deg);
+    transform: rotate(30deg);
   }
 }

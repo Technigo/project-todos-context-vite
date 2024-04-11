@@ -81,11 +81,12 @@ Another challenge will be giving your checkboxes and/or radio buttons a custom l
 - Headers for lists                         CHECK!
 
 - Style added/completed text                CHECK!
-- Style for responsiveness (mobile first)
+- Style for responsiveness (mobile first)   CHECK!
 
 - Due date (äggklocka!)
 
-- Complete all button
+- Clear all button                          CHECK!
+- Complete all button         
 - Theme switcher (lightbulb? sun/moon? )
 
 - Change title of headings

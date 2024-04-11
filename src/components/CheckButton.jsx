@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./CheckButton.css";
 import { useTask } from "../contexts/TaskContext";
 
@@ -15,18 +15,19 @@ export const CheckButton = ({ todo, index }) => {
 
   };
 
+
   return (
     <form>
       <input
         ref={taskRef}
-        className={todo.complete ? "complete" : ""}
+        className={todo.complete ? "egg complete" : "egg"}
         checked={todo.complete}
         type="checkbox"
         id={todo.id}
         name="task-check"
         onChange={clicked}
       ></input>
-      <label htmlFor={todo.id}>{todo.title}</label>
+      <label className="egg" htmlFor={todo.id}>{todo.title}</label>
     </form>
   );
 };

@@ -3,16 +3,33 @@ import { useAppData } from "../contexts/AppContext";
 import { useTask } from "../contexts/TaskContext";
 
 export const Header = () => {
-  const { name, appContent } = useAppData();
+  const { theme, setTheme, appContent } = useAppData();
   const { taskData, addTask } = useTask();
 
   const completedTasks = taskData.filter((task) => task.complete);
 
+  const toggleTheme = () => {
+    console.log("Clicked birdy")
+    if (theme === "light") {
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }
+
   return (
-    <header>
+    <header className={theme}>
       <div className="title">
         <h1>{appContent.heading}</h1>
-        <img src="src/assets/baby-chick.svg" />
+        <button id="toggle-button" onClick={toggleTheme}>
+          <img
+            src={
+              theme === "light"
+                ? "src/assets/baby-chick.svg"
+                : "src/assets/baby-chick-black.svg"
+            }
+          />
+        </button>
       </div>
       <p>
         Eggs cracked:{" "}

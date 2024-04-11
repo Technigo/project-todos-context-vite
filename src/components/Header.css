@@ -1,29 +1,41 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: grey;
-    padding: 0 2rem;
-    color: white;
-    font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  padding: 0 2rem;
+  font-weight: 900;
+}
+.light header{
+  color:white;
+}
+
+#toggle-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .title {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 header img {
-    width: 20px;
+  width: clamp(10px, 2vw, 50px);
 }
 
+header p {
+  font-size: clamp(0.5rem, 2vw, 1.5rem);
+}
 
 .clear-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    /* flex-direction: column; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* flex-direction: column; */
   position: relative;
   border: 2px solid black;
   border-radius: 50px;

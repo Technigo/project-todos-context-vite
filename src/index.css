@@ -14,29 +14,23 @@ body {
 }
 
 /* Phone */
-.movie-grid {
+.task-area {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  background-color: black;
+  background-color: white;
 }
 
 /* Tablet */
-@media (min-width: 370px) {
-  .movie-grid {
+@media (min-width: 570px) {
+  .task-area {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Desktop */
-@media (min-width: 570px) {
-  .movie-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 870px) {
+  .task-area {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Desktop */
-@media (min-width: 820px) {
-  .movie-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
