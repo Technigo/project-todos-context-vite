@@ -16,6 +16,10 @@ export const TodoList = () =>{
     return (
         <div className="todo-list-container">
             {todos.length >0 ? (
+                <>
+                <div>
+                    {todos.length ===1 ? <p>You have 1 task in your todo list.</p> : <p>You have {todos.length} tasks in your todo list.</p>}
+                </div>
                 <ul style={{listStyle: 'none'}}>
                     {todos.map((task, index)=>(
                         <li key={index}>{task}
@@ -23,6 +27,8 @@ export const TodoList = () =>{
                         </li>
                     ))}
                 </ul>
+                </>
+                
             ): <ul>No task</ul>}
         </div>
     )
