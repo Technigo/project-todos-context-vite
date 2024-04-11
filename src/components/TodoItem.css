@@ -31,6 +31,12 @@
   font-size: 20px;
 }
 
+.todo-text.completed{
+  text-decoration: line-through;
+  color: grey;
+}
+
+
 /*Avocado checkbox*/
 
 [type="checkbox"] {
