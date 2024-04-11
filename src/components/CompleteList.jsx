@@ -1,12 +1,10 @@
-import { useComplete } from '../context/CompleteContext'
-import { useToDo } from '../context/ToDoContext'
-import '../styling/CompletedList.css'
-import trash from '../assets/rubbish-bin.svg'
-import TaskList from './TaskList'
-import noComplete from '../assets/nocomplete.svg'
+import { useComplete } from "../context/CompleteContext";
+import "../styling/CompletedList.css";
+import TaskList from "./TaskList";
+import noComplete from "../assets/nocomplete.svg";
 
 const CompleteList = () => {
-  const { complete } = useComplete()
+  const { complete } = useComplete();
 
   return (
     <div className="section completed">
@@ -22,7 +20,7 @@ const CompleteList = () => {
       )}
       <p className="count">Count:{complete.length}/5</p>
     </div>
-  )
-}
+  );
+};
 
-export default CompleteList
+export default CompleteList;
