@@ -36,7 +36,6 @@ ul {
   margin-top: 10px;
 }
 
-
 /*Media queries*/
 @media (min-width: 400px) {
   .todo-count-container {
@@ -44,11 +43,16 @@ ul {
   }
 }
 
-
 @media (min-width: 600px) {
   .list-container {
     width: 550px;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .completed,
+  .uncompleted,
+  .todo-text {
+    max-width: 220px;
   }
 }
