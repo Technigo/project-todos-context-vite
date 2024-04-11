@@ -13,9 +13,9 @@ import "../styling/TaskList.css";
 
 const TaskList = ({ data }) => {
   // sounds
-  const [playDump] = useSound(Dump, { volume: 0.5 });
-  const [playAddToDo] = useSound(AddToDo, { volume: 0.5 });
-  const [playCompleteToDo] = useSound(CompleteToDo, { volume: 0.2 });
+  const [playDump] = useSound(Dump, { volume: 0.1 });
+  const [playAddToDo] = useSound(AddToDo, { volume: 0.1 });
+  const [playCompleteToDo] = useSound(CompleteToDo, { volume: 0.1 });
   // contexts
   const { ToDo, addToDo, removeToDo } = useToDo();
   const { complete, addComplete, removeComplete } = useComplete();

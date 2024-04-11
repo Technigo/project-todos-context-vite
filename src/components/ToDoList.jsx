@@ -1,15 +1,17 @@
-import { useToDo } from "../context/ToDoContext";
-import { useComplete } from "../context/CompleteContext";
-import "../styling/ToDoList.css";
-import TaskList from "./TaskList";
-import clear from "../assets/noToDo.svg";
 import useSound from "use-sound";
+
+import clear from "../assets/noToDo.svg";
 import CompleteAll from "../assets/sounds/completeAll.mp3";
+import { useComplete } from "../context/CompleteContext";
+import { useToDo } from "../context/ToDoContext";
+import TaskList from "./TaskList";
+
+import "../styling/ToDoList.css";
 
 const ToDoList = () => {
   const { ToDo, completeAllToDo } = useToDo();
   const { addAllComplete } = useComplete();
-  const [playCompleteAll] = useSound(CompleteAll, { volume: 0.5 });
+  const [playCompleteAll] = useSound(CompleteAll, { volume: 0.1 });
 
   return (
     <div className="section todo-list">
