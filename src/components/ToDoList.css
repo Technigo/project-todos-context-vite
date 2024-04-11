@@ -1,3 +1,21 @@
+.task-amount {
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 14px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.clear-all-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
 .clear-all-button {
   display: flex;
   justify-content: space-evenly;

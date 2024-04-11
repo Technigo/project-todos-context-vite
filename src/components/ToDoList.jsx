@@ -26,7 +26,7 @@ export const ToDoList = () => {
           Completed tasks: {completedTasks().length}/{amountOfTasks}
         </p>
       </div>
-      <h2>ToDo List</h2>
+      
       {allTasksCompleted ? (
         <div className="completion-message">
           <h3>All todos are completed! Well done ⭐</h3>
@@ -43,10 +43,12 @@ export const ToDoList = () => {
           ))}
         </ul>
       )}
-      <button className="clear-all-button" onClick={handleClearAll}>
-        <p>Clear all</p>
-        <img src={clearIcon} alt="Clear icon" />
-      </button>
+         <div className="clear-all-button-container">
+        <button className="clear-all-button" onClick={handleClearAll}>
+          <p>Clear all</p>
+          <img src={clearIcon} alt="Clear icon" />
+        </button>
+      </div>
     </div>
   );
 };
