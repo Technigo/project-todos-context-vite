@@ -12,6 +12,9 @@ export const ToDoList = () => {
     return toDos.filter((toDo) => toDo.completed);
   };
 
+  const allTasksCompleted =
+    completedTasks().length === amountOfTasks && amountOfTasks > 0;
+
   const handleClearAll = () => {
     clearToDos();
   };
@@ -23,16 +26,24 @@ export const ToDoList = () => {
           Completed tasks: {completedTasks().length}/{amountOfTasks}
         </p>
       </div>
-      <ul>
-        {toDos.map((toDo, index) => (
-          <ToDoCard
-            key={index}
-            toDo={toDo}
-            toggleComplete={() => toggleComplete(index)}
-          />
-        ))}
-      </ul>
-      <div className="clear-all-button-container">
+      
+      {allTasksCompleted ? (
+        <div className="completion-message">
+          <h3>All todos are completed! Well done ⭐</h3>
+          <p> Create some more tasks, you can do it! 💪</p>
+        </div>
+      ) : (
+        <ul>
+          {toDos.map((toDo, index) => (
+            <ToDoCard
+              key={index}
+              toDo={toDo}
+              toggleComplete={() => toggleComplete(index)}
+            />
+          ))}
+        </ul>
+      )}
+         <div className="clear-all-button-container">
         <button className="clear-all-button" onClick={handleClearAll}>
           <p>Clear all</p>
           <img src={clearIcon} alt="Clear icon" />
