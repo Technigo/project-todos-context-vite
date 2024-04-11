@@ -7,9 +7,9 @@ export const TaskList = () => {
 
   return (
     <div className="task-list">
-      {tasks.map((task, id) => (
-        <Task key={id} task={task} />
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} />
       ))}
     </div>
-  );
-};
+  )
+}

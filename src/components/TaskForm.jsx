@@ -3,7 +3,7 @@ import { useTasks } from "../contexts/TasksContext"
 import "./TaskForm.css"
 
 export const TaskForm = () => {
-  const { tasks, addTask } = useTasks()
+  const { tasks, nextId, addTask } = useTasks()
 
   const [newTask, setNewTask] = useState({
     id: null,
@@ -13,7 +13,7 @@ export const TaskForm = () => {
   const handleChange = (event) => {
     setNewTask({
       ...newTask,
-      task: event.target.value, id: (tasks.length + 1) })
+      task: event.target.value, id: nextId, done: false })
   }
 
   const handleSubmit = (event) => {
