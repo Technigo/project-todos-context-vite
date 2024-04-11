@@ -49,7 +49,6 @@ const TaskList = ({ data }) => {
               <input
                 type="checkbox"
                 id={item.createdAt}
-                // value={item.task}
                 defaultChecked={complete.includes(item)}
                 onChange={() => {
                   changeStatus(item);

@@ -14,6 +14,8 @@ li {
 
   p {
     padding: 0 0 0.5em 1em;
+    color: rgba(83, 1, 1, 0.562);
+    font-weight: 500;
   }
 }
 
@@ -38,6 +40,11 @@ input[type="checkbox"]:hover {
 .checkbox {
   width: 30px;
   height: 30px;
+  transition: transform 0.2s;
+}
+
+.checkbox:hover {
+  transform: scale(1.15);
 }
 
 .unchecked {
@@ -70,11 +77,19 @@ input[type="checkbox"]:checked ~ .checked {
 
 label {
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 800;
+  color: rgb(105, 35, 35);
 }
 
 .trashbin {
   width: 15px;
   height: 15px;
   padding-top: 5px;
+  fill: rgb(82, 27, 27);
+  transition: transform 0.2s;
+}
+
+.trashbin:hover {
+  cursor: pointer;
+  transform: scale(1.15);
 }

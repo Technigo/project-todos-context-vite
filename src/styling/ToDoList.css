@@ -5,9 +5,6 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 .clear {
@@ -22,6 +19,20 @@
   align-items: center;
 }
 
+.complete {
+  transition: box-shadow 0.2s;
+}
+
+.complete:hover {
+  box-shadow: 0 0 11px rgba(87, 32, 0, 0.308);
+}
+
 .count {
   align-self: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+  .todo-list {
+    min-height: 600px;
+  }
 }

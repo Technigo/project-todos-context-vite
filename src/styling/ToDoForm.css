@@ -1,30 +1,63 @@
-.todo-form{
-    background-color: rgb(136, 134, 255);
-    height: 130px;
+.todo-form {
+  background-color: rgb(136, 134, 255);
+  height: 150px;
+  place-content: center;
+
+  h1 {
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  }
 }
 
-form{
-    display: flex;
-    align-items: center;
+form {
+  display: flex;
+  align-items: center;
 }
 
-input[type=text]{
-    width: 90%;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    text-indent: 10px;
-    margin-top: 1em;
+.submit-button {
+  box-sizing: border-box;
+  width: 20%;
+  height: 40px;
+  padding: 0.3em 0.7em;
+  color: white;
+  border: none;
+  background-color: rgb(255, 151, 151);
+  border-radius: 0 5px 5px 0;
+}
+
+.submit-button:disabled {
+  background-color: lightgray;
+  color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  text-indent: 1em;
+  color: rgba(119, 1, 1, 0.562);
+  font-weight: 500;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.word-count {
+  margin: 0.3em 0.2em;
 }
 
 input::placeholder {
-    font-weight: bold;
-    color: rgba(119, 1, 1, 0.562);
+  font-weight: 600;
+  font-size: 1.1em;
+  font-family: "Mallanna";
+  color: rgba(119, 1, 1, 0.562);
 }
 
-
-@media screen and (min-width: 768px){
-    .todo-form{
-        height: 100px;
-    }
+@media screen and (min-width: 768px) {
+  .todo-form {
+    height: 100px;
+  }
 }

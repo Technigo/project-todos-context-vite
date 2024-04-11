@@ -37,8 +37,15 @@ p {
   padding: 0.3em 0.7em;
   width: max-content;
   border: none;
+  font-size: 1em;
   border-radius: 8px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(90, 31, 31);
+}
+
+.button:disabled {
+  background-color: rgb(224, 194, 194);
+  color: grey;
 }
 
 .button:hover {

@@ -20,9 +20,19 @@ export const CompleteProvider = ({ children }) => {
     setComplete(complete.filter(item => item !== completeToRemove));
   };
 
+  const removeAllComplete = () => {
+    setComplete([]);
+  };
+
   return (
     <CompleteContext.Provider
-      value={{ complete, addComplete, removeComplete, addAllComplete }}
+      value={{
+        complete,
+        addComplete,
+        removeComplete,
+        addAllComplete,
+        removeAllComplete,
+      }}
     >
       {children}
     </CompleteContext.Provider>

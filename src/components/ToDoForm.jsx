@@ -8,7 +8,7 @@ const ToDoForm = () => {
   const [newTodo, setNewTodo] = useState("");
   const [charCount, setCharCount] = useState(0);
   const { addToDo } = useToDo();
-  const [playSubmit] = useSound(Submit, { volume: 0.5 });
+  const [playSubmit] = useSound(Submit, { volume: 0.1 });
 
   const handleInputChange = e => {
     const userInput = e.target.value;
@@ -32,18 +32,20 @@ const ToDoForm = () => {
         <input
           value={newTodo}
           type="text"
-          placeholder="write your task here..."
+          placeholder="Write your task here..."
           onChange={handleInputChange}
         />
         <button
           disabled={newTodo && charCount <= 70 ? false : true}
           type="submit"
-          className="button add"
+          className="submit-button"
         >
           Add Todo
         </button>
       </form>
-      <p style={{ color: charCount > 70 && "red" }}>{charCount}/70</p>
+      <p className="word-count" style={{ color: charCount > 70 && "red" }}>
+        {charCount}/70
+      </p>
     </div>
   );
 };

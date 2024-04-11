@@ -1,30 +1,48 @@
-.daily-inspo{
-    background-color: rgb(252, 175, 131); 
-    display: flex;
-    justify-content: space-between;
-    height: 130px;
+.daily-inspo {
+  background-color: rgb(252, 175, 131);
+  /* display: flex; */
+  /* justify-content: space-between; */
+  height: 150px;
 
-    p{
-        font-style:italic;
-        font-size: 18px;
-    }
+  p {
+    font-style: italic;
+    font-size: 18px;
+  }
 }
 
-.quote p{
-    width: max-content;
-    margin-top: 1em;
-    }
-
-#lottie{
-    width: 160px;
+.quote p {
+  margin-top: 1em;
 }
 
-@media screen and (min-width: 1024px){
-    .quote p{
-        font-size: 1.5em;
-    }
+#lottie {
+  /* width: 160px; */
+  width: 50%;
+  float: right;
+  position: relative;
+  top: -5%;
+  right: -10%;
+}
 
-.daily-inspo{
+@media screen and (min-width: 668px) {
+  .quote p {
+    font-size: 1.5em;
+  }
+  #lottie {
+    width: 40%;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .quote p {
+    font-size: 1.3em;
+  }
+
+  .daily-inspo {
     height: 100px;
-    }
+  }
+  #lottie {
+    max-width: 240px;
+    top: -15%;
+  }
 }

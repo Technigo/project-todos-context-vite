@@ -7,6 +7,12 @@
   grid-template-columns: 100%;
 }
 
+.top-complete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .count {
   align-self: flex-end;
 }
@@ -17,6 +23,8 @@
   justify-self: center;
 }
 
-/* .complete-btn {
-  margin: 0;
-} */
+@media screen and (min-width: 1024px) {
+  .completed {
+    min-height: 600px;
+  }
+}

@@ -17,7 +17,7 @@ const ToDoList = () => {
         <h1>To do:</h1>
         <button
           type="button"
-          className="button"
+          className="button complete"
           onClick={() => {
             playCompleteAll();
             completeAllToDo();
