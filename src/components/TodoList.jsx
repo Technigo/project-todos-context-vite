@@ -1,7 +1,7 @@
 // A component to display a list of todo items
 import { useContext } from "react"
 import { TodoContext } from "./TodoContext"
-import { Todo } from "./Todo"
+import { Todo } from "./TodoItem"
 import moment from "moment"
 
 export const TodoList = () => {
@@ -31,6 +31,7 @@ export const TodoList = () => {
               // create Todo.jsx component to handle both completed and uncompleted todos
               // these props (id, completed, todo...) are the data that Todo.jsx needs
               <Todo
+                key={todo.id}
                 id={todo.id}
                 completed={todo.completed}
                 todo={todo.todo}
@@ -46,6 +47,7 @@ export const TodoList = () => {
           <ul>
             {completedTodos.map((todo) => (
               <Todo
+                key={todo.id}
                 id={todo.id}
                 completed={todo.completed}
                 todo={todo.todo}
