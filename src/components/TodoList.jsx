@@ -23,9 +23,11 @@ export const TodoList = () => {
         <span> Completed: {completedCount}</span>
       </div>
       <div className="list-container">
-        <div className="uncompleted">
+        <div className="uncompleted section">
           {" "}
-          <h2>Uncompleted</h2>
+          <div className="header-container">
+            <h2>Uncompleted</h2>
+          </div>
           <ul>
             {uncompletedTodos.map((todo) => (
               // create Todo.jsx component to handle both completed and uncompleted todos
@@ -43,8 +45,11 @@ export const TodoList = () => {
           </ul>
         </div>
 
-        <div className="completed">
-          <h2>Completed</h2>
+        <div className="completed section">
+          {" "}
+          <div className="header-container">
+            <h2>Completed</h2>
+          </div>
           <ul>
             {completedTodos.map((todo) => (
               <Todo
@@ -61,6 +66,6 @@ export const TodoList = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
  
