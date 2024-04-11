@@ -1,74 +1,84 @@
-.todo-list {
-    list-style-type: none;
-    padding: 0;
+.todo-list-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.todo-card {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 10px;
 }
 
 .todo-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 .todo-item input[type="checkbox"] {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #999;
-    border-radius: 4px;
-    background-color: transparent;
-    position: relative;
-    top: 4px;
-    margin-right: 10px;
+	appearance: none;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #999;
+	border-radius: 4px;
+	background-color: transparent;
+	position: relative;
+	top: 4px;
+	margin-right: 10px;
 }
 
 /* style the custom checkbox when checked */
 .todo-item input[type="checkbox"]:checked {
-    background-color: #007bff;
-    border-color: #007bff;
+	background-color: #007bff;
+	border-color: #007bff;
 }
 
 /* Create the custome chekbox indicator */
 .todo-item input[type="checkbox"]::after {
-    content: "";
-    width: 6px;
-    height: 12px;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 1px;
-    left: 4px;
-    opacity: 0;
-    /* hide by default */
-    transition: opacity 0.2s ease-in-out;
+	content: "";
+	width: 6px;
+	height: 12px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 1px;
+	left: 4px;
+	opacity: 0;
+	/* hide by default */
+	transition: opacity 0.2s ease-in-out;
 }
 
 /* Show the custom checkbox indicator when checked */
 .todo-item input[type="checkbox"]:checked::after {
-    opacity: 1;
+	opacity: 1;
 }
 
 .todo-item span {
-    flex: 1;
-    /* move remove button to the right */
-    overflow-wrap: break-word;
-    /* ensure long text doesn´t overflow */
+	flex: 1;
+	/* move remove button to the right */
+	overflow-wrap: break-word;
+	/* ensure long text doesn´t overflow */
 }
 
 .todo-item button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    cursor: pointer;
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 6px 12px;
+	cursor: pointer;
 }
 
 .todo-item button:hover {
-    background-color: #c82333;
+	background-color: #c82333;
 }
 
-/* check why it is not applied */
 .completed {
-    text-decoration: line-through;
+	text-decoration: line-through;
+}
+
+.timestamp {
+	margin-top: 20px;
 }

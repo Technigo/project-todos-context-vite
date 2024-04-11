@@ -7,27 +7,34 @@ const TodoList = () => {
   const { todos, toggleComplete, removeTodo } = useTodoContext();
 
   return (
-    <ul className="todo-list" aria-label="Task List">
+    <div className="todo-list-container" aria-label="Task List">
       {todos.map((todo) => (
-        <li className="todo-item" key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={() => toggleComplete(todo.id)}
-            aria-label={`Mark task ${
-              todo.completed ? "incomplete" : "complete"
-            }`}
-          />
-          <span className={todo.completed ? "completed" : ""}>{todo.text}</span>
+        <div className="todo-card" key={todo.id}>
+          <div className="todo-item">
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => toggleComplete(todo.id)}
+              aria-label={`Mark task ${
+                todo.completed ? "incomplete" : "complete"
+              }`}
+            />
+            <span className={todo.completed ? "completed" : ""}>
+              {todo.text}
+            </span>
+            <button
+              onClick={() => removeTodo(todo.id)}
+              aria-label="Remove task"
+            >
+              Remove
+            </button>
+          </div>
           <span className="timestamp">
-            {moment(todo.createdAt).format("h:mm:ss a")}
+            {moment(todo.createdAt).format("D/MM/YY")}
           </span>
-          <button onClick={() => removeTodo(todo.id)} aria-label="Remove task">
-            Remove
-          </button>
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 
