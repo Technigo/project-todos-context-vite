@@ -37,7 +37,12 @@ input[type="checkbox"]:hover {
   cursor: pointer;
 }
 .checkbox:has([type="checkbox"]:checked) ~ .task-content > .task-text {
-  text-decoration: line-through 0.1em solid;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 0.1em;
+  text-decoration-style: solid;
+  text-decoration-color: inherit;
+  -webkit-text-decoration-color: inherit;
+  -webkit-text-decoration-line: line-through;
 }
 
 .checkbox {
