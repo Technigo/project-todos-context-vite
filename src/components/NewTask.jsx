@@ -1,7 +1,9 @@
 import { useState } from "react";
-import "../style/NewTask.scss";
+
 import { useTask } from "../context/TaskContext";
 import { useTheme } from "../context/ThemeContext";
+
+import "../style/NewTask.scss";
 
 export const NewTask = () => {
   const { addTask } = useTask();

@@ -1,7 +1,9 @@
+import { GiBurningDot } from "react-icons/gi";
+
 import { useTask } from "../context/TaskContext";
 import { useTheme } from "../context/ThemeContext";
+
 import "../style/ToDoList.scss";
-import { GiBurningDot } from "react-icons/gi";
 
 export const ToDoList = () => {
   const { toDoList, removeTask, updatedStatus } = useTask();
@@ -22,7 +24,8 @@ export const ToDoList = () => {
               checked={taskObj.status}
               onChange={() => updatedStatus(taskObj.id)}
             />
-            <GiBurningDot /> {taskObj.text} <GiBurningDot />
+            <GiBurningDot className="fireball" /> {taskObj.text}{" "}
+            <GiBurningDot className="fireball" />
             <button onClick={() => removeTask(taskObj.id)}>🗑️</button>
           </li>
         ))}

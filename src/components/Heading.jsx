@@ -1,7 +1,9 @@
-import "../style/Heading.scss";
 import { FaClipboardList } from "react-icons/fa";
-import { useTheme } from "../context/ThemeContext";
+
 import { useTask } from "../context/TaskContext";
+import { useTheme } from "../context/ThemeContext";
+
+import "../style/Heading.scss";
 
 export const Heading = () => {
   const { darkMode, changeMode } = useTheme();
