@@ -17,7 +17,7 @@ const App = () => {
           <TodoList />
         </div>
         <div className="card">
-          <h2 className="card-title">Task Count</h2>
+          <h2 className="card-title">All my tasks</h2>
           <div className="task-count" aria-label="Task Count">
             {/* Display task count here */}
           </div>

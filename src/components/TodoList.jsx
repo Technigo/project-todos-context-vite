@@ -1,4 +1,5 @@
 import { useTodoContext } from "../context/TodoContext";
+import moment from "moment";
 
 import "./TodoList.css";
 
@@ -17,10 +18,10 @@ const TodoList = () => {
               todo.completed ? "incomplete" : "complete"
             }`}
           />
-          {/*    {todo.isEditing ? (
-            <input type="text" 
-          )} */}
           <span className={todo.completed ? "completed" : ""}>{todo.text}</span>
+          <span className="timestamp">
+            {moment(todo.createdAt).format("h:mm:ss a")}
+          </span>
           <button onClick={() => removeTodo(todo.id)} aria-label="Remove task">
             Remove
           </button>
