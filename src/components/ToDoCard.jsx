@@ -1,4 +1,6 @@
 import { useToDoContext } from "../contexts/ToDoContext";
+import removeIcon from "../assets/cross-white.svg";
+import "./ToDoCard.css";
 
 export const ToDoCard = ({ toDo, toggleComplete }) => {
   const { removeToDo } = useToDoContext();
@@ -18,7 +20,13 @@ export const ToDoCard = ({ toDo, toggleComplete }) => {
       >
         {toDo.description}
       </span>
-      <button onClick={handleRemove}>Remove</button>
+      {/* <button onClick={handleRemove}>Remove</button> */}
+      <img
+        src={removeIcon}
+        alt="Remove"
+        className="remove-button"
+        onClick={handleRemove}
+      />
     </li>
   );
 };

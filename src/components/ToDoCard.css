@@ -1,0 +1,4 @@
+.remove-button {
+  background-color: black; /* Remove background when list item has a backround - just here now to be able to see the white icon*/
+  width: 61px;
+}
