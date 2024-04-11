@@ -18,11 +18,7 @@ export const ListToDo = () => {
                 toggleToDo(index);
               }}
             />
-            <label
-              className={
-                todo.completed ? "text-gray-400 line-through" : "text-black"
-              }
-            >
+            <label>
               {todo.text}
             </label>
             <span> - {moment(todo.time).format("hh:mm A")}</span>{" "}
