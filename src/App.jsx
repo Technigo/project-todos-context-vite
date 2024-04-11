@@ -4,12 +4,13 @@ import { TodoList } from "./Components/TodoList.jsx";
 import { WorkoutBlock } from "./Components/WorkoutBlock.jsx";
 import { ReminderBlock } from "./Components/ReminderBlock.jsx";
 import { NotesBlock } from "./Components/NotesBlock.jsx";
+import './index.css';
 
 export const App = () => {
   return (
     <TodoProvider>
       <div>
-        <h1>Todo App</h1>
+        <h1>To-Do App</h1>
       </div>
       <div className="container">
         <div className="block">

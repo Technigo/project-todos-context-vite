@@ -1,5 +1,6 @@
 /* Importing font */
 @import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 /* Styling for App.jsx */
 body {
@@ -14,14 +15,11 @@ h1 {
   color: #695853;
 }
 
-/* Styling for blocks */
+/* Styling and placement for blocks */
 .container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(500px, 1fr)
-  );
-  gap: 20px; 
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
   justify-content: center;
 }
 

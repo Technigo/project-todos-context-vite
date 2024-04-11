@@ -1,0 +1,37 @@
+.workout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workout-container h2 {
+  font-family: "Poltawski Nowy", sans-serif;
+  font-size: 25px;
+  color: #382e2c;
+  margin-top: 5px;
+}
+
+.workout-days {
+  display: flex;
+  justify-content: center;
+}
+
+.workout-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #9a9086;
+  color: #382e2c;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.workout-day.active {
+  background-color: #382e2c;
+  color: #ffffff;
+}
