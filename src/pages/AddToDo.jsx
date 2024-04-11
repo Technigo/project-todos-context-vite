@@ -1,7 +1,7 @@
 import { useToDos } from "../contexts/ToDoContext";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import moment from "moment";
-
 
 export const AddToDo = () => {
   const [text, setText] = useState("");
@@ -14,9 +14,9 @@ export const AddToDo = () => {
     if (!text.trim()) return;
 
     // Format the date using moment.js
-    const formattedDate = moment(date).format("YYYY-MM-DD");
+    const formattedDate = moment(date).format("hh:mm MMMM YY");
 
-    addToDo(text, formattedDate, category); 
+    addToDo(text, formattedDate, category);
     setText("");
     setDate("");
     setCategory("");
@@ -24,8 +24,11 @@ export const AddToDo = () => {
 
   return (
     <div>
+      <Link to="/">
+        <p>Back to main page!</p>
+      </Link>
       <h2>New Task</h2>
-      <form onSubmit={submitHandler} className="">
+      <form onSubmit={submitHandler} className="todo-wrapper">
         <input
           type="text"
           value={text}
