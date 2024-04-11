@@ -12,7 +12,8 @@ export const ToDoList = () => {
     return toDos.filter((toDo) => toDo.completed);
   };
 
-  const allTasksCompleted = completedTasks().length === amountOfTasks;
+  const allTasksCompleted =
+    completedTasks().length === amountOfTasks && amountOfTasks > 0;
 
   const handleClearAll = () => {
     clearToDos();
