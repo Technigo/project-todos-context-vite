@@ -43,15 +43,16 @@ export const TodoProvider = ({ children }) => {
     setTotalChecked(checkedCount);
   }, [todoList]);
 
-
   const toggleAllTodos = () => {
     setTodoList((currentItems) => {
-      const allCompleted = currentItems.every((item) => item.completed)
-      return currentItems.map(item => ({ ...item, completed: !allCompleted }));
+      //checks if at least one item is not completed, then negate the result. this way when we toggle button, it checks all items
+      const allCompleted = !currentItems.some((item) => !item.completed);
+      return currentItems.map((item) => ({
+        ...item,
+        completed: !allCompleted,
+      }));
     });
-    ;
   };
-
 
   return (
     <TodoContext.Provider

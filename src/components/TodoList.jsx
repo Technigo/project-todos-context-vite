@@ -15,12 +15,12 @@ export const TodoList = () => {
     <div className="todo-list-container">
       <h2>To do list:</h2>
       <p>
-        {totalChecked}/{totalItems}
+        Completed: {totalChecked} / {totalItems}
       </p>
-      <ul>
+      <ul className="todo-ul">
         {todoList.map((item) => {
           return (
-            <li key={item.id}>
+            <li className="todo-li" key={item.id}>
               <label>
                 <input
                   type="checkbox"
@@ -34,9 +34,9 @@ export const TodoList = () => {
                 >
                   {item.text}
                 </span>
-                <span>at {moment(item.createdAt).format("HH:mm")}</span>
+                <span>added on {moment(item.createdAt).format("HH:mm")}</span>
 
-                <button onClick={() => deleteTodo(item.id)}>Delete</button>
+                <button onClick={() => deleteTodo(item.id)}>x</button>
               </label>
             </li>
           );

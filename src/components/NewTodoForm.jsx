@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTodo } from "../context/TodoContext";
+import "./NewTodoForm.css"
 
 export const NewTodoForm = () => {
   const [newItem, setNewItem] = useState("");
@@ -13,19 +14,22 @@ export const NewTodoForm = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="new-todo-form">
+    <div className="form-container">
+      <h1 className="app-name">What To Do Tracker</h1>
+      <form onSubmit={handleSubmit} className="add-todo-form">
         <label>
           {" "}
-          Add to do:
+          Add Todo:
           <input
             type="text"
             value={newItem}
             onChange={(event) => setNewItem(event.target.value)}
           />
         </label>
-        <button type="submit">Add to list</button>
+        <button className="add-todo-button" type="submit">
+          Add to list
+        </button>
       </form>
-    </>
+    </div>
   );
 };
