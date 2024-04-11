@@ -13,6 +13,7 @@ export const AddToDo = () => {
 
   return (
     <div>
+      <h2>New Task</h2>
       <form onSubmit={submitHandler} className="">
         <input
           type="text"
