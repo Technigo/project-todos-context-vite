@@ -1,0 +1,39 @@
+.itemContainer {
+  position: relative;
+  margin: 15px;
+}
+
+.itemButton {
+  position: absolute;
+  right: 10px;
+  padding: 2px;
+}
+
+@media (min-width: 745px) {
+  .itemContainer {
+    font-size: 20px;
+  }
+  .itemButton {
+    right: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .itemContainer {
+    font-size: 25px;
+  }
+
+  .itemButton {
+    right: 30px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .itemContainer {
+    font-size: 30px;
+  }
+
+  .itemButton {
+    right: 40px;
+  }
+}
