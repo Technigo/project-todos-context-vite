@@ -1,3 +1,7 @@
+import { TaskProvider } from "./context/TaskContext";
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
+  <TaskProvider>
+    <div></div>
+  </TaskProvider>;
 };
