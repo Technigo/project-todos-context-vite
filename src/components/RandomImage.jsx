@@ -1,9 +1,9 @@
-import image from '/ferhat-deniz-fors.jpg'
+import image from "/ferhat-deniz-fors.jpg";
 
 export const RandomImage = () => {
-    return(
-        <div className="section image">
-            <img src={image} alt="image"></img>
-        </div>
-    )
-}
+  return (
+    <div className="section image">
+      <img src={image} alt="image"></img>
+    </div>
+  );
+};

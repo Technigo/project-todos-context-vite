@@ -9,7 +9,11 @@ h2,
 h3,
 p {
   color: white;
-  margin: 0.5%;
+  margin: 0.7%;
+}
+
+h1 {
+  font-size: 1.7em;
 }
 
 .main-container {
@@ -41,11 +45,13 @@ p {
   border-radius: 8px;
   background-color: rgb(255, 255, 255);
   color: rgb(90, 31, 31);
+  cursor: pointer;
 }
 
 .button:disabled {
   background-color: rgb(224, 194, 194);
   color: grey;
+  cursor: not-allowed;
 }
 
 .button:hover {

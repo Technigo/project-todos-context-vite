@@ -1,7 +1,6 @@
 .daily-inspo {
   background-color: rgb(252, 175, 131);
-  /* display: flex; */
-  /* justify-content: space-between; */
+  place-content: center;
   height: 150px;
 
   p {
@@ -15,12 +14,8 @@
 }
 
 #lottie {
-  /* width: 160px; */
-  width: 50%;
+  width: 45%;
   float: right;
-  position: relative;
-  top: -5%;
-  right: -10%;
 }
 
 @media screen and (min-width: 668px) {
@@ -29,7 +24,6 @@
   }
   #lottie {
     width: 40%;
-    right: 0;
   }
 }
 
@@ -43,6 +37,5 @@
   }
   #lottie {
     max-width: 240px;
-    top: -15%;
   }
 }

@@ -23,7 +23,7 @@
   transition: box-shadow 0.2s;
 }
 
-.complete:hover {
+.complete:enabled:hover {
   box-shadow: 0 0 11px rgba(87, 32, 0, 0.308);
 }
 

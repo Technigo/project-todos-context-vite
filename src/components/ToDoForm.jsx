@@ -19,8 +19,6 @@ const ToDoForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     playSubmit();
-    //validate the task - avoid empty input
-    console.log(newTodo);
     addToDo(newTodo);
     setNewTodo("");
     setCharCount(0);

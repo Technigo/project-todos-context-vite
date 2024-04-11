@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import "../styling/InspirationCard.css";
-import animation from "../assets/animations/Animation-planning.json";
 import Lottie from "lottie-react";
+import { useEffect, useState } from "react";
+
+import animation from "../assets/animations/Animation-planning.json";
+
+import "../styling/InspirationCard.css";
 
 const InspirationCard = () => {
   const [quote, setQuote] = useState([]);
@@ -13,7 +15,6 @@ const InspirationCard = () => {
       .then(response => response.json())
       .then(q => {
         setQuote(q);
-        console.log(q);
         setLoading(false);
       })
       .catch(error => {

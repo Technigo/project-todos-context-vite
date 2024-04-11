@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.remove-all:enabled:hover {
+  box-shadow: 0 0 11px rgba(87, 32, 0, 0.308);
+}
+
 .count {
   align-self: flex-end;
 }

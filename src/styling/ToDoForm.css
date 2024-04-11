@@ -28,6 +28,7 @@ form {
 .submit-button:disabled {
   background-color: lightgray;
   color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+  cursor: not-allowed;
 }
 
 input[type="text"] {
@@ -52,7 +53,7 @@ input[type="text"]:focus {
 input::placeholder {
   font-weight: 600;
   font-size: 1.1em;
-  font-family: "Mallanna";
+  font-family: "Quicksand";
   color: rgba(119, 1, 1, 0.562);
 }
 

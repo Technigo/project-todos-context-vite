@@ -1,19 +1,21 @@
-import { useToDo } from "../context/ToDoContext";
-import { useComplete } from "../context/CompleteContext";
-import trash from "../assets/rubbish-bin.svg";
-import unChecked from "../assets/empty-check.svg";
-import checked from "../assets/checked.svg";
-import "../styling/TaskList.css";
 import useSound from "use-sound";
-import Dump from "../assets/sounds/delete.mp3";
+
+import checked from "../assets/checked.svg";
+import trash from "../assets/rubbish-bin.svg";
 import AddToDo from "../assets/sounds/addToDo.mp3";
 import CompleteToDo from "../assets/sounds/complete.mp3";
+import Dump from "../assets/sounds/delete.mp3";
+import unChecked from "../assets/unchecked.svg";
+import { useComplete } from "../context/CompleteContext";
+import { useToDo } from "../context/ToDoContext";
+
+import "../styling/TaskList.css";
 
 const TaskList = ({ data }) => {
   // sounds
   const [playDump] = useSound(Dump, { volume: 0.5 });
   const [playAddToDo] = useSound(AddToDo, { volume: 0.5 });
-  const [playCompleteToDo] = useSound(CompleteToDo, { volume: 0.5 });
+  const [playCompleteToDo] = useSound(CompleteToDo, { volume: 0.2 });
   // contexts
   const { ToDo, addToDo, removeToDo } = useToDo();
   const { complete, addComplete, removeComplete } = useComplete();
@@ -22,12 +24,16 @@ const TaskList = ({ data }) => {
   const changeStatus = item => {
     if (data === "ToDo") {
       playCompleteToDo();
-      addComplete(item);
-      removeToDo(item);
+      setTimeout(() => {
+        addComplete(item);
+        removeToDo(item);
+      }, 500);
     } else {
       playAddToDo();
-      addToDo(item.task);
-      removeComplete(item);
+      setTimeout(() => {
+        addToDo(item.task);
+        removeComplete(item);
+      }, 500);
     }
   };
 

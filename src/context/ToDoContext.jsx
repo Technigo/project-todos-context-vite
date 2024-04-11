@@ -1,31 +1,31 @@
-import { createContext, useContext, useState } from 'react'
-import moment from 'moment'
+import { createContext, useContext, useState } from "react";
+import moment from "moment";
 
-const ToDoContext = createContext()
+const ToDoContext = createContext();
 
 export const ToDoProvider = ({ children }) => {
-  const [ToDo, setToDo] = useState([])
+  const [ToDo, setToDo] = useState([]);
 
-  const addToDo = (newToDo) => {
+  const addToDo = newToDo => {
     if (ToDo.length === 5) {
-      setToDo((prevValue) => [
+      setToDo(prevValue => [
         ...prevValue.slice(1),
         { task: newToDo, createdAt: moment() },
-      ])
+      ]);
     } else {
-      setToDo((prevValue) => [
+      setToDo(prevValue => [
         ...prevValue,
         { task: newToDo, createdAt: moment() },
-      ])
+      ]);
     }
-  }
+  };
 
   const completeAllToDo = () => {
-    setToDo([])
-  }
-  const removeToDo = (todoToRemove) => {
-    setToDo(ToDo.filter((item) => item !== todoToRemove))
-  }
+    setToDo([]);
+  };
+  const removeToDo = todoToRemove => {
+    setToDo(ToDo.filter(item => item !== todoToRemove));
+  };
 
   return (
     <ToDoContext.Provider
@@ -33,12 +33,12 @@ export const ToDoProvider = ({ children }) => {
     >
       {children}
     </ToDoContext.Provider>
-  )
-}
+  );
+};
 export const useToDo = () => {
-  const context = useContext(ToDoContext)
+  const context = useContext(ToDoContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
-  return context
-}
+  return context;
+};
