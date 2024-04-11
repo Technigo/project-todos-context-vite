@@ -19,23 +19,28 @@ export const TodoForm = () => {
     event.preventDefault();
     addTodo(newTodo);
     setNewTodo({ todotext: "", id: newTodo.id + 1 });
-    console.log(newTodo);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>New Task </label>
-      <input
-        className="inputField"
-        type="text"
-        name="todotext"
-        key={newTodo.id}
-        value={newTodo.todotext}
-        onChange={handleChange}
-      />
-      <button type="submit" className="addTodo-btn">
-        Add!
-      </button>
-    </form>
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input
+            className="inputField"
+            type="text"
+            name="todotext"
+            placeholder="Write your tasks here..."
+            key={newTodo.id}
+            value={newTodo.todotext}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <button type="submit" className="addTodo-btn">
+            Add task
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
