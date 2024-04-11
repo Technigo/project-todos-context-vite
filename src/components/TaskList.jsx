@@ -6,10 +6,14 @@ export const TaskList = () => {
 
   return (
     <div className="task-list">
-      {tasks.map((task) => (
-        <Task key={task.id} task={task}/>
-      ))}
-      <div>Number of tasks: {tasks.length}</div>
+      {tasks
+        .filter((task) => task.done === false)
+        .map((task) => (
+          <Task key={task.id} task={task} />
+        ))}
+      <div>
+        Number of tasks: {tasks.filter((task) => task.done === false).length}
+      </div>
     </div>
-  )
+  );
 }

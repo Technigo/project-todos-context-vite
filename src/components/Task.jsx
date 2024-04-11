@@ -1,17 +1,12 @@
-import { useState } from "react"
 import { useTasks } from "../contexts/TasksContext"
 import deleteIcon from "/icon-delete.png"
 import "./Task.css"
 
 export const Task = ({ task }) => {
-  const [done, setDone] = useState(false)
-  const { deleteTask, addTaskDone, toggleChecked } = useTasks()
+  const { toggleChecked, deleteTask } = useTasks()
 
-  const toggleDone = (event) => { 
-    setDone(event.target.checked)
+  const toggleDone = () => { 
     toggleChecked(task.id)
-    addTaskDone(task)
-    deleteTask(task.task)
   }
 
   return (
@@ -21,7 +16,7 @@ export const Task = ({ task }) => {
           <input
             className="checkbox"
             type="checkbox"
-            checked={done}
+            checked={task.done}
             onChange={toggleDone}
             aria-label="checkbox for tasks"
           />
@@ -29,7 +24,7 @@ export const Task = ({ task }) => {
         </div>
         <p>{task.task}</p>
       </div>
-      <button className="button" onClick={() => deleteTask(task.task)}>
+      <button className="button" onClick={() => deleteTask(task.id)}>
         <img className="delete-icon" src={deleteIcon} alt="Delete icon" />
       </button>
     </div>

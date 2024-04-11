@@ -4,10 +4,10 @@ import "./TaskForm.css"
 
 export const TaskForm = () => {
   const { tasks, nextId, addTask } = useTasks()
-
   const [newTask, setNewTask] = useState({
     id: null,
     task: "",
+    done: false
   })
 
   const handleChange = (event) => {
