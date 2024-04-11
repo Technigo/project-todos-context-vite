@@ -23,3 +23,30 @@
   border-radius: 10px;
   border: 2px solid #088395;
 }
+
+@media (min-width: 745px) {
+  .formTitle {
+    font-size: 28px;
+  }
+
+  .formText {
+    padding: 20px;
+  }
+
+  .formButton {
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formTitle {
+    font-size: 32px;
+  }
+  .formText {
+    padding: 30px;
+  }
+
+  .formButton {
+    padding: 15px 35px;
+  }
+}
