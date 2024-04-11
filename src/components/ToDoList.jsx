@@ -32,10 +32,12 @@ export const ToDoList = () => {
           />
         ))}
       </ul>
-      <button className="clear-all-button" onClick={handleClearAll}>
-        <p>Clear all</p>
-        <img src={clearIcon} alt="Clear icon" />
-      </button>
+      <div className="clear-all-button-container">
+        <button className="clear-all-button" onClick={handleClearAll}>
+          <p>Clear all</p>
+          <img src={clearIcon} alt="Clear icon" />
+        </button>
+      </div>
     </div>
   );
 };

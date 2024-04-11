@@ -12,16 +12,18 @@ export const ToDoCard = ({ toDo, toggleComplete }) => {
     <div className="to-do-list-item">
       <li>
         <input
+          className="checkbox"
           type="checkbox"
           checked={toDo.completed}
           onChange={toggleComplete}
         />
         <span
-          style={{ textDecoration: toDo.completed ? "line-through" : "none" }}
+          style={{
+            textDecoration: toDo.completed ? "line-through" : "none",
+          }}
         >
           {toDo.description}
         </span>
-        {/* <button onClick={handleRemove}>Remove</button> */}
         <img
           src={removeIcon}
           alt="Remove"

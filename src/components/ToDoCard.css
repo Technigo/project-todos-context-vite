@@ -1,24 +1,20 @@
-.to-do-list-item {
-  /* background-color: black; */
-  color: white;
-  list-style: none;
-}
-
-.to-do-list-item input {
-  border: pink;
-}
-
 .to-do-list-item li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: black;
+  justify-content: space-between;
+  background-color: #201f1f;
+  font-size: 18px;
+  color: white;
   border-radius: 8px;
-  margin-bottom: 5px;
-  max-width: 382px;
+  margin-bottom: 7px;
   height: 60px;
 }
-
 .remove-button {
   width: 61px;
+  height: 61px;
+}
+
+.checkbox {
+  margin: 15px;
 }
