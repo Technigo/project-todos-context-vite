@@ -6,7 +6,7 @@
   flex-direction: column-reverse;
   align-items: center;
   gap: 20px;
-  font-size: 3vw;
+  font-size: 15px;
 
   .heading-text {
     display: flex;
@@ -29,6 +29,7 @@
     padding: 5px 10px;
     cursor: pointer;
     align-self: flex-end;
+    font-size: 15px;
   }
 
   .task-count {
