@@ -7,17 +7,32 @@ export const ToDoProvider = ({ children }) => {
   const [toDos, setToDos] = useState([
     {
       id: 1,
-      description: "Buy vegetables",
+      description: "Wake up and stretch",
       completed: false,
     },
     {
       id: 2,
-      description: "Pay bills",
+      description: "Brew a fresh cup of coffee or tea",
       completed: false,
     },
     {
       id: 3,
+      description: "Take a brisk walk",
+      completed: false,
+    },
+    {
+      id: 4,
+      description: "Eat some breakfast",
+      completed: false,
+    },
+    {
+      id: 5,
       description: "Pet the dog",
+      completed: false,
+    },
+    {
+      id: 6,
+      description: "Get ready for the day!",
       completed: false,
     },
   ]);
