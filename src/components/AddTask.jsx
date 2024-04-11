@@ -18,6 +18,8 @@ export const AddTask = () => {
         setNewTask(e.target.value)
     }
 
+    
+
    return (
     <>
     <div>

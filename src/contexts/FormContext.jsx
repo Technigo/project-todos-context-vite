@@ -5,7 +5,7 @@ const AppDataContext = createContext()
 export const AppDataProvider = ({children}) => {
     // const [taskCount, setTaskCount] = useState(0)
     // const [newTask, setNewTask] = useState('') //new task needs to be filled
-    const [todos, setTodos] = useState([]) //todo list
+    const [todos, setTodos] = useState([{text: 'Laundry', completed: false}]) //todo list
 
     // const taskAmounts = () => setTaskCount((taskCount) => taskCount + 1) //all the tasks number
 
@@ -20,13 +20,19 @@ export const AppDataProvider = ({children}) => {
       localStorage.setItem('todos', JSON.stringify(todos))
     }, [todos])
 
-    const addTask = (task) => {
-      setTodos([...todos, task])
+    const addTask = (todo) => {
+      setTodos([...todos, {text: todo, completed: false}])
     } //add new task to todo list
 
     const removeTask = (taskToRemove) => {
-      setTodos(todos.filter((task)=> task !== taskToRemove))
+      setTodos(todos.filter((task)=> task.text !== taskToRemove.text))
     } //setTodoList for its' value -- todoList, when the task is !== the task to be removed, which means these tasks I will keep in the todo list
+
+    const toggleTodo = (index, completed) =>{
+      const updatedTodo = [...todos]
+      updatedTodo[index].completed = completed
+      setTodos(updatedTodo)
+    }
 
     const appContent = {
       title: "My todo list",
@@ -35,7 +41,7 @@ export const AppDataProvider = ({children}) => {
     
     return (
       <AppDataContext.Provider
-        value={{ todos, addTask, appContent, removeTask}}
+        value={{ todos, addTask, appContent, removeTask, toggleTodo}}
       >
         {children}
       </AppDataContext.Provider>
