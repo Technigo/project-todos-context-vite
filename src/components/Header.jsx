@@ -1,5 +1,4 @@
-import headerIcon from "../assets/check-dark.svg";
-
+import headerIcon from "../assets/check-white.svg";
 import "./Header.css";
 
 export const Header = () => {

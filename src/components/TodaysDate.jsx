@@ -1,4 +1,6 @@
 import moment from "moment";
+import "./TodaysDate.css";
+
 export const TodaysDate = () => {
   // Current date
   const currentDate = moment();

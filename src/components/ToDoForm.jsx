@@ -28,9 +28,9 @@ export const ToDoForm = () => {
   };
 
   return (
-    <div className="add-task-form">
-      <form onSubmit={handleSubmit}>
+      <form className="add-task-form" onSubmit={handleSubmit}>
         <input
+          className="add-task-input"
           type="text"
           value={newToDo.description}
           placeholder="New task"
@@ -44,6 +44,5 @@ export const ToDoForm = () => {
           onClick={handleSubmit}
         />
       </form>
-    </div>
   );
 };
