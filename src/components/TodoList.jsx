@@ -1,12 +1,12 @@
 import { useTodo } from "../context/TodoContext";
 
 export const TodoList = () => {
-  const { todoList, deleteTodo, toggleTodo, countTodos } = useTodo();
+  const { todoList, deleteTodo, toggleTodo, totalItems, totalChecked } = useTodo();
 
   return (
     <div className="todo-list-container">
       <h2>To do list:</h2>
-      <p>{countTodos}</p>
+      <p>{totalChecked}/{totalItems}</p>
       <ul>
         {todoList.map((item) => {
           return (

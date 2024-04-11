@@ -1,10 +1,14 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
+import moment from "moment";
+
 
 const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [todoList, setTodoList] = useState([]);
   const [itemId, setItemId] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
+  const [totalChecked, setTotalChecked] = useState(0);
 
   const toggleTodo = (id, completed) => {
     setTodoList((currentItems) => {
@@ -16,10 +20,6 @@ export const TodoProvider = ({ children }) => {
       });
     });
   };
-
-  // const deleteTasks =(id) => {
-  //   setTodoList(todoList.filter(item => item.id !== id))
-  // };
 
   const deleteTodo = (id) => {
     setTodoList((currentItems) => {
@@ -36,8 +36,18 @@ export const TodoProvider = ({ children }) => {
     });
   };
 
-  const countTodos = todoList.length;
+  useEffect(() => {
+    setTotalItems(todoList.length);
 
+    const checkedCount = todoList.filter(
+      (item) => item.completed === true
+    ).length;
+    setTotalChecked(checkedCount);
+  }, [todoList]);
+
+  const dateDispaly = () => {
+    
+  }
   return (
     <TodoContext.Provider
       value={{
@@ -47,7 +57,8 @@ export const TodoProvider = ({ children }) => {
         setItemId,
         deleteTodo,
         toggleTodo,
-        countTodos,
+        totalItems,
+        totalChecked,
       }}
     >
       {children}
