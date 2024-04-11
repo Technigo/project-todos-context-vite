@@ -1,8 +1,12 @@
 header {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  background-color: #0ab6ab;
+  padding: 30px 0 40px 0;
 }
 
 .header-text {
-  font-size: 22pt;
+  font-size: 24px;
+  color: white;
 }
