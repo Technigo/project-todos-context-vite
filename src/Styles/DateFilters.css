@@ -1,0 +1,32 @@
+main button {
+  border-radius: 40px;
+  background-color: #f1f4f9;
+  height: 50px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+}
+.filtersContainer {
+  display: flex;
+  gap: 10px;
+}
+main h2 {
+  text-align: left;
+  color: #f1f4f9;
+}
+main i {
+  color: #101729;
+}
+.wrapper {
+  padding: 10px 0;
+}
+.nowDate {
+  padding: 10px 0;
+}
+.filtersContainer button:hover {
+  background-color: #7d59e7; /* Change background color on hover */
+}
+
+.filtersContainer button:hover i {
+  color: #f1f4f9; /* Change icon color on hover */
+}

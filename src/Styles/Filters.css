@@ -3,10 +3,14 @@
   gap: 10px;
 }
 .filtersWrapper button {
+  cursor: pointer;
   border: none;
   border-radius: 20px;
   padding: 5px 10px;
   font-weight: bold;
+
+  color: #bc8cff;
+  background: none;
 }
 .filters {
   display: flex;
@@ -14,4 +18,12 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+.filtersWrapper button:hover {
+  color: #e9e1ff;
+  background-color: #7d59e7;
+}
+.filtersWrapper button:focus {
+  color: #e9e1ff;
+  background-color: #7d59e7;
 }

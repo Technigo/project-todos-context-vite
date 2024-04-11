@@ -4,17 +4,20 @@ const TodoContext = createContext()
 
 export const TodoProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([])
+  const [showAddTaskPopup, setShowAddTaskPopup] = useState(false)
 
   useEffect(() => {
     fetch('https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content')
       .then((res) => res.json())
       .then((data) => {
         setTaskList(data)
-        setFilteredTasks(data)
+        // setFilteredTasks(data)
       })
   }, [])
 
   const addTask = (newTask) => {
+    newTask.createdAt = new Date().toISOString()
+
     fetch('https://6612c3e453b0d5d80f665515.mockapi.io/content', {
       method: 'POST',
       headers: {
@@ -88,6 +91,9 @@ export const TodoProvider = ({ children }) => {
       })
       .catch((error) => console.error('Error updating task:', error))
   }
+  const toggleAddTaskPopup = () => {
+    setShowAddTaskPopup(!showAddTaskPopup)
+  }
 
   return (
     <TodoContext.Provider
@@ -97,6 +103,8 @@ export const TodoProvider = ({ children }) => {
         deleteTask,
         completeTask,
         completeTask,
+        toggleAddTaskPopup,
+        showAddTaskPopup,
       }}
     >
       {children}
