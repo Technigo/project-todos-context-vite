@@ -1,0 +1,40 @@
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.todo-item span {
+    flex: 1;
+    /* move remove button to the right */
+    text-decoration: none;
+    overflow-wrap: break-word;
+    /* ensure long text doesn´t overflow */
+}
+
+.todo-item button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.todo-item button:hover {
+    background-color: #c82333;
+}
+
+/* check why it is not applied */
+.completed {
+    text-decoration: line-through;
+}

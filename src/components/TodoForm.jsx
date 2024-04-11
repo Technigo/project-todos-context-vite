@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { useTodoContext } from "../context/TodoContext";
+
 import "./TodoForm.css";
 
 const TodoForm = () => {
@@ -31,12 +33,13 @@ const TodoForm = () => {
   return (
     <div className="form-input-container">
       <form onSubmit={handleSubmit}>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <input
           type="text"
           placeholder="Add Todo..."
           value={todoText}
           onChange={handleInputChange}
+          className={errorMessage ? "error-input" : ""}
         />
         <button type="submit">Add</button>
       </form>
