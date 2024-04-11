@@ -1,5 +1,7 @@
 import { ToDoCard } from "./ToDoCard";
 import { useToDoContext } from "../contexts/ToDoContext";
+import clearIcon from "../assets/cross-black.svg";
+import "./ToDoList.css";
 
 export const ToDoList = () => {
   const { toDos, toggleComplete, clearToDos } = useToDoContext();
@@ -31,7 +33,10 @@ export const ToDoList = () => {
           />
         ))}
       </ul>
-      <button onClick={handleClearAll}>Clear ToDo-list</button>
+      <button className="clear-all-button" onClick={handleClearAll}>
+        <p>Clear all</p>
+        <img src={clearIcon} alt="Clear icon" />
+      </button>
     </div>
   );
 };
