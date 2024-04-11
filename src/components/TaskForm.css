@@ -11,6 +11,14 @@
     align-items: flex-start;
 }
 
+.input-field {
+  height: 60px;
+  width: 100%;
+  padding: 10px 5px;
+  margin: 5px 0;
+  resize: none;
+}
+
 .submit-button {
     align-self: flex-end;
 }

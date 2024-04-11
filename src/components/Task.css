@@ -1,29 +1,33 @@
 .task-box {
   padding: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  margin: 4px;
+  border-radius: 4px;
 }
 
 /*Div with just checkbox and name of task*/
 .task {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /*Making sure only delete-icon is visible on delete-button*/
 .button {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 .delete-icon {
-    height: 20px;
+  height: 20px;
 }
 
-
-/* Hide the browser's default checkbox and radio-buttons */
+/* Hide the browser's default checkbox */
 .checkbox {
   opacity: 0.5;
+  z-index: 2;
   cursor: pointer;
   height: 25px;
   width: 25px;
@@ -47,13 +51,13 @@
 }
 
 /*When you hover...*/
-.checkbox-field:hover input~.checkmark {
+.checkbox-field:hover input ~ .checkmark {
   background-color: white;
   cursor: pointer;
 }
 
 /* When the checkbox is checked*/
-.checkbox:checked~.checkmark {
+.checkbox:checked ~ .checkmark {
   background-color: rgb(145, 145, 145);
   transition: 0.2s ease;
 }
@@ -66,7 +70,7 @@
   transition: 0.2s ease;
 }
 
-.checkbox:checked~.checkmark:after {
+.checkbox:checked ~ .checkmark:after {
   display: block;
 }
 

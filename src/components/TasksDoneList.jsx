@@ -1,18 +1,16 @@
-import { Task } from "./Task";
-import { useTasks } from "../contexts/TasksContext";
+import { TaskDone } from "./TaskDone"
+import { useTasks } from "../contexts/TasksContext"
 
 export const TasksDoneList = () => {
   const { tasksDone } = useTasks();
 
   return (
     <div className="task-list">
+      <h3>Finished tasks</h3>
       {tasksDone.map((task) => (
-        <div key={task.id} className="task">
-          <input type="checkbox" />
-          <p>{task.task}</p>
-          <button>Delete</button>
-        </div>
+        <TaskDone key={task.id} task={task} />
       ))}
+      <div>Finished tasks: {tasksDone.length}</div>
     </div>
   );
-};
+}

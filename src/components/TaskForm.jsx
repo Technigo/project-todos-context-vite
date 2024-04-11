@@ -30,9 +30,10 @@ export const TaskForm = () => {
     <div className="task-form">
       <h2>Add new task here:</h2>
       <form className="form" onSubmit={handleSubmit}>
-        <label>
+        <label >
           To do:
           <input
+            className="input-field"
             type="text"
             name="task"
             value={newTask.task}

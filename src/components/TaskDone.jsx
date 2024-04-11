@@ -3,15 +3,15 @@ import { useTasks } from "../contexts/TasksContext"
 import deleteIcon from "/icon-delete.png"
 import "./Task.css"
 
-export const Task = ({ task }) => {
+export const TaskDone = ({ task }) => {
   const [done, setDone] = useState(false)
-  const { deleteTask, addTaskDone, toggleChecked } = useTasks()
+  const { deleteDoneTask, addTask, toggleChecked } = useTasks()
 
   const toggleDone = (event) => { 
     setDone(event.target.checked)
     toggleChecked(task.id)
-    addTaskDone(task)
-    deleteTask(task.task)
+    addTask(task)
+    deleteDoneTask(task.task)
   }
 
   return (
@@ -23,13 +23,12 @@ export const Task = ({ task }) => {
             type="checkbox"
             checked={done}
             onChange={toggleDone}
-            aria-label="checkbox for tasks"
           />
           <span className="checkmark"></span>
         </div>
         <p>{task.task}</p>
       </div>
-      <button className="button" onClick={() => deleteTask(task.task)}>
+      <button className="button" onClick={() => deleteDoneTask(task.task)}>
         <img className="delete-icon" src={deleteIcon} alt="Delete icon" />
       </button>
     </div>
