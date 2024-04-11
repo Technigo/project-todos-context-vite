@@ -5,6 +5,7 @@
   cursor: pointer;
   width: 18px;
   height: 18px;
+  opacity: 0.4;
 }
 
 .remove-button img {
@@ -14,4 +15,8 @@
   width: 18px;
   justify-content: center;
   align-items: center;
+}
+
+.remove-button:hover {
+  opacity: 1;
 }

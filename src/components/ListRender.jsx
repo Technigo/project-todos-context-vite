@@ -3,7 +3,6 @@ import { RemoveButton } from "./RemoveButton";
 import moment from "moment";
 
 export const ListRender = ({ array }) => {
-  console.log("ListRender Array: ", array);
 
   return (
       <div>

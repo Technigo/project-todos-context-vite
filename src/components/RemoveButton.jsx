@@ -4,7 +4,6 @@ import { useTask } from "../contexts/TaskContext";
 export const RemoveButton = ({ todo, index }) => {
   const { taskData, addTask, completeTask, removeTask } = useTask();
  
-  console.log(todo)
   const clicked = (e) => {
     e.preventDefault();
 

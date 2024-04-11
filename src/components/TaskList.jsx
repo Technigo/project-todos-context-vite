@@ -1,18 +1,13 @@
 import "./TaskList.css";
 import { useTask } from "../contexts/TaskContext";
 import { ListRender } from "./ListRender";
+import { ClearButton } from "./ClearButton";
 
 export const TaskList = () => {
   const { taskData, addTask, completeTask } = useTask();
 
   const incompleteTasks = taskData.filter((task) => task.complete === false);
   const completedTasks = taskData.filter((task) => task.complete === true);
-  console.log("IncompletedTasks: ", incompleteTasks);
-  console.log("CompletedTasks: ", completedTasks);
-console.log("All Tasks: ", taskData);
-  // const filterComplete = () => {
-
-  // };
 
   return (
     <div>
@@ -33,6 +28,13 @@ console.log("All Tasks: ", taskData);
           <ListRender array={completedTasks} />
         </div>
       ) : null}
+      {incompleteTasks.length != 0 || completedTasks.length != 0 ? (
+        <div>
+          <ClearButton />
+        </div>
+      ) : null}
     </div>
   );
 };
+
+

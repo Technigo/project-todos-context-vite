@@ -14,28 +14,32 @@ export const TaskProvider = ({ children }) => {
     }
   };
 
-  const completeTask = (taskId,index) => {
+  const completeTask = (taskId, index) => {
+    const indexCheck = (task) => task.id === taskId;
+    const indexToComplete = taskData.findIndex(indexCheck);
     const updateTasks = [...taskData];
-    const currentState = updateTasks[index].complete;
-    updateTasks[index].complete = !currentState;
+    const currentState = updateTasks[indexToComplete].complete;
+    updateTasks[indexToComplete].complete = !currentState;
 
     setTaskData(updateTasks);
   };
 
   const removeTask = (taskId) => {
-    console.log(taskId);
     const indexCheck = (task) => task.id === taskId;
-    const indexToRemove = taskData.findIndex(indexCheck)
-    console.log("Remove task:", indexToRemove);
+    const indexToRemove = taskData.findIndex(indexCheck);
     const updateTasks = [...taskData];
     updateTasks.splice([indexToRemove], 1);
-    
+
     setTaskData(updateTasks);
   };
 
+  const clearTasks = () => {
+    setTaskData([])
+  }
+
   return (
     <TaskContext.Provider
-      value={{ taskData, addTask, completeTask, removeTask }}
+      value={{ taskData, addTask, completeTask, removeTask, clearTasks }}
     >
       {children}
     </TaskContext.Provider>

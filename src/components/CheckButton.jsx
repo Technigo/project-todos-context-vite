@@ -6,11 +6,13 @@ export const CheckButton = ({ todo, index }) => {
   const { taskData, addTask, completeTask } = useTask();
   const taskRef = useRef();
 
+  console.log("CheckButton :", todo)
+
   const clicked = () => {
     taskRef.current.classList.toggle("complete");
+    console.log("Checkbox clicked:", todo.id);
+    completeTask(todo.id, index);
 
-    completeTask(index, todo.id);
-    console.log("Checkbox:", todo.id);
   };
 
   return (
@@ -20,11 +22,11 @@ export const CheckButton = ({ todo, index }) => {
         className={todo.complete ? "complete" : ""}
         checked={todo.complete}
         type="checkbox"
-        id={index}
+        id={todo.id}
         name="task-check"
         onChange={clicked}
       ></input>
-      <label htmlFor={index}>{todo.title}</label>
+      <label htmlFor={todo.id}>{todo.title}</label>
     </form>
   );
 };
