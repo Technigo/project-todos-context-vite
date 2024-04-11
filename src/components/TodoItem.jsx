@@ -33,7 +33,7 @@ export const Todo = ({
             </label>
             <div className="todo-time">
               {moment(createdAt).format("YYYY-MM-DD HH:mm")}
-            </div>{" "}
+            </div>
           </div>
 
           <div className="remove-button">
