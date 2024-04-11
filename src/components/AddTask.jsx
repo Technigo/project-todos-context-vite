@@ -1,28 +1,21 @@
 import { useAppData } from "../contexts/FormContext"
-import { useState } from "react"
+import { useState} from "react"
 
-export const TodoForm = () => {
+export const AddTask = () => {
 
-    const {taskListItems, addTask, appContent} = useAppData()
-    const [newTask, setNewTask] = useState([]) //new task needs to be filled
+    const { addTask, appContent} = useAppData()
+    const [newTask, setNewTask] = useState('') //new task needs to be filled
 
-    const handleSubmit = e => {
+    const handleSubmitTask = e =>{
         e.preventDefault()
-
-        if ( newTask) {
+        if(newTask.trim() !== '') {
             addTask(newTask)
             setNewTask('')
-        }else(
-            alert('Please write you task to the todo list')
-        )
+        } 
     }
 
-    const handleChange = e => {
-        setNewTask ({
-         ...newTask,
-         [e.target.name]: e.target.value
-        }
-        )
+    const handleNewListChange = e =>{
+        setNewTask(e.target.value)
     }
 
    return (
@@ -31,14 +24,11 @@ export const TodoForm = () => {
         <h1>{appContent.title}</h1>
     </div>
     <div>
-        <form onClick={handleSubmit}>
+        <form onSubmit={handleSubmitTask}>
             <label>{appContent.heading}</label>
-            <input type="text" name="task" value={newTask} onChange={handleChange}/>
-            <button>Add task</button>
+            <textarea type="text" name="task" value={newTask} onChange={handleNewListChange}/>
+            <button type="submit">Add task</button>
         </form>
-    </div>
-    <div>
-        <p>You have {taskListItems.length} tasks on your todo list!</p>
     </div>
     </>
    )

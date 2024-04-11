@@ -1,17 +1,32 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 const AppDataContext = createContext()
 
 export const AppDataProvider = ({children}) => {
     // const [taskCount, setTaskCount] = useState(0)
     // const [newTask, setNewTask] = useState('') //new task needs to be filled
-    const [taskListItems, setTaskListItems] = useState([]) //todo list
+    const [todos, setTodos] = useState([]) //todo list
 
     // const taskAmounts = () => setTaskCount((taskCount) => taskCount + 1) //all the tasks number
 
-    const addTask = (newTask) => {
-        setTaskListItems((pre) => [...pre, newTask])
-    }
+    useEffect(() =>{
+      const storedTodos = localStorage.getItem('todos')
+      if (storedTodos) {
+        setTodos(JSON.parse(storedTodos))
+      }
+    }, [])
+
+    useEffect(()=> {
+      localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos])
+
+    const addTask = (task) => {
+      setTodos([...todos, task])
+    } //add new task to todo list
+
+    const removeTask = (taskToRemove) => {
+      setTodos(todos.filter((task)=> task !== taskToRemove))
+    } //setTodoList for its' value -- todoList, when the task is !== the task to be removed, which means these tasks I will keep in the todo list
 
     const appContent = {
       title: "My todo list",
@@ -20,7 +35,7 @@ export const AppDataProvider = ({children}) => {
     
     return (
       <AppDataContext.Provider
-        value={{ taskListItems, addTask, appContent}}
+        value={{ todos, addTask, appContent, removeTask}}
       >
         {children}
       </AppDataContext.Provider>

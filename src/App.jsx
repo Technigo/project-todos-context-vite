@@ -1,4 +1,5 @@
-import { TodoForm } from "./components/TodoForm";
+import { AddTask } from "./components/AddTask";
+import { TodoList } from "./components/TodoList";
 import { AppDataProvider } from "./contexts/FormContext";
 
 export const App = () => {
@@ -6,7 +7,8 @@ export const App = () => {
     <>
     <div>Find me in App.jsx!</div>
     <AppDataProvider>
-      <TodoForm />
+      <AddTask/>
+      <TodoList />
     </AppDataProvider>
     </>
     
