@@ -18,10 +18,10 @@ export const ListToDo = () => {
                 toggleToDo(index);
               }}
             />
-            <label>
-              {todo.text}
-            </label>
-            <span> - {moment(todo.time).format("hh:mm A")}</span>{" "}
+            <label>{todo.text}</label>
+            <span className="category-tag">{todo.category}</span>
+            <span> - {moment(todo.time).format("hh:mm A")}</span>
+            <span className="category-tag">{todo.category}</span>
           </div>
         ))}
       </div>
