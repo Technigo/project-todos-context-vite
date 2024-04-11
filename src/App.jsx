@@ -6,7 +6,6 @@ export const App = () => {
   return (
     <TaskProvider>
       <div>
-        <h1>Todo App</h1>
         <TaskForm />
         <TaskList />
       </div>

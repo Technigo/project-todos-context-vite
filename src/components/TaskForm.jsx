@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTask } from "../context/TaskContext";
+import "../styling/TaskForm.css";
 
 const TaskForm = () => {
   const [text, setText] = useState("");
@@ -18,15 +19,21 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Add new task"
-        value={text}
-        onChange={handleChange}
-      />
-      <button type="submit">Add Task</button>
-    </form>
+    <div className="formContainer">
+      <h2 className="formTitle">Add new Task</h2>
+      <form onSubmit={handleSubmit} className="addTaskForm">
+        <input
+          type="text"
+          placeholder="Add new task"
+          value={text}
+          onChange={handleChange}
+          className="formText"
+        />
+        <button type="submit" className="formButton">
+          Add Task
+        </button>
+      </form>
+    </div>
   );
 };
 
