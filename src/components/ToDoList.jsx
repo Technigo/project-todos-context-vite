@@ -23,7 +23,6 @@ export const ToDoList = () => {
           Completed tasks: {completedTasks().length}/{amountOfTasks}
         </p>
       </div>
-      <h2>ToDo List</h2>
       <ul>
         {toDos.map((toDo, index) => (
           <ToDoCard

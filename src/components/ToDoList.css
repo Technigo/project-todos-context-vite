@@ -1,3 +1,9 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid pink;
+}
+
 .clear-all-button {
   display: flex;
   justify-content: space-evenly;

@@ -1,4 +1,24 @@
+.to-do-list-item {
+  /* background-color: black; */
+  color: white;
+  list-style: none;
+}
+
+.to-do-list-item input {
+  border: pink;
+}
+
+.to-do-list-item li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  max-width: 382px;
+  height: 60px;
+}
+
 .remove-button {
-  background-color: black; /* Remove background when list item has a backround - just here now to be able to see the white icon*/
   width: 61px;
 }
