@@ -15,7 +15,7 @@ export const NewTodoForm = () => {
 
   return (
     <div className="form-container">
-      <h1 className="app-name">What To Do Tracker</h1>
+      <h1 className="app-name">What Todo Tracker</h1>
       <form onSubmit={handleSubmit} className="add-todo-form">
         <label>
           {" "}
