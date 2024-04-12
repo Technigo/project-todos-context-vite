@@ -3,13 +3,14 @@ export const ClearStorage = () => {
   const clearStorage = event => {
     event.preventDefault();
     localStorage.clear();
+    window.location.reload();
   };
 
   return (
     <button
       className="btn"
       onClick={clearStorage}>
-      Clear Storage
+      Clear storage and reload
     </button>
   );
 };

@@ -52,6 +52,7 @@ export const ListItem = ({ id }) => {
           type="pro"
         />
       </div>
+      <p>{currentTask.duedate}</p>
     </li>
   );
 };

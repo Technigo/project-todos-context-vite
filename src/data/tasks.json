@@ -5,7 +5,8 @@
     "isDone": true,
     "category": "Must have",
     "sprint": "Current",
-    "project":"To do"
+    "project":"To do",
+    "duedate": "2024/05/05"
   },
   {
     "_id": 2,

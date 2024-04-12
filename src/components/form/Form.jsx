@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTodo } from "../../contexts/TodoContext";
 import "./form.css";
+import { Select } from "../select/Select";
+import { Duedate } from "../date-picker/Duedate";
 
 export const Form = () => {
   const { tasks, setTasks, addTask } = useTodo();
@@ -12,7 +14,7 @@ export const Form = () => {
   const [error, setError] = useState();
 
   const handleError = () => {
-    setError("Must be over 2 char");
+    setError("Must be over 2 characters");
     setTimeout(() => setError(""), 2000);
   };
 
@@ -23,7 +25,26 @@ export const Form = () => {
   };
 
   const handleChange = event => {
-    setNewTask({ ...newTask, _id: tasks.length + 1, desc: event.target.value });
+    setNewTask({
+      ...newTask,
+      _id: tasks.length + 1,
+      desc: event.target.value,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSelect = event => {
+    setNewTask({
+      ...newTask,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleDuedate = date => {
+    setNewTask({
+      ...newTask,
+      duedate: date,
+    });
   };
 
   return (
@@ -37,10 +58,24 @@ export const Form = () => {
           id="task-input"
           type="text"
           name="desc"
+          className={error && "error"}
           value={newTask.desc}
           onChange={handleChange}
-          placeholder={error && error}
+          placeholder={error ? error : "Type your new task..."}
         />
+        <Select
+          type="category"
+          handler={handleSelect}
+        />
+        <Select
+          type="sprint"
+          handler={handleSelect}
+        />
+        <Select
+          type="project"
+          handler={handleSelect}
+        />
+        <Duedate handler={handleDuedate} />
         <button className="btn">Submit</button>
       </form>
     </section>

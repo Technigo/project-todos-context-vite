@@ -18,6 +18,9 @@
 }
 
 #task-input::placeholder {
+  color: var(--decor-color-3);
+}
+#task-input.error::placeholder {
   color: var(--secondary-color);
 }
 
