@@ -9,7 +9,7 @@ const TaskCount = () => {
 
   return (
     <div className="countContainer">
-      <p>
+      <p className="count">
         {completedCount} / {totalCount}
       </p>
     </div>

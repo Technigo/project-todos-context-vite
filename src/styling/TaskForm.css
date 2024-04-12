@@ -1,27 +1,29 @@
 .formContainer {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
 }
 
 .formTitle {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 20px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .formText {
-  padding: 10px;
   border-radius: 5px;
-  border: 3px solid #088395;
+  border: none;
+  background-color: #ccd3ca;
+  height: 30px;
+  width: 200px;
 }
 
 .formButton {
-  display: block;
-  padding: 5px 20px;
-  margin: 20px auto;
-  background-color: #a1ccd1;
-  border-radius: 10px;
-  border: 2px solid #088395;
+  background-color: white;
+  border: none;
+  position: absolute;
 }
 
 @media (min-width: 745px) {

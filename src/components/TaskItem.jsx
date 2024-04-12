@@ -1,5 +1,6 @@
 import { useTask } from "../context/TaskContext";
 import { FaTrashAlt } from "react-icons/fa";
+import RemoveIcon from "../assets/Rectangle 15.png";
 import "../styling/TaskItem.css";
 
 const TaskItem = ({ task }) => {
@@ -28,7 +29,7 @@ const TaskItem = ({ task }) => {
           {task.text}
         </span>
         <button onClick={handleRemove} className="itemButton">
-          <FaTrashAlt />
+          <img src={RemoveIcon} alt="Remove Icon" />
         </button>
       </li>
     </div>

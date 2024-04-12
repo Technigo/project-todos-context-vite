@@ -8,8 +8,12 @@ const TaskList = () => {
 
   return (
     <div className="listContainer">
-      <TaskCount />
-      <h2 className="listTitle">Todo List</h2>
+      <div className="listWrapper">
+        <h2 className="listTitle">Tasks</h2>
+        <p className="taskCount">
+          <TaskCount />
+        </p>
+      </div>
       <ul className="taskList">
         {tasks.map((task) => (
           <TaskItem key={task.id} task={task} />

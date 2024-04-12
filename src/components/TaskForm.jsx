@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTask } from "../context/TaskContext";
 import "../styling/TaskForm.css";
+import AddButton from "../assets/Rectangle 2.png";
 
 const TaskForm = () => {
   const [text, setText] = useState("");
@@ -30,7 +31,7 @@ const TaskForm = () => {
           className="formText"
         />
         <button type="submit" className="formButton">
-          Add Task
+          <img src={AddButton} alt="Add task button" />
         </button>
       </form>
     </div>
