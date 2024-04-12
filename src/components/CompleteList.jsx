@@ -6,7 +6,9 @@ import Dump from "../assets/sounds/delete.mp3";
 import useSound from "use-sound";
 
 const CompleteList = () => {
+  //context
   const { complete, removeAllComplete } = useComplete();
+  //sound
   const [playDump] = useSound(Dump, { volume: 0.1 });
 
   return (

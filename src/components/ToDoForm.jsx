@@ -1,15 +1,17 @@
 import { useState } from "react";
 import useSound from "use-sound";
-
 import Submit from "../assets/sounds/submit.mp3";
 import { useToDo } from "../context/ToDoContext";
 
 import "../styling/ToDoForm.css";
 
 const ToDoForm = () => {
+  //state variables
   const [newTodo, setNewTodo] = useState("");
   const [charCount, setCharCount] = useState(0);
+  //contexts
   const { addToDo } = useToDo();
+  // sounds
   const [playSubmit] = useSound(Submit, { volume: 0.1 });
 
   const handleInputChange = e => {

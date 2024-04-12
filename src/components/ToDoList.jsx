@@ -1,16 +1,16 @@
 import useSound from "use-sound";
-
 import clear from "../assets/noToDo.svg";
 import CompleteAll from "../assets/sounds/completeAll.mp3";
 import { useComplete } from "../context/CompleteContext";
 import { useToDo } from "../context/ToDoContext";
 import TaskList from "./TaskList";
-
 import "../styling/ToDoList.css";
 
 const ToDoList = () => {
+  //contexts
   const { ToDo, completeAllToDo } = useToDo();
   const { addAllComplete } = useComplete();
+  //sounds
   const [playCompleteAll] = useSound(CompleteAll, { volume: 0.1 });
 
   return (

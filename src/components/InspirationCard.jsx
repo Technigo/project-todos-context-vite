@@ -1,13 +1,13 @@
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
-
 import animation from "../assets/animations/Animation-planning.json";
-
 import "../styling/InspirationCard.css";
 
 const InspirationCard = () => {
+  //state variables
   const [quote, setQuote] = useState([]);
   const [loading, setLoading] = useState(true);
+  //Api url
   const URL = "https://type.fit/api/quotes";
 
   const fetchQuote = () => {

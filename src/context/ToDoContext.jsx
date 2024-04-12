@@ -6,6 +6,8 @@ const ToDoContext = createContext();
 export const ToDoProvider = ({ children }) => {
   const [ToDo, setToDo] = useState([]);
 
+  // function contexts
+  // add task to ToDo state and limit the number of tasks to 5
   const addToDo = newToDo => {
     if (ToDo.length === 5) {
       setToDo(prevValue => [
@@ -19,10 +21,11 @@ export const ToDoProvider = ({ children }) => {
       ]);
     }
   };
-
+  // empty ToDo state
   const completeAllToDo = () => {
     setToDo([]);
   };
+  // remove task from ToDo state
   const removeToDo = todoToRemove => {
     setToDo(ToDo.filter(item => item !== todoToRemove));
   };
@@ -38,7 +41,7 @@ export const ToDoProvider = ({ children }) => {
 export const useToDo = () => {
   const context = useContext(ToDoContext);
   if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error("useToDo must be used within a ToDoProvider");
   }
   return context;
 };
