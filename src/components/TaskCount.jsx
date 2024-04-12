@@ -4,7 +4,6 @@ const TaskCount = () => {
   const { tasks } = useTask();
 
   const totalCount = tasks.length;
-
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (

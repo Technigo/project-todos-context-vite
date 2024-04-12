@@ -10,9 +10,9 @@ const TaskList = () => {
     <div className="listContainer">
       <div className="listWrapper">
         <h2 className="listTitle">Tasks</h2>
-        <p className="taskCount">
+        <div className="taskCount">
           <TaskCount />
-        </p>
+        </div>
       </div>
       <ul className="taskList">
         {tasks.map((task) => (

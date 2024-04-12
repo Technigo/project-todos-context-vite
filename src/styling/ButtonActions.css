@@ -1,0 +1,20 @@
+.actionsContainer {
+  width: 250px;
+  margin: 10px auto;
+}
+
+.completeAllButton {
+  display: block;
+  margin-bottom: 10px;
+  padding: 7px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f5e8dd;
+}
+
+.removeAllButton {
+  padding: 7px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f5e8dd;
+}

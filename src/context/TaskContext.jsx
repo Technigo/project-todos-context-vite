@@ -4,7 +4,7 @@ const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([
-    { id: 1, text: "Finish homework", compoleted: false },
+    { id: 1, text: "Finish homework", completed: false },
     { id: 2, text: "Go for a run", completed: true },
     { id: 3, text: "Buy groceries", completed: false },
   ]);
@@ -32,8 +32,25 @@ export const TaskProvider = ({ children }) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const completeAllTasks = () => {
+    setTasks(tasks.map((task) => ({ ...task, completed: true })));
+  };
+
+  const removeAllTasks = () => {
+    setTasks([]);
+  };
+
   return (
-    <TaskContext.Provider value={{ tasks, addTask, toggleTask, removeTask }}>
+    <TaskContext.Provider
+      value={{
+        tasks,
+        addTask,
+        toggleTask,
+        removeTask,
+        completeAllTasks,
+        removeAllTasks,
+      }}
+    >
       {children}
     </TaskContext.Provider>
   );
