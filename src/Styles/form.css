@@ -26,8 +26,6 @@ form label {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
-  /* color: #333; */
-  /* text-align: center; */
 }
 
 form button {
@@ -46,4 +44,49 @@ form button {
 
 form button:hover {
   background-color: #6b48cc;
+}
+
+form select {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #e9e1ff;
+  color: #7d59e7; /* Text color */
+}
+
+/*  dropdown arrow */
+form select::-ms-expand {
+  display: none;
+}
+
+form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* options */
+form option {
+  background-color: #e9e1ff;
+  color: #7d59e7;
+}
+
+/*  selected option */
+form option:checked {
+  background-color: #7d59e7;
+  color: white;
+}
+
+/* Styling the dropdown arrow icon */
+form select:after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 10px;
+  pointer-events: none;
 }

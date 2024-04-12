@@ -108,3 +108,28 @@
   font-size: 24px;
   color: #aaa;
 }
+.loadingIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  font-size: 100px;
+  text-align: center;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20%;
+}
+.header img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+.user {
+  display: flex;
+  align-items: center;
+}

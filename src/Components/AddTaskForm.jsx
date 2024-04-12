@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../Styles/form.css'
-import { redirect } from 'react-router-dom'
 import { useToDoContext } from '../Contexts/TodoContext'
 export const AddTaskForm = () => {
   const { addTask, toggleAddTaskPopup } = useToDoContext()
-  const [newTask, setNewTask] = useState({ content: '' })
+  const [newTask, setNewTask] = useState({ content: '', category: '' })
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
 
   const handleChange = (event) => {
@@ -14,9 +13,9 @@ export const AddTaskForm = () => {
   const navigate = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (newTask.content) {
+    if (newTask.content && newTask.category) {
       addTask(newTask)
-      setNewTask({ content: '' })
+      setNewTask({ content: '', category: '' })
       navigate('/')
       setShowSuccessMessage(true)
       setTimeout(() => setShowSuccessMessage(false), 3000)
@@ -38,6 +37,25 @@ export const AddTaskForm = () => {
           value={newTask.content}
           onChange={handleChange}
         ></textarea>
+      </label>
+      <label>
+        Category:
+        <select
+          name="category"
+          id="category"
+          onChange={handleChange}
+          value={newTask.category}
+          required
+        >
+          <option selected value="Choose an option">
+            Choose an option👇🏻
+          </option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="health">Health</option>
+          <option value="events">Events</option>
+          <option value="economy">Economy</option>
+        </select>
       </label>
 
       <button type="submit">Submit</button>

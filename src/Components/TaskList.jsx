@@ -6,6 +6,8 @@ import '../Styles/Task.css'
 import { Filters } from './Filters'
 import { AddTaskForm } from './AddTaskForm'
 import { DateFilters } from './DateFilters'
+import { ProgressCircle } from './ProgressCircle'
+
 export const TaskList = () => {
   const {
     taskList,
@@ -13,19 +15,28 @@ export const TaskList = () => {
     completeTask,
     toggleAddTaskPopup,
     showAddTaskPopup,
+    loading,
   } = useToDoContext()
   const [filter, setFilter] = useState('all')
 
-  const filteredTasks = taskList.filter((task) => {
-    if (filter === 'completed') return task.completed
-    if (filter === 'pending') return !task.completed
-    if (filter === 'work') return task.category === 'work'
-    if (filter === 'personal') return task.category === 'personal'
-    if (filter === 'health') return task.category === 'health'
-    if (filter === 'economy') return task.category === 'economy'
-    if (filter === 'events') return task.category === 'events'
-    return true
-  })
+  const filteredTasks = taskList
+    .filter((task) => {
+      if (filter === 'completed') return task.completed
+      if (filter === 'pending') return !task.completed
+      if (filter === 'work') return task.category === 'work'
+      if (filter === 'personal') return task.category === 'personal'
+      if (filter === 'health') return task.category === 'health'
+      if (filter === 'economy') return task.category === 'economy'
+      if (filter === 'events') return task.category === 'events'
+      return true
+    })
+    .filter((task) => {
+      if (task.completed) {
+        return moment().diff(moment(task.completedAt), 'hours') <= 3
+      }
+      return true
+    })
+  const completedTasksCount = taskList.filter((task) => task.completed).length
   const uncompletedTasksCount = taskList.filter(
     (task) => !task.completed
   ).length
@@ -33,18 +44,43 @@ export const TaskList = () => {
     deleteTask(taskId)
   }
   const handleCheckboxChange = (taskId, isCompleted) => {
-    completeTask(taskId, isCompleted)
+    completeTask(taskId, isCompleted, isCompleted ? new Date() : null)
+  }
+  if (loading) {
+    return (
+      <div className="loadingIcon">
+        <img src="/loading.icon.gif" alt="loading-icon"></img>
+      </div>
+    )
   }
 
   return (
     <>
+      <div className="header">
+        <div className="user">
+          <img src="/man.png" alt="user-picture" />
+          <h2>Hello User!</h2>
+        </div>
+        <ProgressCircle
+          totalTasks={taskList.length}
+          completedTasks={completedTasksCount}
+        />
+      </div>
+
       <DateFilters setFilter={setFilter} />
       <section className="taskList">
         <Filters
+          filter={filter}
           setFilter={setFilter}
           uncompletedTasksCount={uncompletedTasksCount}
         />
-        {filteredTasks &&
+        {filteredTasks.length === 0 ? (
+          <>
+            <h2>No tasks - click on the + to add a new Task</h2>
+            <img src="/empty-state.jpg" alt="no-tasks" />
+          </>
+        ) : (
+          filteredTasks &&
           filteredTasks.map((item) => (
             <div key={item.id} className="taskItem">
               <input
@@ -72,7 +108,8 @@ export const TaskList = () => {
                 </div>
               </label>
             </div>
-          ))}
+          ))
+        )}
         {/* Add popup */}
         {showAddTaskPopup && (
           <div className="popup">

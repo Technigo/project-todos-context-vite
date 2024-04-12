@@ -5,13 +5,18 @@ const TodoContext = createContext()
 export const TodoProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([])
   const [showAddTaskPopup, setShowAddTaskPopup] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     fetch('https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content')
       .then((res) => res.json())
       .then((data) => {
         setTaskList(data)
-        // setFilteredTasks(data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.error('Failed to fetch tasks:', error)
+        setLoading(false)
       })
   }, [])
 
@@ -61,7 +66,11 @@ export const TodoProvider = ({ children }) => {
     }
 
     // Update the 'completed' status of the task.
-    const updatedTask = { ...taskToUpdate, completed: isCompleted }
+    const updatedTask = {
+      ...taskToUpdate,
+      completed: isCompleted,
+      completedAt: isCompleted ? new Date() : null,
+    }
 
     fetch(
       `https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content/${taskId}`,
@@ -102,8 +111,8 @@ export const TodoProvider = ({ children }) => {
         addTask,
         deleteTask,
         completeTask,
-        completeTask,
         toggleAddTaskPopup,
+        loading,
         showAddTaskPopup,
       }}
     >
