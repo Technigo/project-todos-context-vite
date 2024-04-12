@@ -9,7 +9,7 @@ export const CheckButton = ({ todo }) => {
   };
 
   return (
-    <form>
+    <form className="todo-form">
       <input
         className={todo.complete ? "egg complete" : "egg"}
         checked={todo.complete}

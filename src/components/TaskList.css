@@ -1,5 +1,9 @@
-.todo-area {
-  align-items: center;
+.task-area {
+  width: 80%;
+  max-width: 1000px;
+  margin-inline: auto;
+  display:flex;
+    justify-content: center;
 }
 
 .todo-container{
@@ -16,7 +20,6 @@
 .todo-list h2 {
   font-size: clamp(0.85rem, 2.5vw, 1.5rem);
   margin-inline: auto;
-
 }
 
 .todo {
