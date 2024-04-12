@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-	flex-grow: 1;
 }
 
 .todo-card {
@@ -68,4 +67,12 @@
   margin-top: 20px;
   color: grey;
   font-size: 0.8rem;
+}
+
+.CompletedTasks {
+  display: none; /* Initially hide completed tasks */
+}
+
+.CompletedTasks.show {
+  display: block; /* Show completed tasks when the 'show' class is applied */
 }

@@ -17,13 +17,14 @@ const TaskCount = () => {
 
   return (
     <div className="task-count" aria-label="Task Count">
+      <p>Incomplete: {incompleteCount}</p>
+      <hr />
       <p>Completed: {completedTasks.lenght}</p>
       <ul className="completed-tasks">
         {completedTasks.map((task) => (
           <li key={task.id}>{task.text}</li>
         ))}
       </ul>
-      <p>Incomplete: {incompleteCount}</p>
     </div>
   );
 };

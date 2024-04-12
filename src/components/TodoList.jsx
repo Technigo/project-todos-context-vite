@@ -1,5 +1,5 @@
 import { useTodoContext } from "../context/TodoContext";
-import { RemoveButton } from "./RemoveButton";
+import { TodoCard } from "./TodoCard";
 
 import "./TodoList.css";
 
@@ -10,32 +10,13 @@ const TodoList = () => {
   return (
     <div className="todo-list-container" aria-label="Task List">
       {todos.map((todo) => (
-        <div className="todo-card" key={todo.id}>
-          <div className="todo-item">
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => toggleComplete(todo.id)}
-              aria-label={`Mark task ${
-                todo.completed ? "incomplete" : "complete"
-              }`}
-            />
-            {/* this class is responsible for applying a strikethrough effect to the todo text*/}
-            <span className={todo.completed ? "completed" : ""}>
-              {todo.text}
-            </span>
-            <RemoveButton
-              onClick={() => removeTodo(todo.id)}
-              aria-label="Remove task"
-            />
-          </div>
-          <span className="timestamp">
-            Created {formatCreatedAt(todo.createdAt)}
-          </span>
-          {/* <span className="timestamp">
-            {moment(todo.createdAt).format("D/MM/YY")}
-          </span> */}
-        </div>
+        <TodoCard
+          key={todo.id}
+          todo={todo}
+          toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
+          formatCreatedAt={formatCreatedAt}
+        />
       ))}
     </div>
   );

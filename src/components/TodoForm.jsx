@@ -18,7 +18,7 @@ const TodoForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!todoText.trim()) {
-      setErrorMessage("Field cannot be blank");
+      setErrorMessage("Create a task first");
       return; // Exit the function if the todoText is blank
     }
 
@@ -30,16 +30,16 @@ const TodoForm = () => {
   return (
     <div className="form-input-container">
       <form onSubmit={handleSubmit}>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <input
           type="text"
           placeholder="Add Todo..."
           value={todoText}
           onChange={handleInputChange}
           className={errorMessage ? "error-input" : ""}
-        />
+          />
         <button type="submit">Add</button>
       </form>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
   );
 };
