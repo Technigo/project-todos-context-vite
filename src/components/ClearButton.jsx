@@ -22,7 +22,7 @@ export const ClearButton = () => {
       onClick={clicked}
     >
       Clear all
-      <img src="./assets/trash-can.svg" />
+      <img src={TrashCan} />
     </button>
   );
 };
