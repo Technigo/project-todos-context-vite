@@ -17,13 +17,13 @@ export const NewTodoForm = () => {
     <div className="form-container">
       <h1 className="app-name">What Todo Tracker</h1>
       <form onSubmit={handleSubmit} className="add-todo-form">
-        <label>
-          {" "}
-          Add Todo:
+        <label classname="todo-label">
+          {/* Add Todo: */}
           <input
             type="text"
             value={newItem}
             onChange={(event) => setNewItem(event.target.value)}
+            placeholder="Add task here..."
           />
         </label>
         <button className="add-todo-button" type="submit">

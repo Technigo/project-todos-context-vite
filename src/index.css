@@ -3,89 +3,18 @@
 *,
 *::before,
 *::after {
- box-sizing: border-box;
- margin: 0;
- font-family: "Poppins";
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins";
 }
-
 
 body {
- /* margin: 0; */
- background-color: #f4f4f4; /* Consistent background color */
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100vh; /* Full viewport height */
-}
-
-
-
-/* Container for the todo list */
-.todo-list-container {
- max-width: 600px;
- width: 100%; /* Ensure it takes full width up to the max-width */
- padding: 20px;
- 
- border-radius: 10px;
- text-align: center; /* Center the text within the container */
-}
-
-/* Heading */
-.todo-list-container h2 {
- color: #333;
- margin-bottom: 30px;
-}
-
-/* List */
-.todo-list-container ul {
- list-style-type: none;
- padding: 0;
-}
-
-/* List items */
-.todo-list-container ul li {
- display: flex;
- align-items: center;
- justify-content: space-between;
- margin-bottom: 10px;
- padding: 10px;
- background-color: #f9f9f9;
- border-radius: 5px;
- box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Checkbox and text */
-.todo-list-container ul li label {
- display: flex;
- align-items: center;
- flex-grow: 1;
-}
-
-/* Text with line-through if completed */
-.todo-list-container ul li span {
- margin-left: 10px;
- color: #333;
-}
-
-/* Delete button */
-.todo-list-container ul li button {
- background-color: #ff4d4d;
- color: #fff;
- border: none;
- border-radius: 5px;
- padding: 5px 10px;
- cursor: pointer;
- font-size: 14px;
-}
-
-/* Hover effect for the delete button */
-.todo-list-container ul li button:hover {
- background-color: #ff0000;
-}
-
-/* Checkbox */
-.todo-list-container ul li input[type="checkbox"] {
- margin-right: 10px;
+  /* margin: 0; */
+  background-color: #f4f4f4; /* Consistent background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
 }
 
 /* New Todo Form */
@@ -132,25 +61,6 @@ body {
   min-height: 100vh; /* Ensure it takes at least the full viewport height */
   padding: 20px; /* Add some padding around the content */
   background-color: #f4f4f4; /* Match the background color of the body for consistency */
- }
- 
- /* Ensure the todo list container is centered within the page wrapper */
- .todo-list-container {
-  width: 100%; /* Take full width */
-  max-width: 600px; /* But not more than 600px */
-  margin: 0 auto; /* Center horizontally */
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
- }
- 
- /* Adjust the new todo form to be centered within the page wrapper */
- .new-todo-form {
-  width: 100%; /* Take full width */
-  max-width: 600px; /* But not more than 600px */
-  margin: 20px auto; /* Center horizontally and add some margin */
-  display: flex;
-  justify-content: center;
- }
- 
+}
+
+
