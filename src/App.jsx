@@ -1,3 +1,12 @@
+import { Home } from "./components/Home";
+import { TodosProvider } from "./contexts/TodosContext";
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
+  return (
+    <>
+      <TodosProvider>
+        <Home />
+      </TodosProvider>
+    </>
+  );
 };
