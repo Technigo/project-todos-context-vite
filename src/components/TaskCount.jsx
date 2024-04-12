@@ -4,9 +4,9 @@ import "./TaskCount.css";
 
 const TaskCount = () => {
   const { todos } = useTodoContext();
-/*   const [completedCount, setCompletedCount] = useState(0); */
+  /*   const [completedCount, setCompletedCount] = useState(0); */
   const [incompleteCount, setIncompleteCount] = useState(0);
-	const [completedTasks, setCompletedTasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([]);
 
   useEffect(() => {
     const completed = todos.filter((todo) => todo.completed);
@@ -18,7 +18,7 @@ const TaskCount = () => {
   return (
     <div className="task-count" aria-label="Task Count">
       <p>Completed: {completedTasks.lenght}</p>
-			<ul className="completed-tasks">
+      <ul className="completed-tasks">
         {completedTasks.map((task) => (
           <li key={task.id}>{task.text}</li>
         ))}

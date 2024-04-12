@@ -1,4 +1,4 @@
-.btncontainer{
+.btncontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
 }
 
 .btncontainer:hover > img {
-  filter: invert(100%) brightness(100%)
+  filter: invert(100%) brightness(100%);
 }
 
 .btncontainer:hover {

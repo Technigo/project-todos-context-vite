@@ -7,10 +7,12 @@ import { TodoProvider } from "./context/TodoContext";
 
 import "./App.css";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 const App = () => {
   return (
     <TodoProvider>
+      <div className="App">
       <Header />
       <div className="app-container">
         <div className="card-container">
@@ -27,7 +29,9 @@ const App = () => {
           </div>
         </div>
       </div>
-    </TodoProvider>
+      <Footer />
+      </div>
+  </TodoProvider>
   );
 };
 

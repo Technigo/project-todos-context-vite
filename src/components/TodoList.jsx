@@ -4,7 +4,8 @@ import { RemoveButton } from "./RemoveButton";
 import "./TodoList.css";
 
 const TodoList = () => {
-  const { todos, toggleComplete, removeTodo, formatCreatedAt } = useTodoContext();
+  const { todos, toggleComplete, removeTodo, formatCreatedAt } =
+    useTodoContext();
 
   return (
     <div className="todo-list-container" aria-label="Task List">
@@ -15,19 +16,22 @@ const TodoList = () => {
               type="checkbox"
               checked={todo.completed}
               onChange={() => toggleComplete(todo.id)}
-              aria-label={`Mark task ${todo.completed ? "incomplete" : "complete"
-                }`}
+              aria-label={`Mark task ${
+                todo.completed ? "incomplete" : "complete"
+              }`}
             />
             {/* this class is responsible for applying a strikethrough effect to the todo text*/}
             <span className={todo.completed ? "completed" : ""}>
               {todo.text}
             </span>
-            <RemoveButton 
+            <RemoveButton
               onClick={() => removeTodo(todo.id)}
               aria-label="Remove task"
             />
           </div>
-          <span className="timestamp">Created {formatCreatedAt(todo.createdAt)}</span>
+          <span className="timestamp">
+            Created {formatCreatedAt(todo.createdAt)}
+          </span>
           {/* <span className="timestamp">
             {moment(todo.createdAt).format("D/MM/YY")}
           </span> */}

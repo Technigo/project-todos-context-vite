@@ -1,10 +1,10 @@
-import RemoveIcon from "../assets/RemoveIcon.svg"
-import "./RemoveButton.css"
+import RemoveIcon from "../assets/RemoveIcon.svg";
+import "./RemoveButton.css";
 
-export const RemoveButton = () =>{
-  return(
-    <button className="btncontainer">
-        <img className="trash-icon" src={RemoveIcon} alt="remove-icon"/>
+export const RemoveButton = ({ onClick, ariaLabel }) => {
+  return (
+    <button className="btncontainer" onClick={onClick} aria-label={ariaLabel}>
+      <img className="trash-icon" src={RemoveIcon} alt="remove-icon" />
     </button>
-  )
-}
+  );
+};

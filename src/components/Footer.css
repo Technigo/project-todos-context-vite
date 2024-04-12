@@ -1,0 +1,19 @@
+.footer-container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #a68c40;
+  color: white;
+  width: 100%;
+}
+
+.footer-container p {
+  margin: 10px;
+}
+
+.logo {
+  height: 35px;
+}
