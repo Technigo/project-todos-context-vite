@@ -15,6 +15,13 @@
   margin: auto;
 }
 
+@media (min-width: 668px) {
+  .sub-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 @media (min-height: 1117px) {
   .background {
     object-fit: cover;

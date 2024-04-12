@@ -14,7 +14,7 @@ const App = () => {
       <section className="wrapper">
       <Header />
       <ToDoProvider>
-        <div>
+        <div className="sub-wrapper">
           <TodaysDate />
           <ToDoForm />
           <ToDoList />
