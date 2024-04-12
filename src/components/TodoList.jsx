@@ -1,7 +1,11 @@
 import { useAppData } from "../contexts/FormContext";
+import moment from "moment";
+
 
 export const TodoList = () =>{
     const {todos, removeTask, toggleTodo} = useAppData()
+
+    
 
     // const isAdded = (taskId) => {
     //   return todos.some((item) => item.id === taskId)
@@ -14,6 +18,18 @@ export const TodoList = () =>{
     const handleToggle =(index, completed)=>{
         toggleTodo(index, !completed)
     }
+
+
+   
+   const addTaskTime = moment().format("MMM Do YY")
+
+    // const completedTask = (todos)=> {
+    //    return }
+
+    // const uncompletedTask = (todos)=>{
+    //     return todos.filter(todo => !todo.completed)}
+
+   
    
     return (
         <div className="todo-list-container">
@@ -29,7 +45,8 @@ export const TodoList = () =>{
                             type="checkbox"
                             checked={todo.completed}
                             onChange={()=> handleToggle(index, todo.completed)}/>
-                            <label style={{textDecoration: todo.completed ? 'line-through' : 'none'}}>{todo.text}</label>
+                            <label style={{textDecoration: todo.completed ? 'line-through' : 'none'}}>{todo.text}</label>{' '}
+                            <time >{addTaskTime}</time>
                         <span><button onClick={()=>handleRemoveTask(todo)}>⛔️</button></span>
                         </li>
                     ))}

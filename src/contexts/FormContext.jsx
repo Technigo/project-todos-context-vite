@@ -34,6 +34,12 @@ export const AppDataProvider = ({children}) => {
       setTodos(updatedTodo)
     }
 
+    // const completedTask = (index, completed) => {
+    //   const updatedCompletedTask = [...todos]
+    //   updatedCompletedTask[index].completed = true
+    //   setTodos(updatedCompletedTask)
+    // }
+
     const appContent = {
       title: "My todo list",
       heading: "New task",
