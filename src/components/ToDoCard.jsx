@@ -11,19 +11,28 @@ export const ToDoCard = ({ toDo, toggleComplete }) => {
   return (
     <div className="to-do-list-item">
       <li>
-        <input
-          className="checkbox"
-          type="checkbox"
-          checked={toDo.completed}
-          onChange={toggleComplete}
-        />
-        <span
-          style={{
-            textDecoration: toDo.completed ? "line-through" : "none",
-          }}
-        >
-          {toDo.description}
-        </span>
+        <label className="checkbox-container">
+          <span
+            style={{
+              textDecoration: toDo.completed ? "line-through" : "none",
+            }}
+          >
+            {toDo.description}
+          </span>
+          <input
+            type="checkbox"
+            checked={toDo.completed}
+            onChange={toggleComplete}
+          ></input>
+          <span
+            className="checkmark"
+            // style={{
+            //   textDecoration: toDo.completed ? "line-through" : "none",
+            // }}
+          >
+            {/* {toDo.description} */}
+          </span>
+        </label>
         <img
           src={removeIcon}
           alt="Remove"
