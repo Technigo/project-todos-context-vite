@@ -9,12 +9,16 @@ export const Form = () => {
     desc: "",
     isDone: false,
   });
+  const [error, setError] = useState();
+
+  const handleError = () => {
+    setError("Must be over 2 char");
+    setTimeout(() => setError(""), 2000);
+  };
 
   const handleFormSubmit = event => {
     event.preventDefault();
-    newTask.desc.length > 3
-      ? addTask(newTask)
-      : console.error("Must be over 2 char");
+    newTask.desc.length > 3 ? addTask(newTask) : handleError();
     setNewTask({ ...newTask, desc: "" });
   };
 
@@ -35,6 +39,7 @@ export const Form = () => {
           name="desc"
           value={newTask.desc}
           onChange={handleChange}
+          placeholder={error && error}
         />
         <button className="btn">Submit</button>
       </form>

@@ -6,7 +6,7 @@ const TodoContext = createContext();
 
 // Todo provider
 export const TodoProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(tasksJson);
   const [local, setLocal] = useState(JSON.parse(localStorage.getItem("To-Do")));
 
   // Update local storage
@@ -36,12 +36,10 @@ export const TodoProvider = ({ children }) => {
 
   // Component
   return (
-    <>
-      <TodoContext.Provider
-        value={{ tasks, setTasks, addTask, removeTask, updateLocal }}>
-        {children}
-      </TodoContext.Provider>
-    </>
+    <TodoContext.Provider
+      value={{ tasks, setTasks, addTask, removeTask, updateLocal }}>
+      {children}
+    </TodoContext.Provider>
   );
 };
 

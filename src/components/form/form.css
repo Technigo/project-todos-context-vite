@@ -17,6 +17,9 @@
   outline: var(--primary-color);
 }
 
+#task-input::placeholder {
+  color: var(--secondary-color);
+}
 
 .btn {
   height: 2rem;
@@ -26,7 +29,7 @@
   background-color: var(--primary-color);
   color: white;
   font-size: 1rem;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {

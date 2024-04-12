@@ -1,6 +1,7 @@
 import { TodoProvider } from "./contexts/TodoContext";
 import { Form } from "./components/form/Form";
 import { List } from "./components/list/List";
+import { ClearStorage } from "./components/clear-storage/ClearStorage";
 
 export const App = () => {
   return (
@@ -9,6 +10,7 @@ export const App = () => {
       <main>
         <Form />
         <List />
+        <ClearStorage />
       </main>
     </TodoProvider>
   );
