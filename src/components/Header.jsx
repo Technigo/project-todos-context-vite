@@ -25,8 +25,8 @@ export const Header = () => {
           <img
             src={
               theme === "light"
-                ? "src/assets/baby-chick.svg"
-                : "src/assets/baby-chick-black.svg"
+                ? "../../public/baby-chick.svg"
+                : "../../public/baby-chick-black.svg"
             }
           />
         </button>
