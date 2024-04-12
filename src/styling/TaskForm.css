@@ -18,6 +18,7 @@
   background-color: #ccd3ca;
   height: 30px;
   width: 200px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .formButton {
