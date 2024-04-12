@@ -10,30 +10,28 @@ export const ToDoCard = ({ toDo, toggleComplete }) => {
   };
   return (
     <div className="to-do-list-item">
-      <li>
-        <label className="checkbox-container">
-          <input
-            type="checkbox"
-            checked={toDo.completed}
-            onChange={toggleComplete}
-          ></input>
-          <span
-            style={{
-              textDecoration: toDo.completed ? "line-through" : "none",
-              color: toDo.completed ? "#7A7777" : "inherit",
-            }}
-          >
-            <div className="todo-text">{toDo.description}</div>
-          </span>
-          <span className="checkmark"></span>
-        </label>
-        <img
-          src={removeIcon}
-          alt="Remove"
-          className="remove-button"
-          onClick={handleRemove}
-        />
-      </li>
+      <label className="checkbox-container">
+        <input
+          type="checkbox"
+          checked={toDo.completed}
+          onChange={toggleComplete}
+        ></input>
+        <span
+          style={{
+            textDecoration: toDo.completed ? "line-through" : "none",
+            color: toDo.completed ? "#7A7777" : "inherit",
+          }}
+        >
+          <div className="todo-text">{toDo.description}</div>
+        </span>
+        <span className="checkmark"></span>
+      </label>
+      <img
+        src={removeIcon}
+        alt="Remove"
+        className="remove-button"
+        onClick={handleRemove}
+      />
     </div>
   );
 };
