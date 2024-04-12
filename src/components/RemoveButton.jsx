@@ -1,9 +1,10 @@
 import "./RemoveButton.css";
 import { useTask } from "../contexts/TaskContext";
+import TrashCan from "../assets/trash-can.svg";
 
 export const RemoveButton = ({ todo }) => {
   const { removeTask } = useTask();
- 
+
   const clicked = (e) => {
     e.preventDefault();
 
@@ -18,7 +19,7 @@ export const RemoveButton = ({ todo }) => {
       name="remove"
       onClick={clicked}
     >
-      <img src="src/assets/trash-can.svg" />
+      <img src={TrashCan} />
     </button>
   );
 };
