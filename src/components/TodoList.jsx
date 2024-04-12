@@ -4,7 +4,7 @@ import "./TodoList.css";
 
 const TodoList = () => {
   const { todos, toggleComplete, removeTodo, formatCreatedAt } = useTodoContext();
-  
+
   return (
     <div className="todo-list-container" aria-label="Task List">
       {todos.map((todo) => (
@@ -14,10 +14,10 @@ const TodoList = () => {
               type="checkbox"
               checked={todo.completed}
               onChange={() => toggleComplete(todo.id)}
-              aria-label={`Mark task ${
-                todo.completed ? "incomplete" : "complete"
-              }`}
+              aria-label={`Mark task ${todo.completed ? "incomplete" : "complete"
+                }`}
             />
+            {/* this class is responsible for applying a strikethrough effect to the todo text*/}
             <span className={todo.completed ? "completed" : ""}>
               {todo.text}
             </span>
