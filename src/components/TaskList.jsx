@@ -1,19 +1,45 @@
 import { useTask } from "../context/TaskContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskItem from "./TaskItem";
 import TaskCount from "./TaskCount";
+import Confetti from "react-confetti";
 import AllRemovedImage from "../assets/Celebrate.png";
 import "../styling/TaskList.css";
 
 const TaskList = () => {
-  const { tasks } = useTask();
-  const [allTasksRemoved, setAllTasksRemoved] = useState(false);
+  const { tasks, removeTask, toggleTask } = useTask();
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [allTasksCompleted, setAllTasksCompleted] = useState(false);
+
+  useEffect(() => {
+    const anyIncompleteTasks = tasks.some((task) => !task.completed);
+    setAllTasksCompleted(!anyIncompleteTasks && tasks.length > 0);
+    if (allTasksCompleted) {
+      setShowConfetti(true);
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000);
+    }
+  }, [tasks, allTasksCompleted]);
+
+  /*
+  useEffect(() => {
+    let confettiTimer;
+    if (allTasksCompleted) {
+      confettiTimer = setTimeout(() => {
+        setAllTasksCompleted(false);
+      }, 5000);
+      return () => clearTimeout(confettiTimer);
+    }
+  }, [allTasksCompleted]);
+  */
 
   const handleRemoveTask = (id) => {
     removeTask(id);
-    if (task.length === 1) {
-      setAllTasksRemoved(true);
-    }
+  };
+
+  const handleToggleTask = (id) => {
+    toggleTask(id);
   };
 
   return (
@@ -30,6 +56,7 @@ const TaskList = () => {
             <TaskItem
               key={task.id}
               task={task}
+              onToggle={() => handleToggleTask(task.id)}
               onRemove={() => handleRemoveTask(task.id)}
             />
           ))}
@@ -42,6 +69,11 @@ const TaskList = () => {
             className="allRemovedImg"
           />
           <p className="allRemovedText">No tasks remaining</p>
+        </div>
+      )}
+      {showConfetti && (
+        <div className={`confettiContainer ${showConfetti ? "show" : ""}`}>
+          {showConfetti && <Confetti />}
         </div>
       )}
     </div>

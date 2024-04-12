@@ -36,6 +36,15 @@
   align-items: center;
 }
 
+.confettiContainer {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.confettiContainer.show {
+  opacity: 1;
+}
+
 @media (min-width: 745px) {
   .listContainer {
     width: 400px;
