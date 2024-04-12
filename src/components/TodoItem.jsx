@@ -1,10 +1,7 @@
-// Component to show and check one todo (a task)
 import { RxCross1 } from "react-icons/rx"
-
 import moment from "moment"
 import "./TodoItem.css"
 
-// passing the props (data = id, completed, onChange, todo, createdAt, removeTodo) from TodoList.jsx
 export const Todo = ({
   id,
   completed,
@@ -16,7 +13,7 @@ export const Todo = ({
   return (
     <div className="todo-item">
       <li
-        key={id} // Use the unique id (= Date.now() thing) of each todo for the key prop.
+        key={id} 
       >
         <div className="list-item">
           <div className="list-text">
@@ -24,8 +21,8 @@ export const Todo = ({
               id={id}
               className="checkbox"
               type="checkbox"
-              checked={completed} // The checkbox is checked if the todo is marked as completed.
-              onChange={onChange} // When you click the checkbox, the toggleTodo function is called with the todo's ID to switch its "completed" status between done and not done.
+              checked={completed} 
+              onChange={onChange} 
             />
             <label
               htmlFor={id}
