@@ -1,9 +1,7 @@
-const ListForm = () => {
+export const AddTaskForm = ({onFormSubmit, newTodo, onNewTodoChange}) => {
     return(
         <form onSubmit={onFormSubmit}>
-            <h1>Todo List 📝</h1>
-            <h2>My task</h2>
-
+            <label>Add Task here</label>
             <textarea
             value={newTodo}
             onChange={onNewTodoChange}

@@ -1,10 +1,12 @@
 import { useAppData } from "../contexts/FormContext"
 import { useState} from "react"
 import moment from "moment";
+import {AddTaskForm} from "../components/AddTaskForm"
+import { Time } from "./Time";
 
 export const AddTask = () => {
 
-    const { addTask, appContent} = useAppData()
+    const { addTask} = useAppData()
     const [newTask, setNewTask] = useState('') //new task needs to be filled
 
     const handleSubmitTask = e =>{
@@ -22,22 +24,13 @@ export const AddTask = () => {
     const date = moment().format("MMM Do YY")
     const weekday = moment().format('dddd')
     
-
    return (
     <>
-    <div>
-        <h1>{appContent.title}</h1>
+    <div className="date">
+     <Time weekday={weekday} date={date} />
     </div>
-    <div>
-        <time>{weekday}</time>
-        <time>{date}</time>
-    </div>
-    <div>
-        <form onSubmit={handleSubmitTask}>
-            <label>{appContent.heading}</label>
-            <textarea type="text" name="task" value={newTask} onChange={handleNewListChange}/>
-            <button type="submit">Add task</button>
-        </form>
+    <div className="add-wrapper">
+        <AddTaskForm onFormSubmit={handleSubmitTask} newTodo={newTask} onNewTodoChange={handleNewListChange} />
     </div>
     </>
    )
