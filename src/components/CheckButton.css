@@ -35,7 +35,7 @@ label{
   left: 0;
   width: 18px;
   height: 18px;
-  background-image: url("/fried-egg-base-icon.svg");
+  background-image: url("../assets/fried-egg-base-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
@@ -51,7 +51,7 @@ label{
   left: 0;
   width: 18px;
   height: 18px;
-  background-image: url("/egg-icon.svg");
+  background-image: url("../assets/egg-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
@@ -67,7 +67,7 @@ label{
   left: 0;
   width: 18px;
   height: 18px;
-  background-image: url("/fried-egg-yoke-icon.svg");
+  background-image: url("../assets/fried-egg-yoke-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
