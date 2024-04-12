@@ -26,6 +26,7 @@ export const ToDoCard = ({ toDo, toggleComplete }) => {
         </span>
         <span className="checkmark"></span>
       </label>
+
       <img
         src={removeIcon}
         alt="Remove"
