@@ -1,14 +1,78 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e1f6c7;
+}
+
+.todo-container {
+  width: 300px;
+}
+
+h3 {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.count-tasks {
+  text-align: center;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-tasks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.move-all {
+  background-color: rgb(198, 49, 136);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 2px 8px 2px 8px;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.move-all:hover {
+  background-color: rgb(130, 33, 89);
+}
+
+@media (min-width: 400px) and (max-width: 520px) {
+  .todo-container {
+    width: 380px;
+  }
+
+  .input-field {
+    width: 336px;
+  }
+}
+
+@media (min-width: 521px) {
+  .todo-container {
+    width: 500px;
+  }
+
+  .input-field {
+    width: 456px;
+  }
 }

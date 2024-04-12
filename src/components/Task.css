@@ -1,0 +1,111 @@
+.task-box {
+  padding: 10px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+/*Div with just checkbox and name of task*/
+.task {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hi;
+}
+
+.task p {
+  word-wrap: break-word;
+}
+
+/*Div with date and delete-button*/
+.task-end {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  font-size: 10px;
+  margin: 0;
+  padding: 10px;
+  align-self: flex-start;
+}
+
+/*Making sure only delete-icon is visible on delete-button*/
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.delete-icon {
+  height: 25px;
+}
+
+/* STYLING FOR COSTUM CHECKBOXES*/
+/* Hide the browser's default checkbox */
+.checkbox {
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+/* Styling for custom checkbox */
+.checkbox-field {
+  position: relative;
+}
+
+/* Create a box*/
+.checkmark {
+  position: absolute;
+  right: 2px;
+  bottom: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: #dedede;
+}
+
+/*On hover*/
+.checkmark:hover {
+  background-color: #e1f5c6;
+  cursor: pointer;
+}
+
+/* When the checkbox is checked*/
+.checkbox:checked ~ .checkmark {
+  background-color: #e1f5c6;
+  transition: 0.2s ease;
+}
+
+/* Create a checkmark that is visible when checkbox is checked*/
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  transition: 0.2s ease;
+}
+
+.checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-field .checkmark:after {
+  left: 5px;
+  bottom: 5px;
+  width: 10px;
+  height: 16px;
+  border: solid #2c6f4c;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checked {
+  text-decoration: line-through;
+}
