@@ -12,12 +12,6 @@
   padding-bottom: 180px;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
 .clear-all-button-container {
   display: flex;
   justify-content: flex-end;

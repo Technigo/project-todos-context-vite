@@ -41,7 +41,7 @@ export const ToDoList = () => {
           <p> Create some more tasks, you can do it! 💪</p>
         </div>
       ) : (
-        <ul>
+        <div>
           {toDos.map((toDo, index) => (
             <ToDoCard
               key={index}
@@ -49,7 +49,7 @@ export const ToDoList = () => {
               toggleComplete={() => toggleComplete(index)}
             />
           ))}
-        </ul>
+        </div>
       )}
       <div className="clear-all-button-container">
         <button className="clear-all-button" onClick={handleClearAll}>
