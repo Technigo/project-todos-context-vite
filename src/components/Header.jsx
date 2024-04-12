@@ -1,6 +1,9 @@
 import "./Header.css";
 import { useAppData } from "../contexts/AppContext";
-import { useTask } from "../contexts/TaskContext";
+import { useTask } from "../contexts/TaskContext"
+import BabyChick from "../assets/baby-chick.svg";
+import BlackChick from "../assets/baby-chick-black.svg";
+
 
 export const Header = () => {
   const { theme, setTheme, appContent } = useAppData();
@@ -25,8 +28,8 @@ export const Header = () => {
           <img
             src={
               theme === "light"
-                ? "../../public/baby-chick.svg"
-                : "../../public/baby-chick-black.svg"
+                ? BabyChick
+                : BlackChick
             }
           />
         </button>

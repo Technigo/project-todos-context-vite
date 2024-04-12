@@ -1,5 +1,6 @@
 import "./ClearButton.css";
 import { useTask } from "../contexts/TaskContext";
+import TrashCan from "../assets/trash-can.svg";
 
 export const ClearButton = () => {
   const { clearTasks } = useTask();
@@ -21,7 +22,7 @@ export const ClearButton = () => {
       onClick={clicked}
     >
       Clear all
-      <img src="src/assets/trash-can.svg" />
+      <img src="./assets/trash-can.svg" />
     </button>
   );
 };
