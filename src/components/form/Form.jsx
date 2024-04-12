@@ -3,6 +3,7 @@ import { useTodo } from "../../contexts/TodoContext";
 import "./form.css";
 import { Select } from "../select/Select";
 import { Duedate } from "../date-picker/Duedate";
+import { format, formatRelative, subDays } from "date-fns";
 
 export const Form = () => {
   const { tasks, setTasks, addTask } = useTodo();
@@ -41,9 +42,10 @@ export const Form = () => {
   };
 
   const handleDuedate = date => {
+    const newDate = format(date, "yyyy/MM/22");
     setNewTask({
       ...newTask,
-      duedate: date,
+      duedate: newDate,
     });
   };
 
