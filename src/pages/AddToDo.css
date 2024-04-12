@@ -1,41 +1,48 @@
 .add-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "bkmn . . ."
-    "bklst . . ."
-    "nt nt nt nt"
-    "form form form form"
-    "txt txt txt txt"
-    "dt dt . ."
-    "cat cat . ."
-    "btn btn btn btn";
+  padding: 30px;
+  max-width: 600px;
 }
 
-.main-link {
-  grid-area: bkmn;
-}
+/* .main-link {
+} */
 
 .todo-link {
-  grid-area: bklst;
+  text-decoration: none;
 }
 
-/* .add-container {
-  background-color: grey;
-} */
+.add-container {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid var(--sun-purple);
+  border-radius: 20px;
+}
 
 .add-title {
-  grid-area: nt;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 20px 0;
 }
 
-/* .add-text {
+.add-text {
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-bottom: 1px solid var(--sun-purple);
+  margin-bottom: 20px;
+}
 
-} */
-
-/* .add-date {
-
-} */
+.add-btn,
+button {
+  margin-top: 30px;
+  padding: 5px;
+  font-size: 1.25;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--sun-purple);
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
 .add-form {
   grid-area: form;
@@ -43,6 +50,27 @@
   flex-direction: column;
 }
 
-.add-btn {
-  grid-area: btn;
+.add-date,
+.add-category {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+input,
+select {
+  font-size: 1.25;
+  font-weight: 700;
+  border: none;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (min-width: 667px) {
+  .add-date,
+  .add-category {
+    flex-direction: row;
+  }
 }

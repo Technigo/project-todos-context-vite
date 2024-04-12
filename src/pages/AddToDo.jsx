@@ -30,64 +30,67 @@ export const AddToDo = () => {
   return (
     <section className="add-section">
       {/* navigation back to main page */}
-      <Link to="/" className="main-link">
-        <p>Back to main page!</p>
-      </Link>
+      {/* <Link to="/" className="main-link">
+        <p>Home</p>
+      </Link> */}
       {/* navigation back to list */}
       <Link to="/todo" className="todo-link">
-        <p>Back to ToDo list!</p>
+        <p>✖️</p>
       </Link>
-      {/* <div className="add-container"> */}
+
       <div className="add-title">
         <h2>New Task</h2>
       </div>
-      <form onSubmit={submitHandler} className="add-form">
-        <label htmlFor="task">What are you planning?</label>
-        <textarea
-          className="add-text"
-          id="task"
-          name="task"
-          rows="5"
-          cols="40"
-          value={text}
-          placeholder="Add a new task"
-          onChange={(e) => {
-            setText(e.target.value);
-          }}
-        />
-        <label htmlFor="date">⏰</label>
-        <input
-          className="add-date"
-          id="date"
-          type="date"
-          value={date}
-          onChange={(e) => {
-            setDate(e.target.value);
-          }}
-        />
-        <label htmlFor="category">📌</label>
-        {/* Use categories array to generate options for select dropdown */}
-        <select
-          name="category"
-          id="category"
-          value={category}
-          onChange={(e) => {
-            setCategory(e.target.value);
-          }}
-        >
-          <option value="">Select a category</option>
-          {categories.map((category) => (
-            <option key={category.value} value={category.value}>
-              {category.label}
-            </option>
-          ))}
-        </select>
-        <button type="submit" className="add-btn">
-          Create
-        </button>
-      </form>
-
-      {/* </div> */}
+      <div className="add-container">
+        <form onSubmit={submitHandler} className="add-form">
+          <label htmlFor="task">What are you planning?</label>
+          <textarea
+            className="add-text"
+            id="task"
+            name="task"
+            rows="5"
+            cols="40"
+            value={text}
+            placeholder="Add a new task"
+            onChange={(e) => {
+              setText(e.target.value);
+            }}
+          />
+          <div className="add-date">
+            <label htmlFor="date">⏰ Deadline</label>
+            <input
+              id="date"
+              type="date"
+              value={date}
+              onChange={(e) => {
+                setDate(e.target.value);
+              }}
+            />
+          </div>
+          <div className="add-category">
+            <label htmlFor="category">📌 Category</label>
+            {/* Use categories array to generate options for select dropdown */}
+            <select
+              name="category"
+              id="category"
+              value={category}
+              onChange={(e) => {
+                setCategory(e.target.value);
+              }}
+            >
+              <option value="">Select a category</option>
+              {categories.map((category) => (
+                <option key={category.value} value={category.value}>
+                  {category.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button type="submit" className="add-btn">
+            Create
+          </button>
+        </form>
+      </div>
     </section>
   );
 };
