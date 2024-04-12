@@ -5,8 +5,9 @@ import { useTask } from "../contexts/TaskContext";
 import moment from "moment";
 
 export const TaskInput = () => {
-  const { taskData, addTask } = useTask();
+  const { addTask } = useTask();
 
+  //create "unique" id to keep between list moves.
   const [newTask, setNewTask] = useState({
     id: "id" + Math.random().toString(16).slice(2),
     title: "",
@@ -14,6 +15,7 @@ export const TaskInput = () => {
     date: moment().calendar(),
   });
 
+  // 
   const handleChange = (event) => {
     setNewTask({
       ...newTask,

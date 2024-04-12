@@ -4,8 +4,9 @@ import { ListRender } from "./ListRender";
 import { ClearButton } from "./ClearButton";
 
 export const TaskList = () => {
-  const { taskData, addTask, completeTask } = useTask();
+  const { taskData } = useTask();
 
+  // Filter out two lists, either with the complete state true or false.
   const incompleteTasks = taskData.filter((task) => task.complete === false);
   const completedTasks = taskData.filter((task) => task.complete === true);
 

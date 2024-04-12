@@ -1,18 +1,17 @@
 import "./ClearButton.css";
-
 import { useTask } from "../contexts/TaskContext";
 
-export const ClearButton = ({ todo, index }) => {
+export const ClearButton = () => {
   const { clearTasks } = useTask();
 
-  const clicked = (e) => {
-    e.preventDefault();
+  const clicked = (event) => {
+    event.preventDefault();
 
+    // Do an alert to see if the user is sure.
     if (confirm("Are you sure?")) {
       clearTasks();
     }
   };
-
 
   return (
     <button

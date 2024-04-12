@@ -5,12 +5,12 @@ import moment from "moment";
 export const ListRender = ({ array }) => {
   return (
     <div>
-      {array.map((todo, index) => (
+      {array.map((todo) => (
         <div className="todo-container" key={todo.id}>
           <div className={todo.complete ? "todo complete" : "todo"}>
-            <CheckButton todo={todo} taskId={todo.id} />
+            <CheckButton todo={todo} />
 
-            <RemoveButton todo={todo} taskId={todo.id} />
+            <RemoveButton todo={todo} />
 
             {todo.complete ? (
               <p className="timestamp">Completed: {moment().calendar()} </p>

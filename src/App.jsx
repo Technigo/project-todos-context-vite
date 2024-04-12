@@ -1,4 +1,3 @@
-import { CheckButton } from "./components/CheckButton";
 import { Header } from "./components/Header";
 import { TaskList } from "./components/TaskList";
 import { TaskInput } from "./components/TaskInput";
