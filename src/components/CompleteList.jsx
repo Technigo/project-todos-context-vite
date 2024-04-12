@@ -7,7 +7,7 @@ import useSound from "use-sound";
 
 const CompleteList = () => {
   const { complete, removeAllComplete } = useComplete();
-  const [playDump] = useSound(Dump, { volume: 0.5 });
+  const [playDump] = useSound(Dump, { volume: 0.1 });
 
   return (
     <div className="section completed">
