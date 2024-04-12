@@ -11,14 +11,16 @@ const App = () => {
   return (
     <>
       <img src={backGround} className="background" alt="Background" />
+      <section className="wrapper">
       <Header />
       <ToDoProvider>
-        <div>
+        <div className="sub-wrapper">
           <TodaysDate />
           <ToDoForm />
           <ToDoList />
         </div>
       </ToDoProvider>
+      </section>
     </>
   );
 };
