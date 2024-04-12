@@ -1,0 +1,48 @@
+.add-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "bkmn . . ."
+    "bklst . . ."
+    "nt nt nt nt"
+    "form form form form"
+    "txt txt txt txt"
+    "dt dt . ."
+    "cat cat . ."
+    "btn btn btn btn";
+}
+
+.main-link {
+  grid-area: bkmn;
+}
+
+.todo-link {
+  grid-area: bklst;
+}
+
+/* .add-container {
+  background-color: grey;
+} */
+
+.add-title {
+  grid-area: nt;
+}
+
+/* .add-text {
+
+} */
+
+/* .add-date {
+
+} */
+
+.add-form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-btn {
+  grid-area: btn;
+}
