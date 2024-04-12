@@ -24,6 +24,7 @@
   background-color: white;
   border: none;
   position: absolute;
+  top: 60px;
 }
 
 @media (min-width: 745px) {
@@ -32,11 +33,11 @@
   }
 
   .formText {
-    padding: 20px;
+    width: 250px;
   }
 
   .formButton {
-    padding: 10px 30px;
+    top: 75px;
   }
 }
 
@@ -45,10 +46,9 @@
     font-size: 32px;
   }
   .formText {
-    padding: 30px;
   }
 
   .formButton {
-    padding: 15px 35px;
+    top: 85px;
   }
 }
