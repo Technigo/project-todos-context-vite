@@ -11,6 +11,7 @@ const App = () => {
   return (
     <>
       <img src={backGround} className="background" alt="Background" />
+      <section className="wrapper">
       <Header />
       <ToDoProvider>
         <div>
@@ -19,6 +20,7 @@ const App = () => {
           <ToDoList />
         </div>
       </ToDoProvider>
+      </section>
     </>
   );
 };

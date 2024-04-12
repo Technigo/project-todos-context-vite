@@ -1,7 +1,7 @@
 .background {
   position: fixed;
   object-fit: none;
-  object-position: 47% 60%;
+  object-position: 45% 55%;
   z-index: -1;
   top: 0;
   left: 0;
@@ -9,8 +9,13 @@
   height: 100vh;
 }
 
+.wrapper {
+  padding: 25px;
+  max-width: 700px;
+  margin: auto;
+}
+
 @media (min-height: 1117px) {
-  
   .background {
     object-fit: cover;
   }
