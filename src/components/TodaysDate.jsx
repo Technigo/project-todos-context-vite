@@ -13,7 +13,7 @@ export const TodaysDate = () => {
 
   return (
     <div className="date-container">
-      <h3>{todayDay}</h3>
+      <h2>{todayDay}</h2>
       <p>{formattedDate}</p>
     </div>
   );

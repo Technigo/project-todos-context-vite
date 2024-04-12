@@ -1,5 +1,7 @@
 import { ToDoCard } from "./ToDoCard";
 import { useToDoContext } from "../contexts/ToDoContext";
+import Lottie from "lottie-react";
+import wellDoneAnimation from "../animations//WellDone.json";
 import clearIcon from "../assets/cross-black.svg";
 import "./ToDoList.css";
 
@@ -26,10 +28,16 @@ export const ToDoList = () => {
           Completed tasks: {completedTasks().length}/{amountOfTasks}
         </p>
       </div>
-      
+
       {allTasksCompleted ? (
         <div className="completion-message">
-          <h3>All todos are completed! Well done ⭐</h3>
+          <Lottie
+            animationData={wellDoneAnimation}
+            style={{ width: 250, height: 200 }}
+            speed={0.5}
+            loop={false}
+          />
+          <h3>All todos are completed!</h3>
           <p> Create some more tasks, you can do it! 💪</p>
         </div>
       ) : (
@@ -43,7 +51,7 @@ export const ToDoList = () => {
           ))}
         </ul>
       )}
-         <div className="clear-all-button-container">
+      <div className="clear-all-button-container">
         <button className="clear-all-button" onClick={handleClearAll}>
           <p>Clear all</p>
           <img src={clearIcon} alt="Clear icon" />
