@@ -1,9 +1,10 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ToDoContext = createContext();
 
 export const ToDoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
+
   const categories = [
     { value: "work", label: "Work" },
     { value: "home", label: "Home" },

@@ -17,6 +17,7 @@
 .text-wrapper {
   display: flex;
   flex-direction: column;
+  
 }
 
 .task-text {
@@ -27,4 +28,9 @@
   padding-left: 10px;
   font-size: 0.8em;
   color: var(--sun-purple);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }

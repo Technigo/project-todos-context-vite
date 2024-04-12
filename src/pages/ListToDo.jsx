@@ -60,6 +60,7 @@ import React from "react";
 import { useToDos } from "../contexts/ToDoContext";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
+import "./ListToDo.css";
 
 export const ListToDo = () => {
   //useToDos from ToDoContext provides "todos" to access the list of tasks and toggleToDo for marking tasks complete
@@ -84,7 +85,8 @@ export const ListToDo = () => {
                 toggleToDo(index);
               }}
             />
-            <label className="text-wrapper ">
+            <label
+              className={`text-wrapper ${todo.completed ? 'completed' : ''}`}>
               <div className="task-text">{todo.text}</div>
               <div className="task-date">{todo.date}</div>
               {/* <div>{todo.category}</div> */}
