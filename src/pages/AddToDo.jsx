@@ -13,6 +13,7 @@ export const AddToDo = () => {
   //access functionality for adding tasks from ToDoContext
   const { addToDo, categories } = useToDos();
 
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (!text.trim()) return;

@@ -60,6 +60,7 @@ import React from "react";
 import { useToDos } from "../contexts/ToDoContext";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
+
 import "./ListToDo.css";
 
 export const ListToDo = () => {
@@ -86,7 +87,8 @@ export const ListToDo = () => {
               }}
             />
             <label
-              className={`text-wrapper ${todo.completed ? 'completed' : ''}`}>
+              className={`text-wrapper ${todo.completed ? "completed" : ""}`}
+            >
               <div className="task-text">{todo.text}</div>
               <div className="task-date">{todo.date}</div>
               {/* <div>{todo.category}</div> */}

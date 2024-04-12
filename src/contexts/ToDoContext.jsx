@@ -3,7 +3,18 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ToDoContext = createContext();
 
 export const ToDoProvider = ({ children }) => {
-  const [todos, setTodos] = useState([]);
+
+  //uselocalStorage to save the task
+  const [todos, setTodos] = useState(() => {
+    const localtodos = localStorage.getItem("todos");
+    return localtodos ? JSON.parse(localtodos) : [];
+  });
+
+  useEffect(() => {
+    if (todos.length > 0) {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  }, [todos]);
 
   const categories = [
     { value: "work", label: "Work" },
