@@ -3,7 +3,6 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ToDoContext = createContext();
 
 export const ToDoProvider = ({ children }) => {
-
   //uselocalStorage to save the task
   const [todos, setTodos] = useState(() => {
     const localtodos = localStorage.getItem("todos");
@@ -51,8 +50,15 @@ export const ToDoProvider = ({ children }) => {
     setTodos(newToDo);
   };
 
+  const deleteToDo = (index) => {
+    const newToDo = todos.filter((_, i) => i !== index);
+    setTodos(newToDo);
+  };
+
   return (
-    <ToDoContext.Provider value={{ todos, addToDo, toggleToDo, categories }}>
+    <ToDoContext.Provider
+      value={{ todos, addToDo, toggleToDo, categories, deleteToDo }}
+    >
       {children}
     </ToDoContext.Provider>
   );
