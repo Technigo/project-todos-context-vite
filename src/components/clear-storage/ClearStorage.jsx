@@ -2,7 +2,7 @@ import "./clearStorage.css";
 export const ClearStorage = () => {
   const clearStorage = event => {
     event.preventDefault();
-    localStorage.clear("To-Do");
+    localStorage.clear();
   };
 
   return (
