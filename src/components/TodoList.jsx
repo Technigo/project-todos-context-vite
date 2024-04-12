@@ -1,11 +1,10 @@
 import { useTodoContext } from "../context/TodoContext";
-import moment from "moment";
 
 import "./TodoList.css";
 
 const TodoList = () => {
-  const { todos, toggleComplete, removeTodo } = useTodoContext();
-
+  const { todos, toggleComplete, removeTodo, formatCreatedAt } = useTodoContext();
+  
   return (
     <div className="todo-list-container" aria-label="Task List">
       {todos.map((todo) => (
@@ -29,9 +28,10 @@ const TodoList = () => {
               Remove
             </button>
           </div>
-          <span className="timestamp">
+          <span className="timestamp">Created {formatCreatedAt(todo.createdAt)}</span>
+          {/* <span className="timestamp">
             {moment(todo.createdAt).format("D/MM/YY")}
-          </span>
+          </span> */}
         </div>
       ))}
     </div>
@@ -43,23 +43,3 @@ export default TodoList;
 /* this allows to display todos */
 
 /* handle checkbox: added and <input> element of type 'checkbox'. set it 'checked' attribute based on the 'completed' property of each to do item. then added an 'onChange' event handler to call the ´toggleComplete´ function provided by the context when the checkbox is clicked. Next update the 'TodoContext'*/
-
-// TodoList.js
-import { useTodoContext } from './TodoContext'
-
-const TodoList = () => {
-  const { todos, removeTodo } = useTodoContext()
-
-  return (
-    <ul>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-          {todo.text}
-          <button onClick={() => removeTodo(todo.id)}>Remove</button>
-        </li>
-      ))}
-    </ul>
-  )
-}
-
-export default TodoList

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import moment from "moment";
 
 const TodoContext = createContext(null);
@@ -34,6 +34,47 @@ export const TodoProvider = ({ children }) => {
     );
   };
 
+  const formatCreatedAt = (createdAt) => {
+    return moment(createdAt).fromNow();
+  };
+
+  return (
+    <TodoContext.Provider value={{ todos, addTodo, removeTodo, toggleComplete, formatCreatedAt }}>
+      {children}
+    </TodoContext.Provider>
+  );
+};
+
+
+/* export const TodoProvider = ({ children }) => {
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (todo) => {
+    setTodos([...todos, todo]);
+  };
+
+  const removeTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  useEffect(() => {
+    // Sort todos whenever there is a change in the todo list
+    const sortedTodos = [...todos].sort((a, b) => {
+      if (a.completed && !b.completed) return 1; // completed tasks go to the bottom
+      if (!a.completed && b.completed) return -1; // incomplete tasks go to the top
+      return 0; // leave the order unchanged if both are completed or incomplete
+    });
+    setTodos(sortedTodos);
+  }, [todos]); // Run this effect whenever todos change
+
   return (
     <TodoContext.Provider
       value={{ todos, addTodo, removeTodo, toggleComplete }}
@@ -41,4 +82,4 @@ export const TodoProvider = ({ children }) => {
       {children}
     </TodoContext.Provider>
   );
-};
+}; */

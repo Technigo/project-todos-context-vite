@@ -2,6 +2,7 @@ import React from "react";
 
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import TaskCount from "./components/TaskCount";
 import { TodoProvider } from "./context/TodoContext";
 
 import "./App.css";
@@ -20,7 +21,7 @@ const App = () => {
           <div className="card">
             <h2 className="card-title">All my tasks</h2>
             <div className="task-count" aria-label="Task Count">
-              {/* Display task count here */}
+              <TaskCount />
             </div>
           </div>
         </div>

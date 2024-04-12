@@ -81,4 +81,6 @@
 
 .timestamp {
 	margin-top: 20px;
+	color: grey;
+	font-size: 0.8rem;
 }
