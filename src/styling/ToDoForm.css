@@ -37,7 +37,7 @@ input[type="text"] {
   height: 50px;
   border-radius: 5px 0 0 5px;
   border: none;
-  text-indent: 1em;
+  text-indent: 0.5em;
   color: rgba(119, 1, 1, 0.562);
   font-weight: 500;
   font-size: 1.4em;
@@ -60,5 +60,8 @@ input::placeholder {
 @media screen and (min-width: 768px) {
   .todo-form {
     height: 100px;
+  }
+  input[type="text"] {
+  text-indent: 1em;
   }
 }
