@@ -1,0 +1,78 @@
+@import "../index.scss";
+
+// Main Input for adding a task styling
+.task-input-box {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  label {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  input {
+    border-radius: 10px;
+    padding: 7px;
+    width: 300px;
+    font-size: 15px;
+  }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  button {
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+}
+
+// Extra Light Mode Styling
+.light-button {
+  background-color: $light-third;
+  border: 2px solid $light-sec;
+}
+
+.light-button:hover {
+  background-color: $light-sec;
+  border: 2px solid $light-third;
+}
+
+// Extra Dark Mode Styling
+.dark-button {
+  background-color: $dark-third;
+  border: 2px solid $dark-sec;
+}
+
+.dark-button:hover {
+  background-color: $dark-sec;
+  border: 2px solid $dark-third;
+}
+
+// Responsive Styling
+@media (min-width: 460px) {
+  .task-input-box {
+    label {
+      font-size: 30px;
+    }
+    input {
+      font-size: 20px;
+    }
+    button {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .task-input-box {
+    label {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,37 +1,15 @@
-<h1 align="center">
-  <a href="">
-    <img src="./src/assets/banner.svg" alt="Project Banner Image">
-  </a>
-</h1>
+# Getting Started with the Project
 
-# Todo - useContext Project
+## The Problem
 
-Replace this readme with your own information about your project.
+We started with a brainstorming session about how to structure the project and how we want the project to look since we didn't have any design to follow.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Then we started coding and implementing the basic requirements and some basic styling.
+We ended up also adding some strech goals. We switched up the styling quite a few times.
 
-## Getting Started with the Project
+If we would have more time we would implement a due date for the tasks and make use of the localstorage so taks would be stored if a user returns.
 
-### Dependency Installation & Startup Development Server
+## View it live
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+ToDo List by Etna and Linda:
+https://linda-etna-project-todos.netlify.app/

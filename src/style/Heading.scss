@@ -1,0 +1,113 @@
+@import "../index.scss";
+
+// Main Styling of the heading
+.heading-background {
+  padding: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+
+  .heading-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  button {
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    font-size: 15px;
+  }
+
+  .task-count {
+    font-size: 15px;
+    align-self: flex-end;
+    padding-right: 10px;
+  }
+}
+
+// Extra Light Mode Styling
+.light-heading {
+  background-image: linear-gradient($light-prim, $light-sec);
+  color: #000;
+
+  button {
+    background-color: $light-third;
+    border: 2px solid $light-sec;
+  }
+
+  button:hover {
+    background-color: $light-sec;
+    border: 2px solid $light-third;
+  }
+}
+
+// Extra Dark Mode Styling
+.dark-heading {
+  background-image: linear-gradient($dark-prim, $dark-sec);
+  color: #fff;
+
+  button {
+    background-color: $dark-third;
+    border: 2px solid $dark-sec;
+  }
+
+  button:hover {
+    background-color: $dark-sec;
+    border: 2px solid $dark-third;
+  }
+}
+
+.task-light {
+  border-right: 10px solid $light-fourth;
+}
+
+.task-dark {
+  border-right: 10px solid $dark-fourth;
+}
+
+// Responsive Styling
+@media (min-width: 460px) {
+  .heading-background {
+    font-size: 30px;
+
+    button {
+      font-size: 20px;
+    }
+
+    .task-count {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .heading-background {
+    font-size: 40px;
+
+    .task-count {
+      align-self: center;
+      justify-content: center;
+      order: -1;
+      font-size: 25px;
+    }
+  }
+
+  .task-light {
+    border: none;
+  }
+
+  .task-dark {
+    border: none;
+  }
+}

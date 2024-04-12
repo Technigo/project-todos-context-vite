@@ -1,3 +1,19 @@
+import { Heading } from "./components/Heading";
+import { NewTask } from "./components/NewTask";
+import { ToDoList } from "./components/ToDoList";
+import { TaskProvider } from "./context/TaskContext";
+import { ThemeProvider } from "./context/ThemeContext";
+
+import "./index.scss";
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
+  return (
+    <ThemeProvider>
+      <TaskProvider>
+        <Heading />
+        <NewTask />
+        <ToDoList />
+      </TaskProvider>
+    </ThemeProvider>
+  );
 };
