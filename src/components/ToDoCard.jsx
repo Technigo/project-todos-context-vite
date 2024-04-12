@@ -15,6 +15,7 @@ export const ToDoCard = ({ toDo, toggleComplete }) => {
           <span
             style={{
               textDecoration: toDo.completed ? "line-through" : "none",
+              color: toDo.completed ? "#7A7777" : "inherit",
             }}
           >
             {toDo.description}
