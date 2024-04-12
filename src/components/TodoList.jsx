@@ -1,4 +1,5 @@
 import { useTodoContext } from "../context/TodoContext";
+import { RemoveButton } from "./RemoveButton";
 
 import "./TodoList.css";
 
@@ -21,12 +22,10 @@ const TodoList = () => {
             <span className={todo.completed ? "completed" : ""}>
               {todo.text}
             </span>
-            <button
+            <RemoveButton 
               onClick={() => removeTodo(todo.id)}
               aria-label="Remove task"
-            >
-              Remove
-            </button>
+            />
           </div>
           <span className="timestamp">Created {formatCreatedAt(todo.createdAt)}</span>
           {/* <span className="timestamp">

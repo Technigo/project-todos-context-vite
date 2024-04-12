@@ -56,23 +56,8 @@
 }
 
 .todo-item span {
-	flex: 1;
-	/* move remove button to the right */
-	overflow-wrap: break-word;
-	/* ensure long text doesn´t overflow */
-}
-
-.todo-item button {
-	background-color: #dc3545;
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	padding: 6px 12px;
-	cursor: pointer;
-}
-
-.todo-item button:hover {
-	background-color: #c82333;
+	flex: 1; /* move remove button to the right */	
+	overflow-wrap: break-word;/* ensure long text doesn´t overflow */
 }
 
 .completed {
