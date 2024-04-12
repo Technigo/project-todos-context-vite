@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import moment from "moment";
 
 const TodoContext = createContext(null);
 
@@ -7,8 +8,16 @@ export const useTodoContext = () => useContext(TodoContext);
 export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
 
-  const addTodo = (todo) => {
-    setTodos([...todos, todo]);
+  const addTodo = (todoText) => {
+    const newTodo = {
+      id: Date.now(),
+      text: todoText,
+      completed: false,
+      //Initialize the completed property with a default value of false
+      //This approach directly modifies the todo object by adding the completed property with a default value of false. Then, it adds the modified todo object to the todos array.
+      createdAt: moment().toISOString(), //Add timestamp
+    };
+    setTodos([...todos, newTodo]);
   };
 
   const removeTodo = (id) => {

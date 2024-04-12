@@ -22,11 +22,8 @@ const TodoForm = () => {
       return; // Exit the function if the todoText is blank
     }
 
-    // If the todoText is not blank, add the todo and reset the form
-    addTodo({
-      id: Date.now(),
-      text: todoText,
-    });
+    // If the todoText is not blank, add the todo text and reset the form
+    addTodo(todoText);
     setTodoText("");
   };
 
