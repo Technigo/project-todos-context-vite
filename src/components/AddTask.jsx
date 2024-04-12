@@ -1,5 +1,6 @@
 import { useAppData } from "../contexts/FormContext"
 import { useState} from "react"
+import moment from "moment";
 
 export const AddTask = () => {
 
@@ -18,12 +19,17 @@ export const AddTask = () => {
         setNewTask(e.target.value)
     }
 
-    
+    const date = moment().format("MMM Do YY")
+    const weekday = moment().format('dddd')
 
    return (
     <>
     <div>
         <h1>{appContent.title}</h1>
+    </div>
+    <div>
+        <time>{weekday}</time>
+        <time>{date}</time>
     </div>
     <div>
         <form onSubmit={handleSubmitTask}>

@@ -1,16 +1,18 @@
-import { AddTask } from "./components/AddTask";
-import { TodoList } from "./components/TodoList";
+
+import { MainPage } from "./components/MainPage";
 import { AppDataProvider } from "./contexts/FormContext";
+import { ModeProvider } from "./contexts/ModeContext";
 
 export const App = () => {
   return (
     <>
-    <div>Find me in App.jsx!</div>
-    <AppDataProvider>
-      <AddTask/>
-      <TodoList />
-    </AppDataProvider>
+      <div>Find me in App.jsx!</div>
+      <AppDataProvider>
+        <ModeProvider>
+          <MainPage />
+          
+        </ModeProvider>
+      </AppDataProvider>
     </>
-    
-  )
+  );
 };

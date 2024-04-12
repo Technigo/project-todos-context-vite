@@ -5,7 +5,11 @@ const AppDataContext = createContext()
 export const AppDataProvider = ({children}) => {
     // const [taskCount, setTaskCount] = useState(0)
     // const [newTask, setNewTask] = useState('') //new task needs to be filled
-    const [todos, setTodos] = useState([{text: 'Laundry', completed: false}]) //todo list
+    const [todos, setTodos] = useState([
+      {text: 'Laundry 🧺', completed: false},
+      {text: 'Cook 👩‍🍳', completed: false},
+      {text: 'Gym 🏋️‍♀️', completed: false}
+    ]) //todo list
 
     // const taskAmounts = () => setTaskCount((taskCount) => taskCount + 1) //all the tasks number
 
