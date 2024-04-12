@@ -1,5 +1,3 @@
-import { FaClipboardList } from "react-icons/fa";
-
 import { useTask } from "../context/TaskContext";
 import { useTheme } from "../context/ThemeContext";
 
@@ -8,8 +6,6 @@ import "../style/Heading.scss";
 export const Heading = () => {
   const { darkMode, changeMode } = useTheme();
   const { totalLength, uncompletedLength } = useTask();
-
-  console.log(totalLength);
 
   return (
     <>

@@ -1,5 +1,6 @@
 @import "../index.scss";
 
+// Main Input for adding a task styling
 .task-input-box {
   padding: 30px;
   display: flex;
@@ -31,6 +32,7 @@
   }
 }
 
+// Extra Light Mode Styling
 .light-button {
   background-color: $light-third;
   border: 2px solid $light-sec;
@@ -41,6 +43,7 @@
   border: 2px solid $light-third;
 }
 
+// Extra Dark Mode Styling
 .dark-button {
   background-color: $dark-third;
   border: 2px solid $dark-sec;
@@ -51,6 +54,7 @@
   border: 2px solid $dark-third;
 }
 
+// Responsive Styling
 @media (min-width: 460px) {
   .task-input-box {
     label {

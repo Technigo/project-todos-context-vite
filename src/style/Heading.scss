@@ -1,5 +1,6 @@
 @import "../index.scss";
 
+// Main Styling of the heading
 .heading-background {
   padding: 30px;
   display: flex;
@@ -35,6 +36,7 @@
   }
 }
 
+// Extra Light Mode Styling
 .light-heading {
   background-image: linear-gradient($light-prim, $light-sec);
   color: #000;
@@ -50,6 +52,7 @@
   }
 }
 
+// Extra Dark Mode Styling
 .dark-heading {
   background-image: linear-gradient($dark-prim, $dark-sec);
   color: #fff;
@@ -73,6 +76,7 @@
   border-right: 10px solid $dark-fourth;
 }
 
+// Responsive Styling
 @media (min-width: 460px) {
   .heading-background {
     font-size: 30px;

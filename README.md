@@ -12,3 +12,4 @@ If we would have more time we would implement a due date for the tasks and make 
 ## View it live
 
 ToDo List by Etna and Linda:
+https://linda-etna-project-todos.netlify.app/

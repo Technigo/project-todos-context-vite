@@ -1,4 +1,3 @@
-import moment from "moment";
 import { GiBurningDot } from "react-icons/gi";
 
 import { useTask } from "../context/TaskContext";
@@ -10,8 +9,6 @@ export const ToDoList = () => {
   const { toDoList, removeTask, updatedStatus } = useTask();
   const { darkMode } = useTheme();
 
-  console.log(toDoList);
-
   return (
     <div className="tasklist">
       <ul>
@@ -21,7 +18,6 @@ export const ToDoList = () => {
             key={taskObj.id}
           >
             <input
-              /*  className="bigbox" */
               type="checkbox"
               checked={taskObj.status}
               onChange={() => updatedStatus(taskObj.id)}
@@ -30,13 +26,7 @@ export const ToDoList = () => {
             <p className="single-task">{taskObj.text}</p>{" "}
             <GiBurningDot className="fireball" />{" "}
             <p className="date">{taskObj.date}</p>
-            <button
-              onClick={() => {
-                removeTask(taskObj.id);
-              }}
-            >
-              🗑️
-            </button>
+            <button onClick={() => removeTask(taskObj.id)}>🗑️</button>
           </li>
         ))}
       </ul>

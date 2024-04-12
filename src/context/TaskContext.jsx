@@ -8,6 +8,7 @@ export const TaskProvider = ({ children }) => {
 
   const addTask = (task) => {
     const newTask = {
+      // Setting the id as the date so it stays unique also if we remove and add new tasks randomly
       id: Date.now(),
       text: task,
       status: false,
@@ -20,6 +21,7 @@ export const TaskProvider = ({ children }) => {
     setToDoList((prevList) => prevList.filter((task) => task.id !== taskId));
   };
 
+  // Updating if a task is checked or not
   const updatedStatus = (taskId) => {
     setToDoList((prevList) =>
       prevList.map((task) =>
@@ -29,7 +31,6 @@ export const TaskProvider = ({ children }) => {
   };
 
   let totalLength = toDoList.length;
-  console.log(totalLength);
 
   let uncompletedTasks = [];
 
@@ -38,8 +39,6 @@ export const TaskProvider = ({ children }) => {
   } else {
     uncompletedTasks = toDoList.filter((task) => !task.status);
   }
-
-  console.log(uncompletedTasks);
 
   let uncompletedLength = uncompletedTasks.length;
 

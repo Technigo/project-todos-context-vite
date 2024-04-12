@@ -1,5 +1,6 @@
 @import "../index.scss";
 
+// Main Styling for all the ToDo's
 .tasklist {
   padding: 0 30px;
 
@@ -50,17 +51,20 @@
   }
 }
 
+// Extra Light Mode Styling
 .background-light {
   border: 10px solid $light-sec;
   background-color: $light-fourth;
 }
 
+// Extra Dark Mode Styling
 .background-dark {
   border: 10px solid $dark-fourth;
   background-color: $dark-prim;
   color: #fff;
 }
 
+// Responsive Styling
 @media (min-width: 460px) {
   .tasklist {
     ul {
