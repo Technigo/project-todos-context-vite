@@ -11,10 +11,10 @@
 }
 
 .add-container {
-  background-color: white;
   padding: 20px;
   border: 1px solid var(--sun-purple);
   border-radius: 20px;
+  height: auto;
 }
 
 .add-title {
@@ -31,8 +31,7 @@
   margin-bottom: 20px;
 }
 
-.add-btn,
-button {
+.add-btn {
   margin-top: 30px;
   padding: 5px;
   font-size: 1.25;
@@ -58,10 +57,9 @@ button {
   justify-content: space-between;
 }
 
-input,
+input#date,
 select {
   font-size: 1.25;
-  font-weight: 700;
   border: none;
   padding: 0 10px;
   border-radius: 10px;
