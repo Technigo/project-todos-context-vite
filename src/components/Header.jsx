@@ -9,13 +9,13 @@ export const Header = () => {
   const completedTasks = taskData.filter((task) => task.complete);
 
   const toggleTheme = () => {
-    console.log("Clicked birdy")
+    console.log("Clicked birdy");
     if (theme === "light") {
-      setTheme("dark")
+      setTheme("dark");
     } else {
-      setTheme("light")
+      setTheme("light");
     }
-  }
+  };
 
   return (
     <header className={theme}>
@@ -25,8 +25,8 @@ export const Header = () => {
           <img
             src={
               theme === "light"
-                ? "./baby-chick.svg"
-                : "./baby-chick-black.svg"
+                ? "../assets/baby-chick.svg"
+                : "../assets/baby-chick-black.svg"
             }
           />
         </button>
