@@ -1,18 +1,13 @@
 .headerContainer {
-  background-color: #a1ccd1;
-  padding: 50px 0;
-  display: relative;
-}
-
-.logo {
-  margin: 10px;
-  position: absolute;
-  top: 20px;
-  left: 10px;
+  background-color: #f5e8dd;
+  padding: 30px 0;
 }
 
 .header {
   text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 @media (min-width: 745px) {
