@@ -13,6 +13,8 @@ export const AddToDo = () => {
   //access functionality for adding tasks from ToDoContext
   const { addToDo, categories } = useToDos();
 
+  // Get today's date
+  const today = new Date().toISOString().split("T")[0];
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -63,6 +65,7 @@ export const AddToDo = () => {
               id="date"
               type="date"
               value={date}
+              min={today}
               onChange={(e) => {
                 setDate(e.target.value);
               }}
