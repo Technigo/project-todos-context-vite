@@ -25,7 +25,6 @@ export const TodoProvider = ({ children }) => {
   };
 
   /* here we add a 'toggleComplete' function that toggles the 'completed' property when called.  We update the todo list state using setTodos and map over the existing todos to find the todo with the given id and toggle its completed property.*/
-
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) =>
