@@ -4,7 +4,7 @@ import "./NewTodoForm.css"
 
 export const NewTodoForm = () => {
   const [newItem, setNewItem] = useState("");
-  const { addTodo, itemId, setItemId } = useTodo();
+  const { addTodo } = useTodo();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +18,6 @@ export const NewTodoForm = () => {
       <h1 className="app-name">What Todo Tracker</h1>
       <form onSubmit={handleSubmit} className="add-todo-form">
         <label classname="todo-label">
-          {/* Add Todo: */}
           <input
             type="text"
             value={newItem}

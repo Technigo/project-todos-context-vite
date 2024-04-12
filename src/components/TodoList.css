@@ -3,13 +3,12 @@
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
-  text-align: center; 
+  text-align: center;
   width: 300px;
-  margin: 0 auto; 
+  margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  border: solid pink;
 }
 
 .todo-list-container h2 {
@@ -19,35 +18,28 @@
 .todo-ul {
   list-style-type: none;
   padding: 0;
-  border: solid purple;
   word-break: break-word;
 }
 
 .todo-li {
-display: flex;
-align-items: center;
-/* justify-content: space-between; */
-  border: solid lightgreen;
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 
+.todo-li input {
+  cursor: pointer;
+}
 
-.todo-list-container label {
-  display: inline-block;
-  align-items: center;
-  /* flex-grow: 1; */
-  border: solid orange;
-  flex-wrap: wrap;
+.time-delete-row {
+  margin-left: auto;
 }
 
 .span-todo {
   color: #333;
-  border: solid green;
 }
 
 .span-time {
-  margin-left: 10px;
-  border: solid green;
   font-size: 13px;
 }
 
@@ -59,7 +51,22 @@ align-items: center;
   padding: 5px 10px;
   cursor: pointer;
   font-size: 14px;
-  border: solid blue;
+  margin-left: 5px;
+}
+
+.toggle-button {
+  padding: 10px 10px;
+  width: 100px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.toggle-button:hover {
+  background-color: #ff0000;
 }
 
 .todo-list-container ul li button:hover {
