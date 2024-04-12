@@ -1,18 +1,14 @@
 import { ListItem } from "../listItem/ListItem";
 import { useTodo } from "../../contexts/TodoContext";
 import "./list.css";
+import { Counter } from "../counter/Counter";
 
 export const List = () => {
   const { tasks } = useTodo([]);
-  const completedTasks = tasks.filter(item => item.isDone);
 
   return (
     <section className="task-container">
-      <p>You have {tasks.length} tasks</p>
-      <p>
-        You have completed {completedTasks.length}.{" "}
-        {tasks.length - completedTasks.length} left to do!{" "}
-      </p>
+      <Counter tasks={tasks} />
       <ul className="task-list">
         {tasks.map(item => {
           return (

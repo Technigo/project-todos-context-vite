@@ -1,0 +1,16 @@
+.count {
+font-weight: bolder;
+font-size: 1.5em;
+}
+
+.count:first-of-type {
+  color: var(--decor-color-1);
+}
+
+.count:nth-child() {
+  color: var(--decor-color-2);
+}
+
+.count:nth-of-type(3) {
+  color: var(--decor-color-3);
+}

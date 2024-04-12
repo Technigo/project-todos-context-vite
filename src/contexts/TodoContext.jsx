@@ -12,7 +12,6 @@ export const TodoProvider = ({ children }) => {
   // Update local storage
   const updateLocal = async () => {
     localStorage.setItem("To-Do", JSON.stringify(tasks));
-    console.log("local update", tasks);
   };
 
   // Add task from state array
@@ -27,14 +26,12 @@ export const TodoProvider = ({ children }) => {
 
   // Load data from local storage on component mount
   useEffect(() => {
-    console.log("savedData", local);
     local ? setTasks(local) : setTasks(tasksJson);
   }, []);
 
   // When tasks are updated, save to localStorage
   useEffect(() => {
     updateLocal();
-    console.log("effect, wtf");
   }, [tasks]);
 
   // Component

@@ -18,7 +18,7 @@ export const ListItem = ({ id }) => {
 
   return (
     <li className="task">
-      <label className="task-desc">
+      <form className="task-form">
         <input
           type="checkbox"
           name={currentTask.desc}
@@ -26,8 +26,18 @@ export const ListItem = ({ id }) => {
           checked={currentTask.isDone}
           onChange={handleCheckUpdate}
         />
-        {currentTask.desc}
-      </label>
+        <label
+          htmlFor={`task-${id}`}
+          className="task-desc">
+          {currentTask.desc}
+        </label>
+        <button
+          className="remove"
+          aria-label="remove task"
+          onClick={handleRemove}>
+          <i className="fa-solid fa-xmark fa-lg"></i>
+        </button>
+      </form>
       <div className="badge-container">
         <Badge
           text={currentTask.category}
@@ -42,11 +52,6 @@ export const ListItem = ({ id }) => {
           type="pro"
         />
       </div>
-      <button
-        className="btn remove"
-        onClick={handleRemove}>
-        remove
-      </button>
     </li>
   );
 };
