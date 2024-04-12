@@ -6,11 +6,12 @@ import TaskCount from "./components/TaskCount";
 import { TodoProvider } from "./context/TodoContext";
 
 import "./App.css";
+import { Header } from "./components/Header";
 
 const App = () => {
   return (
     <TodoProvider>
-      <h1>To-Doodle</h1>
+      <Header />
       <div className="app-container">
         <div className="card-container">
           <div className="card">
