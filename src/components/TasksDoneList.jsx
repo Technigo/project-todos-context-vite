@@ -14,7 +14,7 @@ export const TasksDoneList = () => {
         ))}
       <div className="count-tasks">
         You have finished {tasks.filter((task) => task.done === true).length}{" "}
-        tasks
+        tasks.
       </div>
     </div>
   );

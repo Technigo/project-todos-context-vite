@@ -27,21 +27,12 @@ export const TasksProvider = ({ children }) => {
     setTasks(newTasks);
   };
 
-  const toggleChecked = (taskToToggle) => {
-    /*Find the index of the task to toggle.*/
-    const changedTask = tasks.map((task) => task.id).indexOf(taskToToggle);
-    /*Find out whether the task is done or not.*/
-    const doneStatus = tasks[changedTask].done;
-    /*Make a copy of current task-list.*/
-    const updatedList = tasks;
-    /*See if the task is found in "tasks".*/
-    const targetTask = updatedList.find((task) => task.id === taskToToggle);
-    /*If the task is found, go to the new list, index of the task to toggle, attribute "done" and change it to what it wasn't before.*/
-    if (targetTask) {
-      updatedList[changedTask].done = doneStatus ? false : true;
-    }
-    /*Use the old task list to the updated.*/
-    setTasks(updatedList);
+  const toggleChecked = (taskId) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === taskId ? { ...task, done: !task.done } : task
+      )
+    );
   };
 
   return (

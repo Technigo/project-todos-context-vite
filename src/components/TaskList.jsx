@@ -13,7 +13,7 @@ export const TaskList = () => {
           <Task key={task.id} task={task} />
         ))}
       <div className="count-tasks">
-        You have {tasks.filter((task) => task.done === false).length} tasks
+        You have {tasks.filter((task) => task.done === false).length} tasks to do.
       </div>
     </div>
   );
