@@ -1,75 +1,57 @@
-/*Container for the todo list*/
 .todo-list-container {
-  width: 100%; /*Ensure it takes full width up to the max-width */
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 10px;
-  text-align: center; /* Center the text within the container */
-  max-width: 300px;
-  margin: 0 auto; /* Center horizontally */
-  padding: 20px;
+  text-align: center; 
+  width: 300px;
+  margin: 0 auto; 
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
- }
- 
- /* Heading */
- .todo-list-container h2 {
+  border: solid pink;
+}
+
+.todo-list-container h2 {
   color: #333;
-  margin-bottom: 10px;
-  /* border: solid green; */
- }
- .todo-list-container p {
-  margin-bottom: 5px;
- }
- 
- /* List */
- .todo-list-container ul {
+}
+
+.todo-ul {
   list-style-type: none;
   padding: 0;
-  /* border: solid pink; */
- }
- 
- /* List items */
- .todo-list-container ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border: solid purple;
+  word-break: break-word;
+}
+
+.todo-li {
+display: flex;
+align-items: center;
+/* justify-content: space-between; */
+  border: solid lightgreen;
   margin-bottom: 10px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  border: solid pink;
- }
- 
- /* Checkbox and text */
- .todo-list-container label {
-  display: flex;
+}
+
+
+.todo-list-container label {
+  display: inline-block;
   align-items: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   border: solid orange;
- }
- 
- /* Text with line-through if completed */
- /* .todo-list-container span {
-  margin-left: 5px;
-  color: #333;
-  border: solid green;
- } */
+  flex-wrap: wrap;
+}
 
 .span-todo {
-  /* margin-left: 5px; */
   color: #333;
   border: solid green;
- }
- 
- .span-time {
+}
+
+.span-time {
   margin-left: 10px;
   border: solid green;
- }
+  font-size: 13px;
+}
 
- /* Delete button */
- .todo-list-container ul li button {
+.delete-button {
   background-color: #ff4d4d;
   color: #fff;
   border: none;
@@ -78,15 +60,12 @@
   cursor: pointer;
   font-size: 14px;
   border: solid blue;
-  
- }
- 
- /* Hover effect for the delete button */
- .todo-list-container ul li button:hover {
+}
+
+.todo-list-container ul li button:hover {
   background-color: #ff0000;
- }
- 
- /* Checkbox */
- .todo-list-container ul li input[type="checkbox"] {
+}
+
+.todo-list-container ul li input[type="checkbox"] {
   margin-right: 10px;
- } 
+}

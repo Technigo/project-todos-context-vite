@@ -3,8 +3,8 @@
   flex-direction: column;
   gap: 20px;
   margin-bottom: 15px;
-  border: solid green;
-  max-width: 300px;
+  /* border: solid green; */
+  width: 300px;
 }
 
 .form-container h1 {
@@ -15,7 +15,7 @@
   /* flex-direction: column; */
   align-items: center;
   /* gap: 20px; */
-  border: solid blue;
+  /* border: solid blue; */
 }
 
 .add-todo-form label {

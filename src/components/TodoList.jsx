@@ -1,6 +1,6 @@
 import { useTodo } from "../context/TodoContext";
 import moment from "moment";
-import "./TodoList.css"
+import "./TodoList.css";
 
 export const TodoList = () => {
   const {
@@ -18,27 +18,31 @@ export const TodoList = () => {
       <p>
         Completed: {totalChecked} / {totalItems}
       </p>
+
       <ul className="todo-ul">
         {todoList.map((item) => {
           return (
             <li className="todo-li" key={item.id}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={item.completed}
-                  onChange={(e) => toggleTodo(item.id, e.target.checked)}
-                />
-                <span className="span-todo"
-                  style={{
-                    textDecoration: item.completed ? "line-through" : "none",
-                  }}
-                >
-                  {item.text}
-                </span>
-                <span className="span-time">added on {moment(item.createdAt).format("HH:mm")}</span>
+              <input
+                type="checkbox"
+                checked={item.completed}
+                onChange={(e) => toggleTodo(item.id, e.target.checked)}
+              />
 
-                <button onClick={() => deleteTodo(item.id)}>x</button>
+              <label
+                className="span-todo"
+                style={{
+                  textDecoration: item.completed ? "line-through" : "none",
+                }}
+              >
+                {item.text}
               </label>
+
+              <span className="span-time">
+                on {moment(item.createdAt).format("HH:mm")}
+              </span>
+
+              <button className="delete-button" onClick={() => deleteTodo(item.id)}>x</button>
             </li>
           );
         })}
