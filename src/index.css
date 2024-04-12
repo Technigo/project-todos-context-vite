@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E1F6C7;
+  background-color: #e1f6c7;
 }
 
 .todo-container {
@@ -25,6 +25,36 @@ h3 {
 
 .count-tasks {
   text-align: center;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-tasks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.move-all {
+  background-color: rgb(198, 49, 136);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 2px 8px 2px 8px;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.move-all:hover {
+  background-color: rgb(130, 33, 89);
 }
 
 @media (min-width: 400px) and (max-width: 520px) {
@@ -45,4 +75,4 @@ h3 {
   .input-field {
     width: 456px;
   }
-} 
+}

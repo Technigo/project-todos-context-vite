@@ -1,15 +1,17 @@
-import { useState } from "react";
-import { useTasks } from "../contexts/TasksContext";
-import addIcon from "/icon-add.png";
-import "./TaskForm.css";
+import moment from "moment"
+import { useState } from "react"
+import { useTasks } from "../contexts/TasksContext"
+import addIcon from "/icon-add.png"
+import "./TaskForm.css"
 
 export const TaskForm = () => {
-  const { tasks, nextId, addTask } = useTasks();
+  const { nextId, addTask } = useTasks()
   const [newTask, setNewTask] = useState({
     id: null,
     task: "",
     done: false,
-  });
+    createdAt: "",
+  })
 
   const handleChange = (event) => {
     setNewTask({
@@ -17,18 +19,19 @@ export const TaskForm = () => {
       task: event.target.value,
       id: nextId,
       done: false,
-    });
-  };
+      createdAt: moment().format(),
+    })
+  }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     if (newTask.task) {
-      addTask(newTask);
-      setNewTask({ id: null, task: "" });
+      addTask(newTask)
+      setNewTask({ id: null, task: "" })
     } else {
-      alert("Please fill in the field");
+      alert("Please fill in the field")
     }
-  };
+  }
 
   return (
     <div className="task-form">
@@ -52,5 +55,5 @@ export const TaskForm = () => {
         </button>
       </form>
     </div>
-  );
-};
+  )
+}
