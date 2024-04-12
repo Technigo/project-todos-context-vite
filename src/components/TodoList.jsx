@@ -1,18 +1,14 @@
 import { useAppData } from "../contexts/FormContext";
-
 // import { useState } from "react";
+
+
+
 import { EmptyList } from "./EmptyList";
-
-
+import { UncompletedBtn } from "./UncompleteBtn";
 
 export const TodoList = () =>{
-    const {todos, removeTask, toggleTodo} = useAppData()
-
-    
-
-    // const isAdded = (taskId) => {
-    //   return todos.some((item) => item.id === taskId)
-    // } 
+    const {todos, removeTask, toggleTodo, clearAllTask} = useAppData()
+    // const [undoTask, setUndoTask] = useState([])
 
     const handleRemoveTask = (taskToRemove) => {
         removeTask(taskToRemove)
@@ -22,19 +18,23 @@ export const TodoList = () =>{
         toggleTodo(index, !completed)
     }
 
-    
+    const handleClearAll = (index) => {
+        clearAllTask(index)
+    }
+    // const handleDoneBtn = (completed) => {
+    //    toggleTodo(index, !completed)
+    // }
 
-
-   
-   
 
     // const completedTask = (todos)=> {
     //    return }
 
-    // const uncompletedTask = (todos)=>{
-    //     return todos.filter(todo => !todo.completed)}
+//   const unfinishBtn = () => {
+//     const uncompletedTask = todos.filter (todo=> !todo.completed)
+//     setUndoTask(uncompletedTask)
+//   }
 
-   const completedTask = todos.filter(todo=> todo.completed).length
+   const completedTaskAmount = todos.filter(todo=> todo.completed).length
    
     return (
         <div className="todo-list-container">
@@ -42,7 +42,7 @@ export const TodoList = () =>{
                 <>
                 <div>
                     {/* {todos.length ===1 ? <p>You have 1 task in your todo list.</p> : <p>You have {todos.length} tasks in your todo list.</p>} */}
-                    <p>Completed tasks {completedTask}/{todos.length}</p>
+                    <p>Completed tasks {completedTaskAmount}/{todos.length}</p>
                 </div>
                 <ul style={{listStyle: 'none'}}>
                     {todos.map((todo, index)=>(
@@ -56,6 +56,17 @@ export const TodoList = () =>{
                         </li>
                     ))}
                 </ul>
+                <button onClick={handleClearAll}>Clean all</button>
+                {/* <button onClick={unfinishBtn}>Uncompleted</button>
+                <ul>
+                    {undoTask.map((task, index) => (
+                        <li key={index}>
+                            {task.text}
+
+                        </li>
+                    ))}
+                </ul> */}
+                <UncompletedBtn />
                 </>
                 
             ): <EmptyList />} 

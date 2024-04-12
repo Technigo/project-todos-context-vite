@@ -21,6 +21,7 @@ export const AddTask = () => {
 
     const date = moment().format("MMM Do YY")
     const weekday = moment().format('dddd')
+    
 
    return (
     <>
@@ -42,54 +43,3 @@ export const AddTask = () => {
    )
 }
 
-// export const TodoForm = () => {
-//     const {list, appContent, removeTodo, addToList} = useAppData()
-
-//     console.log(list, appContent, removeTodo, addToList)
-
-//     const handleIncreaseQuantity = (taskId) => {
-//         addToList(list.find((item)=> item.id === taskId))
-//     }
-    
-//     const handleDecreaseQuantity = (taskId) => {
-//         removeTodo(taskId)
-//     }
-
-//     return(
-//         <>
-//         <header>
-//                 {appContent.title}
-//             </header>
-
-//         <div>
-//             <form onSubmit={handleSubmit}>
-//                <label>{appContent.heading}</label> 
-//                <textarea 
-//                type='text'
-//                name='text'
-//                id='text'
-//                cols={30}
-//                rows={10}
-//                onChange={hanldeInputTaskChange}
-//                value={list}
-//                placeholder="My task...">
-//                </textarea>
-//                <div>
-//                 <button>
-//                     Add my new task
-//                 </button>
-//                </div>
-//             </form>
-//         </div>
-//         <div>
-//             {list.length ? (
-//                 list.map((item)=>(
-//                     <ul key={item.id}>
-//                         <li>{item}</li>
-//                     </ul>    
-//                 ))
-//             ) : }
-//         </div>
-//         </>     
-//     )
-// }

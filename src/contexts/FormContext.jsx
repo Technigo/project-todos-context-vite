@@ -44,6 +44,21 @@ export const AppDataProvider = ({children}) => {
     //   setTodos(updatedCompletedTask)
     // }
 
+    // const completedTask = (index, completed) => {
+    //   const updatedCompletedTask = [...todos]
+    //   updatedCompletedTask[index].completed = completed
+    //   setTodos(updatedCompletedTask)
+    // }
+
+  //  const uncompletedTask = (index, completed) => {
+  //    const updatedUncompletedTask = [...todos]
+  //  updatedUncompletedTask[index].completed = !completed
+  //    setTodos(updatedUncompletedTask)
+  //    }
+    const clearAllTask = () => {
+      setTodos([])
+    }
+
     const appContent = {
       title: "My todo list",
       heading: "New task",
@@ -51,7 +66,9 @@ export const AppDataProvider = ({children}) => {
     
     return (
       <AppDataContext.Provider
-        value={{ todos, addTask, appContent, removeTask, toggleTodo}}
+        value={{ todos, addTask, appContent, 
+          removeTask, toggleTodo,clearAllTask
+       }}
       >
         {children}
       </AppDataContext.Provider>
