@@ -28,7 +28,6 @@ export const TodoList = () => {
           )}
         </div>
         </div>
-
         <div className="counter">
           <h3>{todo.length}</h3>
         </div>
