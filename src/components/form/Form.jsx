@@ -42,7 +42,8 @@ export const Form = () => {
   };
 
   const handleDuedate = date => {
-    const newDate = format(date, "yyyy/MM/22");
+    const newDate = format(date, "yyyy/MM/dd");
+    console.log("test", date);
     setNewTask({
       ...newTask,
       duedate: newDate,

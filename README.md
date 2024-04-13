@@ -32,14 +32,18 @@ To do this we're building a To Do app.
 - You should be able to add and remove tasks.
 - Your app should show a count of either all tasks or all uncompleted tasks (or both).
 
-Eveything went pretty smootly until I started with local storage. Something made it update one event too late. Then, instead it started resetting local at every reload. When it finally works, there are double logs in the console and I don't know why. Descided to leave it for now...
+Eveything went pretty smootly until I started with local storage. Something made it update one event too late (check one task - nothing happends, check another one - last one get's checked). When I fixed that, instead it started resetting local at every reload. When it finally works, there are double logs in the console and I don't know why. Descided to leave it.
+
+Really not feeling the styling. Will do something basic for now and maybe go back and fix it when I have time, after the bootcamp.
+
+Added categories and projects but haven't added any functionality to it.
+Same as with styling, will probably leave it basic and come back to it another time.
+
+!! In React Dev Tool I get the message "Looks like this page doesn't have React, or it hasn't been loaded yet.", whichs seeems weird when eveything works-ish. We'll see if it breaks it when I deploy.
 
 #### Next
 
-- Styling
-- Adding categories and projects
-- Addind deadline
-- I would like to create a kanban style board, with multiple statuses and labels. I doubt I will have time though...
+- I would like to create a kanban style board, with multiple statuses and labels.
 
 ### View it live
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./duedate.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -14,10 +14,13 @@ export const Duedate = ({ handler }) => {
       placeholderText="Pick duedate"
       showIcon
       showWeekNumbers
+      allowSameDay
       weekLabel="w"
       selected={duedate}
-      onSelect={date => setDuedate(date)}
-      onChange={() => handler(duedate)}
+      onSelect={date => {
+        setDuedate(date);
+      }}
+      onChange={date => handler(date)}
     />
   );
 };

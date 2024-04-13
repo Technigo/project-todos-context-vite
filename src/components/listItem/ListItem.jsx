@@ -12,7 +12,8 @@ export const ListItem = ({ id }) => {
     setTasks(tasks => tasks.map(item => (item._id === id ? update : item)));
   };
 
-  const handleRemove = () => {
+  const handleRemove = event => {
+    event.preventDefault();
     removeTask(id);
   };
 
