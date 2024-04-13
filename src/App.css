@@ -7,7 +7,6 @@
   --sun-orange: #faaa82;
   --sun-pink: #e07082;
   --sun-purple: #a24892;
-  --sun-blue: #203d98;
   --white: #ffffff;
   --black: #000000;
   --grey: #808588;
@@ -42,7 +41,7 @@ button {
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
-  color: var(--sun-purple);
+  color: var(--black);
 }
 
 h1 {

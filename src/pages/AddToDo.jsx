@@ -33,12 +33,6 @@ export const AddToDo = () => {
 
   return (
     <section className="add-section">
-      {/* navigation back to main page */}
-      {/* <Link to="/" className="main-link">
-        <p>Home</p>
-      </Link> */}
-      {/* navigation back to list */}
-
       <div className="add-title">
         <Link to="/" className="todo-link">
           <h2>x</h2>
@@ -93,9 +87,9 @@ export const AddToDo = () => {
               ))}
             </select>
           </div>
-            <button type="submit" className="add-btn">
-              Create
-            </button>
+          <button type="submit" className="add-btn">
+            Create
+          </button>
         </form>
       </div>
     </section>

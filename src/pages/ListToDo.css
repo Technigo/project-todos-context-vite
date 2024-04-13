@@ -59,6 +59,11 @@
   margin-left: 10px;
 }
 
+.btn-group {
+  text-wrap: nowrap;
+  width: 50px;
+}
+
 .task-delete {
   background-color: transparent;
   border: none;
