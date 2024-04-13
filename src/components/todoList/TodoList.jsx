@@ -25,7 +25,7 @@ export const TodoList = () => {
     <div className="todo-list-container">
       {todos.length > 0 ? (
         <>
-          <ul style={{ listStyle: "none" }} className="todo">
+          <div  className="todo">
             {todos.map((todo, index) => (
               <TodoListForm
                 keyword={index}
@@ -42,9 +42,9 @@ export const TodoList = () => {
                 onClick={() => handleRemoveTask(todo)}
               />
             ))}
-          </ul>
+          </div>
           <div className="completeAmount">
-          <p>
+          <p aria-label="completed tasks amount">
              🥐 Completed {completedTaskAmount}/{todos.length}
             </p>
             {/* <button onClick={handleClearAll}>Clean all</button> */}

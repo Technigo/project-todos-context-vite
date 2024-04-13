@@ -1,6 +1,9 @@
 export const AddTaskForm = ({onFormSubmit, newTodo, onNewTodoChange}) => {
     return(
-        <form onSubmit={onFormSubmit} className="add-task-container">
+        <form onSubmit={onFormSubmit} 
+        className="add-task-container"
+        aria-label="add new task"
+        >
             <input
             type="text"
             value={newTodo}
@@ -10,7 +13,7 @@ export const AddTaskForm = ({onFormSubmit, newTodo, onNewTodoChange}) => {
             className="add-input"
             placeholder="What do you need to do?"
             />
-            <button type="submit" className="addBtn">➕ Add</button>
+            <button type="submit" className="addBtn" aria-label="add task">➕ Add</button>
         </form>
     )
 }
