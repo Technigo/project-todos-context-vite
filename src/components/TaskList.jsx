@@ -22,18 +22,6 @@ const TaskList = () => {
     }
   }, [tasks, allTasksCompleted]);
 
-  /*
-  useEffect(() => {
-    let confettiTimer;
-    if (allTasksCompleted) {
-      confettiTimer = setTimeout(() => {
-        setAllTasksCompleted(false);
-      }, 5000);
-      return () => clearTimeout(confettiTimer);
-    }
-  }, [allTasksCompleted]);
-  */
-
   const handleRemoveTask = (id) => {
     removeTask(id);
   };

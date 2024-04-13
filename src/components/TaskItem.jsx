@@ -1,5 +1,4 @@
 import { useTask } from "../context/TaskContext";
-import { FaTrashAlt } from "react-icons/fa";
 import RemoveIcon from "../assets/Rectangle 15.png";
 import "../styling/TaskItem.css";
 
