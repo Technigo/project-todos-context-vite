@@ -41,3 +41,9 @@
 .add-todo-form button:hover {
   background-color: #ff0000;
 }
+
+@media (min-width: 1025px) {
+  .form-container h1 {
+    font-size: 40px;
+  }
+}

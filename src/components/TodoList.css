@@ -76,3 +76,17 @@
 .todo-list-container ul li input[type="checkbox"] {
   margin-right: 10px;
 }
+
+@media (min-width: 1025px) {
+  .todo-list-container h2 {
+    font-size: 28px;
+  }
+
+  .todo-li label {
+    font-size: 18px;
+  }
+  
+  .span-time {
+    font-size: 15px;
+  }
+}
