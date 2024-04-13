@@ -1,11 +1,11 @@
 import '../Styles/ProgressCircle.css'
 
 export const ProgressCircle = ({ totalTasks, completedTasks }) => {
-  const radius = 30 // Reduced radius to 30
-  const strokeWidth = 6 // Adjusted stroke width to 6 for better proportion
-  // Increase the SVG dimensions to account for the stroke
+  const radius = 30
+  const strokeWidth = 6
+
   const svgSize = radius * 2 + strokeWidth * 2
-  const center = radius + strokeWidth // Adjust the center to account for the stroke
+  const center = radius + strokeWidth
 
   const circumference = 2 * Math.PI * radius
   const percentage = totalTasks > 0 ? (completedTasks / totalTasks) * 100 : 0
@@ -16,7 +16,7 @@ export const ProgressCircle = ({ totalTasks, completedTasks }) => {
       <svg
         width={svgSize}
         height={svgSize}
-        viewBox={`0 0 ${svgSize} ${svgSize}`} // Adjust viewBox to fit all elements
+        viewBox={`0 0 ${svgSize} ${svgSize}`}
       >
         <circle
           r={radius}
@@ -44,7 +44,7 @@ export const ProgressCircle = ({ totalTasks, completedTasks }) => {
           y={center}
           textAnchor="middle"
           dominantBaseline="middle"
-          fontSize="14px" // Reduced font size to fit smaller circle
+          fontSize="14px"
           className="progress-text"
         >
           {Math.round(percentage)}%

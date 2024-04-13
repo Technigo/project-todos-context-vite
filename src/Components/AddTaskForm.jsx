@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../Styles/form.css'
 import { useToDoContext } from '../Contexts/TodoContext'
+import '../Styles/AddTaskForm.css'
 export const AddTaskForm = () => {
   const { addTask, toggleAddTaskPopup } = useToDoContext()
   const [newTask, setNewTask] = useState({ content: '', category: '' })
@@ -21,7 +21,7 @@ export const AddTaskForm = () => {
       setTimeout(() => setShowSuccessMessage(false), 3000)
       setTimeout(() => toggleAddTaskPopup(false), 1000)
     } else {
-      alert('Please fill in the form')
+      confirm('Please fill in the form')
     }
   }
 
@@ -36,6 +36,7 @@ export const AddTaskForm = () => {
           placeholder="Task to-do..."
           value={newTask.content}
           onChange={handleChange}
+          required
         ></textarea>
       </label>
       <label>
@@ -59,9 +60,7 @@ export const AddTaskForm = () => {
       </label>
 
       <button type="submit">Submit</button>
-      {showSuccessMessage && (
-        <div className="success-message">Task added successfully!</div>
-      )}
+      {showSuccessMessage && <p>Task added successfully!</p>}
     </form>
   )
 }

@@ -22,11 +22,9 @@
   padding: 10px 20px;
   display: flex;
   justify-content: center;
-  width: 80%;
-  height: 5%;
   align-items: center;
-  height: auto;
 }
+
 .taskItem:hover {
   background-color: #bc8cff6d;
 }
@@ -37,29 +35,30 @@
 .customCheckboxContent {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .customCheckboxContent h2 {
   padding: 0 20px;
+  color: #101729;
   margin: 0;
 }
 .checkboxDatesContainer {
   display: flex;
 }
-.checkboxInput:checked + .customRadioCheckbox .customCheckboxContent h2,
+.checkboxInput:checked + .customRadioCheckbox ~ .customCheckboxContent h2,
 .checkboxInput:checked
   + .customRadioCheckbox
-  .customCheckboxContent
+  ~ .customCheckboxContent
   .checkboxDatesContainer
   h5 {
   text-decoration: line-through;
-  color: white;
+  color: #10172974;
   margin: 0;
 }
 #deleteBtn {
-  position: absolute; /* Add this */
-  top: 5px; /* Adjust this value as needed */
+  position: absolute;
+  top: 5px;
   right: 5px;
   cursor: pointer;
   width: 20px;
@@ -69,15 +68,66 @@
   font-size: 10px;
   background: none;
 }
+
 .taskItem label {
   box-sizing: border-box;
 }
 .checkboxInput {
   cursor: pointer;
   position: absolute;
-  left: 5px; /* Adjust this value as needed */
-  top: 50%; /* Align vertically */
-  transform: translateY(-50%); /* Center vertically */
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.customCheckboxContent {
+  flex-grow: 1;
+}
+.checkboxInput + .customRadioCheckbox::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.checkboxInput:checked + .customRadioCheckbox::before {
+  background-color: #4c4ca2;
+}
+.checkboxInput + .customRadioCheckbox::after {
+  content: '\2713';
+  /* Checkmark character  */
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 4px;
+  line-height: 1.5;
+  opacity: 0;
+}
+.checkboxInput:checked + .customRadioCheckbox::after {
+  opacity: 1;
+}
+.customRadioCheckbox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.customCheckboxContent h2 {
+  padding: 0 20px;
+  margin: 0;
+}
+
+.checkboxDatesContainer {
+  display: flex;
+}
+
+.checkboxInput {
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .popup {
@@ -132,4 +182,36 @@
 .user {
   display: flex;
   align-items: center;
+}
+#plusButton {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 2%;
+  font-size: 35px;
+  cursor: pointer;
+  background-color: #ffad47;
+}
+
+@media (min-width: 669px) and (max-width: 1022px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30%;
+  }
+}
+@media (min-width: 1023px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40%;
+  }
 }

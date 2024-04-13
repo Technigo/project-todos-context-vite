@@ -1,7 +1,7 @@
 import moment from 'moment'
-import '../Styles/DateFilters.css'
+import '../Styles/CategoryFilters.css'
 
-export const DateFilters = ({ setFilter }) => {
+export const CategoryFilters = ({ setFilter }) => {
   return (
     <main>
       <div className="wrapper">

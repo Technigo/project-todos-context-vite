@@ -1,5 +1,5 @@
 main button {
-  border-radius: 40px;
+  border-radius: 10px;
   background-color: #f1f4f9;
   height: 50px;
   width: 30px;
@@ -29,4 +29,32 @@ main i {
 
 .filtersContainer button:hover i {
   color: #f1f4f9; /* Change icon color on hover */
+}
+
+@media (min-width: 669px) and (max-width: 1022px) {
+  main button {
+    height: 60px;
+    width: 35px;
+  }
+  main i {
+    font-size: 15px;
+  }
+
+  .filtersContainer {
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1023px) {
+  main button {
+    height: 65px;
+    width: 40px;
+  }
+  main i {
+    font-size: 20px;
+  }
+
+  .filtersContainer {
+    gap: 15px;
+  }
 }

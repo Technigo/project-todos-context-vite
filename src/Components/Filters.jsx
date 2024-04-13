@@ -8,14 +8,10 @@ export const Filters = ({ setFilter, uncompletedTasksCount, filter }) => {
         <button onClick={() => setFilter('pending')}>Pending</button>
         <button onClick={() => setFilter('completed')}>Completed Tasks</button>
       </div>
+      {/* show the counter only when displaying all tasks */}
       {filter === 'all' && (
-        <span className="counter">
-          Tasks to complete: {uncompletedTasksCount}
-        </span>
+        <span>Tasks to complete: {uncompletedTasksCount}</span>
       )}
-      {/* <span className="counter">
-        Tasks to complete: {uncompletedTasksCount}
-      </span> */}
     </section>
   )
 }

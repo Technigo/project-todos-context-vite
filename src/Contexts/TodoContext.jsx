@@ -8,6 +8,7 @@ export const TodoProvider = ({ children }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // fetching from my mockAPI
     fetch('https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content')
       .then((res) => res.json())
       .then((data) => {
@@ -22,7 +23,7 @@ export const TodoProvider = ({ children }) => {
 
   const addTask = (newTask) => {
     newTask.createdAt = new Date().toISOString()
-
+    // adding new tasks to the API with POST request
     fetch('https://6612c3e453b0d5d80f665515.mockapi.io/content', {
       method: 'POST',
       headers: {
@@ -32,6 +33,7 @@ export const TodoProvider = ({ children }) => {
     })
       .then((response) => response.json())
       .then((data) => {
+        // using spread operator to add and not modify the actual Array in the API
         setTaskList((prevTasks) => [...prevTasks, data])
       })
       .catch((error) => {
@@ -39,6 +41,7 @@ export const TodoProvider = ({ children }) => {
       })
   }
   const deleteTask = (taskId) => {
+    // deleting tasks from API with delete request
     fetch(
       `https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content/${taskId}`,
       {
@@ -71,7 +74,7 @@ export const TodoProvider = ({ children }) => {
       completed: isCompleted,
       completedAt: isCompleted ? new Date() : null,
     }
-
+    // usind a PUT request to modify the key value of completed in my API
     fetch(
       `https://6612c3e453b0d5d80f665515.mockapi.io/tasks/content/${taskId}`,
       {
@@ -100,6 +103,7 @@ export const TodoProvider = ({ children }) => {
       })
       .catch((error) => console.error('Error updating task:', error))
   }
+  // fucntion to toggle the popup form
   const toggleAddTaskPopup = () => {
     setShowAddTaskPopup(!showAddTaskPopup)
   }

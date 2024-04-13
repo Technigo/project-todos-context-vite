@@ -16,7 +16,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   resize: vertical;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
   background-color: #e9e1ff;
 }
@@ -24,7 +24,7 @@ form label {
   color: #7d59e7;
   display: block;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -37,7 +37,7 @@ form button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease;
 }
@@ -53,10 +53,10 @@ form select {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
   background-color: #e9e1ff;
-  color: #7d59e7; /* Text color */
+  color: #7d59e7;
 }
 
 /*  dropdown arrow */
@@ -89,4 +89,42 @@ form select:after {
   top: calc(50% - 0.5em);
   right: 10px;
   pointer-events: none;
+}
+form p {
+  text-align: center;
+  font-size: 14px;
+}
+@media (min-width: 669px) and (max-width: 1022px) {
+  form select {
+    font-size: 16px;
+  }
+  form button {
+    font-size: 16px;
+  }
+  form label {
+    font-size: 18px;
+  }
+  textarea {
+    font-size: 16px;
+  }
+  form p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1023px) {
+  form select {
+    font-size: 18px;
+  }
+  form button {
+    font-size: 18px;
+  }
+  form label {
+    font-size: 20px;
+  }
+  textarea {
+    font-size: 18px;
+  }
+  form p {
+    font-size: 18px;
+  }
 }

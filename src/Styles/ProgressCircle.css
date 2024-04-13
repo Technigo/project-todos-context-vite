@@ -6,8 +6,8 @@
 }
 
 svg {
-  width: 100%; /* Make sure the SVG is responsive */
-  max-width: 120px; /* Adjust based on design requirements */
+  width: 100%;
+  max-width: 120px;
 }
 
 .circle-background {
@@ -17,7 +17,7 @@ svg {
 
 .circle-progress {
   stroke: #7d59e7;
-  transition: stroke-dashoffset 0.6s ease-in-out; /* Smooth transition for the progress bar */
+  transition: stroke-dashoffset 0.6s ease-in-out;
 }
 
 .progress-text {
