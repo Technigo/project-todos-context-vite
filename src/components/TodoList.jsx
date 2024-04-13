@@ -16,6 +16,9 @@ export const TodoList = () => {
       {todo.map((task) => (
         <SingleTodo checked={task.checkmark} key={task.id} task={task} />
       ))}
+      <div className="counter">
+        <p>You have {todo.length} tasks to do!</p>
+      </div>
       <div className="delete-btn-div">
         <div>
           {todo.length > 0 && (
@@ -27,12 +30,8 @@ export const TodoList = () => {
             </button>
           )}
         </div>
-        </div>
-        <div className="counter">
-          <h3>{todo.length}</h3>
-        </div>
       </div>
-    
+    </div>
   );
 };
 
