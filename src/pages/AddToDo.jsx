@@ -17,6 +17,7 @@ export const AddToDo = () => {
   // Get today's date
   const today = new Date().toISOString().split("T")[0];
 
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
@@ -29,6 +30,7 @@ export const AddToDo = () => {
     setText("");
     setDate("");
     setCategory("");
+
   };
 
   return (

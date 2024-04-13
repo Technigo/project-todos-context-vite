@@ -55,9 +55,35 @@ export const ToDoProvider = ({ children }) => {
     setTodos(newToDo);
   };
 
+  const moveTaskUp = (index) => {
+    if (index === 0) return; // Can't move the first task up
+    const newTodos = [...todos];
+    const temp = newTodos[index];
+    newTodos[index] = newTodos[index - 1];
+    newTodos[index - 1] = temp;
+    setTodos(newTodos);
+  };
+
+  const moveTaskDown = (index) => {
+    if (index === todos.length - 1) return; // Can't move the last task down
+    const newTodos = [...todos];
+    const temp = newTodos[index];
+    newTodos[index] = newTodos[index + 1];
+    newTodos[index + 1] = temp;
+    setTodos(newTodos);
+  };
+
   return (
     <ToDoContext.Provider
-      value={{ todos, addToDo, toggleToDo, categories, deleteToDo }}
+      value={{
+        todos,
+        addToDo,
+        toggleToDo,
+        categories,
+        deleteToDo,
+        moveTaskUp,
+        moveTaskDown,
+      }}
     >
       {children}
     </ToDoContext.Provider>

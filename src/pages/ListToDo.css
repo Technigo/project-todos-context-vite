@@ -75,3 +75,13 @@
 input {
   accent-color: var(--sun-purple);
 }
+
+.btn-move-up {
+  color: var(--sun-purple);
+  padding: 5px;
+
+}
+
+.btn-move-down {
+  color: var(--sun-purple);
+}
