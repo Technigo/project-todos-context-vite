@@ -11,7 +11,7 @@
   {
     "_id": 2,
     "desc": "Create components",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Current",
     "project":"To do",
@@ -20,7 +20,7 @@
   {
     "_id": 3,
     "desc": "Set up form",
-    "isDone": false    ,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Current",
     "project":"To do",
@@ -29,7 +29,7 @@
   {
     "_id": 4,
     "desc": "Feature - Add task",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Current",
     "project":"To do",
@@ -38,7 +38,7 @@
   {
     "_id": 5,
     "desc": "Feature - Remove task",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Current",
     "project":"To do",
@@ -47,7 +47,7 @@
   {
     "_id": 6,
     "desc": "Feature - Toggle completion",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Coming up",
     "project":"To do",
@@ -56,7 +56,7 @@
   {
     "_id": 7,
     "desc": "Feature - Count",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Coming up",
     "project":"To do",
@@ -92,7 +92,7 @@
   {
     "_id": 11,
     "desc": "Feature - Duedate",
-    "isDone": false,
+    "isDone": true,
     "category": "Could have",
     "sprint": "Future",
     "project":"To do",
@@ -128,7 +128,7 @@
   {
     "_id": 15,
     "desc": "Style",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Future",
     "project":"To do",
@@ -137,7 +137,7 @@
   {
     "_id": 16,
     "desc": "Deploy to Netlify",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Future",
     "project":"To do",
@@ -155,7 +155,7 @@
   {
     "_id": 18,
     "desc": "Set up list",
-    "isDone": false,
+    "isDone": true,
     "category": "Must have",
     "sprint": "Future",
     "project":"To do",
@@ -164,7 +164,7 @@
   {
     "_id": 19,
     "desc": "Set up local storage",
-    "isDone": false,
+    "isDone": true,
     "category": "Could have",
     "sprint": "Future",
     "project":"To do",
