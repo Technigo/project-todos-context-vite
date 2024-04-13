@@ -1,4 +1,4 @@
-export const TodoListForm = ({keyword, type, checked, onChange, style, todo, onClick}) => {
+export const TodoListForm = ({keyword, type, checked, onChange, style, todo, onClick, task, taskName}) => {
     return (
         <li key={keyword}>
             <div className="todo-list">
@@ -6,12 +6,14 @@ export const TodoListForm = ({keyword, type, checked, onChange, style, todo, onC
             type={type}
             checked={checked}
             onChange={onChange}
+            id={task}
+            name="todo"
             />
-            <p style={style}>{todo}</p>{' '}
+            <label style={style} for={taskName}>{todo}</label>{' '}
             <div className="deletBtn">
              <button onClick={onClick}>🗑️</button>
             </div>
           </div>
         </li>
     )
-}
+} 

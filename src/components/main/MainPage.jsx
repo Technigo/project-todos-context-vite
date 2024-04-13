@@ -3,8 +3,10 @@ import { useModeChangeData } from "../../contexts/ModeContext";
 import { AddTask } from "../addTask/AddTask";
 import { TodoList } from "../todoList/TodoList";
 import { Time } from "./Time";
+
 import moment from "moment";
 import "./mainPage.css";
+
 
 export const MainPage = () => {
   const { appContent } = useAppData();
@@ -15,13 +17,14 @@ export const MainPage = () => {
 
   return (
     <>
+    <header >{appContent.title}</header>
       <main className={mode}>
-        <header >{appContent.title}</header>
         <div className="date-mode">
           <Time weekday={weekday} date={date} />
-          <button onClick={handleModeChange}>
+  
+          {/* <button onClick={handleModeChange}>
             {mode === "light" ? "dark" : "light"}
-          </button>
+          </button> */}
         </div>
 
         <div className="container">
