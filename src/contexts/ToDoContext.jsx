@@ -16,11 +16,11 @@ export const ToDoProvider = ({ children }) => {
   }, [todos]);
 
   const categories = [
-    { value: "work", label: "Work" },
-    { value: "home", label: "Home" },
-    { value: "shopping", label: "Shopping" },
-    { value: "study", label: "Study" },
-    { value: "travel", label: "Travel" },
+    { value: "Work", label: "Work" },
+    { value: "Home", label: "Home" },
+    { value: "Shopping", label: "Shopping" },
+    { value: "Study", label: "Study" },
+    { value: "Travel", label: "Travel" },
   ];
   //function to add a todo with text, date, category.
   //creates a new todo objecte with additional properties (completed, time and completedAt)

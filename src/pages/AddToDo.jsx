@@ -1,6 +1,7 @@
 import { useToDos } from "../contexts/ToDoContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import moment from "moment";
 
 import "./AddToDo.css";
@@ -38,7 +39,7 @@ export const AddToDo = () => {
       </Link> */}
       {/* navigation back to list */}
       <Link to="/todo" className="todo-link">
-        <p>✖️</p>
+        <h2> x</h2>
       </Link>
 
       <div className="add-title">
@@ -48,7 +49,6 @@ export const AddToDo = () => {
         <form onSubmit={submitHandler} className="add-form">
           <label htmlFor="task">What are you planning?</label>
           <textarea
-            className="add-text"
             id="task"
             name="task"
             rows="5"

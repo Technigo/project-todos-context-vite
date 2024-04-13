@@ -10,6 +10,7 @@
   --sun-blue: #203d98;
   --white: #ffffff;
   --black: #000000;
+  --grey: #808588;
 }
 
 *,
@@ -57,7 +58,7 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--sun-purple);
 }
 
@@ -65,9 +66,5 @@ h2 {
   display: flex;
   justify-content: center;
   height: 100vh;
-  /* background: linear-gradient(
-    var(--sun-yellow),
-    var(--sun-orange),
-    var(--sun-pink)
-  ); */
+  padding-top: 20px;
 }
