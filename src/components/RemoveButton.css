@@ -4,10 +4,9 @@
   align-items: center;
   margin: 10px;
   border-radius: 30px;
-  background-color: rgb(225, 223, 223);
   border: none;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   transform: scale(1);
   transition: transform 250ms ease-in;
 }

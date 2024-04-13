@@ -1,30 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTodoContext } from "../context/TodoContext";
 import "./TaskCount.css";
 
 const TaskCount = () => {
   const { todos } = useTodoContext();
-  /*   const [completedCount, setCompletedCount] = useState(0); */
-  const [incompleteCount, setIncompleteCount] = useState(0);
-  const [completedTasks, setCompletedTasks] = useState([]);
 
   useEffect(() => {
-    const completed = todos.filter((todo) => todo.completed);
-    const incomplete = todos.filter((todo) => !todo.completed).length;
-    setCompletedTasks(completed);
-    setIncompleteCount(incomplete);
+    // No need to store completed tasks separately, we'll calculate it directly
   }, [todos]);
+
+  const totalTasks = todos.length;
+  const completedCount = todos.filter((todo) => todo.completed).length;
 
   return (
     <div className="task-count" aria-label="Task Count">
-      <p>Incomplete: {incompleteCount}</p>
-      <hr />
-      <p>Completed: {completedTasks.lenght}</p>
-      <ul className="completed-tasks">
-        {completedTasks.map((task) => (
-          <li key={task.id}>{task.text}</li>
-        ))}
-      </ul>
+      <p>
+        {totalTasks === 0 ? (
+          "No tasks to do yet" // Display "No tasks created yet" if no tasks
+        ) : (
+          `${completedCount} task${completedCount !== 1 ? "s" : ""} completed of ${totalTasks}` // Pluralize "task" based on count
+        )}
+      </p>
     </div>
   );
 };

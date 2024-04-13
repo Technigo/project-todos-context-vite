@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useTodoContext } from "../context/TodoContext";
 
 import "./TodoForm.css";
+import TaskCount from "./TaskCount";
 
 const TodoForm = () => {
   const { addTodo } = useTodoContext();
@@ -40,6 +41,7 @@ const TodoForm = () => {
         <button type="submit">Add</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
+      <TaskCount />
     </div>
   );
 };

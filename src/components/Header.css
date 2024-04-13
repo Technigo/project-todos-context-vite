@@ -6,6 +6,10 @@
   color: white;
   font-size: 2rem;
   width: 100%;
-  height: ¨150px;
+  height: 150px;
   margin-bottom: 20px;
+}
+
+.header-container h1 {
+  margin: 10px;
 }

@@ -1,6 +1,6 @@
 import "./Footer.css";
 import image from "../assets/technigo-logo.svg";
-import backgroundImage from "../assets/cork-texture.jpg";
+import backgroundImage from "../assets/crumbled-white-papper.jpg";
 
 export const Footer = () => {
   return (

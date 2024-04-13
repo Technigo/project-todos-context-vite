@@ -9,7 +9,7 @@ export const Header = () => {
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      <h1>To-Doodle</h1>
+      <h1>To Doodle</h1>
     </div>
   );
 };

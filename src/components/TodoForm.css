@@ -1,5 +1,10 @@
 .form-input-container {
-  margin-bottom: 20px;
+  width: 400px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 20px;
 }
 
 .form-input-container form {

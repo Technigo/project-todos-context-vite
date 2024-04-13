@@ -1,8 +1,10 @@
-.completed-tasks {
+.task-count {
   list-style-type: none;
-  padding: 0;
 }
 
-.completed-tasks li {
-  margin-bottom: 5px;
+.task-count p {
+  text-align: center;
+  margin-bottom: 0;
 }
+
+

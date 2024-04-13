@@ -13,25 +13,12 @@ const App = () => {
   return (
     <TodoProvider>
       <div className="App">
-      <Header />
-      <div className="app-container">
-        <div className="card-container">
-          <div className="card">
-            <h2 className="card-title">Create Task</h2>
-            <TodoForm />
-            <TodoList />
-          </div>
-          <div className="card">
-            <h2 className="card-title">Completed List</h2>
-            <div className="task-count" aria-label="Task Count">
-              <TaskCount />
-            </div>
-          </div>
-        </div>
+        <Header />
+        <TodoForm />
+        <TodoList />
+        <Footer />
       </div>
-      <Footer />
-      </div>
-  </TodoProvider>
+    </TodoProvider>
   );
 };
 
