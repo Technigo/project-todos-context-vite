@@ -52,4 +52,7 @@ input::placeholder{
 input[type=text].add-input{
     height: fit-content;
 }
+.addBtn{
+    color: black;
+}
 }
