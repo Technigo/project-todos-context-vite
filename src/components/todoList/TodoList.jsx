@@ -14,11 +14,6 @@ export const TodoList = () => {
     toggleTodo(index, !completed);
   };
 
-  const handleClearAll = (index) => {
-    clearAllTask(index);
-    confirm("Are you sure?");
-  };
-
   const completedTaskAmount = todos.filter((todo) => todo.completed).length;
 
   return (
@@ -36,7 +31,6 @@ export const TodoList = () => {
                 onChange={() => handleToggle(index, todo.completed)}
                 style={{
                   textDecoration: todo.completed ? "line-through" : "none",
-                  
                 }}
                 todo={todo.text}
                 onClick={() => handleRemoveTask(todo)}
@@ -47,11 +41,7 @@ export const TodoList = () => {
           <p aria-label="completed tasks amount">
              🥐 Completed {completedTaskAmount}/{todos.length}
             </p>
-            {/* <button onClick={handleClearAll}>Clean all</button> */}
           </div>
-         
-       
-       
         </>
       ) : (
         <EmptyList />

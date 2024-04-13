@@ -1,11 +1,3 @@
-.dark{
-    background-color: blue;
-}
-
-.light{
-    background-color: white;
-}
-
 header{
   color: black;
   height: 200px;
@@ -17,10 +9,11 @@ header{
   font-family: "Rampart One", sans-serif;
   font-weight: 400;
 }
+
  main{
     padding: 20px 100px; 
-
  }
+
 .date-mode{
     /* display: flex;
     flex-direction: row;
@@ -41,12 +34,7 @@ header{
     padding: 50px;
 }
 
-.completeAmount{
-    padding-bottom: 60px;
-}
-
-.date-mode time,
-.completeAmount{
+.date-mode time{
     font-size: 30px;
     font-family: "Caveat", cursive;
     font-weight: 400;
