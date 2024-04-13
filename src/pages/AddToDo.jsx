@@ -14,13 +14,15 @@ export const AddToDo = () => {
   //access functionality for adding tasks from ToDoContext
   const { addToDo, categories } = useToDos();
 
+
   // Get today's date
   const today = new Date().toISOString().split("T")[0];
 
-
   const submitHandler = (e) => {
     e.preventDefault();
-    if (!text.trim()) return;
+    if (!text.trim()) 
+
+    return;
 
     //format the date using moment.js
     const formattedDate = moment(date).format("MMM Do, YY");
@@ -30,7 +32,6 @@ export const AddToDo = () => {
     setText("");
     setDate("");
     setCategory("");
-
   };
 
   return (
@@ -60,6 +61,7 @@ export const AddToDo = () => {
             onChange={(e) => {
               setText(e.target.value);
             }}
+            required
           />
           <div className="add-date">
             <label htmlFor="date">⏰ Deadline</label>
@@ -71,6 +73,7 @@ export const AddToDo = () => {
               onChange={(e) => {
                 setDate(e.target.value);
               }}
+              required
             />
           </div>
           <div className="add-category">
@@ -83,6 +86,7 @@ export const AddToDo = () => {
               onChange={(e) => {
                 setCategory(e.target.value);
               }}
+              required
             >
               <option value="">Select a category</option>
               {categories.map((category) => (
@@ -95,6 +99,7 @@ export const AddToDo = () => {
           <button type="submit" className="add-btn">
             Create
           </button>
+
         </form>
       </div>
     </section>
