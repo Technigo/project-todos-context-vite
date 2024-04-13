@@ -1,6 +1,8 @@
-import { useAppData } from "../contexts/FormContext";
-import { EmptyList } from "./EmptyList";
+import { useAppData } from "../../contexts/FormContext";
+import { EmptyList } from "../EmptyList";
 import { TodoListForm } from "./TodoListForm";
+import "./todoList.css";
+
 export const TodoList = () => {
   const { todos, removeTask, toggleTodo, clearAllTask } = useAppData();
 
@@ -23,15 +25,14 @@ export const TodoList = () => {
     <div className="todo-list-container">
       {todos.length > 0 ? (
         <>
-          <div>
-            <p>
-              Completed tasks {completedTaskAmount}/{todos.length}
-            </p>
-          </div>
-          <ul style={{ listStyle: "none" }}>
+          
+           
+
+       
+          <ul style={{ listStyle: "none" }} className="todo">
             {todos.map((todo, index) => (
               <TodoListForm
-                key={index}
+                keyword={index}
                 type={"checkbox"}
                 checked={todo.completed}
                 onChange={() => handleToggle(index, todo.completed)}
@@ -43,7 +44,14 @@ export const TodoList = () => {
               />
             ))}
           </ul>
-          <button onClick={handleClearAll}>Clean all</button>
+          <h4 className="completeAmount">
+              Completed tasks {completedTaskAmount}/{todos.length}
+            </h4>
+        
+     
+            {/* <button onClick={handleClearAll}>Clean all</button> */}
+       
+       
         </>
       ) : (
         <EmptyList />

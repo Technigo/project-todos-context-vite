@@ -1,0 +1,37 @@
+.dark{
+    background-color: blue;
+}
+
+.light{
+    background-color: white;
+}
+
+header{
+  color: black;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../Image/buttor.jpeg');
+  
+  
+}
+
+.date-mode{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.completeAmount{
+    padding-bottom: 60px;
+}

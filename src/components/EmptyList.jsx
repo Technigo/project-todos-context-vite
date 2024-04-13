@@ -1,9 +1,9 @@
-import catFace from "../Image/catFace.jpeg"
+import yellow from "../Image/yellow.jpeg"
 
 export const EmptyList = () => {
     return (
         <div>
-            <img src={catFace} alt="a cat face" />
+            <img src={yellow} alt="a yellow" />
             <p>
                 Your todo list is empty...
             </p>
