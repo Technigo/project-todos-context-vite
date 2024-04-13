@@ -73,6 +73,12 @@ export const ToDoProvider = ({ children }) => {
     setTodos(newTodos);
   };
 
+  //calculate total number of tasks
+  const totalToDos = todos.length;
+
+  //calculate remaining tasks
+  const doneToDos = todos.filter((todo) => todo.completed).length;
+
   return (
     <ToDoContext.Provider
       value={{
@@ -83,6 +89,8 @@ export const ToDoProvider = ({ children }) => {
         deleteToDo,
         moveTaskUp,
         moveTaskDown,
+        totalToDos,
+        doneToDos,
       }}
     >
       {children}

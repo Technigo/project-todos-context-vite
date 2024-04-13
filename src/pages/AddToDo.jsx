@@ -41,7 +41,7 @@ export const AddToDo = () => {
         <p>Home</p>
       </Link> */}
       {/* navigation back to list */}
-      <Link to="/todo" className="todo-link">
+      <Link to="/" className="todo-link">
         <h2> x</h2>
       </Link>
 
@@ -96,6 +96,7 @@ export const AddToDo = () => {
               ))}
             </select>
           </div>
+
           <button type="submit" className="add-btn">
             Create
           </button>

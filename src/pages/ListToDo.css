@@ -10,6 +10,18 @@
   height: auto;
 }
 
+.empty-container {
+  text-align: center;
+  padding: 20px;
+  color: var(--sun-purple);
+  font-weight: 700;
+}
+
+.empty-text {
+  color: var(--white-purple);
+  padding-bottom: 10px;
+}
+
 .task-wrapper {
   display: flex;
   align-items: center;
@@ -26,12 +38,6 @@
   align-items: center;
   flex-grow: 1;
 }
-
-/* .task-text,
-.task-date,
-.task-category {
-  padding-left: 10px;
-} */
 
 .task-date {
   font-size: 0.8em;
@@ -79,7 +85,6 @@ input {
 .btn-move-up {
   color: var(--sun-purple);
   padding: 5px;
-
 }
 
 .btn-move-down {

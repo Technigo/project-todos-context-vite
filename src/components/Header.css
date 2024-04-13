@@ -7,13 +7,28 @@
     var(--sun-orange),
     var(--sun-pink)
   );
-  height: 150px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header-title {
-  padding: 20px 20px 10px 20px;
+  text-align: center;
 }
 
 .header-subtitle {
   color: var(--sun-yellow);
+  text-align: center;
+}
+
+.counter {
+  border: 1px solid var(--sun-purple);
+  background: var(--white);
+  color: var(--sun-purple);
+  padding: 5px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: 600;
 }
