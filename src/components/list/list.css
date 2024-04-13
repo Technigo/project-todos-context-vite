@@ -1,0 +1,11 @@
+.task-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.task-list {
+  list-style-type: none;
+  width: 100%;
+}
