@@ -29,15 +29,3 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
-/* TABLET SCREENS 745px to 1281px------------------------------------------------------------ */
-
-@media (min-width:746px) and (max-width:1280px){
-
-}
-
-/* SCREENS min 1281px ------------------------------------------------------------ */
-
-@media (min-width: 1281px) {
-
-}
