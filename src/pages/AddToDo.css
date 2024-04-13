@@ -39,7 +39,7 @@
 }
 
 .add-btn {
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 5px;
   font-size: 1.25;
   font-weight: 700;
@@ -53,15 +53,15 @@
 .add-form {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .add-date,
 .add-category {
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
   justify-content: space-between;
+  width: 100%;
 }
 
 input#date,
@@ -82,8 +82,8 @@ textarea {
 
 @media (min-width: 667px) {
   .add-section {
-    width: 80%; 
-    margin: auto; 
+    width: 80%;
+    margin: auto;
   }
 
   .add-container {
@@ -93,5 +93,14 @@ textarea {
   .add-date,
   .add-category {
     flex-direction: row;
+    padding: 10px 0;
+  }
+
+  .add-form {
+    padding: 10px;
+  }
+
+  .add-btn {
+    margin-top: 30px;
   }
 }

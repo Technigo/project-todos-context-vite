@@ -35,7 +35,7 @@ export const ToDoProvider = ({ children }) => {
     setTodos([...todos, newToDo]);
   };
 
-  //function to iterate through the todos list using map. Creates a new object with completed state flipped and sets completedAt if the task is marked complete (check?? not showing)
+  //function to iterate through the todos list using map. Creates a new object with completed state flipped and sets completedAt if the task is marked complete
   const toggleToDo = (index) => {
     const newToDo = todos.map((todo, i) => {
       if (i === index) {

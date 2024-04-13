@@ -27,8 +27,21 @@
   color: var(--sun-purple);
   padding: 5px;
   margin-bottom: 10px;
-
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-weight: 600;
+}
+
+@media (min-width: 667px) {
+  .header-title {
+    padding-top: 5px;
+  }
+
+  .header-subtitle {
+    padding-top: 5px;
+  }
+
+  .counter {
+    margin: 10px 0;
+  }
 }

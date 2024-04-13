@@ -17,7 +17,7 @@ export const ListToDo = () => {
         <h2>Your to-do list</h2>
       </div>
       <div className="add-container">
-        {/* checking if tasks available, otherwise render message */}
+        {/* checking if tasks is available, otherwise render message */}
         {todos.length === 0 ? (
           <div className="empty-container">
             <p className="empty-text">Nothing left to do.</p>
