@@ -14,15 +14,12 @@ export const AddToDo = () => {
   //access functionality for adding tasks from ToDoContext
   const { addToDo, categories } = useToDos();
 
-
   // Get today's date
   const today = new Date().toISOString().split("T")[0];
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (!text.trim()) 
-
-    return;
+    if (!text.trim()) return;
 
     //format the date using moment.js
     const formattedDate = moment(date).format("MMM Do, YY");
@@ -41,11 +38,11 @@ export const AddToDo = () => {
         <p>Home</p>
       </Link> */}
       {/* navigation back to list */}
-      <Link to="/" className="todo-link">
-        <h2> x</h2>
-      </Link>
 
       <div className="add-title">
+        <Link to="/" className="todo-link">
+          <h2>x</h2>
+        </Link>
         <h2>New Task</h2>
       </div>
       <div className="add-container">
@@ -96,11 +93,9 @@ export const AddToDo = () => {
               ))}
             </select>
           </div>
-
-          <button type="submit" className="add-btn">
-            Create
-          </button>
-
+            <button type="submit" className="add-btn">
+              Create
+            </button>
         </form>
       </div>
     </section>
