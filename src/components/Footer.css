@@ -12,8 +12,9 @@
 
 .footer-container p {
   margin: 10px;
+  font-size: 0.85rem;
 }
 
 .logo {
-  height: 35px;
+  height: 30px;
 }

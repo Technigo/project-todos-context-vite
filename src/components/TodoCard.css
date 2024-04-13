@@ -1,5 +1,4 @@
 .todo-card {
-  max-width: 400px;
   margin: 20px;
   border: 1px solid #ccc;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -10,9 +9,9 @@
 
 .todo-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 10px;
-  word-break: break-word;
 }
 
 .todo-item img {
@@ -49,6 +48,8 @@
 .todo-item span {
   flex: 1; /* move remove button to the right */
   overflow-wrap: break-word; /* ensure long text doesn´t overflow */
+  word-break: break-word;
+
 }
 
 .timestamp {
@@ -63,6 +64,11 @@
 /* TABLET SCREENS max 745px ------------------------------------------------------------ */
 
 @media (max-width:745px){ 
+  .todo-card {
+    margin: 10px;
+    padding: 5px;
+    background-color: #ffffff;
+  }
 
 }
 

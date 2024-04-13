@@ -1,15 +1,11 @@
-import backgroundImage from "../assets/cork-texture-big.jpg";
 import "./Header.css";
+import thumbtackInLine from "../assets/thumbtack-in-line.png";
 
 export const Header = () => {
   return (
-    <div
-      className="header-container"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
-    >
+    <div className="header-container">
       <h1>To Doodle</h1>
+      <img src={thumbtackInLine} alt="thumbtack" className="thumbtack-in-line"></img>
     </div>
   );
 };
