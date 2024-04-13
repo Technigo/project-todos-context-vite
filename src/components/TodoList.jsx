@@ -6,7 +6,7 @@ import "./todo-list.css";
 
 //Map and list all todos
 export const TodoList = () => {
-  const { todo, removeToDo, clearList, handleRemoveChecked } = useTodo();
+  const { todo, removeToDo, clearList, handleRemoveChecked, count } = useTodo();
 
   //const filterDoneToDos = () => {};
 
@@ -22,21 +22,28 @@ export const TodoList = () => {
             <button
               className="delete-btn-all"
               type="button"
-              onClick={() => clearList()}
-            >
+              onClick={() => clearList()}>
               Clear all
             </button>
           )}
         </div>
-        {/* {todo.length > 0 && (
+        </div>
+
+        <div className="counter">
+          <h3>{todo.length}</h3>
+        </div>
+      </div>
+    
+  );
+};
+
+{
+  /* {todo.length > 0 && (
           <button
             className="delete-btn-checked"
             type="button"
             onClick={() => handleRemoveChecked()}>
             ✔️ Clear checked
           </button>
-        )}  */}
-      </div>
-    </div>
-  );
-};
+        )}  */
+}

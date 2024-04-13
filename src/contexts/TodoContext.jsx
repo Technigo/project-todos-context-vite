@@ -4,6 +4,7 @@ const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [todo, setTodo] = useState([]);
+  const [count, setCount] = useState([0]);
 
   const addTodo = (newTodo) => {
     setTodo((prevTodos) => [...prevTodos, newTodo]);
@@ -16,8 +17,14 @@ export const TodoProvider = ({ children }) => {
     setTodo(removeItem);
   }
 
+  const countTasks = () => {
+    setCount(function () {
+      return;
+    });
+  };
+
   const clearList = () => {
-    alert(`Are you sure you want to remove all tasks from the list?`);
+    confirm(`Are you sure you want to remove all tasks from the list?`);
     setTodo([]);
   };
 
@@ -29,8 +36,10 @@ export const TodoProvider = ({ children }) => {
         addTodo,
         clearList,
         removeToDo,
-      }}
-    >
+        count,
+        setCount,
+        countTasks,
+      }}>
       {children}
     </TodoContext.Provider>
   );
@@ -50,3 +59,5 @@ export const useTodo = () => useContext(TodoContext);
   useEffect(() => {
     localStorage.setItem("todo", JSON.stringify(todo));
   }, [todo]); */
+
+//spread operator for localStorage
