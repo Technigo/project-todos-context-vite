@@ -11,7 +11,7 @@
 
 .taskItem {
   width: 100%;
-  max-width: 400px;
+  max-width: 250px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
@@ -205,6 +205,9 @@
     align-items: center;
     padding: 0 30%;
   }
+  .taskItem {
+    max-width: 400px;
+  }
 }
 @media (min-width: 1023px) {
   .header {
@@ -213,5 +216,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 40%;
+  }
+  .taskItem {
+    max-width: 500px;
   }
 }
