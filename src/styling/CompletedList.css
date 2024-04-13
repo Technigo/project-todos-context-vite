@@ -1,0 +1,34 @@
+.completed {
+  background-color: rgb(255, 151, 151);
+  min-height: 500px;
+  margin-top: 1em;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.top-complete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-all:enabled:hover {
+  box-shadow: 0 0 11px rgba(87, 32, 0, 0.308);
+}
+
+.count {
+  align-self: flex-end;
+}
+
+.no-complete-img {
+  width: 90%;
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .completed {
+    min-height: 600px;
+  }
+}

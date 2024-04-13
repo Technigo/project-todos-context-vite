@@ -1,37 +1,21 @@
 <h1 align="center">
   <a href="">
-    <img src="./src/assets/banner.svg" alt="Project Banner Image">
+    <img src="./public/project-overview.png" alt="Project Banner Image">
   </a>
 </h1>
 
 # Todo - useContext Project
 
-Replace this readme with your own information about your project.
+During this project we were assigned the task of making a Todo list where the user can add custom tasks, mark them as complete, delete them or reverse them to uncompleted. We were supposed to use useContext for global state. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# The Problem
+- Design: We were not given any design templates and we built the design from scratch.
+- useContext: We created 2 custom contexts for todo and complete tasks separately in order to manipulate their state independently.
+- useSound: We implemented the useSound hook by which we can insert and play audio files triggered by user actions.
+- moment.js: We applied the moment.js module that generates the created date. We saved the raw moment in the state and display the formatted time.
+- API call and useEffect: We created a section for displaying daily inspiration quote fetched by API call and triggered by the useEffect hook.
 
-## Getting Started with the Project
+If we had more time, we would like to challenge ourself with the streach goal - implementing the due date and categories.
 
-### Dependency Installation & Startup Development Server
-
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
-
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
-
-```bash
-npm i && code . && npm run dev
-```
-
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-
-## Instructions
-
-<a href="instructions.md">
-   See instructions of this project
-  </a>
+# View it live
+https://todo-weniza.netlify.app

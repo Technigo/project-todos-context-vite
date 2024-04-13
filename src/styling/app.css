@@ -1,0 +1,72 @@
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: white;
+  margin: 0.7%;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 2em 0;
+}
+
+.card {
+  padding: 1em;
+  border: 0.5px solid white;
+  border-radius: 30px;
+}
+
+.section {
+  width: 90%;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+.button {
+  padding: 0.3em 0.7em;
+  width: max-content;
+  border: none;
+  font-size: 1em;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(90, 31, 31);
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: rgb(224, 194, 194);
+  color: grey;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    grid-template-columns: 50% 50%;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}

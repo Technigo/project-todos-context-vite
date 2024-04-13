@@ -1,0 +1,41 @@
+.daily-inspo {
+  background-color: rgb(252, 175, 131);
+  place-content: center;
+  height: 150px;
+
+  p {
+    font-style: italic;
+    font-size: 18px;
+  }
+}
+
+.quote p {
+  margin-top: 1em;
+}
+
+#lottie {
+  width: 45%;
+  float: right;
+}
+
+@media screen and (min-width: 668px) {
+  .quote p {
+    font-size: 1.5em;
+  }
+  #lottie {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .quote p {
+    font-size: 1.3em;
+  }
+
+  .daily-inspo {
+    height: 100px;
+  }
+  #lottie {
+    max-width: 240px;
+  }
+}

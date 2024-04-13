@@ -1,0 +1,38 @@
+.todo-list {
+  background-color: rgb(252, 198, 127);
+  min-height: 500px;
+  margin-top: 1em;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.clear {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+.top-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complete {
+  transition: box-shadow 0.2s;
+}
+
+.complete:enabled:hover {
+  box-shadow: 0 0 11px rgba(87, 32, 0, 0.308);
+}
+
+.count {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+  .todo-list {
+    min-height: 600px;
+  }
+}

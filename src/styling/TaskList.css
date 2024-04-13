@@ -1,0 +1,105 @@
+.task-list {
+  display: grid;
+  grid-template-rows: repeat(5, max-content);
+  grid-template-columns: 100%;
+  gap: 1em;
+}
+
+li {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: inherit;
+  height: fit-content;
+  padding: 1em;
+
+  p {
+    padding: 0 0 0.5em 1em;
+    color: rgba(83, 1, 1, 0.562);
+    font-weight: 500;
+  }
+}
+
+.task-item {
+  width: inherit;
+  display: flex;
+  align-items: flex-start;
+  padding: 1em 1em 0.5em 1em;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+}
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+.checkbox:has([type="checkbox"]:checked) ~ .task-content > .task-text {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 0.1em;
+  text-decoration-style: solid;
+  text-decoration-color: inherit;
+  -webkit-text-decoration-color: inherit;
+  -webkit-text-decoration-line: line-through;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+
+.checkbox:hover {
+  transform: scale(1.15);
+}
+
+.unchecked {
+  position: absolute;
+  z-index: 0;
+}
+.checked {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  transition: display 0.2s;
+}
+input[type="checkbox"]:checked ~ .checked {
+  display: block;
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  padding-left: 1em;
+}
+
+.task-text {
+  max-width: 80%;
+  height: auto;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 1.3em;
+  font-weight: 800;
+  color: rgb(105, 35, 35);
+}
+
+.trashbin {
+  width: 15px;
+  height: 15px;
+  padding-top: 5px;
+  fill: rgb(82, 27, 27);
+  transition: transform 0.2s;
+}
+
+.trashbin:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
