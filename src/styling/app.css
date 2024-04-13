@@ -66,4 +66,7 @@ h1 {
   .card {
     padding: 2rem;
   }
+  h1 {
+    font-size: 1.5em;
+  }
 }
