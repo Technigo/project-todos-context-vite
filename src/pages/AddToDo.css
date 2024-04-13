@@ -62,6 +62,7 @@
 input#date,
 select,
 textarea {
+  color: var(--sun-purple);
   font-size: 1.25;
   border: none;
   padding: 0 10px;
