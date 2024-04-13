@@ -53,6 +53,7 @@ export const ToDoProvider = ({ children }) => {
   const deleteToDo = (index) => {
     const newToDo = todos.filter((_, i) => i !== index);
     setTodos(newToDo);
+    localStorage.setItem("todos", JSON.stringify(newToDo));
   };
 
   const moveTaskUp = (index) => {
