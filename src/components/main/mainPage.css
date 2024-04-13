@@ -15,10 +15,6 @@ header{
  }
 
 .date-mode{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -40,3 +36,21 @@ header{
     font-weight: 400;
 }
 
+@media only screen and (max-width: 768px){
+    main{
+        padding: 0;
+    }
+
+    header{
+        font-size: 45px;
+    }
+
+    .date-mode{
+        display: flex;
+        padding-left: 50px;
+    }
+
+    .date-mode time{
+        font-size: 25px;
+    }
+}

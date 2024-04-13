@@ -1,21 +1,4 @@
-/* .add-wrapper{
-    display: flex;
-    flex-direction: column;
 
-} */
-
-/* form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-textarea{
-    resize: none;
-    height: 4rem;
-    border-style: inset;
-    border-width: 2px;  
-} */
 .add-container{
     width: 60%;
 }
@@ -33,7 +16,9 @@ input[type=text].add-input{
     border: 2px solid transparent;
     border-radius: 8px;
     position: relative;
-    height: 50px;
+    min-height: 50px;
+    word-wrap: break-word;
+    
 }
 
 .addBtn{
@@ -48,8 +33,6 @@ input[type=text].add-input{
     font-family: "Caveat", cursive;
     font-weight: bold;
     font-size: 15px;
-   
-    
 }
 
 input::placeholder {
@@ -57,3 +40,16 @@ input::placeholder {
     font-size: 20px;
     font-weight: 400;
   }
+
+@media only screen and (max-width: 768px) {
+    
+.add-container{
+    width: 100%;
+}
+input::placeholder{
+    white-space: pre-wrap;
+}
+input[type=text].add-input{
+    height: fit-content;
+}
+}

@@ -13,7 +13,7 @@ export const AddTaskForm = ({onFormSubmit, newTodo, onNewTodoChange}) => {
             className="add-input"
             placeholder="What do you need to do?"
             />
-            <button type="submit" className="addBtn" aria-label="add task">➕ Add</button>
+            <button type="submit" className="addBtn" aria-label="remove task">➕ Add</button>
         </form>
     )
 }
