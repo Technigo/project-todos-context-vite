@@ -29,3 +29,7 @@
   border: var(--light-mode-border);
   text-shadow: 3px 3px 6px white;
 }
+
+.comleted-count {
+  margin-top: 10px;
+}

@@ -22,7 +22,7 @@ const getMonthName = (monthNumber) => {
 };
 
 export const AddTaskPage = () => {
-  const { addTask, completeTask } = useAppData();
+  const { addTask, completeTask, darkTheme } = useAppData();
   const [taskDate, setTaskDate] = useState("");
   const [displayMonth, setDisplayMonth] = useState("");
   const [displayDate, setDisplayDate] = useState("");
@@ -69,13 +69,18 @@ export const AddTaskPage = () => {
   };
 
   return (
-    <section className="task-page">
-      <Link className="home-btn" to="/">
+    <section
+      className={`task-page ${darkTheme ? `light-theme` : `dark-theme`}`}
+    >
+      <Link
+        className={`home-btn ${darkTheme ? `light-theme` : `dark-theme`}`}
+        to="/"
+      >
         <svg
           className="home-btn-icon"
           stroke="currentColor"
           fill="currentColor"
-          stroke-width="0"
+          strokeWidth="0"
           viewBox="0 0 16 16"
           height="1em"
           width="1em"
@@ -93,7 +98,11 @@ export const AddTaskPage = () => {
           ></path>
         </svg>
       </Link>
-      <div className="add-form-container">
+      <div
+        className={`add-form-container ${
+          darkTheme ? `light-theme` : `dark-theme`
+        }`}
+      >
         <h3 className="add-form-title">Add New Task</h3>
         <form className="add-task-form" onSubmit={handleSubmit}>
           <label className="task-description-label" htmlFor="task-description">
@@ -122,7 +131,12 @@ export const AddTaskPage = () => {
             />
           </label>
 
-          <button className="add-form-btn" type="submit">
+          <button
+            className={`add-form-btn ${
+              darkTheme ? `light-theme` : `dark-theme`
+            }`}
+            type="submit"
+          >
             Add
           </button>
         </form>

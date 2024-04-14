@@ -6,10 +6,10 @@
   --dark-mode-text-color: #efefeffc;
   --dark-mode-month-color: #aaaaaa;
 
-  --light-mode-overview-background-color: #ecfccfe1;
-  --light-mode-taskbar-background-color: #ecfccf;
+  --light-mode-overview-background-color: #ffffff;
+  --light-mode-taskbar-background-color: #ffffff;
   --light-mode-border: #373b0e32 solid 2px;
-  --light-mode-task-border: #ffffff51 solid 1px;
+  --light-mode-task-border: #000000 solid 1px;
   --light-mode-text-color: #373b0e;
   --light-mode-month-color: #373b0e;
 }

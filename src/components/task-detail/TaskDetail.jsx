@@ -14,9 +14,16 @@ export const TaskDetail = () => {
 
   return (
     <>
-      <h2 className="task-bar-title">Tasks</h2>
+      <h2
+        className={`task-bar-title ${darkTheme ? `light-theme` : `dark-theme`}`}
+      >
+        Tasks
+      </h2>
       {tasks.map((task, index) => (
-        <article key={index} className="task-detail">
+        <article
+          key={index}
+          className={`task-detail ${darkTheme ? `light-theme` : `dark-theme`}`}
+        >
           <div className="task-main-info">
             <input
               className={`task-complete-btn ${

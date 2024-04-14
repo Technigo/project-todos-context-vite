@@ -11,7 +11,7 @@ export const Overview = () => {
     >
       <div className="overview-text">
         <h1 className="overview-title">To Do list</h1>
-        <p>
+        <p className="comleted-count">
           Completed {completeTaskCount}/{totalTaskCount}
         </p>
       </div>

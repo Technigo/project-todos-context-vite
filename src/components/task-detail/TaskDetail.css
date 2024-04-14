@@ -2,16 +2,24 @@
   font-size: 1.2rem;
   width: 100%;
   padding: 15px 0;
-  border-bottom: var(--dark-mode-task-border);
 }
 
 .task-detail {
   width: 100%;
   padding: 10px 0;
-  border-bottom: var(--dark-mode-task-border);
+
   display: grid;
   grid-template-columns: 4fr 2fr 1fr;
   align-items: center;
+}
+
+.task-bar-title.dark-theme,
+.task-detail.dark-theme {
+  border-bottom: var(--dark-mode-task-border);
+}
+.task-bar-title.light-theme,
+.task-detail.light-theme {
+  border-bottom: var(--light-mode-task-border);
 }
 
 .task-main-info {
