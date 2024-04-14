@@ -3,13 +3,19 @@ import "./TodoList.css";
 
 export const TodoList = () => {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Sample Todo", completed: false },
+    { id: 1, text: "Create a To-Do List", completed: true },
+    {
+      id: 2,
+      text: "Exercise at least three times this week",
+      completed: false,
+    },
+    { id: 3, text: "Finish weekly project", completed: false },
   ]);
   const [newTodoText, setNewTodoText] = useState("");
 
   // Function to handle adding new todo item
   const handleAddTodo = () => {
-    if (newTodoText.trim() !== "") {
+    if (newTodoText.trim() !== "" && todos.length < 10) {
       const newTodo = {
         id: Math.random(),
         text: newTodoText,
@@ -28,10 +34,36 @@ export const TodoList = () => {
     setTodos(updatedTodos);
   };
 
+  // Function to handle removing todo item
+  const handleRemoveTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
+  // Function to handle change in input field
+  const handleChange = (e) => {
+    if (e.target.value.length <= 50) {
+      setNewTodoText(e.target.value);
+    }
+  };
+
+  // Function to get count of all tasks
+  const getAllTasksCount = () => todos.length;
+
+  // Function to get count of uncompleted tasks
+  const getUncompletedTasksCount = () =>
+    todos.filter((todo) => !todo.completed).length;
+
   return (
     <div className="todo-container">
       <div className="todo-header">
         <h2>To-Do List</h2>
+      </div>
+      <div className="todo-count">
+        <p>
+          Total: {getAllTasksCount()} | Uncompleted:{" "}
+          {getUncompletedTasksCount()}
+        </p>
       </div>
       <div className="todo-list">
         {todos.map((todo) => (
@@ -41,9 +73,16 @@ export const TodoList = () => {
               checked={todo.completed}
               onChange={() => handleToggleTodo(todo.id)}
             />
-            <span className={todo.completed ? "completed" : ""}>
+            <span className={`todo-text ${todo.completed ? "completed" : ""}`}>
               {todo.text}
             </span>
+
+            <button
+              className="remove-button"
+              onClick={() => handleRemoveTodo(todo.id)}
+            >
+              Remove
+            </button>
           </div>
         ))}
       </div>
@@ -51,7 +90,8 @@ export const TodoList = () => {
         <input
           type="text"
           value={newTodoText}
-          onChange={(e) => setNewTodoText(e.target.value)}
+          onChange={handleChange}
+          maxLength={40} // Set maximum character length
           placeholder="Enter your next to-do task here"
         />
         <button onClick={handleAddTodo}>Add</button>

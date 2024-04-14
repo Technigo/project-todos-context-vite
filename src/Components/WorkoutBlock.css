@@ -31,6 +31,11 @@
   cursor: pointer;
 }
 
+.workout-day:hover {
+  background-color: #382e2c;
+  color: #ffffff;
+}
+
 .workout-day.active {
   background-color: #382e2c;
   color: #ffffff;
