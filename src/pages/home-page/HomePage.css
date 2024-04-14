@@ -1,0 +1,50 @@
+main {
+  position: relative;
+}
+
+.tool-bar {
+  position: fixed;
+  bottom: 15px;
+  left: 36%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+}
+
+.tool-bar.dark-theme {
+  background-color: var(--dark-mode-overview-background-color);
+  border: var(--dark-mode-border);
+}
+.tool-bar.light-theme {
+  background-color: var(--light-mode-overview-background-color);
+  border: var(--light-mode-border);
+}
+
+.link-add-new-task {
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+
+  margin: 8px 0;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+
+  border-radius: 10px;
+  backdrop-filter: blur;
+}
+
+.link-add-new-task.dark-theme {
+  color: #3e4121;
+  background-color: #e7fe55c6;
+}
+
+.link-add-new-task.light-theme {
+  color: #e7fe55c6;
+  background-color: #2c2f06;
+}

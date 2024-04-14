@@ -1,0 +1,27 @@
+.theme-btn {
+  font-size: 1rem;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.theme-btn:hover {
+  cursor: pointer;
+  background-color: #ffffff51;
+}
+
+.dark-theme-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--light-mode-text-color);
+}
+
+.light-theme-icon {
+  width: 25px;
+  height: 25px;
+  color: var(--dark-mode-text-color);
+}
