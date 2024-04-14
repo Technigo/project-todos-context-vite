@@ -1,0 +1,37 @@
+.task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.task-section {
+  margin: 9rem auto;
+  padding: 1rem 2rem;
+  width: 60%;
+  min-height: 60vh;
+
+  border: var(--dark-mode-border);
+  border-radius: 15px;
+}
+
+.task-section.dark-theme {
+  background-color: var(--dark-mode-taskbar-background-color);
+  color: var(--dark-mode-text-color);
+}
+
+.task-section.light-theme {
+  background-color: var(--light-mode-taskbar-background-color);
+  color: var(--light-mode-text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .task-section {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .task-section {
+    width: 100%;
+  }
+}
