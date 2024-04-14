@@ -1,14 +1,44 @@
+:root {
+  --dark-mode-overview-background-color: #ffffff1c;
+  --dark-mode-taskbar-background-color: #ffffff08;
+  --dark-mode-border: #ffffff14 solid 2px;
+  --dark-mode-task-border: #ffffff51 solid 1px;
+  --dark-mode-text-color: #efefeffc;
+  --dark-mode-month-color: #aaaaaa;
+
+  --light-mode-overview-background-color: #ecfccfe1;
+  --light-mode-taskbar-background-color: #ecfccf;
+  --light-mode-border: #373b0e32 solid 2px;
+  --light-mode-task-border: #ffffff51 solid 1px;
+  --light-mode-text-color: #373b0e;
+  --light-mode-month-color: #373b0e;
+}
+
 *,
 *::before,
 *::after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(
+    to right bottom,
+    #572a19,
+    #492615,
+    #3c2213,
+    #301d10,
+    #25180d,
+    #25190e,
+    #251a0e,
+    #251b0f,
+    #2f2312,
+    #382c14,
+    #403515,
+    #473f17
+  );
+  background-color: #2b260f;
+  min-height: 100vh;
 }
