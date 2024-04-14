@@ -1,10 +1,6 @@
 .form__container input {
-  padding: 10px;
-  border: none;
-  background-color: #e9e9ed;
   min-width: 300px;
   margin-right: 10px;
-  border-radius: 10px;
 }
 
 .form__container button {

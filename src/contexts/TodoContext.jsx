@@ -1,10 +1,5 @@
 // GLOBAL STATE file for adding, updating and removing todos
 
-/**
- * 1 step -> Pass todos to TodoList component.
- * 2 step -> Add a new todo
- */
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 export const TodoContext = createContext();
