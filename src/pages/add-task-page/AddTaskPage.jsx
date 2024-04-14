@@ -107,9 +107,8 @@ export const AddTaskPage = () => {
         <form className="add-task-form" onSubmit={handleSubmit}>
           <label className="task-description-label" htmlFor="task-description">
             Description
-            <input
+            <textarea
               className="task-description-input"
-              type="text"
               id="task-description"
               name="task-description"
               value={taskDescription}

@@ -24,3 +24,14 @@
   background-color: var(--light-mode-taskbar-background-color);
   color: var(--light-mode-text-color);
 }
+
+@media screen and (max-width: 768px) {
+  .task-section {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .task-section {
+    width: 100%;
+  }
+}

@@ -52,13 +52,15 @@
   align-items: center;
 }
 
-.task-month.dark-theme {
+.task-month {
   font-size: 0.8rem;
+}
+
+.task-month.dark-theme {
   color: var(--dark-mode-month-color);
 }
 
 .task-month.light-theme {
-  font-size: 0.8rem;
   color: var(--light-mode-month-color);
 }
 
@@ -89,4 +91,18 @@
 }
 .remove-btn.light-theme {
   color: var(--light-mode-text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .task-month {
+    font-size: 0.7rem;
+  }
+
+  .task-date {
+    font-size: 1.2rem;
+  }
+
+  .remove-btn {
+    font-size: 1.2rem;
+  }
 }

@@ -33,3 +33,24 @@
 .comleted-count {
   margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .overview-section {
+    left: 10%;
+    width: 80%;
+  }
+
+  .overview-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .overview-section {
+    left: 0;
+    width: 100%;
+  }
+
+  .overview-title {
+    font-size: 1.8rem;
+  }
+}
