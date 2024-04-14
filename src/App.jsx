@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/home-page/HomePage";
-import { AddTaskPage } from "./pages/AddTaskPage";
+import { AddTaskPage } from "./pages/add-task-page/AddTaskPage";
 import { AppDataProvider } from "./context/AppContext";
 
 export const App = () => {

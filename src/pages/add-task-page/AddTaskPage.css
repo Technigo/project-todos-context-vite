@@ -1,0 +1,72 @@
+.task-page {
+  color: var(--dark-mode-text-color);
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.home-btn {
+  padding-left: 20vw;
+  text-decoration: none;
+
+  color: var(--dark-mode-text-color);
+}
+
+.home-btn-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.add-form-container {
+  border: red solid 1px;
+  width: 60%;
+
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+
+  color: var(--dark-mode-text-color);
+  background-color: var(--dark-mode-overview-background-color);
+  border: var(--dark-mode-border);
+}
+
+.add-form-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.add-task-form,
+.task-description-label,
+.task-date-label {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.task-description-input,
+.task-date-input {
+  margin-top: 10px;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.add-form-btn {
+  font-size: 1rem;
+  margin-top: 30px;
+  padding: 5px 0;
+  width: 20%;
+  border-radius: 50px;
+  color: var(--dark-mode-text-color);
+  background-color: var(--dark-mode-overview-background-color);
+  border: var(--dark-mode-border);
+  transition: all 0.2s;
+}
+
+.add-form-btn:hover {
+  cursor: pointer;
+  color: var(--light-mode-text-color);
+  background-color: #e7fe55c6;
+  border: var(--light-mode-border);
+}
