@@ -1,8 +1,8 @@
-import { TodoProvider } from "./Components/TodoContext.jsx";
-import { ListName } from "./Components/ListName.jsx";
-import { TodoList } from "./Components/TodoList.jsx";
-import { WorkoutBlock } from "./Components/WorkoutBlock.jsx";
-import { ReminderBlock } from "./Components/ReminderBlock.jsx";
+import { TodoProvider } from "./Components/TodoContext/TodoContext.jsx";
+import { ListName } from "./Components/ListName/ListName.jsx";
+import { TodoList } from "./Components/TodoList/TodoList.jsx";
+import { WorkoutBlock } from "./Components/Workout/WorkoutBlock.jsx";
+import { ReminderBlock } from "./Components/Reminder/ReminderBlock.jsx";
 import "./index.css";
 
 export const App = () => {
