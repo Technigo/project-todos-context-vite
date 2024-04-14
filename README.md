@@ -16,6 +16,10 @@ Key Features:
 - Themes: Users can toggle between light and dark themes to customize their app experience.
 - Persistent Storage: Tasks are stored in the browser's localStorage, ensuring that tasks are saved between sessions.
 
+UI designer inspired by:
+https://dribbble.com/shots/20064912-Task-Note-App-Reminders-App-Design-To-do-App
+https://dribbble.com/shots/20053307-Brutal-List-To-Do-Mobile-App
+
 ### View it live
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b2ac8319-c28a-4db8-8ef7-3f1d9b1ce48d/deploy-status)](https://app.netlify.com/sites/yifan-to-do-list/deploys)
