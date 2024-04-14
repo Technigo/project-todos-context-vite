@@ -1,11 +1,11 @@
 /* Importing font */
 @import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 /* Styling for App.jsx */
 body {
   background-color: #f3eeea;
-  margin: 0 40px;
+  margin: 0 120px;
 }
 
 h1 {
@@ -15,17 +15,36 @@ h1 {
   color: #695853;
 }
 
-/* Styling and placement for blocks */
+/* Placements and styling for component blocks */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
 }
 
-.block {
+.left-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: auto;
   background-color: #ffffff;
   border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.block {
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 20px;
   padding: 20px;
+  margin-bottom: 20px;
+}
+
+.third-block {
+  height: 135px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 40px;
 }

@@ -3,8 +3,7 @@ import { ListName } from "./Components/ListName.jsx";
 import { TodoList } from "./Components/TodoList.jsx";
 import { WorkoutBlock } from "./Components/WorkoutBlock.jsx";
 import { ReminderBlock } from "./Components/ReminderBlock.jsx";
-import { NotesBlock } from "./Components/NotesBlock.jsx";
-import './index.css';
+import "./index.css";
 
 export const App = () => {
   return (
@@ -13,22 +12,20 @@ export const App = () => {
         <h1>To-Do App</h1>
       </div>
       <div className="container">
-        <div className="block">
-          <ListName />
-        </div>
-        <div className="block">
-          <WorkoutBlock />
-        </div>
-        <div className="block">
+        <div className="left-block">
           <TodoList />
         </div>
-        <div className="block">
-          <ReminderBlock />
+        <div className="right-block">
+          <div className="block">
+            <ListName />
+          </div>
+          <div className="block">
+            <WorkoutBlock />
+          </div>
+          <div className="third-block">
+            <ReminderBlock />
+          </div>
         </div>
-        <div className="block">
-          <NotesBlock />
-        </div>
-      
       </div>
     </TodoProvider>
   );

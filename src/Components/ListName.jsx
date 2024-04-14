@@ -3,8 +3,8 @@ import "./ListName.css";
 
 export const ListName = () => {
   // State to store the list name and date
-  const [listName, setListName] = useState("What kind of list is this?");
-  const [date, setDate] = useState("Set a date for your plans!");
+  const [listName, setListName] = useState("Weekly planner");
+  const [date, setDate] = useState("");
 
   // Handler to update the list name
   const handleListNameChange = (event) => {
@@ -37,18 +37,16 @@ export const ListName = () => {
           type="text"
           value={listName}
           onChange={handleListNameChange}
-          onClick={() =>
-            clearDefaultText(listName, "What kind of list is this?")
-          }
+          onClick={() => clearDefaultText(listName, "Weekly planner")}
         />
       </h2>
       <h2>
         Date:
         <input
-          type="text"
+          type="week"
           value={date}
           onChange={handleDateChange}
-          onClick={() => clearDefaultText(date, "Set a date for your plans!")}
+          onClick={() => clearDefaultText(date, "")}
         />
       </h2>
     </div>
