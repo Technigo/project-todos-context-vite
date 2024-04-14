@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import { TestArray } from "./TestArray";
 
 const AppData = createContext();
 
@@ -6,7 +7,7 @@ export const AppDataProvider = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState(false);
   const [tasks, setTasks] = useState(() => {
     const storedTasks = localStorage.getItem("tasks");
-    return storedTasks ? JSON.parse(storedTasks) : [];
+    return storedTasks ? JSON.parse(storedTasks) : TestArray;
   });
   const [completeTask, setCompleteTask] = useState(false);
   const [completeTaskCount, setCompleteTaskCount] = useState(0);
