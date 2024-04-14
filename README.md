@@ -16,6 +16,10 @@ Key Features:
 - Themes: Users can toggle between light and dark themes to customize their app experience.
 - Persistent Storage: Tasks are stored in the browser's localStorage, ensuring that tasks are saved between sessions.
 
+Tech:
+
+**React**, **Context API**, **useState** and **useEffect** Hooks
+
 UI designer inspired by:
 https://dribbble.com/shots/20064912-Task-Note-App-Reminders-App-Design-To-do-App
 https://dribbble.com/shots/20053307-Brutal-List-To-Do-Mobile-App
