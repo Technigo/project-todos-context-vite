@@ -76,7 +76,7 @@
   color: #ff0000;
 }
 
-/* Media Query */
+/* Media Queries */
 @media (max-width: 480px) {
   .reminder-container h2 {
     font-size: 18px;
