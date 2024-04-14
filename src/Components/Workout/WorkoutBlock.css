@@ -40,3 +40,16 @@
   background-color: #382e2c;
   color: #ffffff;
 }
+
+/* Media Query */
+@media (max-width: 480px) {
+  .workout-container h2 {
+    font-size: 18px;
+  }
+
+  .workout-day {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}

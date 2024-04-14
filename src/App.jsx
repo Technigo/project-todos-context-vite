@@ -16,10 +16,10 @@ export const App = () => {
           <TodoList />
         </div>
         <div className="right-block">
-          <div className="block">
+          <div className="first-block">
             <ListName />
           </div>
-          <div className="block">
+          <div className="second-block">
             <WorkoutBlock />
           </div>
           <div className="third-block">

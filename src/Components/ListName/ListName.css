@@ -28,3 +28,14 @@
 .listname-container input:focus {
   outline: 1px solid #695853;
 }
+
+/* Media Query */
+@media (max-width: 480px) {
+  .listname-container h2 {
+    font-size: 18px;
+  }
+
+  .listname-container input {
+    font-size: 14px;
+  }
+}

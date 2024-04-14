@@ -68,7 +68,7 @@
   background-color: #9a9086;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
-  color: #ffffff; 
+  color: #ffffff;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -120,4 +120,15 @@
 .add-todo button:hover {
   background-color: #382e2c;
   color: #ffffff;
+}
+
+/* Media Query */
+@media (max-width: 480px) {
+  .todo-header h2 {
+    font-size: 18px;
+  }
+
+  .todo-text {
+    font-size: 12px;
+}
 }
