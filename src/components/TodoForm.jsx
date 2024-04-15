@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
 import { useTodoContext } from "../context/TodoContext";
-
-import "./TodoForm.css";
 import TaskCount from "./TaskCount";
+import "./TodoForm.css";
 
 const TodoForm = () => {
   const { addTodo } = useTodoContext();
@@ -36,8 +34,7 @@ const TodoForm = () => {
           placeholder="Add Todo..."
           value={todoText}
           onChange={handleInputChange}
-          className={errorMessage ? "error-input" : ""}
-          />
+        />
         <button type="submit">Add</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}

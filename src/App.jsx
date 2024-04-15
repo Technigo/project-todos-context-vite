@@ -1,13 +1,10 @@
 import React from "react";
-
+import { TodoProvider } from "./context/TodoContext";
+import { Header } from "./components/Header";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
-import TaskCount from "./components/TaskCount";
-import { TodoProvider } from "./context/TodoContext";
-
-import "./App.css";
-import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import "./App.css";
 
 const App = () => {
   return (

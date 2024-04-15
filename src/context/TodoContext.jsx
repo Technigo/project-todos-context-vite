@@ -12,8 +12,7 @@ export const TodoProvider = ({ children }) => {
     const newTodo = {
       id: Date.now(),
       text: todoText,
-      completed: false,
-      //Initialize the completed property with a default value of false
+      completed: false, //Initialize the completed property with a default value of false
       //This approach directly modifies the todo object by adding the completed property with a default value of false. Then, it adds the modified todo object to the todos array.
       createdAt: moment().toISOString(), //Add timestamp
     };
@@ -38,9 +37,7 @@ export const TodoProvider = ({ children }) => {
   };
 
   return (
-    <TodoContext.Provider
-      value={{ todos, addTodo, removeTodo, toggleComplete, formatCreatedAt }}
-    >
+    <TodoContext.Provider value={{ todos, addTodo, removeTodo, toggleComplete, formatCreatedAt }}>
       {children}
     </TodoContext.Provider>
   );
