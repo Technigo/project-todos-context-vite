@@ -1,0 +1,31 @@
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 10px auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background-image: url("../assets/cork-texture.jpg");
+  margin-bottom: 30px;
+  min-height: 150px;
+}
+
+
+.CompletedTasks span {
+  text-decoration: line-through;
+  text-decoration-color: rgba(210, 18, 18, 0.56);
+}
+
+.CompletedTasks .todo-card{
+  background-image: url("../assets/crumbled-white-papper.jpg");
+}
+
+/* TABLET SCREENS min 745px ------------------------------------------------------------ */
+
+@media (min-width:745px){ 
+  .todo-list-container {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

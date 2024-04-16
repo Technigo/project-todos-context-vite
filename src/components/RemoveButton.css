@@ -1,0 +1,27 @@
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  height: 30px;
+  width: 30px;
+  transform: scale(1);
+  transition: transform 250ms ease-in;
+  cursor: pointer;
+}
+
+.trash-icon {
+  width: 30px;
+}
+
+.btncontainer:hover > img {
+  filter: invert(100%) brightness(100%);
+}
+
+.btncontainer:hover {
+  background-color: #eb5577;
+  color: white;
+  transform: scale(1.1);
+}

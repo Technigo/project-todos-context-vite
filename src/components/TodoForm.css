@@ -1,0 +1,48 @@
+.form-input-container {
+  width: 95%;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.form-input-container form {
+  display: flex;
+  align-items: center;
+}
+
+.form-input-container input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.form-input-container button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-input-container button:hover {
+  background-color: #0056b3;
+}
+
+/* alert style */
+.error-message {
+  color: red;
+  margin: 8px;
+}
+
+/* TABLET SCREENS min 745px ------------------------------------------------------------ */
+
+@media (min-width:745px){ 
+  .form-input-container {
+    max-width: 700px;
+  }
+}

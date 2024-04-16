@@ -1,0 +1,85 @@
+.todo-card {
+  margin: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.todo-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todo-item img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: transform 250ms ease-in;
+}
+
+.thumbtack {
+  cursor: pointer;
+}
+
+.thumbtack:hover {
+  color: white;
+  transform: rotate(-45deg);
+}
+
+.undoArrow {
+  cursor: pointer;
+  opacity: 0.5;
+  padding: 6px;
+}
+
+.undoArrow:hover {
+  color: white;
+  transform: rotate(-45deg);
+}
+
+.todo-item input[type="checkbox"] {
+  display: none;
+}
+
+.todo-item span {
+  flex: 1; /* move remove button to the right */
+  overflow-wrap: break-word; /* ensure long text doesn´t overflow */
+  word-break: break-word;
+
+}
+
+.timestamp {
+  text-align: right;
+  margin: 0;
+  margin-top: 10px;
+  color: rgb(177, 176, 176);
+  font-size: 0.8rem;
+}
+
+
+/* TABLET SCREENS max 745px ------------------------------------------------------------ */
+
+@media (max-width:745px){ 
+  .todo-card {
+    margin: 10px;
+    padding: 5px;
+    background-color: #ffffff;
+  }
+
+}
+
+/* TABLET SCREENS 745px to 1281px------------------------------------------------------------ */
+
+@media (min-width:746px) and (max-width:1280px){
+
+}
+
+/* SCREENS min 1281px ------------------------------------------------------------ */
+
+@media (min-width: 1281px) {
+
+}
