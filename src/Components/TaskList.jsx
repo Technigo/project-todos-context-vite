@@ -91,19 +91,26 @@ export const TaskList = () => {
                 onChange={(e) =>
                   handleCheckboxChange(item.id, e.target.checked)
                 }
+                aria-labelledby={`content-${item.id}`}
               />
               <label
                 htmlFor={`checkbox-${item.id}`}
                 className="customRadioCheckbox"
-              ></label>
+              />
               <div className="customCheckboxContent">
                 <h2>
                   {item.content}
-                  <h5>{moment(item.createdAt).format('h:mm a')}</h5>
+                  <br></br>
+                  <span>{moment(item.createdAt).format('h:mm a')}</span>
                 </h2>
               </div>
 
-              <button id="deleteBtn" onClick={() => handleDelete(item.id)}>
+              <button
+                id={`deleteBtn-${item.id}`}
+                onClick={() => handleDelete(item.id)}
+                aria-label={`Delete task titled ${item.content}`}
+                tabIndex={0}
+              >
                 ✖️
               </button>
             </div>

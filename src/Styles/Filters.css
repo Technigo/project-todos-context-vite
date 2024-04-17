@@ -9,7 +9,9 @@
   border-radius: 10px;
   padding: 5px 10px;
   font-weight: bold;
-  color: #bc8cff;
+  /* color: #bc8cff; */
+  color: #4c4ca2;
+
   background: none;
 }
 .filters {
@@ -20,11 +22,11 @@
   gap: 10px;
 }
 .filtersWrapper button:hover {
-  color: #e9e1ff;
+  color: #ffffff;
   background-color: #7d59e7;
 }
 .filtersWrapper button:focus {
-  color: #e9e1ff;
+  color: #ffffff;
   background-color: #7d59e7;
 }
 .filters span {

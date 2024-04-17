@@ -23,16 +23,35 @@ main i {
 .nowDate {
   padding: 10px 0;
 }
-.filtersContainer button:hover {
-  background-color: #7d59e7; /* Change background color on hover */
+/* .filtersContainer button:hover {
+  background-color: #7d59e7; 
 }
 
 .filtersContainer button:hover i {
-  color: #f1f4f9; /* Change icon color on hover */
+  color: #f1f4f9;
+} */
+
+.accessible-btn {
+  display: inline-flex; /* Ensure icons center within the button */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  position: relative; /* For positioning pseudo-elements for focus */
+  overflow: hidden; /* Keeps pseudo-elements within the button boundary */
+}
+.accessible-btn:hover {
+  background-color: #7d59e7;
+}
+
+.accessible-btn:hover i {
+  color: #f1f4f9;
 }
 
 @media (min-width: 669px) and (max-width: 1022px) {
-  main button {
+  /* main button {
+    height: 60px;
+    width: 35px;
+  } */
+  .accessible-btn {
     height: 60px;
     width: 35px;
   }
@@ -46,15 +65,19 @@ main i {
 }
 
 @media (min-width: 1023px) {
-  main button {
+  /* main button {
     height: 65px;
     width: 40px;
-  }
+  } */
   main i {
     font-size: 20px;
   }
 
   .filtersContainer {
     gap: 15px;
+  }
+  .accessible-btn {
+    height: 65px;
+    width: 40px;
   }
 }
