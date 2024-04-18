@@ -1,14 +1,63 @@
-*,
-*::before,
-*::after {
+#root {
+  --sticky-note-color-y: #E4D9FF;
+  --sticky-note-color-p: #B5Bee3;
+  --background-color-green: #273469;
+  --background-color-white: #FAFAFF;
+  --background-color-grey: #1E2749;
+
+  --font-color-dark: #30343F;
+  --font-color-light: #f9f9f9;
+}
+
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-app {
+  background-color: var(--background-color-white);
+}
+
+h1 {
+  color: var(--font-color-dark);
+  padding: 1.7rem 1rem 0.8rem 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Indie Flower;
+  src: url(./assets/IndieFlower-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/Montserrat-VariableFont_wght.ttf);
+}
+
+@media all and (min-width: 668px) {
+  .todo-app {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
 }

@@ -1,0 +1,38 @@
+.taskcounter {
+  padding: 1rem 1.3rem 0 0;
+  color: var(--font-color-dark);
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  text-align: end;
+}
+
+.total-task {
+  text-align: end;
+}
+
+@media all and (min-width: 668px) {
+  .taskcounter {
+    align-items: center;
+    width: 66vw;
+  }
+
+  .total-task {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+}
+
+@media all and (min-width: 1028px) {
+  .taskcounter {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 36vw;
+    margin-right: 180px;
+  }
+
+  .total-task {
+    margin-top: 0;
+  }
+}

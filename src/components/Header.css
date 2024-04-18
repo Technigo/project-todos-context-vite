@@ -1,0 +1,22 @@
+.header-container {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: var(--sticky-note-color-p) solid 1px;
+}
+
+h1 {
+  color: var(--background-color-green);
+  padding: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+  width: 100vw;
+  text-align: center;
+}
+
+@media all and (min-width: 668px) {
+  h1 {
+    font-size: 2rem;
+    width: auto;
+  }
+}
