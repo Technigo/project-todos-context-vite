@@ -75,8 +75,11 @@ export const TaskList = () => {
         {/* managing empty state case scenario */}
         {filteredTasks.length === 0 ? (
           <>
-            <h2>No tasks - click on the + to add a new Task</h2>
-            <img src="/empty-state.jpg" alt="no-tasks" />
+            <img src="/empty-state.jpg" alt="no-tasks" className="emptyState" />
+            <button id="plusButton" onClick={toggleAddTaskPopup}>
+              {/* switching sign to indicate that can be toggle to close again */}
+              {showAddTaskPopup ? '-' : '+'}
+            </button>
           </>
         ) : (
           filteredTasks &&
