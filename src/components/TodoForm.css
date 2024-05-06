@@ -1,0 +1,77 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+}
+
+.title-form {
+  color: #776B5D;
+  font-family: Fredericka the Great;
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 20px 0px 20px 0px;
+}
+
+.task-input {
+  background-color: #EEEEEE;
+  width: 50%;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+  border: 3px solid #EEEEEE;
+  font-size: 25px;
+}
+
+.submit-button {
+  font-size: 20px;
+  padding: 10px 16px;
+  background-color: #76885B;
+  color: white;
+  border: #76885B;
+  cursor: pointer;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.9s ease;
+
+}
+
+.submit-button:hover {
+  background-color: #B7B78A;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+  .task-input {
+    width: 90%;
+  }
+  
+  .submit-button {
+    font-size: 18px;
+  }
+}
+
+/* For tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .task-input {
+    width: 80%;
+  }
+  
+  .submit-button {
+    font-size: 20px;
+  }
+}
+
+/* For desktop devices */
+@media only screen and (min-width: 1025px) {
+  .task-input {
+    width: 70%;
+  }
+  
+  .submit-button {
+    font-size: 22px;
+  }
+}
