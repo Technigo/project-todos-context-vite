@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-image: url(./assets/todo-app-background.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+
+.app-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #0f4c5c;
+    font-size: 60px;
+}
+
