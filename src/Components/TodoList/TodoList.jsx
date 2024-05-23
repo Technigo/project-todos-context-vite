@@ -94,7 +94,7 @@ export const TodoList = () => {
         ))}
       </div>
       <div className="add-todo">
-        <label htmlFor="newTodo">New Task:</label>
+        <label htmlFor="newTodo"></label>
         <input
           type="text"
           id="newTodo"
