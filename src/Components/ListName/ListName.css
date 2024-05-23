@@ -1,0 +1,41 @@
+.listname-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.listname-container h2 {
+  font-family: "Poltawski Nowy", sans-serif;
+  font-size: 25px;
+  color: #382e2c;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.listname-container input {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: #695853;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid #9a9086;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.listname-container input:focus {
+  outline: 1px solid #695853;
+}
+
+/* Media Query */
+@media (max-width: 480px) {
+  .listname-container h2 {
+    font-size: 18px;
+  }
+
+  .listname-container input {
+    font-size: 14px;
+  }
+}
