@@ -33,6 +33,12 @@
   margin-bottom: 5px;
 }
 
+.todo-item label {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .todo-item input[type="checkbox"] {
   appearance: none;
   width: 20px;
@@ -89,6 +95,13 @@
   padding: 20px;
 }
 
+.add-todo label {
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #382e2c;
+}
+
 .add-todo input[type="text"] {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
@@ -126,9 +139,9 @@
 /* Maximum active task error message */
 .max-tasks-reached {
   position: absolute;
-  top: -20px; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
   color: red;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
@@ -143,5 +156,9 @@
 
   .todo-text {
     font-size: 12px;
+  }
+
+  .add-todo input[type="text"] {
+    width: 70%;
   }
 }

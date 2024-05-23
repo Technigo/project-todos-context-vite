@@ -23,7 +23,7 @@ export const TodoList = () => {
         completed: false,
       };
       setTodos([...todos, newTodo]);
-      setNewTodoText(""); 
+      setNewTodoText("");
     } else {
       setMaxTasksReached(true);
     }
@@ -47,7 +47,7 @@ export const TodoList = () => {
   const handleChange = (e) => {
     if (e.target.value.length <= 50) {
       setNewTodoText(e.target.value);
-      setMaxTasksReached(false); 
+      setMaxTasksReached(false);
     }
   };
 
@@ -72,15 +72,18 @@ export const TodoList = () => {
       <div className="todo-list">
         {todos.map((todo) => (
           <div key={todo.id} className="todo-item">
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => handleToggleTodo(todo.id)}
-            />
-            <span className={`todo-text ${todo.completed ? "completed" : ""}`}>
-              {todo.text}
-            </span>
-
+            <label>
+              <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => handleToggleTodo(todo.id)}
+              />
+              <span
+                className={`todo-text ${todo.completed ? "completed" : ""}`}
+              >
+                {todo.text}
+              </span>
+            </label>
             <button
               className="remove-button"
               onClick={() => handleRemoveTodo(todo.id)}
@@ -91,8 +94,10 @@ export const TodoList = () => {
         ))}
       </div>
       <div className="add-todo">
+        <label htmlFor="newTodo">New Task:</label>
         <input
           type="text"
+          id="newTodo"
           value={newTodoText}
           onChange={handleChange}
           maxLength={40}

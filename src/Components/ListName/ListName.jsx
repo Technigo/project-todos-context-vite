@@ -31,24 +31,30 @@ export const ListName = () => {
 
   return (
     <div className="listname-container">
-      <h2>
-        List name:
-        <input
-          type="text"
-          value={listName}
-          onChange={handleListNameChange}
-          onClick={() => clearDefaultText(listName, "Weekly planner")}
-        />
-      </h2>
-      <h2>
-        Date:
-        <input
-          type="week"
-          value={date}
-          onChange={handleDateChange}
-          onClick={() => clearDefaultText(date, "")}
-        />
-      </h2>
+      <div className="input-group">
+        <h2>
+          <label htmlFor="listName">List name:</label>
+          <input
+            type="text"
+            id="listName"
+            value={listName}
+            onChange={handleListNameChange}
+            onClick={() => clearDefaultText(listName, "Weekly planner")}
+          />
+        </h2>
+      </div>
+      <div className="input-group">
+        <h2>
+          <label htmlFor="date">Date:</label>
+          <input
+            type="week"
+            id="date"
+            value={date}
+            onChange={handleDateChange}
+            onClick={() => clearDefaultText(date, "")}
+          />
+        </h2>
+      </div>
     </div>
   );
 };
