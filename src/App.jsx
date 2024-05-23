@@ -3,6 +3,7 @@ import { TodoProvider } from "./Components/TodoContext/TodoContext.jsx";
 import { ListName } from "./Components/ListName/ListName.jsx";
 import { TodoList } from "./Components/TodoList/TodoList.jsx";
 import { WorkoutBlock } from "./Components/Workout/WorkoutBlock.jsx";
+import { StickyNote } from "./Components/StickyNote/StickyNote.jsx"; // Import StickyNote
 import "./index.css";
 
 export const App = () => {
@@ -37,10 +38,12 @@ export const App = () => {
               className="toggle-button"
               onClick={toggleWorkoutBlockVisibility}
             >
-              {isWorkoutBlockVisible ? "Hide" : "Show"}
+              {isWorkoutBlockVisible ? "−" : "+"}
             </button>
           </div>
-          <div className="third-block"></div>
+          <div className="third-block">
+            <StickyNote />
+          </div>
         </div>
       </div>
     </TodoProvider>

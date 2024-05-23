@@ -1,6 +1,7 @@
 .todo-container {
   display: flex;
   flex-direction: column;
+  position: relative;
   height: 100%;
   padding: 10px;
   padding: 0 20px;
@@ -83,6 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   margin-top: 20px;
   padding: 20px;
 }
@@ -121,6 +123,18 @@
   background-color: #382e2c;
 }
 
+/* Maximum active task error message */
+.max-tasks-reached {
+  position: absolute;
+  top: -20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: red;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  width: 280px;
+}
+
 /* Media Query */
 @media (max-width: 480px) {
   .todo-header h2 {
@@ -129,5 +143,5 @@
 
   .todo-text {
     font-size: 12px;
-}
+  }
 }

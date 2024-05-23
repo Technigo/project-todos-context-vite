@@ -12,17 +12,20 @@ export const TodoList = () => {
     { id: 3, text: "Finish weekly project", completed: false },
   ]);
   const [newTodoText, setNewTodoText] = useState("");
+  const [maxTasksReached, setMaxTasksReached] = useState(false);
 
   // Function to handle adding new todo item
   const handleAddTodo = () => {
-    if (newTodoText.trim() !== "" && todos.length < 10) {
+    if (newTodoText.trim() !== "" && todos.length < 15) {
       const newTodo = {
         id: Math.random(),
         text: newTodoText,
         completed: false,
       };
       setTodos([...todos, newTodo]);
-      setNewTodoText(""); // Clear input field after adding todo
+      setNewTodoText(""); 
+    } else {
+      setMaxTasksReached(true);
     }
   };
 
@@ -44,6 +47,7 @@ export const TodoList = () => {
   const handleChange = (e) => {
     if (e.target.value.length <= 50) {
       setNewTodoText(e.target.value);
+      setMaxTasksReached(false); 
     }
   };
 
@@ -91,9 +95,14 @@ export const TodoList = () => {
           type="text"
           value={newTodoText}
           onChange={handleChange}
-          maxLength={40} // Set maximum character length
+          maxLength={40}
           placeholder="Enter your next to-do task here"
         />
+        {maxTasksReached && (
+          <p className="max-tasks-reached">
+            Maximum number of active tasks reached!
+          </p>
+        )}
         <button onClick={handleAddTodo}>Add</button>
       </div>
     </div>
