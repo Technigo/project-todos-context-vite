@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
-import TodoContext from './TodoContext';
+import React, { useContext } from 'react'
+import TodoContext from './TodoContext'
 
 const TodoItem = ({ todo }) => {
-  const { toggleTodo, deleteTodo } = useContext(TodoContext);
+  const { toggleTodo, deleteTodo } = useContext(TodoContext)
 
   const handleToggle = () => {
-    toggleTodo(todo.id);
-  };
+    toggleTodo(todo.id)
+  }
 
   const handleDelete = () => {
-    deleteTodo(todo.id);
-  };
+    deleteTodo(todo.id)
+  }
 
   return (
     <li>
@@ -24,7 +24,7 @@ const TodoItem = ({ todo }) => {
       </span>
       <button onClick={handleDelete}>Delete</button>
     </li>
-  );
-};
+  )
+}
 
-export default TodoItem;
+export default TodoItem
