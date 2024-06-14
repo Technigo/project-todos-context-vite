@@ -9,6 +9,8 @@
     background-color: rgb(247, 247, 247, 0.7);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
 }
   
 .todo-list-title {
@@ -34,6 +36,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
 }
   
 .checkbox {
@@ -45,6 +48,7 @@
 }
 
 .checkbox input {
+    position: absolute;
     height: 0;
     width: 0;
 }
@@ -87,6 +91,8 @@
     font-size: 18px;
     color: #333;
     margin-right: 20px;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .completed {
@@ -107,3 +113,8 @@
     background-color: #e36414;
 }
 
+@media only screen and (max-width: 600px) {
+    .todo-text {
+      max-width: 200px;
+    }
+  }
