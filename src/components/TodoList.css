@@ -1,0 +1,120 @@
+.todo-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(247, 247, 247, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+}
+  
+.todo-list-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+  
+.task-count-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+    width: 100%;
+}
+  
+.task-count {
+    font-size: 16px;
+    color: #666;
+}
+  
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+  
+.checkbox {
+    margin-right: 30px;
+    display: block;
+    position: relative;
+    font-size: 25px;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25px;
+    width: 25px;
+    border: 2px solid #e36414;
+    background-color: whitesmoke;
+} 
+
+.checkbox:hover input ~ .checkmark {
+    background-color: #fb8b24;
+}
+
+.checkbox input:checked ~ .checkmark {
+    background-color: #5f0f40;
+}
+
+.checkbox .checkmark:after {
+    content: '✓';
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+} 
+
+.todo-text {
+    flex-grow: 1;
+    font-size: 18px;
+    color: #333;
+    margin-right: 20px;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+  
+.delete-button {
+    background-color: #9a031e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e36414;
+}
+
+@media only screen and (max-width: 600px) {
+    .todo-text {
+      max-width: 200px;
+    }
+  }
