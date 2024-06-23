@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <h1>ToDos</h1>
-      <p>This todo list app stores items locally in your browser.</p>
+      <p>Keeps You Organized!.</p>
       <Switch aria-label="Toggle theme" />
     </header>
   );
