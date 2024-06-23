@@ -1,0 +1,38 @@
+.form-container {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(70, 70, 70, 0.38);
+  justify-content: space-between;
+  background: #fff;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.input-text {
+  width: 85%;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.input-text::placeholder {
+  color: #888;
+}
+
+.input-submit {
+  background: transparent;
+  color: #5b5b5b;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-warning {
+  font-size: 0.875rem;
+  color: red;
+  margin-top: 5px;
+}

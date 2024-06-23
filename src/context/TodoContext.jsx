@@ -1,62 +1,52 @@
-import React, { createContext, useContext, useReducer } from "react";
-import moment from "moment";
-
-const initialState = {
-  tasks: [
-    { id: 1, text: "Complete project", done: false, timestamp: moment() },
-    { id: 2, text: "Walk the dog", done: true, timestamp: moment() },
-    { id: 3, text: "Order groceries", done: false, timestamp: moment() },
-    { id: 4, text: "Dentist", done: false, timestamp: moment() },
-    { id: 5, text: "Water flowers", done: false, timestamp: moment() },
-    { id: 6, text: "Start Laundry", done: false, timestamp: moment() },
-    { id: 7, text: "Design work Template", done: false, timestamp: moment() }
-  ]
-};
+import React, { createContext, useState, useContext } from "react";
 
 const TodoContext = createContext();
 
-export const useTodoContext = () => useContext(TodoContext);
+export const TodosProvider = ({ children }) => {
+  const [todos, setTodos] = useState([
+    { id: 1, title: "Buy groceries", completed: false },
+    { id: 2, title: "Read a book", completed: true },
+    { id: 3, title: "Exercise for 30 minutes", completed: false },
+    { id: 4, title: "Write a blog post", completed: false },
+    { id: 5, title: "Call Mom", completed: true },
+  ]);
 
-export const TodoProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(todoReducer, initialState);
+  const addTodoItem = (title) => {
+    const newTodo = {
+      id: Date.now(),
+      title,
+      completed: false,
+    };
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+  };
 
-  const handleToggleAll = () => {
-    dispatch({ type: 'TOGGLE_ALL_TASKS' });
+  const handleChange = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  const delTodo = (id) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+  };
+
+  const setUpdate = (updatedTitle, id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, title: updatedTitle } : todo
+      )
+    );
   };
 
   return (
-    <TodoContext.Provider value={{ state, dispatch, handleToggleAll }}>
+    <TodoContext.Provider
+      value={{ todos, addTodoItem, handleChange, delTodo, setUpdate }}
+    >
       {children}
     </TodoContext.Provider>
   );
 };
 
-const todoReducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD_TASK':
-      return {
-        ...state,
-        tasks: [...state.tasks, { ...action.payload, timestamp: moment() }]
-      };
-    case 'TOGGLE_TASK':
-      return {
-        ...state,
-        tasks: state.tasks.map(task =>
-          task.id === action.payload ? { ...task, done: !task.done } : task
-        )
-      };
-    case 'TOGGLE_ALL_TASKS':
-      const allDone = state.tasks.every(task => task.done);
-      return {
-        ...state,
-        tasks: state.tasks.map(task => ({ ...task, done: !allDone }))
-      };
-    case 'REMOVE_TASK':
-      return {
-        ...state,
-        tasks: state.tasks.filter(task => task.id !== action.payload)
-      };
-    default:
-      return state;
-  }
-};
+export const useTodosContext = () => useContext(TodoContext);
