@@ -1,4 +1,5 @@
-import React from "react";
+// TodosLogic.jsx
+import React, { Suspense } from "react";
 import InputTodo from "./InputTodo";
 import TodosList from "./TodosList";
 import { TodosProvider } from "../context/TodoContext";

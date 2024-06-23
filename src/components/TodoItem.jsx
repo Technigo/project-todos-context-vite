@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useTodosContext } from "../context/TodoContext";
-import styles from "../styles/TodoItem.css";
+import "../styles/TodoItem.css";
 
 import { FaTrash } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
@@ -8,14 +8,7 @@ import { AiFillEdit } from "react-icons/ai";
 const TodoItem = ({ itemProp }) => {
   const [editing, setEditing] = useState(false);
   const { handleChange, delTodo, setUpdate } = useTodosContext();
-  const editInputRef = useRef(null);
-
-  const completedStyle = {
-    fontStyle: "italic",
-    color: "#595959",
-    opacity: 0.4,
-    textDecoration: "line-through",
-  };
+  const editInputRef = useRef(null); // Referenza per l'input di modifica
 
   const handleEditing = () => {
     setEditing(true);
@@ -29,40 +22,47 @@ const TodoItem = ({ itemProp }) => {
   };
 
   return (
-    <li className={`${styles.item} ${editing ? "" : styles.darkMode}`}>
+    <li className="todo-item">
       <div
-        className={styles.content}
+        className="todo-content"
         style={{ display: editing ? "none" : "flex" }}
       >
         <input
           type="checkbox"
           checked={itemProp.completed}
           onChange={() => handleChange(itemProp.id)}
-          className={styles.checkbox}
+          className="todo-checkbox"
+          id={`checkbox-${itemProp.id}`}
         />
-        <button onClick={handleEditing} className={styles.button}>
-          <AiFillEdit className={styles.icon} />
-        </button>
-        <button onClick={() => delTodo(itemProp.id)} className={styles.button}>
-          <FaTrash className={styles.icon} />
-        </button>
-        <span
-          className={
-            itemProp.completed
-              ? `${styles.title} ${styles.completed}`
-              : styles.title
-          }
+        <label
+          htmlFor={`checkbox-${itemProp.id}`}
+          className="todo-checkbox-label"
         >
           {itemProp.title}
-        </span>
+        </label>
+        <button
+          onClick={handleEditing}
+          className="todo-button"
+          aria-label="Edit todo"
+        >
+          <AiFillEdit className="todo-icon" />
+        </button>
+        <button
+          onClick={() => delTodo(itemProp.id)}
+          className="todo-button"
+          aria-label="Delete todo"
+        >
+          <FaTrash className="todo-icon" />
+        </button>
       </div>
       <input
         type="text"
-        ref={editInputRef}
         defaultValue={itemProp.title}
-        className={`${styles.textInput} ${editing ? "" : styles.textContainer}`}
+        className={`todo-textInput ${editing ? "" : "todo-textContainer"}`}
         style={{ display: editing ? "block" : "none" }}
         onKeyDown={handleUpdatedDone}
+        ref={editInputRef}
+        aria-label="Edit todo input"
       />
     </li>
   );
