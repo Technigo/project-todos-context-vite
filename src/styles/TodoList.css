@@ -1,0 +1,26 @@
+.todo-item {
+  padding: 25px; /* Riduciamo leggermente il padding per una disposizione più compatta */
+  border: 1px solid #ccc; /* Sottile linea divisoria grigia */
+  display: flex; /* Utilizziamo flexbox per allineare gli elementi interni */
+  justify-content: space-between; 
+  margin: 5px 5px 5px 5px;
+}
+
+.todo-item > * {
+  margin-right: 15px;
+}
+
+.todo-item > input[type="checkbox"] {
+  margin-right: 20px;
+}
+
+.todo-item > .button {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.todo-button {
+  margin: 0px 10px 0px 10px;
+  width: 20px;
+}

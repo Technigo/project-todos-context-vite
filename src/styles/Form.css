@@ -1,0 +1,62 @@
+/* Form Styles */
+.form-container {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(70, 70, 70, 0.38);
+  justify-content: space-between;
+  background: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container.dark-mode {
+  background: #555;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
+}
+
+.input-text {
+  width: 85%;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.input-text::placeholder {
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.input-text.dark-mode {
+  background: #666;
+  border: 1px solid #888;
+  color: #fff;
+}
+
+.input-text.dark-mode::placeholder {
+  color: #aaa;
+}
+
+.input-submit {
+  background: transparent;
+  color: #5b5b5b;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.input-submit.dark-mode {
+  color: #ccc;
+}
+
+.submit-warning {
+  font-size: 0.875rem;
+  color: red;
+  margin-top: 5px;
+}

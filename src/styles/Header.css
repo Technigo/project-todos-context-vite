@@ -1,0 +1,36 @@
+/* Header Styles */
+.header {
+  padding: 20px 0;
+  line-height: 1.5em;
+  color: #aeadad;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1em;
+  text-transform: lowercase;
+  text-align: center;
+  color: #333;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.header.dark-mode {
+  background-color: #444;
+  color: #ccc;
+}
+
+.header.dark-mode h1 {
+  color: #fff;
+}
+
+.header.dark-mode p {
+  color: #bbb;
+}
