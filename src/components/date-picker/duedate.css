@@ -1,0 +1,15 @@
+.react-datepicker-wrapper {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.react-datepicker-wrapper input {
+  width: 100%;
+  border: var(--primary-color) 1px solid;
+  height: 2.5rem;
+  padding-left: 2rem!important;
+}
+
+.react-datepicker-wrapper input:focus {
+  outline: var(--primary-color);
+}
